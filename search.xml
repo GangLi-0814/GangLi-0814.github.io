@@ -259,24 +259,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Jupyter Notebook修改起始目录的几种方法</title>
-    <url>/2020/09/09/Jupyter-Notebook%E4%BF%AE%E6%94%B9%E8%B5%B7%E5%A7%8B%E7%9B%AE%E5%BD%95%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>【方法1】<code>Win+R</code> -&gt; <code>cmd</code>-&gt;<code>cd</code>+ 更改的路径 + enter -&gt; jupyter notebook (推荐方法)<br>注意：需提前jupyter-note book.exe文件所在的目录，添加至path环境变量中</p>
-<p>【方法2】更改快捷方式的起始目录的方法</p>
-<p>【方法3】配置文件的方法</p>
-<p>参考这个链接：<a href="http://blog.csdn.net/lixintong1992/article/details/53012921">http://blog.csdn.net/lixintong1992/article/details/53012921</a></p>
-<p><img src="https://img-blog.csdn.net/20170119181245792?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzMwMzk4NTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
-<p>【方法4】切换至工作目录-&gt;键盘Shift+鼠标右键( 打开命令窗口)-&gt; Jupyter Notebook<br>注意：需提前jupyter-note book.exe文件所在的目录，添加至path环境变量中</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://blog.csdn.net/qq_33039859/article/details/54604533">https://blog.csdn.net/qq_33039859/article/details/54604533</a></p>
-]]></content>
-      <categories>
-        <category>Notes</category>
-      </categories>
-      <tags>
-        <tag>Notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Notes of Environment and Development Economics Wechat Platform</title>
     <url>/2020/08/26/Notes-of-Environment-and-Development-Economics-Wechat-Platform/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -799,6 +781,24 @@ Good luck!
       </categories>
       <tags>
         <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Jupyter Notebook修改起始目录的几种方法</title>
+    <url>/2020/09/09/Jupyter-Notebook%E4%BF%AE%E6%94%B9%E8%B5%B7%E5%A7%8B%E7%9B%AE%E5%BD%95%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>【方法1】<code>Win+R</code> -&gt; <code>cmd</code>-&gt;<code>cd</code>+ 更改的路径 + enter -&gt; jupyter notebook (推荐方法)<br>注意：需提前jupyter-note book.exe文件所在的目录，添加至path环境变量中</p>
+<p>【方法2】更改快捷方式的起始目录的方法</p>
+<p>【方法3】配置文件的方法</p>
+<p>参考这个链接：<a href="http://blog.csdn.net/lixintong1992/article/details/53012921">http://blog.csdn.net/lixintong1992/article/details/53012921</a></p>
+<p><img src="https://img-blog.csdn.net/20170119181245792?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzMwMzk4NTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="img"></p>
+<p>【方法4】切换至工作目录-&gt;键盘Shift+鼠标右键( 打开命令窗口)-&gt; Jupyter Notebook<br>注意：需提前jupyter-note book.exe文件所在的目录，添加至path环境变量中</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://blog.csdn.net/qq_33039859/article/details/54604533">https://blog.csdn.net/qq_33039859/article/details/54604533</a></p>
+]]></content>
+      <categories>
+        <category>Notes</category>
+      </categories>
+      <tags>
+        <tag>Notes</tag>
       </tags>
   </entry>
   <entry>
@@ -6010,25 +6010,6 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
       </categories>
       <tags>
         <tag>Data</tag>
-        <tag>Stata</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Stata整理证监会上市公司行业分类</title>
-    <url>/2020/08/17/Stata%E6%95%B4%E7%90%86%E8%AF%81%E7%9B%91%E4%BC%9A%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E8%A1%8C%E4%B8%9A%E5%88%86%E7%B1%BB/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="问题的提出"><a href="#问题的提出" class="headerlink" title="问题的提出"></a>问题的提出</h1><p>证监会网站会公布每季度<a href="http://www.csrc.gov.cn/pub/newsite/scb/ssgshyfljg/">上市公司最新行业分类结果</a>，但提供的是 PDF 版本，难以直接用作数据匹配。刚正好需要这份数据，所以用 Stata 来下载、转换和整理数据。</p>
-<h1 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h1><ol>
-<li>使用 Stata16 调用 Python 完成文件的下载、PDF 转换成 Excel 文件。</li>
-<li>使用 Stata 进行数据整理，涉及观测值去重、填充和利用正则表达式生成新变量等内容。</li>
-</ol>
-<h1 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h1><h2 id="调用-Python-下载和提取文件"><a href="#调用-Python-下载和提取文件" class="headerlink" title="调用 Python 下载和提取文件"></a>调用 Python 下载和提取文件</h2><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">python:</span><br><span class="line">import requests</span><br><span class="line">import pdfplumber</span><br><span class="line">from openpyxl import Workbook</span><br><span class="line"></span><br><span class="line"># 下载 PDF 文件</span><br><span class="line">pdf_2019q4 = &#x27;http:<span class="comment">//www.csrc.gov.cn/pub/newsite/scb/ssgshyfljg/202001/W020200110325952653089.pdf&#x27;</span></span><br><span class="line">r = requests.<span class="built_in">get</span>(pdf_2019q4, stream=True)</span><br><span class="line">with <span class="keyword">open</span>(<span class="string">&quot;证监会2019年4季度上市公司行业分类结果.pdf&quot;</span>, <span class="string">&quot;wb&quot;</span>) <span class="keyword">as</span> pdf:</span><br><span class="line">    <span class="keyword">for</span> content <span class="keyword">in</span> r:</span><br><span class="line">            pdf.write(content)</span><br><span class="line"></span><br><span class="line"># 提取并写入Excel</span><br><span class="line">wb = Workbook()</span><br><span class="line">ws = wb.active</span><br><span class="line">with pdfplumber.<span class="keyword">open</span>(<span class="string">&quot;证监会2019年4季度上市公司行业分类结果.pdf&quot;</span>) <span class="keyword">as</span> pdf:</span><br><span class="line">    <span class="keyword">for</span> page <span class="keyword">in</span> pdf.pages:</span><br><span class="line">        <span class="keyword">for</span> <span class="keyword">table</span> <span class="keyword">in</span> page.extract_tables():</span><br><span class="line">            <span class="keyword">for</span> row <span class="keyword">in</span> <span class="keyword">table</span>:</span><br><span class="line">                ws.<span class="keyword">append</span>(row)</span><br><span class="line">wb.<span class="keyword">save</span>(<span class="string">&quot;证监会2019年4季度上市公司行业分类结果.xlsx&quot;</span>)</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-<h2 id="整理数据"><a href="#整理数据" class="headerlink" title="整理数据"></a>整理数据</h2><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">import excel using <span class="string">&quot;证监会2019年4季度上市公司行业分类结果.xlsx&quot;</span>, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">duplicates</span> <span class="keyword">drop</span></span><br><span class="line"></span><br><span class="line"><span class="comment">* ssc install nrow, replace</span></span><br><span class="line"><span class="comment">* ssc install carryforward, replace</span></span><br><span class="line">nrow</span><br><span class="line">carryforward _all,<span class="keyword">replace</span></span><br><span class="line"><span class="keyword">gen</span> 行业门类与大类 = ustrregexs(0) + 行业大类代码 <span class="keyword">if</span> ustrregexm(门类名称及代码,<span class="string">&quot;[A-Z]&quot;</span>) == 1</span><br><span class="line"><span class="keyword">save</span> <span class="string">&quot;201914上市公司行业分类.dta&quot;</span>, <span class="keyword">replace</span></span><br></pre></td></tr></table></figure>
-<h1 id="最终结果"><a href="#最终结果" class="headerlink" title="最终结果"></a>最终结果</h1><p><img src="/2020/08/17/Stata%E6%95%B4%E7%90%86%E8%AF%81%E7%9B%91%E4%BC%9A%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E8%A1%8C%E4%B8%9A%E5%88%86%E7%B1%BB/result.png" alt></p>
-]]></content>
-      <categories>
-        <category>Stata</category>
-      </categories>
-      <tags>
         <tag>Stata</tag>
       </tags>
   </entry>
@@ -21237,6 +21218,25 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
       </tags>
   </entry>
   <entry>
+    <title>Stata整理证监会上市公司行业分类</title>
+    <url>/2020/08/17/Stata%E6%95%B4%E7%90%86%E8%AF%81%E7%9B%91%E4%BC%9A%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E8%A1%8C%E4%B8%9A%E5%88%86%E7%B1%BB/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="问题的提出"><a href="#问题的提出" class="headerlink" title="问题的提出"></a>问题的提出</h1><p>证监会网站会公布每季度<a href="http://www.csrc.gov.cn/pub/newsite/scb/ssgshyfljg/">上市公司最新行业分类结果</a>，但提供的是 PDF 版本，难以直接用作数据匹配。刚正好需要这份数据，所以用 Stata 来下载、转换和整理数据。</p>
+<h1 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h1><ol>
+<li>使用 Stata16 调用 Python 完成文件的下载、PDF 转换成 Excel 文件。</li>
+<li>使用 Stata 进行数据整理，涉及观测值去重、填充和利用正则表达式生成新变量等内容。</li>
+</ol>
+<h1 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h1><h2 id="调用-Python-下载和提取文件"><a href="#调用-Python-下载和提取文件" class="headerlink" title="调用 Python 下载和提取文件"></a>调用 Python 下载和提取文件</h2><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">python:</span><br><span class="line">import requests</span><br><span class="line">import pdfplumber</span><br><span class="line">from openpyxl import Workbook</span><br><span class="line"></span><br><span class="line"># 下载 PDF 文件</span><br><span class="line">pdf_2019q4 = &#x27;http:<span class="comment">//www.csrc.gov.cn/pub/newsite/scb/ssgshyfljg/202001/W020200110325952653089.pdf&#x27;</span></span><br><span class="line">r = requests.<span class="built_in">get</span>(pdf_2019q4, stream=True)</span><br><span class="line">with <span class="keyword">open</span>(<span class="string">&quot;证监会2019年4季度上市公司行业分类结果.pdf&quot;</span>, <span class="string">&quot;wb&quot;</span>) <span class="keyword">as</span> pdf:</span><br><span class="line">    <span class="keyword">for</span> content <span class="keyword">in</span> r:</span><br><span class="line">            pdf.write(content)</span><br><span class="line"></span><br><span class="line"># 提取并写入Excel</span><br><span class="line">wb = Workbook()</span><br><span class="line">ws = wb.active</span><br><span class="line">with pdfplumber.<span class="keyword">open</span>(<span class="string">&quot;证监会2019年4季度上市公司行业分类结果.pdf&quot;</span>) <span class="keyword">as</span> pdf:</span><br><span class="line">    <span class="keyword">for</span> page <span class="keyword">in</span> pdf.pages:</span><br><span class="line">        <span class="keyword">for</span> <span class="keyword">table</span> <span class="keyword">in</span> page.extract_tables():</span><br><span class="line">            <span class="keyword">for</span> row <span class="keyword">in</span> <span class="keyword">table</span>:</span><br><span class="line">                ws.<span class="keyword">append</span>(row)</span><br><span class="line">wb.<span class="keyword">save</span>(<span class="string">&quot;证监会2019年4季度上市公司行业分类结果.xlsx&quot;</span>)</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<h2 id="整理数据"><a href="#整理数据" class="headerlink" title="整理数据"></a>整理数据</h2><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">import excel using <span class="string">&quot;证监会2019年4季度上市公司行业分类结果.xlsx&quot;</span>, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">duplicates</span> <span class="keyword">drop</span></span><br><span class="line"></span><br><span class="line"><span class="comment">* ssc install nrow, replace</span></span><br><span class="line"><span class="comment">* ssc install carryforward, replace</span></span><br><span class="line">nrow</span><br><span class="line">carryforward _all,<span class="keyword">replace</span></span><br><span class="line"><span class="keyword">gen</span> 行业门类与大类 = ustrregexs(0) + 行业大类代码 <span class="keyword">if</span> ustrregexm(门类名称及代码,<span class="string">&quot;[A-Z]&quot;</span>) == 1</span><br><span class="line"><span class="keyword">save</span> <span class="string">&quot;201914上市公司行业分类.dta&quot;</span>, <span class="keyword">replace</span></span><br></pre></td></tr></table></figure>
+<h1 id="最终结果"><a href="#最终结果" class="headerlink" title="最终结果"></a>最终结果</h1><p><img src="/2020/08/17/Stata%E6%95%B4%E7%90%86%E8%AF%81%E7%9B%91%E4%BC%9A%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E8%A1%8C%E4%B8%9A%E5%88%86%E7%B1%BB/result.png" alt></p>
+]]></content>
+      <categories>
+        <category>Stata</category>
+      </categories>
+      <tags>
+        <tag>Stata</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Stata爬取行业景气指数并可视化</title>
     <url>/2020/08/17/Stata%E7%88%AC%E5%8F%96%E8%A1%8C%E4%B8%9A%E6%99%AF%E6%B0%94%E6%8C%87%E6%95%B0%E5%B9%B6%E5%8F%AF%E8%A7%86%E5%8C%96/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之前看见有文章在稳健性检验部分，用企业景气指数和企业家信心指数代替 GDP 增长率作为宏观经济层面投资机会的替代变量（李凤羽和杨墨竹，2015）。所以想收集来看看，在网上找到<a href="http://data.ce.cn/">中国经济网行情数据中心</a>公布了数据，所以用 Stata 爬了下，好久没有用 Stata 干这种活儿，也当是练练手。</p>
@@ -21532,24 +21532,6 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
       </tags>
   </entry>
   <entry>
-    <title>北京的天气真是魔幻</title>
-    <url>/2020/08/24/%E5%8C%97%E4%BA%AC%E7%9A%84%E5%A4%A9%E6%B0%94%E7%9C%9F%E6%98%AF%E9%AD%94%E5%B9%BB/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1293951677&auto=1&height=66"></iframe>
-
-<p><img src="/2020/08/24/%E5%8C%97%E4%BA%AC%E7%9A%84%E5%A4%A9%E6%B0%94%E7%9C%9F%E6%98%AF%E9%AD%94%E5%B9%BB/1.jpg" alt="主楼11层"></p>
-<p>北京的天气也挺魔幻的，昨天暴雨下的昏天黑地，今天又晴空万里，好像啥都没发生过一样。看着这蓝天想起上次去福建调研，舒院讲的一个段子，北京人看见蓝天白玉就像旧时穷人吃肉，赶紧拍照发朋友圈，跟穷人吃够肉舍不得抹嘴上的油一样。</p>
-<hr>
-<p>今天早上本来 06:30 的闹钟，赖床到 07:20 才起来，迷迷糊糊还做了个梦。梦里在想，现在城市都是这种密集的单元楼，大家又缺乏避难防难的意识和知识储备，要是发生啥意外的事情岂不是很惨烈？</p>
-<p>一想都觉得可怕，一是不知道明天和意外谁先来临；二是一旦有意外来临，简直不堪一击。</p>
-]]></content>
-      <categories>
-        <category>Thoughts</category>
-      </categories>
-      <tags>
-        <tag>Thoughts</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>宜昌之行</title>
     <url>/2020/11/16/%E5%AE%9C%E6%98%8C%E4%B9%8B%E8%A1%8C/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2020/11/16/%E5%AE%9C%E6%98%8C%E4%B9%8B%E8%A1%8C/IMG_E3951.JPG" alt="IMG_E3951"></p>
@@ -21581,6 +21563,24 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
       <tags>
         <tag>Others</tag>
         <tag>Travel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>北京的天气真是魔幻</title>
+    <url>/2020/08/24/%E5%8C%97%E4%BA%AC%E7%9A%84%E5%A4%A9%E6%B0%94%E7%9C%9F%E6%98%AF%E9%AD%94%E5%B9%BB/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1293951677&auto=1&height=66"></iframe>
+
+<p><img src="/2020/08/24/%E5%8C%97%E4%BA%AC%E7%9A%84%E5%A4%A9%E6%B0%94%E7%9C%9F%E6%98%AF%E9%AD%94%E5%B9%BB/1.jpg" alt="主楼11层"></p>
+<p>北京的天气也挺魔幻的，昨天暴雨下的昏天黑地，今天又晴空万里，好像啥都没发生过一样。看着这蓝天想起上次去福建调研，舒院讲的一个段子，北京人看见蓝天白玉就像旧时穷人吃肉，赶紧拍照发朋友圈，跟穷人吃够肉舍不得抹嘴上的油一样。</p>
+<hr>
+<p>今天早上本来 06:30 的闹钟，赖床到 07:20 才起来，迷迷糊糊还做了个梦。梦里在想，现在城市都是这种密集的单元楼，大家又缺乏避难防难的意识和知识储备，要是发生啥意外的事情岂不是很惨烈？</p>
+<p>一想都觉得可怕，一是不知道明天和意外谁先来临；二是一旦有意外来临，简直不堪一击。</p>
+]]></content>
+      <categories>
+        <category>Thoughts</category>
+      </categories>
+      <tags>
+        <tag>Thoughts</tag>
       </tags>
   </entry>
   <entry>
@@ -22019,6 +22019,31 @@ P(W_{m},Z_{m},\theta_{m},\Phi;\alpha,\beta) = \prod_{n=1}^{N_{m}}P(\theta_m;\alp
       <tags>
         <tag>Movies</tag>
         <tag>Thoughts</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>论文查重助手</title>
+    <url>/2021/03/16/%E8%AE%BA%E6%96%87%E6%9F%A5%E9%87%8D%E5%8A%A9%E6%89%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>最近大家都在伤脑筋论文降重，改的改、删的删。不过有的同学思路清奇，完成论文降重的同时，不经意间暴露出超凡脱俗的语言天赋。</p>
+<p><img src="/2021/03/16/%E8%AE%BA%E6%96%87%E6%9F%A5%E9%87%8D%E5%8A%A9%E6%89%8B/01.jpeg" style="zoom:50%"></p>
+<p>不过通过翻译的确是个不改变语义的情况下，给句子改头换面的好方法。那么今天就来探讨下怎么用翻译的方法给论文降重。</p>
+<p>解决思路是通过百度翻译的 API 给要降重的文字批量转换，再修改病句。</p>
+<h3 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h3><p>下面这段是百度翻译 API 给的使用示例，可以对照看看构造 API 需要哪些主要字段。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># This code shows an example of text translation from English to Simplified-Chinese.</span></span><br><span class="line"><span class="comment"># This code runs on Python 2.7.x and Python 3.x.</span></span><br><span class="line"><span class="comment"># You may install `requests` to run this code: pip install requests</span></span><br><span class="line"><span class="comment"># Please refer to `https://api.fanyi.baidu.com/doc/21` for complete api document</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set your own appid/appkey.</span></span><br><span class="line">appid = <span class="string">&#x27;INPUT_YOUR_APPID&#x27;</span></span><br><span class="line">appkey = <span class="string">&#x27;INPUT_YOUR_APPKEY&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># For list of language codes, please refer to `https://api.fanyi.baidu.com/doc/21`</span></span><br><span class="line">from_lang = <span class="string">&#x27;en&#x27;</span></span><br><span class="line">to_lang =  <span class="string">&#x27;zh&#x27;</span></span><br><span class="line"></span><br><span class="line">endpoint = <span class="string">&#x27;http://api.fanyi.baidu.com&#x27;</span></span><br><span class="line">path = <span class="string">&#x27;/api/trans/vip/translate&#x27;</span></span><br><span class="line">url = endpoint + path</span><br><span class="line"></span><br><span class="line">query = <span class="string">&#x27;Hello World! This is 1st paragraph.\nThis is 2nd paragraph.&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Generate salt and sign</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_md5</span>(<span class="params">s, encoding=<span class="string">&#x27;utf-8&#x27;</span></span>):</span></span><br><span class="line">    <span class="keyword">return</span> md5(s.encode(encoding)).hexdigest()</span><br><span class="line"></span><br><span class="line">salt = random.randint(<span class="number">32768</span>, <span class="number">65536</span>)</span><br><span class="line">sign = make_md5(appid + query + str(salt) + appkey)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Build request</span></span><br><span class="line">headers = &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>&#125;</span><br><span class="line">payload = &#123;<span class="string">&#x27;appid&#x27;</span>: appid, <span class="string">&#x27;q&#x27;</span>: query, <span class="string">&#x27;from&#x27;</span>: from_lang, <span class="string">&#x27;to&#x27;</span>: to_lang, <span class="string">&#x27;salt&#x27;</span>: salt, <span class="string">&#x27;sign&#x27;</span>: sign&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Send request</span></span><br><span class="line">r = requests.post(url, params=payload, headers=headers)</span><br><span class="line">result = r.json()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Show response</span></span><br><span class="line">print(json.dumps(result, indent=<span class="number">4</span>, ensure_ascii=<span class="literal">False</span>))</span><br></pre></td></tr></table></figure>
+<p>先去<a href="https://fanyi-api.baidu.com/product/11">百度翻译 API</a> 申请个 <code>APP ID</code> 和密钥，对照示例可以写出这几个函数：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_md5</span>(<span class="params">s, encoding=<span class="string">&#x27;utf-8&#x27;</span></span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    生成随机数和签名</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">return</span> md5(s.encode(encoding)).hexdigest()</span><br></pre></td></tr></table></figure>
+<p>这个函数用于生成随机数和签名，签名是为了保证调用安全，使用 MD5 算法生成的一段字符串，生成的签名长度为 32 位，签名中的英文字符均为小写格式。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">translate</span>(<span class="params">query, from_lang, to_lang</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    调用百度翻译 API</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    url = <span class="string">&#x27;http://api.fanyi.baidu.com/api/trans/vip/translate&#x27;</span></span><br><span class="line">    salt = random.randint(<span class="number">1</span>, <span class="number">65536</span>) <span class="comment">#随机数</span></span><br><span class="line">    sign = make_md5(appid + query + str(salt) + appkey)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 构造请求</span></span><br><span class="line">    headers = &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>&#125;</span><br><span class="line">    payload = &#123;<span class="string">&#x27;appid&#x27;</span>: appid, </span><br><span class="line">               <span class="string">&#x27;q&#x27;</span>: query, </span><br><span class="line">               <span class="string">&#x27;from&#x27;</span>: from_lang, </span><br><span class="line">               <span class="string">&#x27;to&#x27;</span>: to_lang, </span><br><span class="line">               <span class="string">&#x27;salt&#x27;</span>: salt, </span><br><span class="line">               <span class="string">&#x27;sign&#x27;</span>: sign</span><br><span class="line">              &#125;</span><br><span class="line">    r = requests.post(url, params=payload, headers=headers)</span><br><span class="line">    text = r.json()</span><br><span class="line">    result = text[<span class="string">&#x27;trans_result&#x27;</span>][<span class="number">0</span>][<span class="string">&#x27;dst&#x27;</span>]</span><br><span class="line">    <span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>
+<p>这个函数用于请求，函数需要传入的参数有需要转换的文本、初始语言、待转换的语言，运行的结果是：</p>
+<p><img src="/2021/03/16/%E8%AE%BA%E6%96%87%E6%9F%A5%E9%87%8D%E5%8A%A9%E6%89%8B/03.png" style="zoom:50%"></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">transAssistant</span>(<span class="params">query</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    中-英-日-中</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    en = translate(query,<span class="string">&#x27;zh&#x27;</span>,<span class="string">&#x27;en&#x27;</span>) <span class="comment">#中文-英文</span></span><br><span class="line">    jp = translate(en,<span class="string">&#x27;en&#x27;</span>,<span class="string">&#x27;jp&#x27;</span>) <span class="comment">#英文-日文</span></span><br><span class="line">    zh = translate(jp,<span class="string">&#x27;jp&#x27;</span>,<span class="string">&#x27;zh&#x27;</span>) <span class="comment">#日文-中文</span></span><br><span class="line">    <span class="keyword">return</span> zh</span><br></pre></td></tr></table></figure>
+<p>这个函数用来实现将中文转换成英文、从英文转换成日文，再重日文转换成中文，通过不同语言之间的翻译，在保证语义基本不变的情况下对句子结构和用词进行调整，达到降低重复率的目的。</p>
+<p><img src="/2021/03/16/%E8%AE%BA%E6%96%87%E6%9F%A5%E9%87%8D%E5%8A%A9%E6%89%8B/04.png" style="zoom:50%"></p>
+<p>这就是转换的效果了，将需要转换的文本放在一个文档中，批量转换之后再修改语句，能够提高使用这种“奇技淫巧”降重的目的。</p>
+<h3 id="全文代码"><a href="#全文代码" class="headerlink" title="全文代码"></a>全文代码</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_md5</span>(<span class="params">s, encoding=<span class="string">&#x27;utf-8&#x27;</span></span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    生成随机数和签名</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">return</span> md5(s.encode(encoding)).hexdigest()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">translate</span>(<span class="params">query, from_lang, to_lang</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    调用百度翻译 API</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    url = <span class="string">&#x27;http://api.fanyi.baidu.com/api/trans/vip/translate&#x27;</span></span><br><span class="line">    salt = random.randint(<span class="number">1</span>, <span class="number">65536</span>) <span class="comment">#随机数</span></span><br><span class="line">    sign = make_md5(appid + query + str(salt) + appkey)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 构造请求</span></span><br><span class="line">    headers = &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>&#125;</span><br><span class="line">    payload = &#123;<span class="string">&#x27;appid&#x27;</span>: appid, </span><br><span class="line">               <span class="string">&#x27;q&#x27;</span>: query, </span><br><span class="line">               <span class="string">&#x27;from&#x27;</span>: from_lang, </span><br><span class="line">               <span class="string">&#x27;to&#x27;</span>: to_lang, </span><br><span class="line">               <span class="string">&#x27;salt&#x27;</span>: salt, </span><br><span class="line">               <span class="string">&#x27;sign&#x27;</span>: sign</span><br><span class="line">              &#125;</span><br><span class="line">    r = requests.post(url, params=payload, headers=headers)</span><br><span class="line">    text = r.json()</span><br><span class="line">    result = text[<span class="string">&#x27;trans_result&#x27;</span>][<span class="number">0</span>][<span class="string">&#x27;dst&#x27;</span>]</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">transAssistant</span>(<span class="params">query</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    中-英-日-中</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    en = translate(query,<span class="string">&#x27;zh&#x27;</span>,<span class="string">&#x27;en&#x27;</span>) <span class="comment">#中文-英文</span></span><br><span class="line">    jp = translate(en,<span class="string">&#x27;en&#x27;</span>,<span class="string">&#x27;jp&#x27;</span>) <span class="comment">#英文-日文</span></span><br><span class="line">    zh = translate(jp,<span class="string">&#x27;jp&#x27;</span>,<span class="string">&#x27;zh&#x27;</span>) <span class="comment">#日文-中文</span></span><br><span class="line">    <span class="keyword">return</span> zh</span><br><span class="line"></span><br><span class="line">appid = <span class="string">&quot;XXXXX&quot;</span> <span class="comment">#自己申请的 appid</span></span><br><span class="line">appkey = <span class="string">&quot;XXXXX&quot;</span> <span class="comment"># 自己申请的 key</span></span><br><span class="line">query = <span class="string">&#x27;这是我要降低重复率的问题，给我把重复率降低到达到要求，祝大家论文过过过。&#x27;</span></span><br><span class="line"><span class="comment"># print(translate(query,&quot;zh&quot;,&quot;en&quot;))</span></span><br><span class="line">print(transAssistant(query))</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>

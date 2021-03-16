@@ -147,6 +147,81 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/03/16/%E8%AE%BA%E6%96%87%E6%9F%A5%E9%87%8D%E5%8A%A9%E6%89%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Gang Li">
+      <meta itemprop="description" content="Wechat Public Account: PyStaData">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LG's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/16/%E8%AE%BA%E6%96%87%E6%9F%A5%E9%87%8D%E5%8A%A9%E6%89%8B/" class="post-title-link" itemprop="url">论文查重助手</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-03-16 22:38:08 / Modified: 22:41:24" itemprop="dateCreated datePublished" datetime="2021-03-16T22:38:08+08:00">2021-03-16</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近大家都在伤脑筋论文降重，改的改、删的删。不过有的同学思路清奇，完成论文降重的同时，不经意间暴露出超凡脱俗的语言天赋。</p>
+<p><img src="/2021/03/16/%E8%AE%BA%E6%96%87%E6%9F%A5%E9%87%8D%E5%8A%A9%E6%89%8B/01.jpeg" style="zoom:50%"></p>
+<p>不过通过翻译的确是个不改变语义的情况下，给句子改头换面的好方法。那么今天就来探讨下怎么用翻译的方法给论文降重。</p>
+<p>解决思路是通过百度翻译的 API 给要降重的文字批量转换，再修改病句。</p>
+<h3 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h3><p>下面这段是百度翻译 API 给的使用示例，可以对照看看构造 API 需要哪些主要字段。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># This code shows an example of text translation from English to Simplified-Chinese.</span></span><br><span class="line"><span class="comment"># This code runs on Python 2.7.x and Python 3.x.</span></span><br><span class="line"><span class="comment"># You may install `requests` to run this code: pip install requests</span></span><br><span class="line"><span class="comment"># Please refer to `https://api.fanyi.baidu.com/doc/21` for complete api document</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set your own appid/appkey.</span></span><br><span class="line">appid = <span class="string">&#x27;INPUT_YOUR_APPID&#x27;</span></span><br><span class="line">appkey = <span class="string">&#x27;INPUT_YOUR_APPKEY&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># For list of language codes, please refer to `https://api.fanyi.baidu.com/doc/21`</span></span><br><span class="line">from_lang = <span class="string">&#x27;en&#x27;</span></span><br><span class="line">to_lang =  <span class="string">&#x27;zh&#x27;</span></span><br><span class="line"></span><br><span class="line">endpoint = <span class="string">&#x27;http://api.fanyi.baidu.com&#x27;</span></span><br><span class="line">path = <span class="string">&#x27;/api/trans/vip/translate&#x27;</span></span><br><span class="line">url = endpoint + path</span><br><span class="line"></span><br><span class="line">query = <span class="string">&#x27;Hello World! This is 1st paragraph.\nThis is 2nd paragraph.&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Generate salt and sign</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_md5</span>(<span class="params">s, encoding=<span class="string">&#x27;utf-8&#x27;</span></span>):</span></span><br><span class="line">    <span class="keyword">return</span> md5(s.encode(encoding)).hexdigest()</span><br><span class="line"></span><br><span class="line">salt = random.randint(<span class="number">32768</span>, <span class="number">65536</span>)</span><br><span class="line">sign = make_md5(appid + query + str(salt) + appkey)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Build request</span></span><br><span class="line">headers = &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>&#125;</span><br><span class="line">payload = &#123;<span class="string">&#x27;appid&#x27;</span>: appid, <span class="string">&#x27;q&#x27;</span>: query, <span class="string">&#x27;from&#x27;</span>: from_lang, <span class="string">&#x27;to&#x27;</span>: to_lang, <span class="string">&#x27;salt&#x27;</span>: salt, <span class="string">&#x27;sign&#x27;</span>: sign&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Send request</span></span><br><span class="line">r = requests.post(url, params=payload, headers=headers)</span><br><span class="line">result = r.json()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Show response</span></span><br><span class="line">print(json.dumps(result, indent=<span class="number">4</span>, ensure_ascii=<span class="literal">False</span>))</span><br></pre></td></tr></table></figure>
+<p>先去<a target="_blank" rel="noopener" href="https://fanyi-api.baidu.com/product/11">百度翻译 API</a> 申请个 <code>APP ID</code> 和密钥，对照示例可以写出这几个函数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_md5</span>(<span class="params">s, encoding=<span class="string">&#x27;utf-8&#x27;</span></span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    生成随机数和签名</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">return</span> md5(s.encode(encoding)).hexdigest()</span><br></pre></td></tr></table></figure>
+<p>这个函数用于生成随机数和签名，签名是为了保证调用安全，使用 MD5 算法生成的一段字符串，生成的签名长度为 32 位，签名中的英文字符均为小写格式。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">translate</span>(<span class="params">query, from_lang, to_lang</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    调用百度翻译 API</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    url = <span class="string">&#x27;http://api.fanyi.baidu.com/api/trans/vip/translate&#x27;</span></span><br><span class="line">    salt = random.randint(<span class="number">1</span>, <span class="number">65536</span>) <span class="comment">#随机数</span></span><br><span class="line">    sign = make_md5(appid + query + str(salt) + appkey)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 构造请求</span></span><br><span class="line">    headers = &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>&#125;</span><br><span class="line">    payload = &#123;<span class="string">&#x27;appid&#x27;</span>: appid, </span><br><span class="line">               <span class="string">&#x27;q&#x27;</span>: query, </span><br><span class="line">               <span class="string">&#x27;from&#x27;</span>: from_lang, </span><br><span class="line">               <span class="string">&#x27;to&#x27;</span>: to_lang, </span><br><span class="line">               <span class="string">&#x27;salt&#x27;</span>: salt, </span><br><span class="line">               <span class="string">&#x27;sign&#x27;</span>: sign</span><br><span class="line">              &#125;</span><br><span class="line">    r = requests.post(url, params=payload, headers=headers)</span><br><span class="line">    text = r.json()</span><br><span class="line">    result = text[<span class="string">&#x27;trans_result&#x27;</span>][<span class="number">0</span>][<span class="string">&#x27;dst&#x27;</span>]</span><br><span class="line">    <span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>
+<p>这个函数用于请求，函数需要传入的参数有需要转换的文本、初始语言、待转换的语言，运行的结果是：</p>
+<p><img src="/2021/03/16/%E8%AE%BA%E6%96%87%E6%9F%A5%E9%87%8D%E5%8A%A9%E6%89%8B/03.png" style="zoom:50%"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">transAssistant</span>(<span class="params">query</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    中-英-日-中</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    en = translate(query,<span class="string">&#x27;zh&#x27;</span>,<span class="string">&#x27;en&#x27;</span>) <span class="comment">#中文-英文</span></span><br><span class="line">    jp = translate(en,<span class="string">&#x27;en&#x27;</span>,<span class="string">&#x27;jp&#x27;</span>) <span class="comment">#英文-日文</span></span><br><span class="line">    zh = translate(jp,<span class="string">&#x27;jp&#x27;</span>,<span class="string">&#x27;zh&#x27;</span>) <span class="comment">#日文-中文</span></span><br><span class="line">    <span class="keyword">return</span> zh</span><br></pre></td></tr></table></figure>
+<p>这个函数用来实现将中文转换成英文、从英文转换成日文，再重日文转换成中文，通过不同语言之间的翻译，在保证语义基本不变的情况下对句子结构和用词进行调整，达到降低重复率的目的。</p>
+<p><img src="/2021/03/16/%E8%AE%BA%E6%96%87%E6%9F%A5%E9%87%8D%E5%8A%A9%E6%89%8B/04.png" style="zoom:50%"></p>
+<p>这就是转换的效果了，将需要转换的文本放在一个文档中，批量转换之后再修改语句，能够提高使用这种“奇技淫巧”降重的目的。</p>
+<h3 id="全文代码"><a href="#全文代码" class="headerlink" title="全文代码"></a>全文代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_md5</span>(<span class="params">s, encoding=<span class="string">&#x27;utf-8&#x27;</span></span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    生成随机数和签名</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">return</span> md5(s.encode(encoding)).hexdigest()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">translate</span>(<span class="params">query, from_lang, to_lang</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    调用百度翻译 API</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    url = <span class="string">&#x27;http://api.fanyi.baidu.com/api/trans/vip/translate&#x27;</span></span><br><span class="line">    salt = random.randint(<span class="number">1</span>, <span class="number">65536</span>) <span class="comment">#随机数</span></span><br><span class="line">    sign = make_md5(appid + query + str(salt) + appkey)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 构造请求</span></span><br><span class="line">    headers = &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>&#125;</span><br><span class="line">    payload = &#123;<span class="string">&#x27;appid&#x27;</span>: appid, </span><br><span class="line">               <span class="string">&#x27;q&#x27;</span>: query, </span><br><span class="line">               <span class="string">&#x27;from&#x27;</span>: from_lang, </span><br><span class="line">               <span class="string">&#x27;to&#x27;</span>: to_lang, </span><br><span class="line">               <span class="string">&#x27;salt&#x27;</span>: salt, </span><br><span class="line">               <span class="string">&#x27;sign&#x27;</span>: sign</span><br><span class="line">              &#125;</span><br><span class="line">    r = requests.post(url, params=payload, headers=headers)</span><br><span class="line">    text = r.json()</span><br><span class="line">    result = text[<span class="string">&#x27;trans_result&#x27;</span>][<span class="number">0</span>][<span class="string">&#x27;dst&#x27;</span>]</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">transAssistant</span>(<span class="params">query</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    中-英-日-中</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    en = translate(query,<span class="string">&#x27;zh&#x27;</span>,<span class="string">&#x27;en&#x27;</span>) <span class="comment">#中文-英文</span></span><br><span class="line">    jp = translate(en,<span class="string">&#x27;en&#x27;</span>,<span class="string">&#x27;jp&#x27;</span>) <span class="comment">#英文-日文</span></span><br><span class="line">    zh = translate(jp,<span class="string">&#x27;jp&#x27;</span>,<span class="string">&#x27;zh&#x27;</span>) <span class="comment">#日文-中文</span></span><br><span class="line">    <span class="keyword">return</span> zh</span><br><span class="line"></span><br><span class="line">appid = <span class="string">&quot;XXXXX&quot;</span> <span class="comment">#自己申请的 appid</span></span><br><span class="line">appkey = <span class="string">&quot;XXXXX&quot;</span> <span class="comment"># 自己申请的 key</span></span><br><span class="line">query = <span class="string">&#x27;这是我要降低重复率的问题，给我把重复率降低到达到要求，祝大家论文过过过。&#x27;</span></span><br><span class="line"><span class="comment"># print(translate(query,&quot;zh&quot;,&quot;en&quot;))</span></span><br><span class="line">print(transAssistant(query))</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/23/resume/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -16035,67 +16110,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/09/tata2020%E5%9B%BD%E5%AE%B6%E7%A4%BE%E7%A7%91%E5%9F%BA%E9%87%91%E7%AB%8B%E9%A1%B9%E5%90%8D%E5%8D%95%E5%88%86%E6%9E%90/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Gang Li">
-      <meta itemprop="description" content="Wechat Public Account: PyStaData">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LG's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/09/tata2020%E5%9B%BD%E5%AE%B6%E7%A4%BE%E7%A7%91%E5%9F%BA%E9%87%91%E7%AB%8B%E9%A1%B9%E5%90%8D%E5%8D%95%E5%88%86%E6%9E%90/" class="post-title-link" itemprop="url">tata2020国家社科基金立项名单分析</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-09-09 21:19:53" itemprop="dateCreated datePublished" datetime="2020-09-09T21:19:53+08:00">2020-09-09</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -16161,7 +16179,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">40</span>
+          <span class="site-state-item-count">41</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
