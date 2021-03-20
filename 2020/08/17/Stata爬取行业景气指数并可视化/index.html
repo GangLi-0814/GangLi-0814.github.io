@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="http://yoursite.com/2020/08/17/Stata%E7%88%AC%E5%8F%96%E8%A1%8C%E4%B8%9A%E6%99%AF%E6%B0%94%E6%8C%87%E6%95%B0%E5%B9%B6%E5%8F%AF%E8%A7%86%E5%8C%96/index.html">
 <meta property="og:site_name" content="LG&#39;s Blog">
 <meta property="og:description" content="前言之前看见有文章在稳健性检验部分，用企业景气指数和企业家信心指数代替 GDP 增长率作为宏观经济层面投资机会的替代变量（李凤羽和杨墨竹，2015）。所以想收集来看看，在网上找到中国经济网行情数据中心公布了数据，所以用 Stata 爬了下，好久没有用 Stata 干这种活儿，也当是练练手。 思路分析网页是 POST 请求，所以调用 curl 进行爬取。爬虫的思路也不难，找到翻页信息后批量请求，然">
-<meta property="og:locale">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/2020/08/17/Stata%E7%88%AC%E5%8F%96%E8%A1%8C%E4%B8%9A%E6%99%AF%E6%B0%94%E6%8C%87%E6%95%B0%E5%B9%B6%E5%8F%AF%E8%A7%86%E5%8C%96/中国企业景气指数与企业家信心指数_工业.png">
 <meta property="og:image" content="http://yoursite.com/2020/08/17/Stata%E7%88%AC%E5%8F%96%E8%A1%8C%E4%B8%9A%E6%99%AF%E6%B0%94%E6%8C%87%E6%95%B0%E5%B9%B6%E5%8F%AF%E8%A7%86%E5%8C%96/中国经济网行情数据中心.png">
 <meta property="article:published_time" content="2020-08-17T05:06:38.000Z">
@@ -45,7 +45,7 @@
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'zh-Hans'
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -89,7 +89,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="تشغيل شريط التصفح">
+    <div class="toggle" aria-label="切换导航栏">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -118,12 +118,12 @@
   <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
   </ul>
@@ -153,7 +153,7 @@
     
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/17/Stata%E7%88%AC%E5%8F%96%E8%A1%8C%E4%B8%9A%E6%99%AF%E6%B0%94%E6%8C%87%E6%95%B0%E5%B9%B6%E5%8F%AF%E8%A7%86%E5%8C%96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -175,16 +175,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">نُشر في</span>
+              <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="أُنشأ: 2020-08-17 13:06:38 / عُدل: 13:15:48" itemprop="dateCreated datePublished" datetime="2020-08-17T13:06:38+08:00">2020-08-17</time>
+              <time title="创建时间：2020-08-17 13:06:38 / 修改时间：13:15:48" itemprop="dateCreated datePublished" datetime="2020-08-17T13:06:38+08:00">2020-08-17</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">في</span>
+              <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Stata/" itemprop="url" rel="index"><span itemprop="name">Stata</span></a>
                 </span>
@@ -284,10 +284,10 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          المحتويات
+          文章目录
         </li>
         <li class="sidebar-nav-overview">
-          عام
+          站点概览
         </li>
       </ul>
 
@@ -308,16 +308,16 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">42</span>
-          <span class="site-state-item-name">المقالات</span>
+          <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
         <span class="site-state-item-count">24</span>
-        <span class="site-state-item-name">التصنيفات</span>
+        <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">
         <span class="site-state-item-count">16</span>
-        <span class="site-state-item-name">الوسوم</span>
+        <span class="site-state-item-name">标签</span>
       </div>
   </nav>
 </div>
@@ -349,7 +349,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Gang Li</span>
 </div>
-  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
 
         
