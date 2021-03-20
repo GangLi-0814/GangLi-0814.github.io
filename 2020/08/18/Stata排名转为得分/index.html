@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="提出问题手头有一份美国历届总统的排名，排名从1~44，需要将他们转化为对应的得分。换言之,将1位排名等价换算成$100&#x2F;44&#x3D;2.2727273分$。比如第一名为$100$分，第二名为$100-(100&#x2F;44)$分，依次类推。动图来演示如下：  实现思路实现思路大致可以分为如下四步：  首先生成排名与得分之间的换算关系； 借用 Excel 整理成相应的转换语句，参阅 批量替换变量值的小技巧； 将原">
+  <meta name="description" content="提出问题手头有一份美国历届总统的排名，排名从1~44，需要将他们转化为对应的得分。换言之,将1位排名等价换算成$100&#x2F;44&#x3D;2.2727273分$。比如第一名为$100$分，第二名为$100-(100&#x2F;44)$分，依次类推。动图来演示如下：  实现思路实现思路大致可以分为如下四步：  首先生成排名与得分之间的换算关系； 借用 Excel 整理成相应的转换语句，参阅 批量替换变量值的小技巧； 将">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Stata排名转为得分">
 <meta property="og:url" content="http://yoursite.com/2020/08/18/Stata%E6%8E%92%E5%90%8D%E8%BD%AC%E4%B8%BA%E5%BE%97%E5%88%86/index.html">
 <meta property="og:site_name" content="LG&#39;s Blog">
-<meta property="og:description" content="提出问题手头有一份美国历届总统的排名，排名从1~44，需要将他们转化为对应的得分。换言之,将1位排名等价换算成$100&#x2F;44&#x3D;2.2727273分$。比如第一名为$100$分，第二名为$100-(100&#x2F;44)$分，依次类推。动图来演示如下：  实现思路实现思路大致可以分为如下四步：  首先生成排名与得分之间的换算关系； 借用 Excel 整理成相应的转换语句，参阅 批量替换变量值的小技巧； 将原">
+<meta property="og:description" content="提出问题手头有一份美国历届总统的排名，排名从1~44，需要将他们转化为对应的得分。换言之,将1位排名等价换算成$100&#x2F;44&#x3D;2.2727273分$。比如第一名为$100$分，第二名为$100-(100&#x2F;44)$分，依次类推。动图来演示如下：  实现思路实现思路大致可以分为如下四步：  首先生成排名与得分之间的换算关系； 借用 Excel 整理成相应的转换语句，参阅 批量替换变量值的小技巧； 将">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/2020/08/18/Stata%E6%8E%92%E5%90%8D%E8%BD%AC%E4%B8%BA%E5%BE%97%E5%88%86/1.gif">
 <meta property="og:image" content="http://yoursite.com/2020/08/18/Stata%E6%8E%92%E5%90%8D%E8%BD%AC%E4%B8%BA%E5%BE%97%E5%88%86/2.jpg">
@@ -212,7 +212,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="提出问题"><a href="#提出问题" class="headerlink" title="提出问题"></a>提出问题</h2><p>手头有一份美国历届总统的排名，排名从1~44，需要将他们转化为对应的得分。换言之,将1位排名等价换算成$100/44=2.2727273分$。比如第一名为$100$分，第二名为$100-(100/44)$分，依次类推。动图来演示如下：</p>
+        <script src="/assets/js/APlayer.min.js"> </script><h2 id="提出问题"><a href="#提出问题" class="headerlink" title="提出问题"></a>提出问题</h2><p>手头有一份美国历届总统的排名，排名从1~44，需要将他们转化为对应的得分。换言之,将1位排名等价换算成$100/44=2.2727273分$。比如第一名为$100$分，第二名为$100-(100/44)$分，依次类推。动图来演示如下：</p>
 <p><img src="/2020/08/18/Stata%E6%8E%92%E5%90%8D%E8%BD%AC%E4%B8%BA%E5%BE%97%E5%88%86/1.gif" alt></p>
 <h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><p>实现思路大致可以分为如下四步：</p>
 <ul>

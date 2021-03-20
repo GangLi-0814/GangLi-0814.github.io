@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="前言本文为刊载于《经济学（季刊）》2019 年第 4 期上《文本大数据分析在经济学和金融学中的应用：一个文献综述》的阅读笔记。原论文详细综述了文本大数据信息提取方法、文本分析方法在经济学和金融学中的应用，是了解文本分析方法在经济学研究中应用的好材料。本篇笔记聚焦论文的第二部分，即文本大数据信息提取方法，旨在为文本分析方法的学习和日后研究运用提供基本认识。 下图是我阅读时记录的思维导图，原文和高清大">
+  <meta name="description" content="前言本文为刊载于《经济学（季刊）》2019 年第 4 期上《文本大数据分析在经济学和金融学中的应用：一个文献综述》的阅读笔记。原论文详细综述了文本大数据信息提取方法、文本分析方法在经济学和金融学中的应用，是了解文本分析方法在经济学研究中应用的好材料。本篇笔记聚焦论文的第二部分，即文本大数据信息提取方法，旨在为文本分析方法的学习和日后研究运用提供基本认识。 下图是我阅读时记录的思维导图，原文和高清">
 <meta property="og:type" content="article">
 <meta property="og:title" content="文本大数据信息提取方法">
 <meta property="og:url" content="http://yoursite.com/2020/08/17/%E6%96%87%E6%9C%AC%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%BF%A1%E6%81%AF%E6%8F%90%E5%8F%96%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="LG&#39;s Blog">
-<meta property="og:description" content="前言本文为刊载于《经济学（季刊）》2019 年第 4 期上《文本大数据分析在经济学和金融学中的应用：一个文献综述》的阅读笔记。原论文详细综述了文本大数据信息提取方法、文本分析方法在经济学和金融学中的应用，是了解文本分析方法在经济学研究中应用的好材料。本篇笔记聚焦论文的第二部分，即文本大数据信息提取方法，旨在为文本分析方法的学习和日后研究运用提供基本认识。 下图是我阅读时记录的思维导图，原文和高清大">
+<meta property="og:description" content="前言本文为刊载于《经济学（季刊）》2019 年第 4 期上《文本大数据分析在经济学和金融学中的应用：一个文献综述》的阅读笔记。原论文详细综述了文本大数据信息提取方法、文本分析方法在经济学和金融学中的应用，是了解文本分析方法在经济学研究中应用的好材料。本篇笔记聚焦论文的第二部分，即文本大数据信息提取方法，旨在为文本分析方法的学习和日后研究运用提供基本认识。 下图是我阅读时记录的思维导图，原文和高清">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/2020/08/17/%E6%96%87%E6%9C%AC%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%BF%A1%E6%81%AF%E6%8F%90%E5%8F%96%E6%96%B9%E6%B3%95/文本大数据信息提取方法.png">
 <meta property="og:image" content="http://yoursite.com/2020/08/17/%E6%96%87%E6%9C%AC%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%BF%A1%E6%81%AF%E6%8F%90%E5%8F%96%E6%96%B9%E6%B3%95/文本信息提取步骤.jpg">
@@ -207,7 +207,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文为刊载于《经济学（季刊）》2019 年第 4 期上<a target="_blank" rel="noopener" href="https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&amp;dbname=CJFDLAST2020&amp;filename=JJXU201904001&amp;v=MjkxMDF5ZlRlN0c0SDlqTXE0OUZaWVI4ZVgxTHV4WVM3RGgxVDNxVHJXTTFGckNVUjdxZlpPVnVGeTNsVTcvTUw=">《文本大数据分析在经济学和金融学中的应用：一个文献综述》</a>的阅读笔记。原论文详细综述了文本大数据信息提取方法、文本分析方法在经济学和金融学中的应用，是了解文本分析方法在经济学研究中应用的好材料。本篇笔记聚焦论文的第二部分，即文本大数据信息提取方法，旨在为文本分析方法的学习和日后研究运用提供基本认识。</p>
+        <script src="/assets/js/APlayer.min.js"> </script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文为刊载于《经济学（季刊）》2019 年第 4 期上<a target="_blank" rel="noopener" href="https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&amp;dbname=CJFDLAST2020&amp;filename=JJXU201904001&amp;v=MjkxMDF5ZlRlN0c0SDlqTXE0OUZaWVI4ZVgxTHV4WVM3RGgxVDNxVHJXTTFGckNVUjdxZlpPVnVGeTNsVTcvTUw=">《文本大数据分析在经济学和金融学中的应用：一个文献综述》</a>的阅读笔记。原论文详细综述了文本大数据信息提取方法、文本分析方法在经济学和金融学中的应用，是了解文本分析方法在经济学研究中应用的好材料。本篇笔记聚焦论文的第二部分，即文本大数据信息提取方法，旨在为文本分析方法的学习和日后研究运用提供基本认识。</p>
 <p><strong>下图是我阅读时记录的思维导图，原文和高清大图可在公众号后台回复【文本信息】获取。</strong></p>
 <p><img src="/2020/08/17/%E6%96%87%E6%9C%AC%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%BF%A1%E6%81%AF%E6%8F%90%E5%8F%96%E6%96%B9%E6%B3%95/文本大数据信息提取方法.png" alt></p>
 <h1 id="文本信息提取步骤"><a href="#文本信息提取步骤" class="headerlink" title="文本信息提取步骤"></a>文本信息提取步骤</h1><blockquote>
@@ -292,7 +292,7 @@
 <p>TF-IDF ( Term Frequency-Inverse Document Frequency ) ，一般翻译为“词频-逆向文件频率”。其计算公式为：</p>
 <p>首先，计算 tf 的值：</p>
 <script type="math/tex; mode=display">
-tf = \frac{n_{i,j}}{\sum_k{n_{kj}}}</script><p>其中，$n<em>{i,j}$ 表示某个词在语料库中出现的次数；$\sum_k{n</em>{k,j}}$ 表示是该文件中所有单词出现的次数之和。</p>
+tf = \frac{n_{i,j}}{\sum_k{n_{kj}}}</script><p>其中，$n_{i,j}$ 表示某个词在语料库中出现的次数；$\sum_k{n_{k,j}}$ 表示是该文件中所有单词出现的次数之和。</p>
 <p>而在 scikit-learn 中，idf 的计算公式为:</p>
 <script type="math/tex; mode=display">
 idf = log(\frac{N+1}{N_{w}+1})+1</script><p>其中，$N$ 表示语料库中的文件总数；$N_w$ 代表语料库中包含上述单词的文件数量。</p>
@@ -309,11 +309,11 @@ tf-idf = tf*idf</script><p>注：tf-idf 的计算公式有多种变体。</p>
 <li><code>allowPOS</code> 仅包括指定词性的词，默认值为空，即不筛选</li>
 </ul>
 <h4 id="主题分类模型"><a href="#主题分类模型" class="headerlink" title="主题分类模型"></a>主题分类模型</h4><p>在经济和金融领域的一个应用需求是在没有事先标注集的情况下，对文本按主题做分类。由于一篇文本的主题可能有多个，这类分类问题不同于按照事先标注集、将一篇文本仅归入一类的应用。主题分类问题的代表模型是由 Blei et al.（2003）提出的隐含狄利克雷分配（Latent Dirichlet Allocation，LDA）模型，它是一种概率主题模型。</p>
-<p>LDA 模型假定全部文档 $M$ 中存在 $K$ 个主题，每个文档 $m$ 包含 $N<em>m$ 个词语，并且每个词都是由其中一个主题生成。主题服从一个多项式分布 $\theta_m$ ，而每个主题 $k$ 与词汇表中的 $V$ 个单词的一个多项式分布 $\varphi</em>{k}$ 相对应，并且假定分布 $\theta_m$ 和分布 $\varphi_k$ 具有共轭的狄利克雷分布。该共轭的狄利克雷分布的超参数为 $\alpha$ 和 $\beta$ 。<strong>这样，通过预设文档中的主题个数，LDA 模型可以将每篇文档的主题以概率分布的形式给出，其中每个主题对应一类词语的分布，根据词语分布可以挑选出一些关键词对该主题进行描述</strong>。</p>
+<p>LDA 模型假定全部文档 $M$ 中存在 $K$ 个主题，每个文档 $m$ 包含 $N_m$ 个词语，并且每个词都是由其中一个主题生成。主题服从一个多项式分布 $\theta_m$ ，而每个主题 $k$ 与词汇表中的 $V$ 个单词的一个多项式分布 $\varphi_{k}$ 相对应，并且假定分布 $\theta_m$ 和分布 $\varphi_k$ 具有共轭的狄利克雷分布。该共轭的狄利克雷分布的超参数为 $\alpha$ 和 $\beta$ 。<strong>这样，通过预设文档中的主题个数，LDA 模型可以将每篇文档的主题以概率分布的形式给出，其中每个主题对应一类词语的分布，根据词语分布可以挑选出一些关键词对该主题进行描述</strong>。</p>
 <p><img src="/2020/08/17/%E6%96%87%E6%9C%AC%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%BF%A1%E6%81%AF%E6%8F%90%E5%8F%96%E6%96%B9%E6%B3%95/LDA模型图示法.png" alt></p>
-<p>LDA 模型假定文档的生成过程如上图所示：（1）从狄利克雷分布 $\alpha$ 中抽样得到文档 $m$ 的主题多项式分布 $\theta<em>m$ ，从狄利克雷分布 $\beta$ 抽样得到主题 $k$ 的词语多项式分布 $\varphi_k$，其中 $k = 1,2,…,k$；（2）从主题多项式分布 $\theta_m$ 中抽样得到文档 $m$ 的第 $n$ 个词的主题 $Z</em>{m,n}$ ；（3）从主题 $Z<em>{m,n}$ 对应的词语分布 $\varphi</em>{m,n}$ 抽取 $W<em>{m,n}$ ；（4）重复上述步骤 $N</em>{m}$ 次。因此，所有已知和隐藏的变量联合分布可以表示为：</p>
+<p>LDA 模型假定文档的生成过程如上图所示：（1）从狄利克雷分布 $\alpha$ 中抽样得到文档 $m$ 的主题多项式分布 $\theta_m$ ，从狄利克雷分布 $\beta$ 抽样得到主题 $k$ 的词语多项式分布 $\varphi_k$，其中 $k = 1,2,…,k$；（2）从主题多项式分布 $\theta_m$ 中抽样得到文档 $m$ 的第 $n$ 个词的主题 $Z_{m,n}$ ；（3）从主题 $Z_{m,n}$ 对应的词语分布 $\varphi_{m,n}$ 抽取 $W_{m,n}$ ；（4）重复上述步骤 $N_{m}$ 次。因此，所有已知和隐藏的变量联合分布可以表示为：</p>
 <script type="math/tex; mode=display">
-P(W_{m},Z_{m},\theta_{m},\Phi;\alpha,\beta) = \prod_{n=1}^{N_{m}}P(\theta_m;\alpha)P(Z_{m,n}|\theta_m)P(\Phi;\beta)P(W_{m,n}|\varphi_{Z_{m,n}})</script><p>其中，$\Phi = {\theta<em>{k}}</em>{k=1}^{K}$，模型中唯一可观测的变量是词语 $W<em>{m,n}$ 。实际应用中，可以通过 Gibss 抽样方法来估计 LDA 模型的参数，从而得到每篇文档的主题分布 $\theta_m$ 和每个主题对应的词语分布 $\varphi</em>{k}$ 。</p>
+P(W_{m},Z_{m},\theta_{m},\Phi;\alpha,\beta) = \prod_{n=1}^{N_{m}}P(\theta_m;\alpha)P(Z_{m,n}|\theta_m)P(\Phi;\beta)P(W_{m,n}|\varphi_{Z_{m,n}})</script><p>其中，$\Phi = \{\theta_{k}\}_{k=1}^{K}$，模型中唯一可观测的变量是词语 $W_{m,n}$ 。实际应用中，可以通过 Gibss 抽样方法来估计 LDA 模型的参数，从而得到每篇文档的主题分布 $\theta_m$ 和每个主题对应的词语分布 $\varphi_{k}$ 。</p>
 <p>LDA 的一个局限性是需要人为地给出一个主题数量，而主题数量的选择会影响主题的生成和文档的归类。</p>
 <h3 id="有监督学习方法"><a href="#有监督学习方法" class="headerlink" title="有监督学习方法"></a>有监督学习方法</h3><h4 id="经典的有监督机器学习方法"><a href="#经典的有监督机器学习方法" class="headerlink" title="经典的有监督机器学习方法"></a>经典的有监督机器学习方法</h4><p>经典机器学习方法包括朴素贝叶斯、支持向量机、决策树、K 近邻算法、AdaBoost、最大熵法等。在金融领域的文本分析中，较为常用的传统机器学习方法包括朴素贝叶斯（Naive Bayes）和支持向量机（Support Vector Machine，SVM）。</p>
 <p>朴素贝叶斯算法假定文本中的特征互相独立，即不同词语不存在相互依赖关系。在处理文本分类问题时常见步骤如下：</p>
