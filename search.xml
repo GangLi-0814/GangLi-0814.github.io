@@ -173,6 +173,27 @@
       </tags>
   </entry>
   <entry>
+    <title>IELTS-Writing-Answer-0825</title>
+    <url>/2020/08/26/IELTS-Writing-Answer-0825/</url>
+    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><blockquote>
+<p>In some countries, it is now possible for people to buy products made in other countries. To what extend do the benefits of this development outweigh the problems?</p>
+</blockquote>
+<p>It is common for people to purchase imported products such as food and clothes. I think it is a positive change, although it has a damaging effect on the environment. </p>
+<p>Importing products is beneficial to consumers because it can reduce the cost of living for many of them. Countries exporting these products have knowledge and technology to control the cost of production, which leads to lower prices. In addition, fierce competition forces local producers to cut prices. Consumers can benefit from it because they have more disposable income.</p>
+<p>Another benefit is that consumers have more options in shopping. It is difficult for inhabitants to buy some food products and household goods in some areas due to geographic locations and weather conditions. Imported goods allow them to improve the standard of living because they can buy products they need. For example, imported food is likely to alleviate the food shortage caused by extreme weather in some regions.</p>
+<p>On the other hand, the downside of importing products is that it may be harmful to the environment. It is necessary for importers to transport their products a long distance. Transportation can cause pollution since both airplanes and vehicles create emissions.</p>
+<p>In conclusion, I believe that importing products has a beneficial effect on consumers although it can cause damage to the environment.</p>
+]]></content>
+      <categories>
+        <category>IELTS</category>
+        <category>Notes</category>
+      </categories>
+      <tags>
+        <tag>IELTS</tag>
+        <tag>Notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>IELTS-Writing-Answer-0826</title>
     <url>/2020/08/26/IELTS-Writing-Answer-0826/</url>
     <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><blockquote>
@@ -256,23 +277,17 @@
       </tags>
   </entry>
   <entry>
-    <title>IELTS-Writing-Answer-0825</title>
-    <url>/2020/08/26/IELTS-Writing-Answer-0825/</url>
+    <title>Notes of Environment and Development Economics Wechat Platform</title>
+    <url>/2020/08/26/Notes-of-Environment-and-Development-Economics-Wechat-Platform/</url>
     <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><blockquote>
-<p>In some countries, it is now possible for people to buy products made in other countries. To what extend do the benefits of this development outweigh the problems?</p>
+<p>Ebenstein, A., Fan, M., Greenstone, M., He, G. and Zhou, M., 2017. New evidence on the impact of sustained exposure to air pollution on life expectancy from China’s Huai River Policy. Proceedings of the National Academy of Sciences, 114(39), pp.10384-10389.</p>
 </blockquote>
-<p>It is common for people to purchase imported products such as food and clothes. I think it is a positive change, although it has a damaging effect on the environment. </p>
-<p>Importing products is beneficial to consumers because it can reduce the cost of living for many of them. Countries exporting these products have knowledge and technology to control the cost of production, which leads to lower prices. In addition, fierce competition forces local producers to cut prices. Consumers can benefit from it because they have more disposable income.</p>
-<p>Another benefit is that consumers have more options in shopping. It is difficult for inhabitants to buy some food products and household goods in some areas due to geographic locations and weather conditions. Imported goods allow them to improve the standard of living because they can buy products they need. For example, imported food is likely to alleviate the food shortage caused by extreme weather in some regions.</p>
-<p>On the other hand, the downside of importing products is that it may be harmful to the environment. It is necessary for importers to transport their products a long distance. Transportation can cause pollution since both airplanes and vehicles create emissions.</p>
-<p>In conclusion, I believe that importing products has a beneficial effect on consumers although it can cause damage to the environment.</p>
+<p>AQLI(Air Quality Life Index, AQLI） can be used to measure the influence of clean air to human life expectancy.</p>
 ]]></content>
       <categories>
-        <category>IELTS</category>
         <category>Notes</category>
       </categories>
       <tags>
-        <tag>IELTS</tag>
         <tag>Notes</tag>
       </tags>
   </entry>
@@ -784,21 +799,6 @@ Good luck!
       </categories>
       <tags>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Notes of Environment and Development Economics Wechat Platform</title>
-    <url>/2020/08/26/Notes-of-Environment-and-Development-Economics-Wechat-Platform/</url>
-    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><blockquote>
-<p>Ebenstein, A., Fan, M., Greenstone, M., He, G. and Zhou, M., 2017. New evidence on the impact of sustained exposure to air pollution on life expectancy from China’s Huai River Policy. Proceedings of the National Academy of Sciences, 114(39), pp.10384-10389.</p>
-</blockquote>
-<p>AQLI(Air Quality Life Index, AQLI） can be used to measure the influence of clean air to human life expectancy.</p>
-]]></content>
-      <categories>
-        <category>Notes</category>
-      </categories>
-      <tags>
-        <tag>Notes</tag>
       </tags>
   </entry>
   <entry>
@@ -5918,6 +5918,26 @@ dtype: object
       </tags>
   </entry>
   <entry>
+    <title>Python时间戳转化</title>
+    <url>/2020/09/04/Python%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E5%8C%96/</url>
+    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="1-提出问题"><a href="#1-提出问题" class="headerlink" title="1. 提出问题"></a>1. 提出问题</h2><p><img src="/2020/09/04/Python%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E5%8C%96/1.jpg" alt></p>
+<p>爬数据的时候，有没有遇见过爬下来的数据日期显示为一大串数字？像上图中的<code>beginbidtime</code>变量，这是时间戳。时间戳是啥？是指格林威治时间自1970年1月1日（00:00:00 GMT）(一般把这个时点称为 <code>unix</code> 纪元或 <code>POSIX</code> 时间)至当前时间的总秒数。时间戳的好处是能够唯一地表示某一刻的时间，但这显然不利于肉眼观察和分析数据，所以下面我们将时间戳转化为常见的时间格式。</p>
+<h2 id="2-方法介绍"><a href="#2-方法介绍" class="headerlink" title="2. 方法介绍"></a>2. 方法介绍</h2><p>可以使用<code>Pandas</code>库中的<code>to_datetime()</code>函数实现，<code>to_datetime()</code>函数用于转换字符串、时间戳等各种形式的日期数据，转换<code>Series</code>时，返回具有相同索引的<code>Series</code>，日期时间列表则会被转换为<code>DtetimeIndex</code>。鉴于 <code>Timestamp</code> 对象内部存储方式，这种转换的默认单位是纳秒。不过，一般都会用指定其它时间单位 <code>unit</code> 来存储纪元数据。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pd.to_datetime([<span class="number">1349720105</span>, <span class="number">1349806505</span>, <span class="number">1349892905</span>,<span class="number">1349979305</span>, <span class="number">1350065705</span>], unit=<span class="string">&#x27;s&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">DatetimeIndex([&#x27;2012-10-08 18:15:05&#x27;, &#x27;2012-10-09 18:15:05&#x27;,</span></span><br><span class="line"><span class="string">               &#x27;2012-10-10 18:15:05&#x27;, &#x27;2012-10-11 18:15:05&#x27;,</span></span><br><span class="line"><span class="string">               &#x27;2012-10-12 18:15:05&#x27;],</span></span><br><span class="line"><span class="string">              dtype=&#x27;datetime64[ns]&#x27;, freq=None)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">pd.to_datetime([<span class="number">1349720105100</span>, <span class="number">1349720105200</span>, <span class="number">1349720105300</span>,<span class="number">1349720105400</span>, <span class="number">1349720105500</span>], unit=<span class="string">&#x27;ms&#x27;</span>)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">DatetimeIndex([&#x27;2012-10-08 18:15:05.100000&#x27;, &#x27;2012-10-08 18:15:05.200000&#x27;,</span></span><br><span class="line"><span class="string">               &#x27;2012-10-08 18:15:05.300000&#x27;, &#x27;2012-10-08 18:15:05.400000&#x27;,</span></span><br><span class="line"><span class="string">               &#x27;2012-10-08 18:15:05.500000&#x27;],</span></span><br><span class="line"><span class="string">              dtype=&#x27;datetime64[ns]&#x27;, freq=None)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-实现过程"><a href="#3-实现过程" class="headerlink" title="3. 实现过程"></a>3. 实现过程</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;RRD_User_Info.xlsx&#x27;</span>,prase_date=<span class="literal">True</span>)</span><br><span class="line">df.head()</span><br><span class="line"></span><br><span class="line">df.beginbidtime = pd.to_datetime(df.beginbidtime,unit=<span class="string">&#x27;ms&#x27;</span>)</span><br><span class="line">df.closetime = pd.to_datetime(df.closetime,unit=<span class="string">&#x27;ms&#x27;</span>)</span><br><span class="line">df.to_excel(<span class="string">&#x27;RRD_User_Transformed.xlsx&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="4-实现结果"><a href="#4-实现结果" class="headerlink" title="4. 实现结果"></a>4. 实现结果</h2><p>经过上面的操作，就将时间戳转换转换为我们熟悉的时间格式了。结果如下：</p>
+<p><img src="/2020/09/04/Python%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E5%8C%96/2.jpg" alt></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Data</category>
+      </categories>
+      <tags>
+        <tag>Data</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python做多元线性回归</title>
     <url>/2020/08/17/Python%E5%81%9A%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</url>
     <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><blockquote>
@@ -5969,26 +5989,6 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
       </tags>
   </entry>
   <entry>
-    <title>Python时间戳转化</title>
-    <url>/2020/09/04/Python%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E5%8C%96/</url>
-    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="1-提出问题"><a href="#1-提出问题" class="headerlink" title="1. 提出问题"></a>1. 提出问题</h2><p><img src="/2020/09/04/Python%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E5%8C%96/1.jpg" alt></p>
-<p>爬数据的时候，有没有遇见过爬下来的数据日期显示为一大串数字？像上图中的<code>beginbidtime</code>变量，这是时间戳。时间戳是啥？是指格林威治时间自1970年1月1日（00:00:00 GMT）(一般把这个时点称为 <code>unix</code> 纪元或 <code>POSIX</code> 时间)至当前时间的总秒数。时间戳的好处是能够唯一地表示某一刻的时间，但这显然不利于肉眼观察和分析数据，所以下面我们将时间戳转化为常见的时间格式。</p>
-<h2 id="2-方法介绍"><a href="#2-方法介绍" class="headerlink" title="2. 方法介绍"></a>2. 方法介绍</h2><p>可以使用<code>Pandas</code>库中的<code>to_datetime()</code>函数实现，<code>to_datetime()</code>函数用于转换字符串、时间戳等各种形式的日期数据，转换<code>Series</code>时，返回具有相同索引的<code>Series</code>，日期时间列表则会被转换为<code>DtetimeIndex</code>。鉴于 <code>Timestamp</code> 对象内部存储方式，这种转换的默认单位是纳秒。不过，一般都会用指定其它时间单位 <code>unit</code> 来存储纪元数据。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pd.to_datetime([<span class="number">1349720105</span>, <span class="number">1349806505</span>, <span class="number">1349892905</span>,<span class="number">1349979305</span>, <span class="number">1350065705</span>], unit=<span class="string">&#x27;s&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">DatetimeIndex([&#x27;2012-10-08 18:15:05&#x27;, &#x27;2012-10-09 18:15:05&#x27;,</span></span><br><span class="line"><span class="string">               &#x27;2012-10-10 18:15:05&#x27;, &#x27;2012-10-11 18:15:05&#x27;,</span></span><br><span class="line"><span class="string">               &#x27;2012-10-12 18:15:05&#x27;],</span></span><br><span class="line"><span class="string">              dtype=&#x27;datetime64[ns]&#x27;, freq=None)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">pd.to_datetime([<span class="number">1349720105100</span>, <span class="number">1349720105200</span>, <span class="number">1349720105300</span>,<span class="number">1349720105400</span>, <span class="number">1349720105500</span>], unit=<span class="string">&#x27;ms&#x27;</span>)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">DatetimeIndex([&#x27;2012-10-08 18:15:05.100000&#x27;, &#x27;2012-10-08 18:15:05.200000&#x27;,</span></span><br><span class="line"><span class="string">               &#x27;2012-10-08 18:15:05.300000&#x27;, &#x27;2012-10-08 18:15:05.400000&#x27;,</span></span><br><span class="line"><span class="string">               &#x27;2012-10-08 18:15:05.500000&#x27;],</span></span><br><span class="line"><span class="string">              dtype=&#x27;datetime64[ns]&#x27;, freq=None)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-<h2 id="3-实现过程"><a href="#3-实现过程" class="headerlink" title="3. 实现过程"></a>3. 实现过程</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;RRD_User_Info.xlsx&#x27;</span>,prase_date=<span class="literal">True</span>)</span><br><span class="line">df.head()</span><br><span class="line"></span><br><span class="line">df.beginbidtime = pd.to_datetime(df.beginbidtime,unit=<span class="string">&#x27;ms&#x27;</span>)</span><br><span class="line">df.closetime = pd.to_datetime(df.closetime,unit=<span class="string">&#x27;ms&#x27;</span>)</span><br><span class="line">df.to_excel(<span class="string">&#x27;RRD_User_Transformed.xlsx&#x27;</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="4-实现结果"><a href="#4-实现结果" class="headerlink" title="4. 实现结果"></a>4. 实现结果</h2><p>经过上面的操作，就将时间戳转换转换为我们熟悉的时间格式了。结果如下：</p>
-<p><img src="/2020/09/04/Python%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E5%8C%96/2.jpg" alt></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Data</category>
-      </categories>
-      <tags>
-        <tag>Data</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Stata排名转为得分</title>
     <url>/2020/08/18/Stata%E6%8E%92%E5%90%8D%E8%BD%AC%E4%B8%BA%E5%BE%97%E5%88%86/</url>
     <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="提出问题"><a href="#提出问题" class="headerlink" title="提出问题"></a>提出问题</h2><p>手头有一份美国历届总统的排名，排名从1~44，需要将他们转化为对应的得分。换言之,将1位排名等价换算成$100/44=2.2727273分$。比如第一名为$100$分，第二名为$100-(100/44)$分，依次类推。动图来演示如下：</p>
@@ -6010,45 +6010,6 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
       </categories>
       <tags>
         <tag>Data</tag>
-        <tag>Stata</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Stata整理证监会上市公司行业分类</title>
-    <url>/2020/08/17/Stata%E6%95%B4%E7%90%86%E8%AF%81%E7%9B%91%E4%BC%9A%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E8%A1%8C%E4%B8%9A%E5%88%86%E7%B1%BB/</url>
-    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h1 id="问题的提出"><a href="#问题的提出" class="headerlink" title="问题的提出"></a>问题的提出</h1><p>证监会网站会公布每季度<a href="http://www.csrc.gov.cn/pub/newsite/scb/ssgshyfljg/">上市公司最新行业分类结果</a>，但提供的是 PDF 版本，难以直接用作数据匹配。刚正好需要这份数据，所以用 Stata 来下载、转换和整理数据。</p>
-<h1 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h1><ol>
-<li>使用 Stata16 调用 Python 完成文件的下载、PDF 转换成 Excel 文件。</li>
-<li>使用 Stata 进行数据整理，涉及观测值去重、填充和利用正则表达式生成新变量等内容。</li>
-</ol>
-<h1 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h1><h2 id="调用-Python-下载和提取文件"><a href="#调用-Python-下载和提取文件" class="headerlink" title="调用 Python 下载和提取文件"></a>调用 Python 下载和提取文件</h2><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">python:</span><br><span class="line">import requests</span><br><span class="line">import pdfplumber</span><br><span class="line">from openpyxl import Workbook</span><br><span class="line"></span><br><span class="line"># 下载 PDF 文件</span><br><span class="line">pdf_2019q4 = &#x27;http:<span class="comment">//www.csrc.gov.cn/pub/newsite/scb/ssgshyfljg/202001/W020200110325952653089.pdf&#x27;</span></span><br><span class="line">r = requests.<span class="built_in">get</span>(pdf_2019q4, stream=True)</span><br><span class="line">with <span class="keyword">open</span>(<span class="string">&quot;证监会2019年4季度上市公司行业分类结果.pdf&quot;</span>, <span class="string">&quot;wb&quot;</span>) <span class="keyword">as</span> pdf:</span><br><span class="line">    <span class="keyword">for</span> content <span class="keyword">in</span> r:</span><br><span class="line">            pdf.write(content)</span><br><span class="line"></span><br><span class="line"># 提取并写入Excel</span><br><span class="line">wb = Workbook()</span><br><span class="line">ws = wb.active</span><br><span class="line">with pdfplumber.<span class="keyword">open</span>(<span class="string">&quot;证监会2019年4季度上市公司行业分类结果.pdf&quot;</span>) <span class="keyword">as</span> pdf:</span><br><span class="line">    <span class="keyword">for</span> page <span class="keyword">in</span> pdf.pages:</span><br><span class="line">        <span class="keyword">for</span> <span class="keyword">table</span> <span class="keyword">in</span> page.extract_tables():</span><br><span class="line">            <span class="keyword">for</span> row <span class="keyword">in</span> <span class="keyword">table</span>:</span><br><span class="line">                ws.<span class="keyword">append</span>(row)</span><br><span class="line">wb.<span class="keyword">save</span>(<span class="string">&quot;证监会2019年4季度上市公司行业分类结果.xlsx&quot;</span>)</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-<h2 id="整理数据"><a href="#整理数据" class="headerlink" title="整理数据"></a>整理数据</h2><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">import excel using <span class="string">&quot;证监会2019年4季度上市公司行业分类结果.xlsx&quot;</span>, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">duplicates</span> <span class="keyword">drop</span></span><br><span class="line"></span><br><span class="line"><span class="comment">* ssc install nrow, replace</span></span><br><span class="line"><span class="comment">* ssc install carryforward, replace</span></span><br><span class="line">nrow</span><br><span class="line">carryforward _all,<span class="keyword">replace</span></span><br><span class="line"><span class="keyword">gen</span> 行业门类与大类 = ustrregexs(0) + 行业大类代码 <span class="keyword">if</span> ustrregexm(门类名称及代码,<span class="string">&quot;[A-Z]&quot;</span>) == 1</span><br><span class="line"><span class="keyword">save</span> <span class="string">&quot;201914上市公司行业分类.dta&quot;</span>, <span class="keyword">replace</span></span><br></pre></td></tr></table></figure>
-<h1 id="最终结果"><a href="#最终结果" class="headerlink" title="最终结果"></a>最终结果</h1><p><img src="/2020/08/17/Stata%E6%95%B4%E7%90%86%E8%AF%81%E7%9B%91%E4%BC%9A%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E8%A1%8C%E4%B8%9A%E5%88%86%E7%B1%BB/result.png" alt></p>
-]]></content>
-      <categories>
-        <category>Stata</category>
-      </categories>
-      <tags>
-        <tag>Stata</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Stata爬取行业景气指数并可视化</title>
-    <url>/2020/08/17/Stata%E7%88%AC%E5%8F%96%E8%A1%8C%E4%B8%9A%E6%99%AF%E6%B0%94%E6%8C%87%E6%95%B0%E5%B9%B6%E5%8F%AF%E8%A7%86%E5%8C%96/</url>
-    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之前看见有文章在稳健性检验部分，用企业景气指数和企业家信心指数代替 GDP 增长率作为宏观经济层面投资机会的替代变量（李凤羽和杨墨竹，2015）。所以想收集来看看，在网上找到<a href="http://data.ce.cn/">中国经济网行情数据中心</a>公布了数据，所以用 Stata 爬了下，好久没有用 Stata 干这种活儿，也当是练练手。</p>
-<h1 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h1><p>网页是 POST 请求，所以调用 <code>curl</code> 进行爬取。爬虫的思路也不难，找到翻页信息后批量请求，然后对字符串进行清理，最终整理成规范的数据。注意，如果想复刻我的代码，注意先下载 <code>curl</code>，安装<code>nrow</code>, <code>openall</code> 两个外部命令。 </p>
-<h1 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h1><h2 id="爬取数据"><a href="#爬取数据" class="headerlink" title="爬取数据"></a>爬取数据</h2><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="comment">* 获取页面截止页码</span></span><br><span class="line">!curl -<span class="keyword">H</span> <span class="string">&quot;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36&quot;</span> -<span class="keyword">d</span> <span class="string">&quot;curPage=1&amp;numPerPage=15&amp;rand=1587711227852&quot;</span> -o confidenceIndex.txt <span class="string">&quot;http://data.ce.cn/servlet/macrography/MacrographyAction?function=Condition&quot;</span></span><br><span class="line"><span class="keyword">infix</span> strL v 1-20000 using confidenceIndex.txt,<span class="keyword">clear</span></span><br><span class="line"><span class="keyword">keep</span> <span class="keyword">if</span> <span class="built_in">index</span>(v, <span class="string">&quot;pagecount&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> ustrregexm(v,<span class="string">&quot;(\d+)&quot;</span>) <span class="keyword">local</span> a = ustrregexs(1)</span><br><span class="line"></span><br><span class="line"><span class="comment">* 爬取并存储单页数据</span></span><br><span class="line"><span class="keyword">forvalues</span> p = 1/<span class="symbol">`a&#x27;</span>&#123; </span><br><span class="line">    <span class="keyword">qui</span>&#123;</span><br><span class="line">    !curl -<span class="keyword">H</span> <span class="string">&quot;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36&quot;</span> -<span class="keyword">d</span> <span class="string">&quot;curPage=`p&#x27;&amp;numPerPage=15&amp;rand=1530620756348&quot;</span> -o confidenceIndex.txt <span class="string">&quot;http://data.ce.cn/servlet/macrography/MacrographyAction?function=Condition&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">    * 处理字符串</span></span><br><span class="line">    <span class="keyword">infix</span> strL v 1-200000 using confidenceIndex.txt,<span class="keyword">clear</span></span><br><span class="line">    <span class="keyword">keep</span> <span class="keyword">if</span> <span class="built_in">index</span>(v,<span class="string">`&quot;&lt;td &gt;&quot;&#x27;</span>) | <span class="comment">///</span></span><br><span class="line">        <span class="built_in">index</span>(v,<span class="string">`&quot;&lt;td style=&quot;border-left:none;&quot;&gt;&quot;&#x27;</span>) | <span class="comment">///</span></span><br><span class="line">        <span class="built_in">index</span>(v,<span class="string">`&quot;&lt;td class=&quot;tsblue&quot; style=&quot;border-left:0 none;&quot;&gt;&quot;&#x27;</span>) </span><br><span class="line">        </span><br><span class="line">    <span class="keyword">replace</span> v = ustrregexra(v,<span class="string">&quot;&lt;(.*?)td(.*?)&gt;&quot;</span>,<span class="string">&quot;&quot;</span>) </span><br><span class="line"></span><br><span class="line"><span class="comment">    * 调整数据格式</span></span><br><span class="line">        <span class="keyword">forvalues</span> i = 0/7&#123;</span><br><span class="line">            <span class="keyword">gen</span> temp<span class="symbol">`i&#x27;</span> = v <span class="keyword">if</span> <span class="built_in">mod</span>(_n, 7) == <span class="symbol">`i&#x27;</span></span><br><span class="line">            <span class="keyword">preserve</span></span><br><span class="line">            <span class="keyword">keep</span> temp<span class="symbol">`i&#x27;</span></span><br><span class="line">            <span class="keyword">drop</span> <span class="keyword">if</span> temp<span class="symbol">`i&#x27;</span> == <span class="string">&quot;&quot;</span></span><br><span class="line">            <span class="keyword">save</span> <span class="string">&quot;.\temp\temp`i&#x27;.dta&quot;</span>, <span class="keyword">replace</span></span><br><span class="line">            <span class="keyword">restore</span></span><br><span class="line">        &#125;    </span><br><span class="line"></span><br><span class="line">    <span class="keyword">use</span> <span class="string">&quot;.\temp\temp0.dta&quot;</span>, <span class="keyword">clear</span></span><br><span class="line">    <span class="keyword">forvalues</span> i = 1/6&#123;</span><br><span class="line">        <span class="keyword">merge</span> 1:1 _n using <span class="string">&quot;.\temp\temp`i&#x27;.dta&quot;</span>, nogen    </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    nrow</span><br><span class="line">    <span class="keyword">save</span> <span class="string">&quot;.\result\result`p&#x27;.dta&quot;</span>, <span class="keyword">replace</span></span><br><span class="line">&#125;</span><br><span class="line">    <span class="keyword">dis</span> <span class="keyword">in</span> result <span class="string">&quot;第 -`p&#x27;- 页爬取完毕!&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="数据整理"><a href="#数据整理" class="headerlink" title="数据整理"></a>数据整理</h2><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">openall, directory(<span class="string">&quot;./result/&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">* 日期变量</span></span><br><span class="line"><span class="keyword">gen</span> q = usubstr(月份,1,4) + <span class="string">&quot;q&quot;</span> + usubstr(月份,6,1)</span><br><span class="line"><span class="keyword">g</span> 季度=<span class="built_in">quarterly</span>(q,<span class="string">&quot;YQ&quot;</span>)</span><br><span class="line"><span class="keyword">format</span> 季度 %tq</span><br><span class="line"><span class="keyword">drop</span> q</span><br><span class="line"></span><br><span class="line"><span class="comment">* 数据类型</span></span><br><span class="line"><span class="keyword">order</span> 月份 数据类型 总体 工业 建筑业 房地产业 住宿和餐饮业</span><br><span class="line"><span class="keyword">destring</span> 总体-住宿和餐饮业, <span class="keyword">replace</span></span><br><span class="line"><span class="keyword">encode</span> 数据类型, <span class="keyword">gen</span>(类型)</span><br><span class="line"></span><br><span class="line"><span class="comment">* 定义panel</span></span><br><span class="line"><span class="keyword">xtset</span> 季度 类型</span><br><span class="line"><span class="keyword">save</span> <span class="string">&quot;企业景气指数与企业家信心指数.dta&quot;</span>, <span class="keyword">replace</span></span><br></pre></td></tr></table></figure>
-<h1 id="绘图"><a href="#绘图" class="headerlink" title="绘图"></a>绘图</h1><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> <span class="string">&quot;企业景气指数与企业家信心指数.dta&quot;</span>, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">tw</span> (<span class="keyword">line</span> 工业 季度 <span class="keyword">if</span> 类型 == 1) <span class="comment">///</span></span><br><span class="line">   (<span class="keyword">line</span> 工业 季度 <span class="keyword">if</span> 类型 == 2), <span class="comment">///</span></span><br><span class="line">   scheme(qleanmono) <span class="comment">///</span></span><br><span class="line">   legend(pos(8) <span class="keyword">label</span>(1 <span class="string">&quot;企业家信心指数&quot;</span>) <span class="keyword">label</span>(2 <span class="string">&quot;企业景气指数&quot;</span>)) <span class="comment">///</span></span><br><span class="line">   title(<span class="string">&quot;中国企业景气指数与企业家信心指数：工业&quot;</span>) <span class="comment">///</span></span><br><span class="line">   subtitle(<span class="string">&quot;（时间：1999年第1季度-2019年第4季度）&quot;</span>) <span class="comment">///</span></span><br><span class="line">   ytitle(<span class="string">&quot;总体指数&quot;</span>) <span class="comment">///</span></span><br><span class="line">   <span class="keyword">note</span>(<span class="string">&quot;数据来源：中国经济网（http://data.ce.cn）&quot;</span>)</span><br><span class="line"><span class="keyword">graph</span> export <span class="string">&quot;中国企业景气指数与企业家信心指数_工业.png&quot;</span>, <span class="keyword">replace</span></span><br></pre></td></tr></table></figure>
-<p><img src="/2020/08/17/Stata%E7%88%AC%E5%8F%96%E8%A1%8C%E4%B8%9A%E6%99%AF%E6%B0%94%E6%8C%87%E6%95%B0%E5%B9%B6%E5%8F%AF%E8%A7%86%E5%8C%96/中国企业景气指数与企业家信心指数_工业.png" alt></p>
-<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>中国经济网行情数据中心还有一些其他股票、基金、宏观经济和金融等数据，数据源质量还比较好。</p>
-<p><img src="/2020/08/17/Stata%E7%88%AC%E5%8F%96%E8%A1%8C%E4%B8%9A%E6%99%AF%E6%B0%94%E6%8C%87%E6%95%B0%E5%B9%B6%E5%8F%AF%E8%A7%86%E5%8C%96/中国经济网行情数据中心.png" alt></p>
-<p>其实有点想以这个网站数据源为基础，写个命令方便的获取上面的数据，但是一是现在还有其他的事情要忙活，做这件事的激励似乎不太够；二是写出来之后还需要精力维护，就先搁置吧。有兴趣的朋友可以尝试一下，我在上面这里也爬过房价指数和其他的数据，数据页面的网页结构是差不多的，实现起来应该也还好。</p>
-]]></content>
-      <categories>
-        <category>Stata</category>
-      </categories>
-      <tags>
         <tag>Stata</tag>
       </tags>
   </entry>
@@ -21257,6 +21218,45 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
       </tags>
   </entry>
   <entry>
+    <title>Stata爬取行业景气指数并可视化</title>
+    <url>/2020/08/17/Stata%E7%88%AC%E5%8F%96%E8%A1%8C%E4%B8%9A%E6%99%AF%E6%B0%94%E6%8C%87%E6%95%B0%E5%B9%B6%E5%8F%AF%E8%A7%86%E5%8C%96/</url>
+    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之前看见有文章在稳健性检验部分，用企业景气指数和企业家信心指数代替 GDP 增长率作为宏观经济层面投资机会的替代变量（李凤羽和杨墨竹，2015）。所以想收集来看看，在网上找到<a href="http://data.ce.cn/">中国经济网行情数据中心</a>公布了数据，所以用 Stata 爬了下，好久没有用 Stata 干这种活儿，也当是练练手。</p>
+<h1 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h1><p>网页是 POST 请求，所以调用 <code>curl</code> 进行爬取。爬虫的思路也不难，找到翻页信息后批量请求，然后对字符串进行清理，最终整理成规范的数据。注意，如果想复刻我的代码，注意先下载 <code>curl</code>，安装<code>nrow</code>, <code>openall</code> 两个外部命令。 </p>
+<h1 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h1><h2 id="爬取数据"><a href="#爬取数据" class="headerlink" title="爬取数据"></a>爬取数据</h2><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="comment">* 获取页面截止页码</span></span><br><span class="line">!curl -<span class="keyword">H</span> <span class="string">&quot;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36&quot;</span> -<span class="keyword">d</span> <span class="string">&quot;curPage=1&amp;numPerPage=15&amp;rand=1587711227852&quot;</span> -o confidenceIndex.txt <span class="string">&quot;http://data.ce.cn/servlet/macrography/MacrographyAction?function=Condition&quot;</span></span><br><span class="line"><span class="keyword">infix</span> strL v 1-20000 using confidenceIndex.txt,<span class="keyword">clear</span></span><br><span class="line"><span class="keyword">keep</span> <span class="keyword">if</span> <span class="built_in">index</span>(v, <span class="string">&quot;pagecount&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> ustrregexm(v,<span class="string">&quot;(\d+)&quot;</span>) <span class="keyword">local</span> a = ustrregexs(1)</span><br><span class="line"></span><br><span class="line"><span class="comment">* 爬取并存储单页数据</span></span><br><span class="line"><span class="keyword">forvalues</span> p = 1/<span class="symbol">`a&#x27;</span>&#123; </span><br><span class="line">    <span class="keyword">qui</span>&#123;</span><br><span class="line">    !curl -<span class="keyword">H</span> <span class="string">&quot;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36&quot;</span> -<span class="keyword">d</span> <span class="string">&quot;curPage=`p&#x27;&amp;numPerPage=15&amp;rand=1530620756348&quot;</span> -o confidenceIndex.txt <span class="string">&quot;http://data.ce.cn/servlet/macrography/MacrographyAction?function=Condition&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">    * 处理字符串</span></span><br><span class="line">    <span class="keyword">infix</span> strL v 1-200000 using confidenceIndex.txt,<span class="keyword">clear</span></span><br><span class="line">    <span class="keyword">keep</span> <span class="keyword">if</span> <span class="built_in">index</span>(v,<span class="string">`&quot;&lt;td &gt;&quot;&#x27;</span>) | <span class="comment">///</span></span><br><span class="line">        <span class="built_in">index</span>(v,<span class="string">`&quot;&lt;td style=&quot;border-left:none;&quot;&gt;&quot;&#x27;</span>) | <span class="comment">///</span></span><br><span class="line">        <span class="built_in">index</span>(v,<span class="string">`&quot;&lt;td class=&quot;tsblue&quot; style=&quot;border-left:0 none;&quot;&gt;&quot;&#x27;</span>) </span><br><span class="line">        </span><br><span class="line">    <span class="keyword">replace</span> v = ustrregexra(v,<span class="string">&quot;&lt;(.*?)td(.*?)&gt;&quot;</span>,<span class="string">&quot;&quot;</span>) </span><br><span class="line"></span><br><span class="line"><span class="comment">    * 调整数据格式</span></span><br><span class="line">        <span class="keyword">forvalues</span> i = 0/7&#123;</span><br><span class="line">            <span class="keyword">gen</span> temp<span class="symbol">`i&#x27;</span> = v <span class="keyword">if</span> <span class="built_in">mod</span>(_n, 7) == <span class="symbol">`i&#x27;</span></span><br><span class="line">            <span class="keyword">preserve</span></span><br><span class="line">            <span class="keyword">keep</span> temp<span class="symbol">`i&#x27;</span></span><br><span class="line">            <span class="keyword">drop</span> <span class="keyword">if</span> temp<span class="symbol">`i&#x27;</span> == <span class="string">&quot;&quot;</span></span><br><span class="line">            <span class="keyword">save</span> <span class="string">&quot;.\temp\temp`i&#x27;.dta&quot;</span>, <span class="keyword">replace</span></span><br><span class="line">            <span class="keyword">restore</span></span><br><span class="line">        &#125;    </span><br><span class="line"></span><br><span class="line">    <span class="keyword">use</span> <span class="string">&quot;.\temp\temp0.dta&quot;</span>, <span class="keyword">clear</span></span><br><span class="line">    <span class="keyword">forvalues</span> i = 1/6&#123;</span><br><span class="line">        <span class="keyword">merge</span> 1:1 _n using <span class="string">&quot;.\temp\temp`i&#x27;.dta&quot;</span>, nogen    </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    nrow</span><br><span class="line">    <span class="keyword">save</span> <span class="string">&quot;.\result\result`p&#x27;.dta&quot;</span>, <span class="keyword">replace</span></span><br><span class="line">&#125;</span><br><span class="line">    <span class="keyword">dis</span> <span class="keyword">in</span> result <span class="string">&quot;第 -`p&#x27;- 页爬取完毕!&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="数据整理"><a href="#数据整理" class="headerlink" title="数据整理"></a>数据整理</h2><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">openall, directory(<span class="string">&quot;./result/&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">* 日期变量</span></span><br><span class="line"><span class="keyword">gen</span> q = usubstr(月份,1,4) + <span class="string">&quot;q&quot;</span> + usubstr(月份,6,1)</span><br><span class="line"><span class="keyword">g</span> 季度=<span class="built_in">quarterly</span>(q,<span class="string">&quot;YQ&quot;</span>)</span><br><span class="line"><span class="keyword">format</span> 季度 %tq</span><br><span class="line"><span class="keyword">drop</span> q</span><br><span class="line"></span><br><span class="line"><span class="comment">* 数据类型</span></span><br><span class="line"><span class="keyword">order</span> 月份 数据类型 总体 工业 建筑业 房地产业 住宿和餐饮业</span><br><span class="line"><span class="keyword">destring</span> 总体-住宿和餐饮业, <span class="keyword">replace</span></span><br><span class="line"><span class="keyword">encode</span> 数据类型, <span class="keyword">gen</span>(类型)</span><br><span class="line"></span><br><span class="line"><span class="comment">* 定义panel</span></span><br><span class="line"><span class="keyword">xtset</span> 季度 类型</span><br><span class="line"><span class="keyword">save</span> <span class="string">&quot;企业景气指数与企业家信心指数.dta&quot;</span>, <span class="keyword">replace</span></span><br></pre></td></tr></table></figure>
+<h1 id="绘图"><a href="#绘图" class="headerlink" title="绘图"></a>绘图</h1><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> <span class="string">&quot;企业景气指数与企业家信心指数.dta&quot;</span>, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">tw</span> (<span class="keyword">line</span> 工业 季度 <span class="keyword">if</span> 类型 == 1) <span class="comment">///</span></span><br><span class="line">   (<span class="keyword">line</span> 工业 季度 <span class="keyword">if</span> 类型 == 2), <span class="comment">///</span></span><br><span class="line">   scheme(qleanmono) <span class="comment">///</span></span><br><span class="line">   legend(pos(8) <span class="keyword">label</span>(1 <span class="string">&quot;企业家信心指数&quot;</span>) <span class="keyword">label</span>(2 <span class="string">&quot;企业景气指数&quot;</span>)) <span class="comment">///</span></span><br><span class="line">   title(<span class="string">&quot;中国企业景气指数与企业家信心指数：工业&quot;</span>) <span class="comment">///</span></span><br><span class="line">   subtitle(<span class="string">&quot;（时间：1999年第1季度-2019年第4季度）&quot;</span>) <span class="comment">///</span></span><br><span class="line">   ytitle(<span class="string">&quot;总体指数&quot;</span>) <span class="comment">///</span></span><br><span class="line">   <span class="keyword">note</span>(<span class="string">&quot;数据来源：中国经济网（http://data.ce.cn）&quot;</span>)</span><br><span class="line"><span class="keyword">graph</span> export <span class="string">&quot;中国企业景气指数与企业家信心指数_工业.png&quot;</span>, <span class="keyword">replace</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2020/08/17/Stata%E7%88%AC%E5%8F%96%E8%A1%8C%E4%B8%9A%E6%99%AF%E6%B0%94%E6%8C%87%E6%95%B0%E5%B9%B6%E5%8F%AF%E8%A7%86%E5%8C%96/中国企业景气指数与企业家信心指数_工业.png" alt></p>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>中国经济网行情数据中心还有一些其他股票、基金、宏观经济和金融等数据，数据源质量还比较好。</p>
+<p><img src="/2020/08/17/Stata%E7%88%AC%E5%8F%96%E8%A1%8C%E4%B8%9A%E6%99%AF%E6%B0%94%E6%8C%87%E6%95%B0%E5%B9%B6%E5%8F%AF%E8%A7%86%E5%8C%96/中国经济网行情数据中心.png" alt></p>
+<p>其实有点想以这个网站数据源为基础，写个命令方便的获取上面的数据，但是一是现在还有其他的事情要忙活，做这件事的激励似乎不太够；二是写出来之后还需要精力维护，就先搁置吧。有兴趣的朋友可以尝试一下，我在上面这里也爬过房价指数和其他的数据，数据页面的网页结构是差不多的，实现起来应该也还好。</p>
+]]></content>
+      <categories>
+        <category>Stata</category>
+      </categories>
+      <tags>
+        <tag>Stata</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Stata整理证监会上市公司行业分类</title>
+    <url>/2020/08/17/Stata%E6%95%B4%E7%90%86%E8%AF%81%E7%9B%91%E4%BC%9A%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E8%A1%8C%E4%B8%9A%E5%88%86%E7%B1%BB/</url>
+    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h1 id="问题的提出"><a href="#问题的提出" class="headerlink" title="问题的提出"></a>问题的提出</h1><p>证监会网站会公布每季度<a href="http://www.csrc.gov.cn/pub/newsite/scb/ssgshyfljg/">上市公司最新行业分类结果</a>，但提供的是 PDF 版本，难以直接用作数据匹配。刚正好需要这份数据，所以用 Stata 来下载、转换和整理数据。</p>
+<h1 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h1><ol>
+<li>使用 Stata16 调用 Python 完成文件的下载、PDF 转换成 Excel 文件。</li>
+<li>使用 Stata 进行数据整理，涉及观测值去重、填充和利用正则表达式生成新变量等内容。</li>
+</ol>
+<h1 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h1><h2 id="调用-Python-下载和提取文件"><a href="#调用-Python-下载和提取文件" class="headerlink" title="调用 Python 下载和提取文件"></a>调用 Python 下载和提取文件</h2><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">python:</span><br><span class="line">import requests</span><br><span class="line">import pdfplumber</span><br><span class="line">from openpyxl import Workbook</span><br><span class="line"></span><br><span class="line"># 下载 PDF 文件</span><br><span class="line">pdf_2019q4 = &#x27;http:<span class="comment">//www.csrc.gov.cn/pub/newsite/scb/ssgshyfljg/202001/W020200110325952653089.pdf&#x27;</span></span><br><span class="line">r = requests.<span class="built_in">get</span>(pdf_2019q4, stream=True)</span><br><span class="line">with <span class="keyword">open</span>(<span class="string">&quot;证监会2019年4季度上市公司行业分类结果.pdf&quot;</span>, <span class="string">&quot;wb&quot;</span>) <span class="keyword">as</span> pdf:</span><br><span class="line">    <span class="keyword">for</span> content <span class="keyword">in</span> r:</span><br><span class="line">            pdf.write(content)</span><br><span class="line"></span><br><span class="line"># 提取并写入Excel</span><br><span class="line">wb = Workbook()</span><br><span class="line">ws = wb.active</span><br><span class="line">with pdfplumber.<span class="keyword">open</span>(<span class="string">&quot;证监会2019年4季度上市公司行业分类结果.pdf&quot;</span>) <span class="keyword">as</span> pdf:</span><br><span class="line">    <span class="keyword">for</span> page <span class="keyword">in</span> pdf.pages:</span><br><span class="line">        <span class="keyword">for</span> <span class="keyword">table</span> <span class="keyword">in</span> page.extract_tables():</span><br><span class="line">            <span class="keyword">for</span> row <span class="keyword">in</span> <span class="keyword">table</span>:</span><br><span class="line">                ws.<span class="keyword">append</span>(row)</span><br><span class="line">wb.<span class="keyword">save</span>(<span class="string">&quot;证监会2019年4季度上市公司行业分类结果.xlsx&quot;</span>)</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<h2 id="整理数据"><a href="#整理数据" class="headerlink" title="整理数据"></a>整理数据</h2><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">import excel using <span class="string">&quot;证监会2019年4季度上市公司行业分类结果.xlsx&quot;</span>, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">duplicates</span> <span class="keyword">drop</span></span><br><span class="line"></span><br><span class="line"><span class="comment">* ssc install nrow, replace</span></span><br><span class="line"><span class="comment">* ssc install carryforward, replace</span></span><br><span class="line">nrow</span><br><span class="line">carryforward _all,<span class="keyword">replace</span></span><br><span class="line"><span class="keyword">gen</span> 行业门类与大类 = ustrregexs(0) + 行业大类代码 <span class="keyword">if</span> ustrregexm(门类名称及代码,<span class="string">&quot;[A-Z]&quot;</span>) == 1</span><br><span class="line"><span class="keyword">save</span> <span class="string">&quot;201914上市公司行业分类.dta&quot;</span>, <span class="keyword">replace</span></span><br></pre></td></tr></table></figure>
+<h1 id="最终结果"><a href="#最终结果" class="headerlink" title="最终结果"></a>最终结果</h1><p><img src="/2020/08/17/Stata%E6%95%B4%E7%90%86%E8%AF%81%E7%9B%91%E4%BC%9A%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E8%A1%8C%E4%B8%9A%E5%88%86%E7%B1%BB/result.png" alt></p>
+]]></content>
+      <categories>
+        <category>Stata</category>
+      </categories>
+      <tags>
+        <tag>Stata</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Stata自动生成中南财大2019研拟录取究生录报告</title>
     <url>/2020/08/17/Stata%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E4%B8%AD%E5%8D%97%E8%B4%A2%E5%A4%A72019%E7%A0%94%E6%8B%9F%E5%BD%95%E5%8F%96%E7%A9%B6%E7%94%9F%E5%BD%95%E6%8A%A5%E5%91%8A/</url>
     <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>又是一年考研季，今天有朋友问我去年的学校录取情况，因为一直没咋关注过这个，一下还真不知道是啥情况，就去官网找了下名单。但是官网给的名单是 PDF 格式，不方便拿来做统计分析，所以就用 Stata 顺手做了一些简单的分析工作，觉得这也为需要提供重复性报告的工作提供一种思路。具体来说，主要包括如下技术要点：</p>
@@ -21309,15 +21309,37 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
       </tags>
   </entry>
   <entry>
+    <title>微信公众号二维码</title>
+    <url>/2020/11/23/resume/</url>
+    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p><img src="/2020/11/23/resume/WeChatPublic.jpg" style="zoom:33%;"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>tata2020国家社科基金立项名单分析</title>
     <url>/2020/09/09/tata2020%E5%9B%BD%E5%AE%B6%E7%A4%BE%E7%A7%91%E5%9F%BA%E9%87%91%E7%AB%8B%E9%A1%B9%E5%90%8D%E5%8D%95%E5%88%86%E6%9E%90/</url>
     <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script>]]></content>
   </entry>
   <entry>
-    <title>微信公众号二维码</title>
-    <url>/2020/11/23/resume/</url>
-    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p><img src="/2020/11/23/resume/WeChatPublic.jpg" style="zoom:33%;"></p>
+    <title>一些自律的原则</title>
+    <url>/2020/09/28/%E4%B8%80%E4%BA%9B%E8%87%AA%E5%BE%8B%E7%9A%84%E5%8E%9F%E5%88%99/</url>
+    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><ol>
+<li>低糖少油、不喝碳酸饮料、不吃垃圾食品、多吃水果</li>
+<li>每天坚持锻炼</li>
+<li>不说脏话、公众场合不大声喧哗</li>
+<li>重要事情和人提前预约、约定好后准时赴约</li>
+<li>非重要场合和事情不饮酒，饮酒不过度</li>
+<li>说话经过大脑，注重表达逻辑性</li>
+<li>不要轻易承诺，承诺要能兑现</li>
+</ol>
 ]]></content>
+      <categories>
+        <category>Others</category>
+        <category>Thoughts</category>
+      </categories>
+      <tags>
+        <tag>Others</tag>
+        <tag>Thoughts</tag>
+      </tags>
   </entry>
   <entry>
     <title>企研数据经营主体数据的构建方式</title>
@@ -21510,28 +21532,6 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
       </tags>
   </entry>
   <entry>
-    <title>一些自律的原则</title>
-    <url>/2020/09/28/%E4%B8%80%E4%BA%9B%E8%87%AA%E5%BE%8B%E7%9A%84%E5%8E%9F%E5%88%99/</url>
-    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><ol>
-<li>低糖少油、不喝碳酸饮料、不吃垃圾食品、多吃水果</li>
-<li>每天坚持锻炼</li>
-<li>不说脏话、公众场合不大声喧哗</li>
-<li>重要事情和人提前预约、约定好后准时赴约</li>
-<li>非重要场合和事情不饮酒，饮酒不过度</li>
-<li>说话经过大脑，注重表达逻辑性</li>
-<li>不要轻易承诺，承诺要能兑现</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Others</category>
-        <category>Thoughts</category>
-      </categories>
-      <tags>
-        <tag>Others</tag>
-        <tag>Thoughts</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>北京的天气真是魔幻</title>
     <url>/2020/08/24/%E5%8C%97%E4%BA%AC%E7%9A%84%E5%A4%A9%E6%B0%94%E7%9C%9F%E6%98%AF%E9%AD%94%E5%B9%BB/</url>
     <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1293951677&auto=1&height=66"></iframe>
@@ -21561,8 +21561,26 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
       </categories>
       <tags>
         <tag>Photos</tag>
-        <tag>Travel</tag>
         <tag>Others</tag>
+        <tag>Travel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>宜昌游玩备选去处</title>
+    <url>/2020/11/10/%E5%AE%9C%E6%98%8C%E6%B8%B8%E7%8E%A9%E5%A4%87%E9%80%89%E5%8E%BB%E5%A4%84/</url>
+    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="玩"><a href="#玩" class="headerlink" title="玩"></a>玩</h2><h3 id="三峡人家"><a href="#三峡人家" class="headerlink" title="三峡人家"></a>三峡人家</h3><p>三峡人家营业时间8：00-17：00<br>夷陵广场坐10-1大巴到三峡人家、一个小时一次</p>
+<h3 id="三峡大坝"><a href="#三峡大坝" class="headerlink" title="三峡大坝"></a>三峡大坝</h3><p>1.三峡大坝旅游区接待时间：08:00-17:00（闭园时间）<br>2.夜明珠三角地接待站：07:30-16:00</p>
+<h3 id="大老岭国家森林公园"><a href="#大老岭国家森林公园" class="headerlink" title="大老岭国家森林公园"></a>大老岭国家森林公园</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzA4NDEwNzg5NQ==&amp;mid=2651343359&amp;idx=1&amp;sn=dbeb263ebdfecd93071c1ef62d10961a&amp;chksm=8410dee7b36757f14001c26bf554abeac96a2255b0b212cd553175137d09f67c0f85926caf72&amp;scene=126&amp;sessionid=1604976490&amp;key=e50315f78589e33fea3e5c9976ea905aad9f97e3725ea616cedd58c82cde1baf09f42cfaf7e8df0f639cadf3077649c64fb553e1f6a11f607e094e4a6aade96790a6721cf00cdb92c8a0065546664fe35cbedbc8f6ac7373955b8bf1ec8f1f4f652f45d3dcff1df1d93ae1c3389a45e5405b561b55d6d597ee51ed91a8a1a525&amp;ascene=1&amp;uin=MTk2MzA0MTI3NA%3D%3D&amp;devicetype=Windows+10+x64&amp;version=6300002f&amp;lang=zh_CN&amp;exportkey=A6PGgyBID1tWDTNaGfpa%2Buo%3D&amp;pass_ticket=rkup5v3dLmggsdrOJrbQdQXU6FxEpNbCO97pHjdO1t37xwIKfh3jUFrU9X3UEl%2FJ&amp;wx_header=0">https://mp.weixin.qq.com/s?__biz=MzA4NDEwNzg5NQ==&amp;mid=2651343359&amp;idx=1&amp;sn=dbeb263ebdfecd93071c1ef62d10961a&amp;chksm=8410dee7b36757f14001c26bf554abeac96a2255b0b212cd553175137d09f67c0f85926caf72&amp;scene=126&amp;sessionid=1604976490&amp;key=e50315f78589e33fea3e5c9976ea905aad9f97e3725ea616cedd58c82cde1baf09f42cfaf7e8df0f639cadf3077649c64fb553e1f6a11f607e094e4a6aade96790a6721cf00cdb92c8a0065546664fe35cbedbc8f6ac7373955b8bf1ec8f1f4f652f45d3dcff1df1d93ae1c3389a45e5405b561b55d6d597ee51ed91a8a1a525&amp;ascene=1&amp;uin=MTk2MzA0MTI3NA%3D%3D&amp;devicetype=Windows+10+x64&amp;version=6300002f&amp;lang=zh_CN&amp;exportkey=A6PGgyBID1tWDTNaGfpa%2Buo%3D&amp;pass_ticket=rkup5v3dLmggsdrOJrbQdQXU6FxEpNbCO97pHjdO1t37xwIKfh3jUFrU9X3UEl%2FJ&amp;wx_header=0</a></p>
+<h3 id="清江画廊"><a href="#清江画廊" class="headerlink" title="清江画廊"></a>清江画廊</h3><h2 id="吃"><a href="#吃" class="headerlink" title="吃"></a>吃</h2><h3 id="铁路坝小吃街"><a href="#铁路坝小吃街" class="headerlink" title="铁路坝小吃街"></a>铁路坝小吃街</h3><p>位于CBD附近的小吃街<br>CBD的小吃街：<br>印度飞饼：菠萝味的，口感很棒，酸酸甜甜的，饼脆脆的。<br>烤猪蹄<br>凉虾<br>萝卜饺子<br>炕土豆<br>卤水豆腐干</p>
+<h3 id="特色菜"><a href="#特色菜" class="headerlink" title="特色菜"></a>特色菜</h3><p>清江鱼<br>土家菜</p>
+]]></content>
+      <categories>
+        <category>Others</category>
+        <category>Travel</category>
+      </categories>
+      <tags>
+        <tag>Others</tag>
+        <tag>Travel</tag>
       </tags>
   </entry>
   <entry>
@@ -21593,24 +21611,6 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
       </categories>
       <tags>
         <tag>Thoughts</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>宜昌游玩备选去处</title>
-    <url>/2020/11/10/%E5%AE%9C%E6%98%8C%E6%B8%B8%E7%8E%A9%E5%A4%87%E9%80%89%E5%8E%BB%E5%A4%84/</url>
-    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="玩"><a href="#玩" class="headerlink" title="玩"></a>玩</h2><h3 id="三峡人家"><a href="#三峡人家" class="headerlink" title="三峡人家"></a>三峡人家</h3><p>三峡人家营业时间8：00-17：00<br>夷陵广场坐10-1大巴到三峡人家、一个小时一次</p>
-<h3 id="三峡大坝"><a href="#三峡大坝" class="headerlink" title="三峡大坝"></a>三峡大坝</h3><p>1.三峡大坝旅游区接待时间：08:00-17:00（闭园时间）<br>2.夜明珠三角地接待站：07:30-16:00</p>
-<h3 id="大老岭国家森林公园"><a href="#大老岭国家森林公园" class="headerlink" title="大老岭国家森林公园"></a>大老岭国家森林公园</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzA4NDEwNzg5NQ==&amp;mid=2651343359&amp;idx=1&amp;sn=dbeb263ebdfecd93071c1ef62d10961a&amp;chksm=8410dee7b36757f14001c26bf554abeac96a2255b0b212cd553175137d09f67c0f85926caf72&amp;scene=126&amp;sessionid=1604976490&amp;key=e50315f78589e33fea3e5c9976ea905aad9f97e3725ea616cedd58c82cde1baf09f42cfaf7e8df0f639cadf3077649c64fb553e1f6a11f607e094e4a6aade96790a6721cf00cdb92c8a0065546664fe35cbedbc8f6ac7373955b8bf1ec8f1f4f652f45d3dcff1df1d93ae1c3389a45e5405b561b55d6d597ee51ed91a8a1a525&amp;ascene=1&amp;uin=MTk2MzA0MTI3NA%3D%3D&amp;devicetype=Windows+10+x64&amp;version=6300002f&amp;lang=zh_CN&amp;exportkey=A6PGgyBID1tWDTNaGfpa%2Buo%3D&amp;pass_ticket=rkup5v3dLmggsdrOJrbQdQXU6FxEpNbCO97pHjdO1t37xwIKfh3jUFrU9X3UEl%2FJ&amp;wx_header=0">https://mp.weixin.qq.com/s?__biz=MzA4NDEwNzg5NQ==&amp;mid=2651343359&amp;idx=1&amp;sn=dbeb263ebdfecd93071c1ef62d10961a&amp;chksm=8410dee7b36757f14001c26bf554abeac96a2255b0b212cd553175137d09f67c0f85926caf72&amp;scene=126&amp;sessionid=1604976490&amp;key=e50315f78589e33fea3e5c9976ea905aad9f97e3725ea616cedd58c82cde1baf09f42cfaf7e8df0f639cadf3077649c64fb553e1f6a11f607e094e4a6aade96790a6721cf00cdb92c8a0065546664fe35cbedbc8f6ac7373955b8bf1ec8f1f4f652f45d3dcff1df1d93ae1c3389a45e5405b561b55d6d597ee51ed91a8a1a525&amp;ascene=1&amp;uin=MTk2MzA0MTI3NA%3D%3D&amp;devicetype=Windows+10+x64&amp;version=6300002f&amp;lang=zh_CN&amp;exportkey=A6PGgyBID1tWDTNaGfpa%2Buo%3D&amp;pass_ticket=rkup5v3dLmggsdrOJrbQdQXU6FxEpNbCO97pHjdO1t37xwIKfh3jUFrU9X3UEl%2FJ&amp;wx_header=0</a></p>
-<h3 id="清江画廊"><a href="#清江画廊" class="headerlink" title="清江画廊"></a>清江画廊</h3><h2 id="吃"><a href="#吃" class="headerlink" title="吃"></a>吃</h2><h3 id="铁路坝小吃街"><a href="#铁路坝小吃街" class="headerlink" title="铁路坝小吃街"></a>铁路坝小吃街</h3><p>位于CBD附近的小吃街<br>CBD的小吃街：<br>印度飞饼：菠萝味的，口感很棒，酸酸甜甜的，饼脆脆的。<br>烤猪蹄<br>凉虾<br>萝卜饺子<br>炕土豆<br>卤水豆腐干</p>
-<h3 id="特色菜"><a href="#特色菜" class="headerlink" title="特色菜"></a>特色菜</h3><p>清江鱼<br>土家菜</p>
-]]></content>
-      <categories>
-        <category>Others</category>
-        <category>Travel</category>
-      </categories>
-      <tags>
-        <tag>Travel</tag>
-        <tag>Others</tag>
       </tags>
   </entry>
   <entry>
@@ -21760,6 +21760,11 @@ P(W_{m},Z_{m},\theta_{m},\Phi;\alpha,\beta) = \prod_{n=1}^{N_{m}}P(\theta_m;\alp
       </tags>
   </entry>
   <entry>
+    <title>文澴楼空教室</title>
+    <url>/2020/09/02/%E6%96%87%E6%BE%B4%E6%A5%BC%E7%A9%BA%E6%95%99%E5%AE%A4/</url>
+    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script>]]></content>
+  </entry>
+  <entry>
     <title>文献管理工具Zotero入门</title>
     <url>/2020/09/02/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Zotero%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="1-Zotero简介"><a href="#1-Zotero简介" class="headerlink" title="1.Zotero简介"></a>1.Zotero简介</h2><p>Zotero作为一款协助科研工作者收集、管理以及引用研究资源的<strong>免费软件</strong>。本文记录Zotero入门用法，包括安装、英文和中文文献的导入等内容。</p>
@@ -21810,11 +21815,6 @@ P(W_{m},Z_{m},\theta_{m},\Phi;\alpha,\beta) = \prod_{n=1}^{N_{m}}P(\theta_m;\alp
       <tags>
         <tag>Tools</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>文澴楼空教室</title>
-    <url>/2020/09/02/%E6%96%87%E6%BE%B4%E6%A5%BC%E7%A9%BA%E6%95%99%E5%AE%A4/</url>
-    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script>]]></content>
   </entry>
   <entry>
     <title>杂乱文件自动分类</title>
@@ -22067,6 +22067,43 @@ L = L_1 + L_2 = k Y - hr</script>]]></content>
       </tags>
   </entry>
   <entry>
+    <title>留不留北京</title>
+    <url>/2020/09/13/%E7%95%99%E4%B8%8D%E7%95%99%E5%8C%97%E4%BA%AC/</url>
+    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><blockquote>
+<p>2020.09.13， 八家嘉园</p>
+</blockquote>
+<p>优点：</p>
+<ul>
+<li>机会多</li>
+<li>开阔视野</li>
+<li>结交对事业有帮助的伙伴</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>不确定性强，需要时间熬</li>
+<li>最终难在北京安定下来</li>
+<li>心理压力比较大，生活比较苦</li>
+<li>虽然机会多，没有归属感</li>
+</ul>
+<p>想法：</p>
+<ul>
+<li>继续读博深造，不想耽搁</li>
+<li>是时候考虑慢慢安定下来的问题</li>
+</ul>
+<p>决定：</p>
+<ul>
+<li>先回学校，做完毕业论文和研究计划</li>
+<li>慢慢和有申博意向导师联系，看是否有RA的机会</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Thoughts</category>
+      </categories>
+      <tags>
+        <tag>Thoughts</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>用TikZ快速绘制微观经济学常用图</title>
     <url>/2020/08/17/%E7%94%A8TikZ%E5%BF%AB%E9%80%9F%E7%BB%98%E5%88%B6%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%B8%B8%E7%94%A8%E5%9B%BE/</url>
     <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>看经济学教材的时候，在想这些复杂又清晰的图是怎么绘制的。于是上网搜了一下，根据网上的信息，在 LaTeX 中使用 TikZ 包进行绘制是一个不错的选择，所以这两天花点时间学习了一下。</p>
@@ -22137,43 +22174,6 @@ L = L_1 + L_2 = k Y - hr</script>]]></content>
       </categories>
       <tags>
         <tag>Movies</tag>
-        <tag>Thoughts</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>留不留北京</title>
-    <url>/2020/09/13/%E7%95%99%E4%B8%8D%E7%95%99%E5%8C%97%E4%BA%AC/</url>
-    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><blockquote>
-<p>2020.09.13， 八家嘉园</p>
-</blockquote>
-<p>优点：</p>
-<ul>
-<li>机会多</li>
-<li>开阔视野</li>
-<li>结交对事业有帮助的伙伴</li>
-</ul>
-<p>缺点：</p>
-<ul>
-<li>不确定性强，需要时间熬</li>
-<li>最终难在北京安定下来</li>
-<li>心理压力比较大，生活比较苦</li>
-<li>虽然机会多，没有归属感</li>
-</ul>
-<p>想法：</p>
-<ul>
-<li>继续读博深造，不想耽搁</li>
-<li>是时候考虑慢慢安定下来的问题</li>
-</ul>
-<p>决定：</p>
-<ul>
-<li>先回学校，做完毕业论文和研究计划</li>
-<li>慢慢和有申博意向导师联系，看是否有RA的机会</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Thoughts</category>
-      </categories>
-      <tags>
         <tag>Thoughts</tag>
       </tags>
   </entry>
