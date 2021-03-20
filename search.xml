@@ -277,21 +277,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Notes of Environment and Development Economics Wechat Platform</title>
-    <url>/2020/08/26/Notes-of-Environment-and-Development-Economics-Wechat-Platform/</url>
-    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><blockquote>
-<p>Ebenstein, A., Fan, M., Greenstone, M., He, G. and Zhou, M., 2017. New evidence on the impact of sustained exposure to air pollution on life expectancy from China’s Huai River Policy. Proceedings of the National Academy of Sciences, 114(39), pp.10384-10389.</p>
-</blockquote>
-<p>AQLI(Air Quality Life Index, AQLI） can be used to measure the influence of clean air to human life expectancy.</p>
-]]></content>
-      <categories>
-        <category>Notes</category>
-      </categories>
-      <tags>
-        <tag>Notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Photos怀柔水库</title>
     <url>/2020/08/22/Photos%E6%80%80%E6%9F%94%E6%B0%B4%E5%BA%93/</url>
     <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><blockquote>
@@ -310,6 +295,21 @@
       <tags>
         <tag>Scenery</tag>
         <tag>Photos</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Notes of Environment and Development Economics Wechat Platform</title>
+    <url>/2020/08/26/Notes-of-Environment-and-Development-Economics-Wechat-Platform/</url>
+    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><blockquote>
+<p>Ebenstein, A., Fan, M., Greenstone, M., He, G. and Zhou, M., 2017. New evidence on the impact of sustained exposure to air pollution on life expectancy from China’s Huai River Policy. Proceedings of the National Academy of Sciences, 114(39), pp.10384-10389.</p>
+</blockquote>
+<p>AQLI(Air Quality Life Index, AQLI） can be used to measure the influence of clean air to human life expectancy.</p>
+]]></content>
+      <categories>
+        <category>Notes</category>
+      </categories>
+      <tags>
+        <tag>Notes</tag>
       </tags>
   </entry>
   <entry>
@@ -5969,26 +5969,6 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
       </tags>
   </entry>
   <entry>
-    <title>Python时间戳转化</title>
-    <url>/2020/09/04/Python%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E5%8C%96/</url>
-    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="1-提出问题"><a href="#1-提出问题" class="headerlink" title="1. 提出问题"></a>1. 提出问题</h2><p><img src="/2020/09/04/Python%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E5%8C%96/1.jpg" alt></p>
-<p>爬数据的时候，有没有遇见过爬下来的数据日期显示为一大串数字？像上图中的<code>beginbidtime</code>变量，这是时间戳。时间戳是啥？是指格林威治时间自1970年1月1日（00:00:00 GMT）(一般把这个时点称为 <code>unix</code> 纪元或 <code>POSIX</code> 时间)至当前时间的总秒数。时间戳的好处是能够唯一地表示某一刻的时间，但这显然不利于肉眼观察和分析数据，所以下面我们将时间戳转化为常见的时间格式。</p>
-<h2 id="2-方法介绍"><a href="#2-方法介绍" class="headerlink" title="2. 方法介绍"></a>2. 方法介绍</h2><p>可以使用<code>Pandas</code>库中的<code>to_datetime()</code>函数实现，<code>to_datetime()</code>函数用于转换字符串、时间戳等各种形式的日期数据，转换<code>Series</code>时，返回具有相同索引的<code>Series</code>，日期时间列表则会被转换为<code>DtetimeIndex</code>。鉴于 <code>Timestamp</code> 对象内部存储方式，这种转换的默认单位是纳秒。不过，一般都会用指定其它时间单位 <code>unit</code> 来存储纪元数据。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pd.to_datetime([<span class="number">1349720105</span>, <span class="number">1349806505</span>, <span class="number">1349892905</span>,<span class="number">1349979305</span>, <span class="number">1350065705</span>], unit=<span class="string">&#x27;s&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">DatetimeIndex([&#x27;2012-10-08 18:15:05&#x27;, &#x27;2012-10-09 18:15:05&#x27;,</span></span><br><span class="line"><span class="string">               &#x27;2012-10-10 18:15:05&#x27;, &#x27;2012-10-11 18:15:05&#x27;,</span></span><br><span class="line"><span class="string">               &#x27;2012-10-12 18:15:05&#x27;],</span></span><br><span class="line"><span class="string">              dtype=&#x27;datetime64[ns]&#x27;, freq=None)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">pd.to_datetime([<span class="number">1349720105100</span>, <span class="number">1349720105200</span>, <span class="number">1349720105300</span>,<span class="number">1349720105400</span>, <span class="number">1349720105500</span>], unit=<span class="string">&#x27;ms&#x27;</span>)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">DatetimeIndex([&#x27;2012-10-08 18:15:05.100000&#x27;, &#x27;2012-10-08 18:15:05.200000&#x27;,</span></span><br><span class="line"><span class="string">               &#x27;2012-10-08 18:15:05.300000&#x27;, &#x27;2012-10-08 18:15:05.400000&#x27;,</span></span><br><span class="line"><span class="string">               &#x27;2012-10-08 18:15:05.500000&#x27;],</span></span><br><span class="line"><span class="string">              dtype=&#x27;datetime64[ns]&#x27;, freq=None)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-<h2 id="3-实现过程"><a href="#3-实现过程" class="headerlink" title="3. 实现过程"></a>3. 实现过程</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;RRD_User_Info.xlsx&#x27;</span>,prase_date=<span class="literal">True</span>)</span><br><span class="line">df.head()</span><br><span class="line"></span><br><span class="line">df.beginbidtime = pd.to_datetime(df.beginbidtime,unit=<span class="string">&#x27;ms&#x27;</span>)</span><br><span class="line">df.closetime = pd.to_datetime(df.closetime,unit=<span class="string">&#x27;ms&#x27;</span>)</span><br><span class="line">df.to_excel(<span class="string">&#x27;RRD_User_Transformed.xlsx&#x27;</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="4-实现结果"><a href="#4-实现结果" class="headerlink" title="4. 实现结果"></a>4. 实现结果</h2><p>经过上面的操作，就将时间戳转换转换为我们熟悉的时间格式了。结果如下：</p>
-<p><img src="/2020/09/04/Python%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E5%8C%96/2.jpg" alt></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Data</category>
-      </categories>
-      <tags>
-        <tag>Data</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Stata排名转为得分</title>
     <url>/2020/08/18/Stata%E6%8E%92%E5%90%8D%E8%BD%AC%E4%B8%BA%E5%BE%97%E5%88%86/</url>
     <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="提出问题"><a href="#提出问题" class="headerlink" title="提出问题"></a>提出问题</h2><p>手头有一份美国历届总统的排名，排名从1~44，需要将他们转化为对应的得分。换言之,将1位排名等价换算成$100/44=2.2727273分$。比如第一名为$100$分，第二名为$100-(100/44)$分，依次类推。动图来演示如下：</p>
@@ -6010,25 +5990,6 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
       </categories>
       <tags>
         <tag>Data</tag>
-        <tag>Stata</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Stata整理证监会上市公司行业分类</title>
-    <url>/2020/08/17/Stata%E6%95%B4%E7%90%86%E8%AF%81%E7%9B%91%E4%BC%9A%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E8%A1%8C%E4%B8%9A%E5%88%86%E7%B1%BB/</url>
-    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h1 id="问题的提出"><a href="#问题的提出" class="headerlink" title="问题的提出"></a>问题的提出</h1><p>证监会网站会公布每季度<a href="http://www.csrc.gov.cn/pub/newsite/scb/ssgshyfljg/">上市公司最新行业分类结果</a>，但提供的是 PDF 版本，难以直接用作数据匹配。刚正好需要这份数据，所以用 Stata 来下载、转换和整理数据。</p>
-<h1 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h1><ol>
-<li>使用 Stata16 调用 Python 完成文件的下载、PDF 转换成 Excel 文件。</li>
-<li>使用 Stata 进行数据整理，涉及观测值去重、填充和利用正则表达式生成新变量等内容。</li>
-</ol>
-<h1 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h1><h2 id="调用-Python-下载和提取文件"><a href="#调用-Python-下载和提取文件" class="headerlink" title="调用 Python 下载和提取文件"></a>调用 Python 下载和提取文件</h2><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">python:</span><br><span class="line">import requests</span><br><span class="line">import pdfplumber</span><br><span class="line">from openpyxl import Workbook</span><br><span class="line"></span><br><span class="line"># 下载 PDF 文件</span><br><span class="line">pdf_2019q4 = &#x27;http:<span class="comment">//www.csrc.gov.cn/pub/newsite/scb/ssgshyfljg/202001/W020200110325952653089.pdf&#x27;</span></span><br><span class="line">r = requests.<span class="built_in">get</span>(pdf_2019q4, stream=True)</span><br><span class="line">with <span class="keyword">open</span>(<span class="string">&quot;证监会2019年4季度上市公司行业分类结果.pdf&quot;</span>, <span class="string">&quot;wb&quot;</span>) <span class="keyword">as</span> pdf:</span><br><span class="line">    <span class="keyword">for</span> content <span class="keyword">in</span> r:</span><br><span class="line">            pdf.write(content)</span><br><span class="line"></span><br><span class="line"># 提取并写入Excel</span><br><span class="line">wb = Workbook()</span><br><span class="line">ws = wb.active</span><br><span class="line">with pdfplumber.<span class="keyword">open</span>(<span class="string">&quot;证监会2019年4季度上市公司行业分类结果.pdf&quot;</span>) <span class="keyword">as</span> pdf:</span><br><span class="line">    <span class="keyword">for</span> page <span class="keyword">in</span> pdf.pages:</span><br><span class="line">        <span class="keyword">for</span> <span class="keyword">table</span> <span class="keyword">in</span> page.extract_tables():</span><br><span class="line">            <span class="keyword">for</span> row <span class="keyword">in</span> <span class="keyword">table</span>:</span><br><span class="line">                ws.<span class="keyword">append</span>(row)</span><br><span class="line">wb.<span class="keyword">save</span>(<span class="string">&quot;证监会2019年4季度上市公司行业分类结果.xlsx&quot;</span>)</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-<h2 id="整理数据"><a href="#整理数据" class="headerlink" title="整理数据"></a>整理数据</h2><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">import excel using <span class="string">&quot;证监会2019年4季度上市公司行业分类结果.xlsx&quot;</span>, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">duplicates</span> <span class="keyword">drop</span></span><br><span class="line"></span><br><span class="line"><span class="comment">* ssc install nrow, replace</span></span><br><span class="line"><span class="comment">* ssc install carryforward, replace</span></span><br><span class="line">nrow</span><br><span class="line">carryforward _all,<span class="keyword">replace</span></span><br><span class="line"><span class="keyword">gen</span> 行业门类与大类 = ustrregexs(0) + 行业大类代码 <span class="keyword">if</span> ustrregexm(门类名称及代码,<span class="string">&quot;[A-Z]&quot;</span>) == 1</span><br><span class="line"><span class="keyword">save</span> <span class="string">&quot;201914上市公司行业分类.dta&quot;</span>, <span class="keyword">replace</span></span><br></pre></td></tr></table></figure>
-<h1 id="最终结果"><a href="#最终结果" class="headerlink" title="最终结果"></a>最终结果</h1><p><img src="/2020/08/17/Stata%E6%95%B4%E7%90%86%E8%AF%81%E7%9B%91%E4%BC%9A%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E8%A1%8C%E4%B8%9A%E5%88%86%E7%B1%BB/result.png" alt></p>
-]]></content>
-      <categories>
-        <category>Stata</category>
-      </categories>
-      <tags>
         <tag>Stata</tag>
       </tags>
   </entry>
@@ -21237,6 +21198,45 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
       </tags>
   </entry>
   <entry>
+    <title>Stata整理证监会上市公司行业分类</title>
+    <url>/2020/08/17/Stata%E6%95%B4%E7%90%86%E8%AF%81%E7%9B%91%E4%BC%9A%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E8%A1%8C%E4%B8%9A%E5%88%86%E7%B1%BB/</url>
+    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h1 id="问题的提出"><a href="#问题的提出" class="headerlink" title="问题的提出"></a>问题的提出</h1><p>证监会网站会公布每季度<a href="http://www.csrc.gov.cn/pub/newsite/scb/ssgshyfljg/">上市公司最新行业分类结果</a>，但提供的是 PDF 版本，难以直接用作数据匹配。刚正好需要这份数据，所以用 Stata 来下载、转换和整理数据。</p>
+<h1 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h1><ol>
+<li>使用 Stata16 调用 Python 完成文件的下载、PDF 转换成 Excel 文件。</li>
+<li>使用 Stata 进行数据整理，涉及观测值去重、填充和利用正则表达式生成新变量等内容。</li>
+</ol>
+<h1 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h1><h2 id="调用-Python-下载和提取文件"><a href="#调用-Python-下载和提取文件" class="headerlink" title="调用 Python 下载和提取文件"></a>调用 Python 下载和提取文件</h2><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">python:</span><br><span class="line">import requests</span><br><span class="line">import pdfplumber</span><br><span class="line">from openpyxl import Workbook</span><br><span class="line"></span><br><span class="line"># 下载 PDF 文件</span><br><span class="line">pdf_2019q4 = &#x27;http:<span class="comment">//www.csrc.gov.cn/pub/newsite/scb/ssgshyfljg/202001/W020200110325952653089.pdf&#x27;</span></span><br><span class="line">r = requests.<span class="built_in">get</span>(pdf_2019q4, stream=True)</span><br><span class="line">with <span class="keyword">open</span>(<span class="string">&quot;证监会2019年4季度上市公司行业分类结果.pdf&quot;</span>, <span class="string">&quot;wb&quot;</span>) <span class="keyword">as</span> pdf:</span><br><span class="line">    <span class="keyword">for</span> content <span class="keyword">in</span> r:</span><br><span class="line">            pdf.write(content)</span><br><span class="line"></span><br><span class="line"># 提取并写入Excel</span><br><span class="line">wb = Workbook()</span><br><span class="line">ws = wb.active</span><br><span class="line">with pdfplumber.<span class="keyword">open</span>(<span class="string">&quot;证监会2019年4季度上市公司行业分类结果.pdf&quot;</span>) <span class="keyword">as</span> pdf:</span><br><span class="line">    <span class="keyword">for</span> page <span class="keyword">in</span> pdf.pages:</span><br><span class="line">        <span class="keyword">for</span> <span class="keyword">table</span> <span class="keyword">in</span> page.extract_tables():</span><br><span class="line">            <span class="keyword">for</span> row <span class="keyword">in</span> <span class="keyword">table</span>:</span><br><span class="line">                ws.<span class="keyword">append</span>(row)</span><br><span class="line">wb.<span class="keyword">save</span>(<span class="string">&quot;证监会2019年4季度上市公司行业分类结果.xlsx&quot;</span>)</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<h2 id="整理数据"><a href="#整理数据" class="headerlink" title="整理数据"></a>整理数据</h2><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">import excel using <span class="string">&quot;证监会2019年4季度上市公司行业分类结果.xlsx&quot;</span>, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">duplicates</span> <span class="keyword">drop</span></span><br><span class="line"></span><br><span class="line"><span class="comment">* ssc install nrow, replace</span></span><br><span class="line"><span class="comment">* ssc install carryforward, replace</span></span><br><span class="line">nrow</span><br><span class="line">carryforward _all,<span class="keyword">replace</span></span><br><span class="line"><span class="keyword">gen</span> 行业门类与大类 = ustrregexs(0) + 行业大类代码 <span class="keyword">if</span> ustrregexm(门类名称及代码,<span class="string">&quot;[A-Z]&quot;</span>) == 1</span><br><span class="line"><span class="keyword">save</span> <span class="string">&quot;201914上市公司行业分类.dta&quot;</span>, <span class="keyword">replace</span></span><br></pre></td></tr></table></figure>
+<h1 id="最终结果"><a href="#最终结果" class="headerlink" title="最终结果"></a>最终结果</h1><p><img src="/2020/08/17/Stata%E6%95%B4%E7%90%86%E8%AF%81%E7%9B%91%E4%BC%9A%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E8%A1%8C%E4%B8%9A%E5%88%86%E7%B1%BB/result.png" alt></p>
+]]></content>
+      <categories>
+        <category>Stata</category>
+      </categories>
+      <tags>
+        <tag>Stata</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python时间戳转化</title>
+    <url>/2020/09/04/Python%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E5%8C%96/</url>
+    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="1-提出问题"><a href="#1-提出问题" class="headerlink" title="1. 提出问题"></a>1. 提出问题</h2><p><img src="/2020/09/04/Python%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E5%8C%96/1.jpg" alt></p>
+<p>爬数据的时候，有没有遇见过爬下来的数据日期显示为一大串数字？像上图中的<code>beginbidtime</code>变量，这是时间戳。时间戳是啥？是指格林威治时间自1970年1月1日（00:00:00 GMT）(一般把这个时点称为 <code>unix</code> 纪元或 <code>POSIX</code> 时间)至当前时间的总秒数。时间戳的好处是能够唯一地表示某一刻的时间，但这显然不利于肉眼观察和分析数据，所以下面我们将时间戳转化为常见的时间格式。</p>
+<h2 id="2-方法介绍"><a href="#2-方法介绍" class="headerlink" title="2. 方法介绍"></a>2. 方法介绍</h2><p>可以使用<code>Pandas</code>库中的<code>to_datetime()</code>函数实现，<code>to_datetime()</code>函数用于转换字符串、时间戳等各种形式的日期数据，转换<code>Series</code>时，返回具有相同索引的<code>Series</code>，日期时间列表则会被转换为<code>DtetimeIndex</code>。鉴于 <code>Timestamp</code> 对象内部存储方式，这种转换的默认单位是纳秒。不过，一般都会用指定其它时间单位 <code>unit</code> 来存储纪元数据。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pd.to_datetime([<span class="number">1349720105</span>, <span class="number">1349806505</span>, <span class="number">1349892905</span>,<span class="number">1349979305</span>, <span class="number">1350065705</span>], unit=<span class="string">&#x27;s&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">DatetimeIndex([&#x27;2012-10-08 18:15:05&#x27;, &#x27;2012-10-09 18:15:05&#x27;,</span></span><br><span class="line"><span class="string">               &#x27;2012-10-10 18:15:05&#x27;, &#x27;2012-10-11 18:15:05&#x27;,</span></span><br><span class="line"><span class="string">               &#x27;2012-10-12 18:15:05&#x27;],</span></span><br><span class="line"><span class="string">              dtype=&#x27;datetime64[ns]&#x27;, freq=None)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">pd.to_datetime([<span class="number">1349720105100</span>, <span class="number">1349720105200</span>, <span class="number">1349720105300</span>,<span class="number">1349720105400</span>, <span class="number">1349720105500</span>], unit=<span class="string">&#x27;ms&#x27;</span>)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">DatetimeIndex([&#x27;2012-10-08 18:15:05.100000&#x27;, &#x27;2012-10-08 18:15:05.200000&#x27;,</span></span><br><span class="line"><span class="string">               &#x27;2012-10-08 18:15:05.300000&#x27;, &#x27;2012-10-08 18:15:05.400000&#x27;,</span></span><br><span class="line"><span class="string">               &#x27;2012-10-08 18:15:05.500000&#x27;],</span></span><br><span class="line"><span class="string">              dtype=&#x27;datetime64[ns]&#x27;, freq=None)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-实现过程"><a href="#3-实现过程" class="headerlink" title="3. 实现过程"></a>3. 实现过程</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;RRD_User_Info.xlsx&#x27;</span>,prase_date=<span class="literal">True</span>)</span><br><span class="line">df.head()</span><br><span class="line"></span><br><span class="line">df.beginbidtime = pd.to_datetime(df.beginbidtime,unit=<span class="string">&#x27;ms&#x27;</span>)</span><br><span class="line">df.closetime = pd.to_datetime(df.closetime,unit=<span class="string">&#x27;ms&#x27;</span>)</span><br><span class="line">df.to_excel(<span class="string">&#x27;RRD_User_Transformed.xlsx&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="4-实现结果"><a href="#4-实现结果" class="headerlink" title="4. 实现结果"></a>4. 实现结果</h2><p>经过上面的操作，就将时间戳转换转换为我们熟悉的时间格式了。结果如下：</p>
+<p><img src="/2020/09/04/Python%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E5%8C%96/2.jpg" alt></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Data</category>
+      </categories>
+      <tags>
+        <tag>Data</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Stata爬取行业景气指数并可视化</title>
     <url>/2020/08/17/Stata%E7%88%AC%E5%8F%96%E8%A1%8C%E4%B8%9A%E6%99%AF%E6%B0%94%E6%8C%87%E6%95%B0%E5%B9%B6%E5%8F%AF%E8%A7%86%E5%8C%96/</url>
     <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之前看见有文章在稳健性检验部分，用企业景气指数和企业家信心指数代替 GDP 增长率作为宏观经济层面投资机会的替代变量（李凤羽和杨墨竹，2015）。所以想收集来看看，在网上找到<a href="http://data.ce.cn/">中国经济网行情数据中心</a>公布了数据，所以用 Stata 爬了下，好久没有用 Stata 干这种活儿，也当是练练手。</p>
@@ -21254,6 +21254,28 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
       </categories>
       <tags>
         <tag>Stata</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TENTE观后感</title>
+    <url>/2020/09/08/TENTE%E8%A7%82%E5%90%8E%E6%84%9F/</url>
+    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>主角和地名的由来</p>
+<p>由熵的概念引申到旋转门</p>
+<p>熵：用来度量组织中的混乱程度（有序到无序）；逆转是因为熵减，表现在视觉上就是“先果后因”。</p>
+<p>逆转时间的原理</p>
+<p>演算机的由来和作用</p>
+<p>人物各自的动机</p>
+<p>时间钳形运动：红蓝分成两队，红队正向打，蓝队逆向打，两队出发的时间不同。顺时从头到尾行动，逆事从尾到头行动，二者将信息互通，以此精准预判和有效应对。</p>
+<p>影片标示：吸氧机、红色和蓝色</p>
+<h2 id="彩蛋"><a href="#彩蛋" class="headerlink" title="彩蛋"></a>彩蛋</h2><p>剧院放安眠瓦斯</p>
+<p>飞机撞大楼</p>
+<p>后代人谴责前代破坏环境</p>
+]]></content>
+      <categories>
+        <category>Movies</category>
+      </categories>
+      <tags>
+        <tag>Movies</tag>
       </tags>
   </entry>
   <entry>
@@ -21287,28 +21309,6 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
       </tags>
   </entry>
   <entry>
-    <title>TENTE观后感</title>
-    <url>/2020/09/08/TENTE%E8%A7%82%E5%90%8E%E6%84%9F/</url>
-    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>主角和地名的由来</p>
-<p>由熵的概念引申到旋转门</p>
-<p>熵：用来度量组织中的混乱程度（有序到无序）；逆转是因为熵减，表现在视觉上就是“先果后因”。</p>
-<p>逆转时间的原理</p>
-<p>演算机的由来和作用</p>
-<p>人物各自的动机</p>
-<p>时间钳形运动：红蓝分成两队，红队正向打，蓝队逆向打，两队出发的时间不同。顺时从头到尾行动，逆事从尾到头行动，二者将信息互通，以此精准预判和有效应对。</p>
-<p>影片标示：吸氧机、红色和蓝色</p>
-<h2 id="彩蛋"><a href="#彩蛋" class="headerlink" title="彩蛋"></a>彩蛋</h2><p>剧院放安眠瓦斯</p>
-<p>飞机撞大楼</p>
-<p>后代人谴责前代破坏环境</p>
-]]></content>
-      <categories>
-        <category>Movies</category>
-      </categories>
-      <tags>
-        <tag>Movies</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>微信公众号二维码</title>
     <url>/2020/11/23/resume/</url>
     <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p><img src="/2020/11/23/resume/WeChatPublic.jpg" style="zoom:33%;"></p>
@@ -21318,28 +21318,6 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
     <title>tata2020国家社科基金立项名单分析</title>
     <url>/2020/09/09/tata2020%E5%9B%BD%E5%AE%B6%E7%A4%BE%E7%A7%91%E5%9F%BA%E9%87%91%E7%AB%8B%E9%A1%B9%E5%90%8D%E5%8D%95%E5%88%86%E6%9E%90/</url>
     <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script>]]></content>
-  </entry>
-  <entry>
-    <title>一些自律的原则</title>
-    <url>/2020/09/28/%E4%B8%80%E4%BA%9B%E8%87%AA%E5%BE%8B%E7%9A%84%E5%8E%9F%E5%88%99/</url>
-    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><ol>
-<li>低糖少油、不喝碳酸饮料、不吃垃圾食品、多吃水果</li>
-<li>每天坚持锻炼</li>
-<li>不说脏话、公众场合不大声喧哗</li>
-<li>重要事情和人提前预约、约定好后准时赴约</li>
-<li>非重要场合和事情不饮酒，饮酒不过度</li>
-<li>说话经过大脑，注重表达逻辑性</li>
-<li>不要轻易承诺，承诺要能兑现</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Others</category>
-        <category>Thoughts</category>
-      </categories>
-      <tags>
-        <tag>Others</tag>
-        <tag>Thoughts</tag>
-      </tags>
   </entry>
   <entry>
     <title>企研数据经营主体数据的构建方式</title>
@@ -21514,6 +21492,28 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
       </categories>
       <tags>
         <tag>Database</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一些自律的原则</title>
+    <url>/2020/09/28/%E4%B8%80%E4%BA%9B%E8%87%AA%E5%BE%8B%E7%9A%84%E5%8E%9F%E5%88%99/</url>
+    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><ol>
+<li>低糖少油、不喝碳酸饮料、不吃垃圾食品、多吃水果</li>
+<li>每天坚持锻炼</li>
+<li>不说脏话、公众场合不大声喧哗</li>
+<li>重要事情和人提前预约、约定好后准时赴约</li>
+<li>非重要场合和事情不饮酒，饮酒不过度</li>
+<li>说话经过大脑，注重表达逻辑性</li>
+<li>不要轻易承诺，承诺要能兑现</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Others</category>
+        <category>Thoughts</category>
+      </categories>
+      <tags>
+        <tag>Others</tag>
+        <tag>Thoughts</tag>
       </tags>
   </entry>
   <entry>
@@ -21765,6 +21765,42 @@ P(W_{m},Z_{m},\theta_{m},\Phi;\alpha,\beta) = \prod_{n=1}^{N_{m}}P(\theta_m;\alp
     <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script>]]></content>
   </entry>
   <entry>
+    <title>杂乱文件自动分类</title>
+    <url>/2020/08/17/%E6%9D%82%E4%B9%B1%E6%96%87%E4%BB%B6%E8%87%AA%E5%8A%A8%E5%88%86%E7%B1%BB/</url>
+    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h1 id="杂乱文件自动分类"><a href="#杂乱文件自动分类" class="headerlink" title="杂乱文件自动分类"></a>杂乱文件自动分类</h1><p>在数据清理或者实证过程中，常常会有大量的文档、表格和图片等。疏于整理的话，文件夹中文件就会五花八门。下图是不是太过真实？</p>
+<p><img src="/2020/08/17/%E6%9D%82%E4%B9%B1%E6%96%87%E4%BB%B6%E8%87%AA%E5%8A%A8%E5%88%86%E7%B1%BB/1-文件夹实况.png" alt></p>
+<p>如果想按照文件类型将文件归类，你会怎么做呢？<code>Ctrl+X</code> 和 <code>Ctrl+V</code>？听起来好费眼睛啊。有没有一种快捷的方法让文件自动分类呢？ <code>Talk is cheap, show me your code</code> 。本文的内容如下：</p>
+<ul>
+<li>先分别使用 Stata 和 Python 编程来解决问题；</li>
+<li>之后，推荐一款 Windows 平台下的文件管理神器 DropIt 。</li>
+</ul>
+<h1 id="分析问题"><a href="#分析问题" class="headerlink" title="分析问题"></a>分析问题</h1><p>在开始写代码之前，先来分析一下这个问题：如果以该文件后缀命令的文件夹存在，则移动进去；如果不存在，先新建该文件后缀的文件夹，再将文件移动进去。实现思路可以用如下流程图描述：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">st&#x3D;&gt;start: 开始</span><br><span class="line">exist?&#x3D;&gt;condition: 目标文件夹存在吗？</span><br><span class="line">createfolder&#x3D;&gt;operation: 新建该后缀文件夹</span><br><span class="line">move&#x3D;&gt;operation: 移动到目标文件夹</span><br><span class="line">e&#x3D;&gt;end: 结束</span><br><span class="line"></span><br><span class="line">st-&gt;exist?</span><br><span class="line">exist?(no)-&gt;createfolder-&gt;move</span><br><span class="line">exist?(yes)-&gt;move-&gt;e</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/08/17/%E6%9D%82%E4%B9%B1%E6%96%87%E4%BB%B6%E8%87%AA%E5%8A%A8%E5%88%86%E7%B1%BB/1-2-流程图.png" alt></p>
+<h2 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h2><h2 id="Stata-实现"><a href="#Stata-实现" class="headerlink" title="Stata 实现"></a>Stata 实现</h2><p>使用 Stata 的思路是，通过两次遍历，首先遍历文件名，提取后缀，创建文件夹；之后再通过文件后缀判断，将文件移动到相应的文件夹。实现代码如下：</p>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="keyword">cd</span> <span class="string">&quot;..\files&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">* Create folders</span></span><br><span class="line">fs</span><br><span class="line"><span class="keyword">foreach</span> <span class="keyword">file</span> <span class="keyword">in</span> `<span class="built_in">r</span>(files)&#x27;&#123;</span><br><span class="line">    <span class="keyword">local</span> folder =  ustrregexrf(<span class="string">&quot;`file&#x27;&quot;</span>,<span class="string">&quot;^.*\.&quot;</span>,<span class="string">&quot;&quot;</span>,.)</span><br><span class="line">    <span class="keyword">cap</span> <span class="keyword">mkdir</span> <span class="string">&quot;`folder&#x27;&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">* Move Files</span></span><br><span class="line">fs</span><br><span class="line"><span class="keyword">foreach</span> <span class="keyword">file</span> <span class="keyword">in</span> `<span class="built_in">r</span>(files)&#x27;&#123;</span><br><span class="line">    <span class="keyword">local</span> <span class="keyword">type</span> =  ustrregexrf(<span class="string">&quot;`file&#x27;&quot;</span>,<span class="string">&quot;^.*\.&quot;</span>,<span class="string">&quot;&quot;</span>,.)</span><br><span class="line">    <span class="keyword">if</span> ustrregexrf(<span class="string">&quot;`file&#x27;&quot;</span>,<span class="string">&quot;^.*\.&quot;</span>,<span class="string">&quot;&quot;</span>,.) == <span class="string">&quot;`type&#x27;&quot;</span>&#123;</span><br><span class="line">        !<span class="keyword">move</span> <span class="string">&quot;`file&#x27;&quot;</span> <span class="string">&quot;`type&#x27;&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Python-实现"><a href="#Python-实现" class="headerlink" title="Python 实现"></a>Python 实现</h2><p>使用 <code>os</code> 库读取后缀、判断文件夹是否存在，使用 <code>shutil</code> 库来操作文件。实现代码如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"></span><br><span class="line">os.getcwd()</span><br><span class="line">os.listdir()</span><br><span class="line">os.chdir(<span class="string">&quot;../files&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> f <span class="keyword">in</span> files:</span><br><span class="line">    folder = f.split(<span class="string">&#x27;.&#x27;</span>)[<span class="number">-1</span>]</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(folder):</span><br><span class="line">        os.mkdir(folder)</span><br><span class="line">        shutil.move(f, folder)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        shutil.move(f, folder)</span><br></pre></td></tr></table></figure>
+<h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><p><img src="/2020/08/17/%E6%9D%82%E4%B9%B1%E6%96%87%E4%BB%B6%E8%87%AA%E5%8A%A8%E5%88%86%E7%B1%BB/2-实现效果.gif" alt></p>
+<p>以 Stata 运行过程为例，看看实现效果。怎么样？是不是看起来比较“酷炫”？</p>
+<h1 id="DropIt：文件自动分类管理工具"><a href="#DropIt：文件自动分类管理工具" class="headerlink" title="DropIt：文件自动分类管理工具"></a>DropIt：文件自动分类管理工具</h1><p><img src="/2020/08/17/%E6%9D%82%E4%B9%B1%E6%96%87%E4%BB%B6%E8%87%AA%E5%8A%A8%E5%88%86%E7%B1%BB/3-how_to_use_dropit.png" alt></p>
+<p> DropIt 是一款源于国外的开源、免费软件，目前仅支持 Window 系统。预先设定好协议（规则），轻松拖拽就可以将文件自动分类。可前往 <a href="http://www.dropitproject.com/"> DropIt 官网</a> 下载体验，软件非常轻量，安装包只有 5.1 M 。我们来看看处理任务的效果：</p>
+<p><img src="/2020/08/17/%E6%9D%82%E4%B9%B1%E6%96%87%E4%BB%B6%E8%87%AA%E5%8A%A8%E5%88%86%E7%B1%BB/5-dropit实现效果.gif" alt></p>
+<p> 除了自动分类，它还支持批量压缩文件、给重要的文件加密、文件转格式和批量处理图片等功能。根据个人的使用习惯，可以打造个人全自动的文件管理系统，<a href="https://sspai.com/post/45532">这里</a> 有一篇进阶使用说明，感兴趣的朋友可以看看。</p>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>本文围绕杂乱文件自动分类的问题，分别使用 Stata 和 Python 编写代码来实现需求，然后安利了一款 Windows 系统的文件管理神器。通过这篇文章，是不是感觉在日益依赖电脑的学习和办公环境下，能够按照需求写代码，能够节约时间，提高效率。再者，“工欲善其事，必先利其器”，多关注和使用一些良心的神器，也可以极大的提高工作效率。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="http://www.dropitproject.com/dokuwiki/doku.php?id=howto:start_with_dropit">Crash Course: How to start with DropIt</a></p>
+<p><a href="https://sspai.com/post/45532">用 DropIt 打造全自动的 Windows 文件管理体系</a></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Stata</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Stata</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>文献管理工具Zotero入门</title>
     <url>/2020/09/02/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Zotero%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="1-Zotero简介"><a href="#1-Zotero简介" class="headerlink" title="1.Zotero简介"></a>1.Zotero简介</h2><p>Zotero作为一款协助科研工作者收集、管理以及引用研究资源的<strong>免费软件</strong>。本文记录Zotero入门用法，包括安装、英文和中文文献的导入等内容。</p>
@@ -21814,42 +21850,6 @@ P(W_{m},Z_{m},\theta_{m},\Phi;\alpha,\beta) = \prod_{n=1}^{N_{m}}P(\theta_m;\alp
       </categories>
       <tags>
         <tag>Tools</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>杂乱文件自动分类</title>
-    <url>/2020/08/17/%E6%9D%82%E4%B9%B1%E6%96%87%E4%BB%B6%E8%87%AA%E5%8A%A8%E5%88%86%E7%B1%BB/</url>
-    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h1 id="杂乱文件自动分类"><a href="#杂乱文件自动分类" class="headerlink" title="杂乱文件自动分类"></a>杂乱文件自动分类</h1><p>在数据清理或者实证过程中，常常会有大量的文档、表格和图片等。疏于整理的话，文件夹中文件就会五花八门。下图是不是太过真实？</p>
-<p><img src="/2020/08/17/%E6%9D%82%E4%B9%B1%E6%96%87%E4%BB%B6%E8%87%AA%E5%8A%A8%E5%88%86%E7%B1%BB/1-文件夹实况.png" alt></p>
-<p>如果想按照文件类型将文件归类，你会怎么做呢？<code>Ctrl+X</code> 和 <code>Ctrl+V</code>？听起来好费眼睛啊。有没有一种快捷的方法让文件自动分类呢？ <code>Talk is cheap, show me your code</code> 。本文的内容如下：</p>
-<ul>
-<li>先分别使用 Stata 和 Python 编程来解决问题；</li>
-<li>之后，推荐一款 Windows 平台下的文件管理神器 DropIt 。</li>
-</ul>
-<h1 id="分析问题"><a href="#分析问题" class="headerlink" title="分析问题"></a>分析问题</h1><p>在开始写代码之前，先来分析一下这个问题：如果以该文件后缀命令的文件夹存在，则移动进去；如果不存在，先新建该文件后缀的文件夹，再将文件移动进去。实现思路可以用如下流程图描述：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">st&#x3D;&gt;start: 开始</span><br><span class="line">exist?&#x3D;&gt;condition: 目标文件夹存在吗？</span><br><span class="line">createfolder&#x3D;&gt;operation: 新建该后缀文件夹</span><br><span class="line">move&#x3D;&gt;operation: 移动到目标文件夹</span><br><span class="line">e&#x3D;&gt;end: 结束</span><br><span class="line"></span><br><span class="line">st-&gt;exist?</span><br><span class="line">exist?(no)-&gt;createfolder-&gt;move</span><br><span class="line">exist?(yes)-&gt;move-&gt;e</span><br></pre></td></tr></table></figure>
-<p><img src="/2020/08/17/%E6%9D%82%E4%B9%B1%E6%96%87%E4%BB%B6%E8%87%AA%E5%8A%A8%E5%88%86%E7%B1%BB/1-2-流程图.png" alt></p>
-<h2 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h2><h2 id="Stata-实现"><a href="#Stata-实现" class="headerlink" title="Stata 实现"></a>Stata 实现</h2><p>使用 Stata 的思路是，通过两次遍历，首先遍历文件名，提取后缀，创建文件夹；之后再通过文件后缀判断，将文件移动到相应的文件夹。实现代码如下：</p>
-<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="keyword">cd</span> <span class="string">&quot;..\files&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">* Create folders</span></span><br><span class="line">fs</span><br><span class="line"><span class="keyword">foreach</span> <span class="keyword">file</span> <span class="keyword">in</span> `<span class="built_in">r</span>(files)&#x27;&#123;</span><br><span class="line">    <span class="keyword">local</span> folder =  ustrregexrf(<span class="string">&quot;`file&#x27;&quot;</span>,<span class="string">&quot;^.*\.&quot;</span>,<span class="string">&quot;&quot;</span>,.)</span><br><span class="line">    <span class="keyword">cap</span> <span class="keyword">mkdir</span> <span class="string">&quot;`folder&#x27;&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">* Move Files</span></span><br><span class="line">fs</span><br><span class="line"><span class="keyword">foreach</span> <span class="keyword">file</span> <span class="keyword">in</span> `<span class="built_in">r</span>(files)&#x27;&#123;</span><br><span class="line">    <span class="keyword">local</span> <span class="keyword">type</span> =  ustrregexrf(<span class="string">&quot;`file&#x27;&quot;</span>,<span class="string">&quot;^.*\.&quot;</span>,<span class="string">&quot;&quot;</span>,.)</span><br><span class="line">    <span class="keyword">if</span> ustrregexrf(<span class="string">&quot;`file&#x27;&quot;</span>,<span class="string">&quot;^.*\.&quot;</span>,<span class="string">&quot;&quot;</span>,.) == <span class="string">&quot;`type&#x27;&quot;</span>&#123;</span><br><span class="line">        !<span class="keyword">move</span> <span class="string">&quot;`file&#x27;&quot;</span> <span class="string">&quot;`type&#x27;&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Python-实现"><a href="#Python-实现" class="headerlink" title="Python 实现"></a>Python 实现</h2><p>使用 <code>os</code> 库读取后缀、判断文件夹是否存在，使用 <code>shutil</code> 库来操作文件。实现代码如下：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"></span><br><span class="line">os.getcwd()</span><br><span class="line">os.listdir()</span><br><span class="line">os.chdir(<span class="string">&quot;../files&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> f <span class="keyword">in</span> files:</span><br><span class="line">    folder = f.split(<span class="string">&#x27;.&#x27;</span>)[<span class="number">-1</span>]</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(folder):</span><br><span class="line">        os.mkdir(folder)</span><br><span class="line">        shutil.move(f, folder)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        shutil.move(f, folder)</span><br></pre></td></tr></table></figure>
-<h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><p><img src="/2020/08/17/%E6%9D%82%E4%B9%B1%E6%96%87%E4%BB%B6%E8%87%AA%E5%8A%A8%E5%88%86%E7%B1%BB/2-实现效果.gif" alt></p>
-<p>以 Stata 运行过程为例，看看实现效果。怎么样？是不是看起来比较“酷炫”？</p>
-<h1 id="DropIt：文件自动分类管理工具"><a href="#DropIt：文件自动分类管理工具" class="headerlink" title="DropIt：文件自动分类管理工具"></a>DropIt：文件自动分类管理工具</h1><p><img src="/2020/08/17/%E6%9D%82%E4%B9%B1%E6%96%87%E4%BB%B6%E8%87%AA%E5%8A%A8%E5%88%86%E7%B1%BB/3-how_to_use_dropit.png" alt></p>
-<p> DropIt 是一款源于国外的开源、免费软件，目前仅支持 Window 系统。预先设定好协议（规则），轻松拖拽就可以将文件自动分类。可前往 <a href="http://www.dropitproject.com/"> DropIt 官网</a> 下载体验，软件非常轻量，安装包只有 5.1 M 。我们来看看处理任务的效果：</p>
-<p><img src="/2020/08/17/%E6%9D%82%E4%B9%B1%E6%96%87%E4%BB%B6%E8%87%AA%E5%8A%A8%E5%88%86%E7%B1%BB/5-dropit实现效果.gif" alt></p>
-<p> 除了自动分类，它还支持批量压缩文件、给重要的文件加密、文件转格式和批量处理图片等功能。根据个人的使用习惯，可以打造个人全自动的文件管理系统，<a href="https://sspai.com/post/45532">这里</a> 有一篇进阶使用说明，感兴趣的朋友可以看看。</p>
-<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>本文围绕杂乱文件自动分类的问题，分别使用 Stata 和 Python 编写代码来实现需求，然后安利了一款 Windows 系统的文件管理神器。通过这篇文章，是不是感觉在日益依赖电脑的学习和办公环境下，能够按照需求写代码，能够节约时间，提高效率。再者，“工欲善其事，必先利其器”，多关注和使用一些良心的神器，也可以极大的提高工作效率。</p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="http://www.dropitproject.com/dokuwiki/doku.php?id=howto:start_with_dropit">Crash Course: How to start with DropIt</a></p>
-<p><a href="https://sspai.com/post/45532">用 DropIt 打造全自动的 Windows 文件管理体系</a></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Stata</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Stata</tag>
       </tags>
   </entry>
   <entry>
