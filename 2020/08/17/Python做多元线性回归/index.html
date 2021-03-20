@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -24,9 +24,9 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python做多元线性回归">
 <meta property="og:url" content="http://yoursite.com/2020/08/17/Python%E5%81%9A%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/index.html">
-<meta property="og:site_name" content="LG&#39;s Blog">
+<meta property="og:site_name" content="PyStaData">
 <meta property="og:description" content="人们总是倾向于寻求自己熟悉的东西。受其他语言的影响，你大概能猜到 Python 会支持正则表达式，然后就去查阅文档。但是如果你从来没有见过元组拆包（tuple unpacking），也从没有听过描述符（descriptor），那么估计你也不会去搜索它们，然后就永远失去了使用这些 Python 独有特性的机会。(《流畅的 Python 》）  读到这句话时，深有同感。迁移能力帮助我们快速了解陌生">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale">
 <meta property="og:image" content="http://yoursite.com/2020/08/17/Python%E5%81%9A%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/1-预览数据.png">
 <meta property="og:image" content="http://yoursite.com/2020/08/17/Python%E5%81%9A%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/2-数据概览.png">
 <meta property="og:image" content="http://yoursite.com/2020/08/17/Python%E5%81%9A%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/3-1-描述性统计.png">
@@ -51,11 +51,11 @@
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'en'
+    lang   : 'zh'
   };
 </script>
 
-  <title>Python做多元线性回归 | LG's Blog</title>
+  <title>Python做多元线性回归 | PyStaData</title>
   
 
 
@@ -95,7 +95,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
+    <div class="toggle" aria-label="تشغيل شريط التصفح">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -106,7 +106,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">LG's Blog</h1>
+      <h1 class="site-title">PyStaData</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -129,7 +129,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات</a>
 
   </li>
   </ul>
@@ -159,17 +159,17 @@
     
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/17/Python%E5%81%9A%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Gang Li">
-      <meta itemprop="description" content="Wechat Public Account: PyStaData">
+      <meta itemprop="description" content="微信公众号: PyStaData">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LG's Blog">
+      <meta itemprop="name" content="PyStaData">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -181,16 +181,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">نُشر في</span>
               
 
-              <time title="Created: 2020-08-17 12:52:21 / Modified: 14:01:39" itemprop="dateCreated datePublished" datetime="2020-08-17T12:52:21+08:00">2020-08-17</time>
+              <time title="أُنشأ: 2020-08-17 12:52:21 / عُدل: 14:01:39" itemprop="dateCreated datePublished" datetime="2020-08-17T12:52:21+08:00">2020-08-17</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
+              <span class="post-meta-item-text">في</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
                 </span>
@@ -321,10 +321,10 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          Table of Contents
+          المحتويات
         </li>
         <li class="sidebar-nav-overview">
-          Overview
+          عام
         </li>
       </ul>
 
@@ -337,7 +337,7 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Gang Li</p>
-  <div class="site-description" itemprop="description">Wechat Public Account: PyStaData</div>
+  <div class="site-description" itemprop="description">微信公众号: PyStaData</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
@@ -345,16 +345,16 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
           <a href="/archives/">
         
           <span class="site-state-item-count">42</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-name">المقالات</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
         <span class="site-state-item-count">24</span>
-        <span class="site-state-item-name">categories</span>
+        <span class="site-state-item-name">التصنيفات</span>
       </div>
       <div class="site-state-item site-state-tags">
         <span class="site-state-item-count">16</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">الوسوم</span>
       </div>
   </nav>
 </div>
@@ -386,7 +386,7 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
   </span>
   <span class="author" itemprop="copyrightHolder">Gang Li</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>
 
         
