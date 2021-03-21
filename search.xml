@@ -4,13 +4,15 @@
     <title>关于我们</title>
     <url>/2020/11/23/resume/</url>
     <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p><img src="/2020/11/23/resume/WeChatPublic.jpg" style="zoom:40%;"></p>
-<p><a href="./resume/CV-LG-202103.pdf">我的简历</a>                <a href="./resume/CV-WYF-202012.pdf">🐱的简历</a> </p>
+<p><a href="./resume/CV-LG-202103.pdf">我的简历</a></p>
+<p><a href="./resume/CV-WYF-202012.pdf">🐱的简历</a> </p>
 ]]></content>
   </entry>
   <entry>
     <title>🐱 💕 🐯 的美食铺子</title>
     <url>/2021/03/20/%E8%8F%9C%E8%B0%B1/</url>
-    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h1 id="🐱-💕-🐯-的美食铺子"><a href="#🐱-💕-🐯-的美食铺子" class="headerlink" title="🐱 💕 🐯 的美食铺子"></a>🐱 💕 🐯 的美食铺子</h1><h2 id="1-家常菜"><a href="#1-家常菜" class="headerlink" title="1.家常菜"></a>1.家常菜</h2><h3 id="干锅花菜"><a href="#干锅花菜" class="headerlink" title="干锅花菜"></a>干锅花菜</h3><h3 id="手撕包菜"><a href="#手撕包菜" class="headerlink" title="手撕包菜"></a>手撕包菜</h3><h3 id="蚝油生菜"><a href="#蚝油生菜" class="headerlink" title="蚝油生菜"></a>蚝油生菜</h3><h3 id="西红柿炒蛋"><a href="#西红柿炒蛋" class="headerlink" title="西红柿炒蛋"></a>西红柿炒蛋</h3><h3 id="蚂蚁上树"><a href="#蚂蚁上树" class="headerlink" title="蚂蚁上树"></a>蚂蚁上树</h3><h3 id="青豆虾仁"><a href="#青豆虾仁" class="headerlink" title="青豆虾仁"></a>青豆虾仁</h3><h2 id="2-硬菜"><a href="#2-硬菜" class="headerlink" title="2.硬菜"></a>2.硬菜</h2><h3 id="红烧鱼"><a href="#红烧鱼" class="headerlink" title="红烧鱼"></a>红烧鱼</h3><p><img src="/2021/03/20/%E8%8F%9C%E8%B0%B1/12.jpg" style="zoom:30%;"></p>
+    <content><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h1 id="🐱-💕-🐯-的美食铺子"><a href="#🐱-💕-🐯-的美食铺子" class="headerlink" title="🐱 💕 🐯 的美食铺子"></a>🐱 💕 🐯 的美食铺子</h1><a id="more"></a>
+<h2 id="1-家常菜"><a href="#1-家常菜" class="headerlink" title="1.家常菜"></a>1.家常菜</h2><h3 id="干锅花菜"><a href="#干锅花菜" class="headerlink" title="干锅花菜"></a>干锅花菜</h3><h3 id="手撕包菜"><a href="#手撕包菜" class="headerlink" title="手撕包菜"></a>手撕包菜</h3><h3 id="蚝油生菜"><a href="#蚝油生菜" class="headerlink" title="蚝油生菜"></a>蚝油生菜</h3><h3 id="西红柿炒蛋"><a href="#西红柿炒蛋" class="headerlink" title="西红柿炒蛋"></a>西红柿炒蛋</h3><h3 id="蚂蚁上树"><a href="#蚂蚁上树" class="headerlink" title="蚂蚁上树"></a>蚂蚁上树</h3><h3 id="青豆虾仁"><a href="#青豆虾仁" class="headerlink" title="青豆虾仁"></a>青豆虾仁</h3><h2 id="2-硬菜"><a href="#2-硬菜" class="headerlink" title="2.硬菜"></a>2.硬菜</h2><h3 id="红烧鱼"><a href="#红烧鱼" class="headerlink" title="红烧鱼"></a>红烧鱼</h3><p><img src="/2021/03/20/%E8%8F%9C%E8%B0%B1/12.jpg" style="zoom:30%;"></p>
 <p>鱼肚子里的所有的内脏都不要，如果有鱼籽可以留下，鱼腮也不要，多洗几遍洗干净就可以做了。鱼背正反面可以来几个花刀，划几个口子。</p>
 <video id="video" controls preload="none" poster="./菜谱/2-cover.jpg">
 <source id="mp4" src="./菜谱/2.mp4" type="video/mp4">
@@ -73,6 +75,7 @@
 <p>配套教材、课件和课后习题答案：</p>
 <p>链接: <a href="https://pan.baidu.com/s/1fMGW-0a2VqoLq_6Y8H35FA">https://pan.baidu.com/s/1fMGW-0a2VqoLq_6Y8H35FA</a>  </p>
 <p>密码: w277</p>
+<a id="more"></a>
 <blockquote>
 <p>人文社会科学、经济科学本质上来讲是一门历史的科学。</p>
 </blockquote>
@@ -789,8 +792,8 @@ L = L_1 + L_2 = k Y - hr</script><p><img src="/2021/03/19/%E6%B5%99%E5%A4%A7%E5%
       </categories>
       <tags>
         <tag>Photos</tag>
-        <tag>Others</tag>
         <tag>Travel</tag>
+        <tag>Others</tag>
       </tags>
   </entry>
   <entry>
@@ -807,8 +810,8 @@ L = L_1 + L_2 = k Y - hr</script><p><img src="/2021/03/19/%E6%B5%99%E5%A4%A7%E5%
         <category>Travel</category>
       </categories>
       <tags>
-        <tag>Others</tag>
         <tag>Travel</tag>
+        <tag>Others</tag>
       </tags>
   </entry>
   <entry>
