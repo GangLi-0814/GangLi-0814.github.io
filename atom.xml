@@ -88,19 +88,21 @@
   </entry>
   
   <entry>
-    <title>微信公众号二维码</title>
+    <title>关于我们</title>
     <link href="http://yoursite.com/2020/11/23/resume/"/>
     <id>http://yoursite.com/2020/11/23/resume/</id>
     <published>2020-11-22T16:59:07.000Z</published>
-    <updated>2021-03-20T01:58:06.261Z</updated>
+    <updated>2021-03-21T15:33:49.621Z</updated>
     
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p><img src="/2020/11/23/resume/WeChatPublic.jpg" style="zoom:33%;"></p>]]></content>
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p><img src="/2020/11/23/resume/WeChatPublic.jpg" style="zoom:40%;"></p><center><p><a href="./resume/CV-LG-202103.pdf">   我的简历          </a><a href="./resume/CV-WYF-202012.pdf">   🐱的简历       </a></p></center>]]></content>
     
     
       
       
-    <summary type="html">&lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;&lt;img src=&quot;/2020/11/23/resume/WeChatPublic.jpg&quot; style=&quot;zoom:33%;&quot;&gt;&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;&lt;img src=&quot;/2020/11/23/resume/WeChatPublic.jpg&quot; style=&quot;zoom:40%;&quot;&gt;&lt;/p&gt;
+&lt;center&gt;
+&lt;p&gt;
+&lt;a h</summary>
       
     
     
