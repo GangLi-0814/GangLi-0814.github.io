@@ -444,9 +444,9 @@
     <category term="Data" scheme="http://yoursite.com/categories/Python/Data/"/>
     
     
-    <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
-    
     <category term="Data" scheme="http://yoursite.com/tags/Data/"/>
+    
+    <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
     
   </entry>
   
