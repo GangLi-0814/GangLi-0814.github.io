@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="1. 使用方式今天试用了浙大卡特-企研中国涉农企业数据库（CCAD），整体而言，使用还比较方便。有如下几个使用要点：  远程登录：首先使用分发或者购买的服务器地址、账号和密码登录远程桌面。 数据访问：连接云桌面后，可通过浏览器访问数据，也可以将数据下载到远程桌面的本地。云桌面预装了 Anaconda 和 R，如果要使用其他的工具，需要通过 FTP 上传本地文件。 数据外发：试用账号没有数据外发的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CCAD试用体验">
+<meta property="og:url" content="http://yoursite.com/2020/09/22/CCAD%E8%AF%95%E7%94%A8%E4%BD%93%E9%AA%8C/index.html">
+<meta property="og:site_name" content="LG&#39;s Blog">
+<meta property="og:description" content="1. 使用方式今天试用了浙大卡特-企研中国涉农企业数据库（CCAD），整体而言，使用还比较方便。有如下几个使用要点：  远程登录：首先使用分发或者购买的服务器地址、账号和密码登录远程桌面。 数据访问：连接云桌面后，可通过浏览器访问数据，也可以将数据下载到远程桌面的本地。云桌面预装了 Anaconda 和 R，如果要使用其他的工具，需要通过 FTP 上传本地文件。 数据外发：试用账号没有数据外发的">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/2020/09/22/CCAD%E8%AF%95%E7%94%A8%E4%BD%93%E9%AA%8C/CCAD试用体验//images/d1.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/09/22/CCAD%E8%AF%95%E7%94%A8%E4%BD%93%E9%AA%8C/CCAD试用体验//images/d2_1.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/22/CCAD%E8%AF%95%E7%94%A8%E4%BD%93%E9%AA%8C/CCAD试用体验//images/d2.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/09/22/CCAD%E8%AF%95%E7%94%A8%E4%BD%93%E9%AA%8C/CCAD试用体验//images/d3.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/09/22/CCAD%E8%AF%95%E7%94%A8%E4%BD%93%E9%AA%8C/CCAD试用体验/images/d4.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/09/22/CCAD%E8%AF%95%E7%94%A8%E4%BD%93%E9%AA%8C/CCAD试用体验//images/3.png">
+<meta property="article:published_time" content="2020-09-22T05:53:04.000Z">
+<meta property="article:modified_time" content="2020-09-22T05:54:39.000Z">
+<meta property="article:author" content="Gang Li">
+<meta property="article:tag" content="Data">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/09/22/CCAD%E8%AF%95%E7%94%A8%E4%BD%93%E9%AA%8C/CCAD试用体验//images/d1.jpg">
+
+<link rel="canonical" href="http://yoursite.com/2020/09/22/CCAD%E8%AF%95%E7%94%A8%E4%BD%93%E9%AA%8C/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>CCAD试用体验 | LG's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="LG's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">LG's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/22/CCAD%E8%AF%95%E7%94%A8%E4%BD%93%E9%AA%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Gang Li">
+      <meta itemprop="description" content="微信公众号: PyStaData">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LG's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CCAD试用体验
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-09-22 13:53:04 / 修改时间：13:54:39" itemprop="dateCreated datePublished" datetime="2020-09-22T13:53:04+08:00">2020-09-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Data/" itemprop="url" rel="index"><span itemprop="name">Data</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <script src="/assets/js/APlayer.min.js"> </script><h2 id="1-使用方式"><a href="#1-使用方式" class="headerlink" title="1. 使用方式"></a>1. 使用方式</h2><p>今天试用了浙大卡特-企研中国涉农企业数据库（CCAD），整体而言，使用还比较方便。有如下几个使用要点：</p>
+<ul>
+<li><strong>远程登录</strong>：首先使用分发或者购买的服务器地址、账号和密码登录远程桌面。</li>
+<li><strong>数据访问</strong>：连接云桌面后，可通过浏览器访问数据，也可以将数据下载到远程桌面的本地。云桌面预装了 Anaconda 和 R，如果要使用其他的工具，需要通过 FTP 上传本地文件。</li>
+<li><strong>数据外发</strong>：试用账号没有数据外发的权限；正式账号一天有<strong>5 次</strong>外发功能，一次文件大小不超过<strong>1M</strong>，如果超过的话，要放到云桌面的指定文件夹内人工审核后传到邮箱。所以也就能外传一下运行结果。我试了下，在云桌面上不了网，所以应该也不能通过邮箱或云盘往外传数据，挺考虑数据保密的问题。</li>
+</ul>
+<h2 id="2-数据概况与建库思路"><a href="#2-数据概况与建库思路" class="headerlink" title="2. 数据概况与建库思路"></a>2. 数据概况与建库思路</h2><h3 id="2-1-农业企业"><a href="#2-1-农业企业" class="headerlink" title="2.1 农业企业"></a>2.1 农业企业</h3><p><strong>数据来源</strong>： <strong>截止 2019 年 12 月 31 日</strong>在各级工商行政管理部门登记在册的<strong>约 212 万</strong>家企业，包括个人独资企业、合伙企业及有限责任公司等各类企业组织形式。在此基础上，融合了专利、商标等企业知识产权信息，以及招投标、资质荣誉、食品认证产品等其他企业相关信息。</p>
+<p><strong>划分依据</strong>：结合农业的概念以及《国民经济行业分类（GB/T 4754-2017）》，定义为国民经济行业中的农、林、牧、渔业（A 行业）。</p>
+<p><strong>数据概况</strong>：共涵盖农业企业基本信息表、股东及出资信息表、主要管理人员表等<strong>43 张表格</strong>，具体包括企业成立时间、经营范围、行业门类、注册地址和死亡时间等<strong>584 个字段</strong>。</p>
+<p><img src="./CCAD试用体验//images/d1.jpg" alt></p>
+<h3 id="2-2-农产品加工企业"><a href="#2-2-农产品加工企业" class="headerlink" title="2.2 农产品加工企业"></a>2.2 农产品加工企业</h3><p><strong>数据来源</strong>： <strong>截止 2019 年 12 月 31 日</strong>在各级工商行政管理部门登记在册的<strong>约 212 万</strong>家企业，包括个人独资企业、合伙企业及有限责任公司等各类企业组织形式。在此基础上，融合了专利、商标等企业知识产权信息，以及招投标、资质荣誉、食品认证产品等其他企业相关信息。</p>
+<p><strong>划分依据</strong>：在《国民经济行业分类（GB/T4754-2017）》的基础上，结合农业农村部发布的文件<a target="_blank" rel="noopener" href="https://file.qiyandata.cn:10443/FTPshare/20200813180848j6Xq.pdf">《农产品加工业行业划分方式（试行）》</a>以及农业部规划设计研究院发表的文章《中国农产品加工业的区域布局与产业集聚》，确定出农产品加工业的细分行业为农副食品加工业、食品制造业、酒饮料和精制茶制造业、烟草制造业、纺织业、纺织服装服饰业、皮革毛皮羽绒及其制品和制鞋业、木材加工及竹藤棕草制品业、家具制造业、造纸及纸制品业、印刷和记录媒介的复制业、橡胶和塑料制品业<strong>12 类</strong>，进而构建出农产品加工业专题数据库。</p>
+<p><img src="./CCAD试用体验//images/d2_1.png" alt></p>
+<p><strong>数据概况</strong>：共涵盖农产品加工企业基本信息表、股东及出资信息表、专利商标等<strong>47 张表格</strong>，具体包括企业成立时间、经营范围、注册地址和申请专利商标等<strong>655 个字段</strong>。</p>
+<p><img src="./CCAD试用体验//images/d2.jpg" alt></p>
+<h3 id="2-3-农民专业合作社"><a href="#2-3-农民专业合作社" class="headerlink" title="2.3 农民专业合作社"></a>2.3 农民专业合作社</h3><p><strong>数据来源</strong>： <strong>截止 2019 年 12 月 31 日</strong>在各级工商行政管理部门登记在册的<strong>约 253 万家</strong>合作社，并融合了专利、商标等企业知识产权信息，以及招投标、资质荣誉、食品认证产品等其他企业相关信息。</p>
+<p><strong>划分依据</strong>：根据 2007 年 7 月 1 日起实施的<a target="_blank" rel="noopener" href="https://file.qiyandata.cn:10443/FTPshare/20200107172501O5la.pdf"><strong>《农民专业合作社登记管理条例》</strong></a>第六条相关规定，“农民专业合作社的名称应当<strong>含有“专业合作社”字样</strong>，并符合国家有关企业名称登记管理的规定”。此外，第三十二条规定，“本条例施行前设立的农民专业合作社，应当自本条例施行之日起 1 年内依法办理登记”。<strong>因此，以名称是否包含“专业合作社”字样，作为农民专业合作社的筛选依据，并以此为基础，构建农民专业合作社专题数据库</strong>。</p>
+<p><strong>数据概况</strong>：共涵盖农民专业合作社基本信息表、股东出资信息表、专利商标等<strong>22 张表格</strong>，具体包括合作社成立时间、经营范围、注册地址、申请专利商标等<strong>313 个字段</strong>。</p>
+<p><img src="./CCAD试用体验//images/d3.jpg" alt></p>
+<h3 id="2-4-家庭农场"><a href="#2-4-家庭农场" class="headerlink" title="2.4 家庭农场"></a>2.4 家庭农场</h3><p><strong>数据来源</strong>： <strong>截止 2019 年 12 月 31 日</strong>在各级工商行政管理部门登记在册的<strong>896734 户</strong>家庭农场的工商注册信息，其中<strong>655940 家户</strong>登记为个体工商户组织形式，<strong>240794 户</strong>登记为个人独资企业、合伙企业和有限责任公司等企业组织形式。</p>
+<p><strong>划分依据</strong>：以名称是否包含“家庭农场”、“家庭养殖场”、“家庭牧场”、“家庭农牧场”任一字样，作为家庭农场的筛选依据。</p>
+<p><strong>数据概况</strong>：共涵盖家庭农场（企业）基本信息表、股东信息表、人员信息表等<strong>16 张表格</strong>，具体包括合作社成立时间、经营范围、行业门类、行政区划和死亡时间等<strong>251 个字段</strong>。</p>
+<p><img src="./CCAD试用体验/images/d4.jpg" alt></p>
+<h2 id="3-资费"><a href="#3-资费" class="headerlink" title="3. 资费"></a>3. 资费</h2><p>通过购买云桌面账号进行使用，一个账号可以同时两台设备登录使用。费用如下：</p>
+<p><img src="./CCAD试用体验//images/3.png" alt></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>[1] 浙大卡特-企研中国涉农企业数据库：<a target="_blank" rel="noopener" href="https://ccad.qiyandata.com/subject?name=overview&amp;subdivision=brief">https://ccad.qiyandata.com/subject?name=overview&amp;subdivision=brief</a>.</p>
+<p>[2] 研盾-云桌面 使用说明：<a target="_blank" rel="noopener" href="https://file.qiyandata.cn:10443/FTPshare/20200723155706K1LW.pdf">https://file.qiyandata.cn:10443/FTPshare/20200723155706K1LW.pdf</a>.</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Data/" rel="tag"># Data</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/09/15/%E5%8C%97%E4%BA%AC%E5%90%83%E5%92%8C%E7%8E%A9%E5%84%BF/" rel="prev" title="北京吃和玩儿">
+      <i class="fa fa-chevron-left"></i> 北京吃和玩儿
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/09/28/%E4%B8%80%E4%BA%9B%E8%87%AA%E5%BE%8B%E7%9A%84%E5%8E%9F%E5%88%99/" rel="next" title="一些自律的原则">
+      一些自律的原则 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">1. 使用方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%95%B0%E6%8D%AE%E6%A6%82%E5%86%B5%E4%B8%8E%E5%BB%BA%E5%BA%93%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text">2. 数据概况与建库思路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E5%86%9C%E4%B8%9A%E4%BC%81%E4%B8%9A"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 农业企业</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E5%86%9C%E4%BA%A7%E5%93%81%E5%8A%A0%E5%B7%A5%E4%BC%81%E4%B8%9A"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 农产品加工企业</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E5%86%9C%E6%B0%91%E4%B8%93%E4%B8%9A%E5%90%88%E4%BD%9C%E7%A4%BE"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 农民专业合作社</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-%E5%AE%B6%E5%BA%AD%E5%86%9C%E5%9C%BA"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 家庭农场</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E8%B5%84%E8%B4%B9"><span class="nav-number">3.</span> <span class="nav-text">3. 资费</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Gang Li"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Gang Li</p>
+  <div class="site-description" itemprop="description">微信公众号: PyStaData</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Gang Li</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
