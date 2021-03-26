@@ -604,7 +604,7 @@ L = L_1 + L_2 = k Y - hr</script><p><img src="/2021/03/23/MacroEcon-Notes-ZJU-Ye
 <p>AD曲线斜率的经济意义是收入或产出对价格变动的敏感程度。斜率越 大，收入或产出对价格变动的反应越迟钝，图中价格由P0降至P1时，AD0所反应的收 入或产出由Y0增加至Y2，而由斜率更大的AD1所反应的收入或产出则只是由Y0增加至 Y1，增加幅度要小。反之，由斜率较小的AD2所反应的收入或产出则由Y0增加至Y3， 增加幅度较大。影响AD曲线斜率的主要因素是β、k、h、b等参数。</p>
 <p><img src="/2021/03/25/MacroEcon-Notes-ZJU-YeHang-2-2/6-6.png" style="zoom:50%"></p>
 <hr>
-<p>【总阶】曲线的移动</p>
+<p>【总结】曲线的移动</p>
 <p>曲线上的点的上下移动</p>
 <p>曲线的平移</p>
 <p>曲线的旋转</p>
@@ -2821,7 +2821,7 @@ P(W_{m},Z_{m},\theta_{m},\Phi;\alpha,\beta) = \prod_{n=1}^{N_{m}}P(\theta_m;\alp
       </tags>
   </entry>
   <entry>
-    <title>📚经管类书库</title>
+    <title>📚经管类书库（持续更新中...）</title>
     <url>/2021/03/22/Econ-Books/</url>
     <content><![CDATA[<blockquote>
 <p>郑重声明：仅供学习交流，严禁用于商业用途，请于 24 小时内删除。</p>
@@ -24366,6 +24366,71 @@ dtype: object
       <tags>
         <tag>工具</tag>
         <tag>Stata</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Econometrics-R-Sqrared</title>
+    <url>/2021/03/26/Econometrics-R-Sqrared/</url>
+    <content><![CDATA[<p>梳理计量经学 $R^2$ 相关的知识，包括带截距项回归的 $R^2$、调整 $R^2$、不带截距项回归的 $R^2$等</p>
+<h3 id="带截距项回归的-R-2"><a href="#带截距项回归的-R-2" class="headerlink" title="带截距项回归的 $R^2$"></a>带截距项回归的 $R^2$</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>拟合优度用来判定 SRF 拟合真实 $Y$ 值的优劣程度，又称为判定系数。</p>
+<p><img src="/2021/03/26/Econometrics-R-Sqrared/1.png" style="zoom:50%"></p>
+<p>（图片来源：古扎拉蒂《计量经济学精要》（第 4 版））</p>
+<p>如上图所示，将 $Y_i$ 的总变异（TSS）分解为两部分，可以被回归分解（ESS） + 未被回归分解（RSS）。即：</p>
+<script type="math/tex; mode=display">
+\underbrace{\sum_{i=1}^n (Y_i - \bar Y)^2}_{TSS}= \underbrace{\sum_{i=1}^n(\hat Y_i - \bar Y)^2}_{ESS}+ \underbrace{\sum_{i=1}^n (Y_i - \bar Y_i)^2}_{RSS}</script><hr>
+<p>【注意】TSS、ESS 和 RSS 的叫法在不同的教材会有区别</p>
+<p>在伍德里奇的教材中，总平方和（total sum of squares, SST）、解释平方和（explained sum of squares, SSE） 和残差平方和（residual sum of squares，SSR）。</p>
+<p>在古扎拉蒂的教材中，总平方和（TSS）、解释平方和（ESS）、残差平方和（RSS）。</p>
+<p>在 Stata 汇报的结果中：解释平方和（SS of Model）、残差平方和（SS of Residual）和 总平方和（SS of Total）。</p>
+<p><img src="/2021/03/26/Econometrics-R-Sqrared/2.png" style="zoom:80%;"></p>
+<hr>
+<h4 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h4><p>问题：证明 $TSS = ESS + RSS$ 。</p>
+<p>证明：将离差 $(y_i - \bar y)$ 写为 $(y_i - \hat y_i + \hat y_i - \bar y)$ ，则可将 TSS 写为：</p>
+<script type="math/tex; mode=display">
+\sum_{i=1}^n (y_i - \bar y)^2 = \sum_{i=1}^n (y_i - \hat y_i + \hat y_i - \bar y)^2 = \sum_{i=1}^n (e_i + \hat y_i - \bar y)^2 \\
+= \sum_{i=1}^n e_i^2 + \sum_{i=1}^n(\hat y_i - \bar y)^2 + 2 \color{red}{\sum_{i=1}^ne_i(\hat y_i - \bar y)}</script><p>只需证明交叉项 $\sum_{i=1}^ne_i(\hat y_i - \bar y)=0$ 即可，而这由 OLS 的正交性所保证，即：</p>
+<script type="math/tex; mode=display">
+\sum_{i=1}^n e_i(\hat y_i-\bar y) = \sum_{i=1}^n e_i \hat y_i - \sum_{i=1}^ne_i = 0 - 0 = 0</script><p>故得证。</p>
+<h4 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h4><p>有了计算公式，我们试试自己手动计算带截距项回归的 $R^2$：</p>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="comment">*手工计算 R2</span></span><br><span class="line"><span class="keyword">sysuse</span> auto,<span class="keyword">clear</span></span><br><span class="line"><span class="keyword">qui</span> <span class="keyword">regress</span> price weight length mpg rep78</span><br><span class="line"><span class="keyword">predict</span> y_hat</span><br><span class="line"><span class="keyword">predict</span> <span class="keyword">e</span>,re</span><br><span class="line"><span class="keyword">egen</span> y_bar = <span class="keyword">mean</span>(price)</span><br><span class="line"><span class="keyword">egen</span> ess = <span class="keyword">total</span>((y_hat - y_bar)^2)</span><br><span class="line"><span class="keyword">egen</span> rss = <span class="keyword">total</span>((price - y_hat)^2)</span><br><span class="line"><span class="keyword">gen</span> tss = ess + rss</span><br><span class="line"><span class="keyword">gen</span> r2 = ess/tss</span><br><span class="line"><span class="keyword">format</span> tss ess rss %9.0f r2</span><br><span class="line"><span class="keyword">list</span> tss ess rss r2 <span class="keyword">in</span> 1</span><br><span class="line"></span><br><span class="line"><span class="comment">*查看报告结果验证</span></span><br><span class="line"><span class="keyword">sysuse</span> auto,<span class="keyword">clear</span></span><br><span class="line"><span class="keyword">regress</span> price weight length mpg rep78</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/03/26/Econometrics-R-Sqrared/3.png" style="zoom:50%;"></p>
+<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><p><strong>拟合优度的缺点是：如果增加解释变量的数目，则 $R^2$ 只增不减，因为至少可让新增解释变量的系数为 0 而保持 $R^2$ 不变</strong>。另一方面，通过最优地选择新增解释变量的系数（以及已有解释变量的系数），通常可以提高 $R^2$ 。</p>
+<p>下面，我们用程序来看看，是不是解释变量 $R^2$ 越大：</p>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* x 越多真的 r2 越大吗？</span></span><br><span class="line"><span class="comment">* 演示：在一个模型中逐步加入解释变量，并储存相应的 r2 。</span></span><br><span class="line"><span class="comment">当解释变量累计增加到200个时，R2的变化。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">clear</span></span><br><span class="line"><span class="keyword">set</span> obs 500</span><br><span class="line"><span class="keyword">gen</span> id = _n</span><br><span class="line"><span class="keyword">gen</span> r2 = .</span><br><span class="line"><span class="keyword">gen</span> y = int(10*runiform()) <span class="comment">//生成被解释变量</span></span><br><span class="line"><span class="keyword">forvalues</span> i = 1/200 &#123;</span><br><span class="line">    <span class="keyword">gen</span> x<span class="symbol">`i&#x27;</span> = 10*runiform() <span class="comment">//生成解释变量</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">forvalues</span> c = 1/200&#123; <span class="comment">//逐步加入解释变量</span></span><br><span class="line">    <span class="keyword">if</span> <span class="symbol">`c&#x27;</span> == 1 &#123;</span><br><span class="line">        <span class="keyword">reg</span> y x1</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">reg</span> y x1-x<span class="symbol">`c&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  <span class="keyword">replace</span>  r2 = `<span class="built_in">e</span>(r2)&#x27; <span class="keyword">in</span> <span class="symbol">`c&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">scatter</span> r2 id <span class="keyword">if</span> id &lt; 200,xlabel(0(100)200) <span class="comment">///</span></span><br><span class="line">ytitle(<span class="string">&quot;拟合系数&quot;</span>) xtitle(<span class="string">&quot;解释变量个数&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="/2021/03/26/Econometrics-R-Sqrared/4.png" style="zoom:50%;"></p>
+<p>可以看出，模型中随着解释变量个数的增加，拟合系数越来越高。</p>
+<h3 id="调整-R-2"><a href="#调整-R-2" class="headerlink" title="调整 $R^2$"></a>调整 $R^2$</h3><h4 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h4><p>因此，为了避免 $R^2$ 的这个缺点，引入调整 $R^2$ 对解释变量过多（模型不够简洁）进行惩罚，调整的 $R^2$ 就是在分子和分母上下除以自由度。</p>
+<p>定义调整 $\bar R^2$ 为：</p>
+<script type="math/tex; mode=display">
+\bar R^2 = 1 - \frac{RSS/(n-k-1)}{TSS/(n-1)}</script><h4 id="何为自由度？"><a href="#何为自由度？" class="headerlink" title="何为自由度？"></a>何为自由度？</h4><p>自由度是指当以样本的统计量来估计总体的参数时，样本中独立或能自由变化的数据的个数，称为该统计量的自由度。通常为 $df = n-k$ 。</p>
+<p>比如，若存在两个变量 $a, b$，而 $a+b = 6$ 那么自由度为 1 。因为其实只有 $a$ 才能真正的自由变化，$b$ 会被 $a$ 的取值不同所限制（$b = 6 - a$）。</p>
+<p>按自由度的定义：</p>
+<p>TSS 自由度：TSS = $\sum (Y_i - \bar Y)^2$。$n$ 已知，$\bar y$ 已知，如果 $n-1$ 个 $Y_i$ 已知，那么最后一个也就不能随便变化了。因此只有 $n-1$ 个 $Y_i - \bar Y$ 是可变化的，最后一个则可以通过平均值与样本量确切的计算出来。所以 TSS 的自由度为 $n-1$ 。</p>
+<p>ESS 自由度：$ESS = (\hat Y_i - \hat Y)^2$。对于每个 $\hat Y_i$ 可以有 $k+1$ 个 $\hat \beta$ 。但是 $\bar Y$ 平均值已知，正如一元线性回归中所看到的，$\bar Y = \beta_0 + \beta_1 \bar X$ ，这样又占据了一个自由度。所以 ESS 的自由度是 $k$ 。</p>
+<p>RSS 自由度：$RSS = e_i^2$。回忆正规方程组，给定 $k+1$ 个方程，意味着 $k+1$ 个残差固定，所以对于残差平方和，自由度为 $n-(k+1)$ 。</p>
+<h4 id="计算-1"><a href="#计算-1" class="headerlink" title="计算"></a>计算</h4><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="comment">* 计算调整R^2</span></span><br><span class="line"><span class="comment">* 调整拟合优度</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">adj_r2 = 1 - (RSS/df)/(TSS/df)</span></span><br><span class="line"><span class="comment">= 1 - ((RSS/n-k-1)/(TSS/(n-1))</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">sysuse</span> auto, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">qui</span> <span class="keyword">reg</span> <span class="keyword">pr</span> wei len</span><br><span class="line"><span class="keyword">eret</span> <span class="keyword">list</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">ESS: e(mss)</span></span><br><span class="line"><span class="comment">RSS: e(rss)</span></span><br><span class="line"><span class="comment">TSS: e(mss) + e(rss)</span></span><br><span class="line"><span class="comment">n: e(N)</span></span><br><span class="line"><span class="comment">k: e(df_m)</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">scalar</span> adj_r2 = 1- (<span class="built_in">e</span>(rss)/(<span class="built_in">e</span>(<span class="keyword">N</span>)-<span class="built_in">e</span>(df_m)-1))/((<span class="built_in">e</span>(mss)+<span class="built_in">e</span>(rss))/(<span class="built_in">e</span>(<span class="keyword">N</span>)-1))</span><br><span class="line"><span class="keyword">dis</span> <span class="string">&quot;调整的R^2:&quot;</span> adj_r2</span><br><span class="line"></span><br><span class="line"><span class="comment">* 验证:</span></span><br><span class="line"><span class="keyword">sysuse</span> auto, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">qui</span> <span class="keyword">reg</span> <span class="keyword">pr</span> wei len</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="/2021/03/26/Econometrics-R-Sqrared/5.png" style="zoom:50%;"></p>
+<h3 id="不带截距项回归的-R-2"><a href="#不带截距项回归的-R-2" class="headerlink" title="不带截距项回归的 $R^2$"></a>不带截距项回归的 $R^2$</h3><p>还有一种情况要注意，当模型没有截距项的时候，平方和分解公式不成立（只有一个一阶条件，无法保证 $\sum_{i=1}^n e_i = 0$），不宜使用 $R^2$ 来度量拟合优度。</p>
+<p>记拟合值为 $\hat y_i = \hat \beta x_i$，残差仍与拟合值正交仍然成立：</p>
+<script type="math/tex; mode=display">
+\sum_{i=1}^n \hat y_i e_i = \sum_{i=1}^n \hat \beta x_ie_i = \hat \beta \sum_{i=1} x_ie_i= \hat \beta \cdot0 = 0</script><p>所以可以利用正交性将 $\sum_{i=1}^n y_i^2$ 分解为：</p>
+<script type="math/tex; mode=display">
+\sum_{i=1} y_i^2 = \sum_{i=1}^n (\hat y_i + e_i)^2 = \sum_{i=1}^n \hat y_i^2 + 2\underbrace{\sum_{i=1}^n \hat y_ie_i}_{=0} + \sum_{i=1}^n e_i^2 = \sum_{i=1}^n \hat y_i^2 + \sum_{i=1}^n e_i^2</script><p>$\sum<em>{i=1}^n \hat y_i^2$ 为可由模型解释的部分，而 $\sum</em>{i=1}^n e_i^2$ 为模型不可解释的部分。</p>
+<p>定义非中心 $R^2$ （uncentered $R^2$）：</p>
+<script type="math/tex; mode=display">
+R_{uc}^2 = \frac{\sum_{i=1}^n \hat y_i^2}{\sum_{i=1}^n y_i^2}</script><p>如果无常数项，Stata 汇报的 $R^2$ 正是 $R_{uc}^2$ 。</p>
+<h4 id="计算-2"><a href="#计算-2" class="headerlink" title="计算"></a>计算</h4><figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="comment">* 非中心拟合优度</span></span><br><span class="line"><span class="comment">* 手动计算</span></span><br><span class="line"><span class="keyword">sysuse</span> auto, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">qui</span> <span class="keyword">reg</span> price wei length, noconstant</span><br><span class="line"><span class="keyword">predict</span> yhat, xb</span><br><span class="line"><span class="keyword">gen</span> yhat2 = yhat^2</span><br><span class="line"><span class="keyword">gen</span> y2 = price^2</span><br><span class="line"><span class="keyword">egen</span> yhat2_sum = <span class="keyword">total</span>(yhat2)</span><br><span class="line"><span class="keyword">egen</span> y2_sum = <span class="keyword">total</span>(y2)</span><br><span class="line"><span class="keyword">gen</span> r_r2_2 = yhat2_sum/y2_sum</span><br><span class="line"><span class="keyword">list</span>  r_r2_2 <span class="keyword">in</span> 1</span><br><span class="line"></span><br><span class="line"><span class="comment">*验证</span></span><br><span class="line"><span class="keyword">reg</span> price wei length, noconstant</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/03/26/Econometrics-R-Sqrared/6.png" style="zoom:50%;"></p>
+<h3 id="另一种理解"><a href="#另一种理解" class="headerlink" title="另一种理解"></a>另一种理解</h3><p>有常数项的情况下，拟合优度等于被解释变量 $y_i$ 与拟合值 $\hat y_i$ 之间相关系数的平方，即 $R^2 = [Corr(y_i,\hat y_i)]^2$ ，故记为 $R^2$ 。</p>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="comment">* R2的理解</span></span><br><span class="line"><span class="keyword">sysuse</span> auto,<span class="keyword">clear</span></span><br><span class="line"><span class="keyword">reg</span> <span class="keyword">pr</span> wei len mpg rep78</span><br><span class="line"><span class="keyword">predict</span> yhat, xb</span><br><span class="line"><span class="keyword">qui</span> <span class="keyword">corr</span> <span class="keyword">pr</span> yhat</span><br><span class="line"><span class="keyword">scalar</span> rho = <span class="built_in">r</span>(rho)</span><br><span class="line"><span class="keyword">dis</span> rho^2</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/03/26/Econometrics-R-Sqrared/7.png" style="zoom:50%;"></p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p>[1] 杰弗里·M·伍德里奇, 2015. 计量经济学导论（第 5 版）[M]. 北京: 中国人民大学出版社.</p>
+<p>[2] 陈强, 2015. 计量经济学及 Stata 应用[M]. 高等教育出版社.</p>
+<p>[3] 达莫道尔·N·古扎拉蒂, 道恩·C·波特, 2010. 经济计量学精要（第 4 版）[M]. 机械工业出版社.</p>
+<p>[4] 李·C·阿迪金斯, 卡特·希尔, 2015. 应用 Stata 学习计量经济学原理（第 4 版）[M]. 重庆：重庆大学出版社.</p>
+]]></content>
+      <tags>
+        <tag>计量</tag>
       </tags>
   </entry>
 </search>
