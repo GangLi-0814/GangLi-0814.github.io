@@ -1285,10 +1285,29 @@
       </categories>
   </entry>
   <entry>
-    <title>MacroEcon-Notes-Outline-yeHang</title>
-    <url>/2021/03/30/MacroEcon-Notes-Outline-yeHang/</url>
+    <title>浙大叶航宏观笔记大纲</title>
+    <url>/2021/03/30/MacroEcon-Notes-Outline-YeHang/</url>
     <content><![CDATA[<p>浙江大学叶航教授宏观经济学课程笔记导航 🧭 。</p>
+<p>B 站视频：<a href="https://www.bilibili.com/video/BV1Yx411x7Ba?p=1">浙江大学叶航宏观经济学全84课</a></p>
+<p>配套教材、课件和课后习题答案：</p>
+<p>链接: <a href="https://pan.baidu.com/s/1fMGW-0a2VqoLq_6Y8H35FA">https://pan.baidu.com/s/1fMGW-0a2VqoLq_6Y8H35FA</a></p>
+<p>密码: w277</p>
 <a id="more"></a>
+<h3 id="导论与宏观经济变量"><a href="#导论与宏观经济变量" class="headerlink" title="导论与宏观经济变量"></a>导论与宏观经济变量</h3><p><a href="http://lgspace.top/2021/03/23/MacroEcon-Notes-ZJU-YeHang-1/">导论与宏观经济变量</a></p>
+<h3 id="宏观经济模型"><a href="#宏观经济模型" class="headerlink" title="宏观经济模型"></a>宏观经济模型</h3><p><a href="http://lgspace.top/2021/03/23/MacroEcon-Notes-ZJU-YeHang-2/">有效需求决定模型</a></p>
+<p><a href="http://lgspace.top/2021/03/25/MacroEcon-Notes-ZJU-YeHang-2-1/">IS-LM 模型</a></p>
+<p><a href="http://lgspace.top/2021/03/25/MacroEcon-Notes-ZJU-YeHang-2-2/">AD-AS 模型</a></p>
+<h3 id="宏观经济运行"><a href="#宏观经济运行" class="headerlink" title="宏观经济运行"></a>宏观经济运行</h3><p>通货膨胀：</p>
+<p><a href="http://lgspace.top/2021/03/23/MacroEcon-Notes-ZJU-YeHang-3/">宏观经济运行（一）：通货膨胀</a></p>
+<p>经济增长：</p>
+<p><a href="http://lgspace.top/2021/03/30/MacroEcon-EconGrowth-Models-1/">经济增长模型（一）：哈罗德-多马模型</a></p>
+<p><a href="http://lgspace.top/2021/03/30/MacroEcon-EconGrowth-Models-2/">经济增长模型（二）：索洛模型</a></p>
+<p><a href="http://lgspace.top/2021/03/30/MacroEcon-EconGrowth-Models-3/">经济增长模型（三）：内生增长模型</a></p>
+<p>经济周期：</p>
+<p><a href="http://lgspace.top/2021/03/30/MacroEcon-EconCycle/">宏观经济运行（二）：经济周期</a></p>
+<h3 id="宏观经济调控"><a href="#宏观经济调控" class="headerlink" title="宏观经济调控"></a>宏观经济调控</h3><p>宏观经济调控政策、宏观经济调控效应、宏观经济调控技术</p>
+<p><a href="http://lgspace.top/2021/03/23/MacroEcon-Notes-ZJU-YeHang-4/">宏观经济调控</a></p>
+<h3 id="宏观经济学流派"><a href="#宏观经济学流派" class="headerlink" title="宏观经济学流派"></a>宏观经济学流派</h3><p><a href="http://lgspace.top/2021/03/30/MacroEcon-Theories/">宏观经济学主要流派</a></p>
 ]]></content>
       <categories>
         <category>学习</category>
@@ -1304,7 +1323,7 @@
     <url>/2021/03/30/MacroEcon-Theories/</url>
     <content><![CDATA[<p>梳理宏观经济学主要流派。</p>
 <a id="more"></a>
-<p><img src="/2021/03/30/MacroEcon-Theories/1.png" style="zoom:100%;"></p>
+<p><img src="/2021/03/30/MacroEcon-Theories/1.png" style="zoom:50%;"></p>
 <h3 id="新古典综合派"><a href="#新古典综合派" class="headerlink" title="新古典综合派"></a>新古典综合派</h3><p>代表人物：汉森、希克斯、萨缪尔森、索洛等。</p>
 <p>理论特征：</p>
 <ul>
@@ -1555,8 +1574,8 @@
   <entry>
     <title>经济增长模型（二）：索洛模型</title>
     <url>/2021/03/30/MacroEcon-EconGrowth-Models-2/</url>
-    <content><![CDATA[<a id="more"></a>
-<h3 id="新古典增长模型（索洛模型）"><a href="#新古典增长模型（索洛模型）" class="headerlink" title="新古典增长模型（索洛模型）"></a>新古典增长模型（索洛模型）</h3><p>索洛模型：$s \cdot f(k) = k’ + nk$</p>
+    <content><![CDATA[<h3 id="新古典增长模型（索洛模型）"><a href="#新古典增长模型（索洛模型）" class="headerlink" title="新古典增长模型（索洛模型）"></a>新古典增长模型（索洛模型）</h3><a id="more"></a>
+<p>索洛模型：$s \cdot f(k) = k’ + nk$</p>
 <h4 id="推导"><a href="#推导" class="headerlink" title="推导"></a>推导</h4><p>设生产函数为 $Y=F(K,L)$ ，若规模报酬不变，有 $\lambda Y = F(\lambda K, \lambda L)$ ，令 $\lambda = 1/L$，有 $Y/L=F(K/L)$ 。</p>
 <p><strong>（索洛模型的数学技巧：将$\lambda = 1/L$ 代入之后，从而 $\lambda$ 可以被消除掉了。背后的含义是劳动和资本可以相互替代，这也是索洛模型广受诟病的一点。）</strong></p>
 <p>上式中，$Y/L$ 为人均产出，$K/L$ 为人均资本，记 $Y/L = y, K/L = k$，有：</p>
@@ -2522,8 +2541,7 @@ q = AK^\alpha L^\beta</script>]]></content>
 <li><a href="http://lgspace.top/2021/03/23/MacroEcon-Notes-ZJU-YeHang-3/">宏观经济运行</a></li>
 <li><a href="http://lgspace.top/2021/03/23/MacroEcon-Notes-ZJU-YeHang-4/">宏观经济调控</a></li>
 </ul>
-<h2 id="有效需求模型"><a href="#有效需求模型" class="headerlink" title="有效需求模型"></a>有效需求模型</h2><p>何为有效需求理论？</p>
-<p>按照凯恩斯理论，之所以出现“大萧条”，是因为有效需求不足，有效需求不足是由于存在边际消费倾向递减规律、资本边际效率递减规律和流动性陷阱（有些教材认为第三个基本因素为“流动性偏好”，差异不大）这三个基本心理因素。这三个基本心理因素造成市场机制不能使总需求与总供给在充分就业水平上达到均衡，必然会出现萧条和失业。对此，凯恩斯主张政府干预经济，通过调节经济来维持经济的稳定。考虑到此时经济陷入流动偏好陷阱，货币政策效果不理想，凯恩斯推崇采用财政政策来进行总需求管理。</p>
+<h2 id="有效需求模型"><a href="#有效需求模型" class="headerlink" title="有效需求模型"></a>有效需求模型</h2><p>按照凯恩斯理论，之所以出现“大萧条”，是因为有效需求不足，有效需求不足是由于存在边际消费倾向递减规律、资本边际效率递减规律和流动性陷阱（有些教材认为第三个基本因素为“流动性偏好”，差异不大）这三个基本心理因素。这三个基本心理因素造成市场机制不能使总需求与总供给在充分就业水平上达到均衡，必然会出现萧条和失业。对此，凯恩斯主张政府干预经济，通过调节经济来维持经济的稳定。考虑到此时经济陷入流动偏好陷阱，货币政策效果不理想，凯恩斯推崇采用财政政策来进行总需求管理。</p>
 <p>边际消费倾向递减规律：按照凯恩斯的消费理论，消费曲线是以递减的速率单调上升，因此消费的增加存在一个上限，存在—个极大值。当消费达到极大值时，无论怎样增加可支配收入，消费都不会进一步增加。如果消费达到极大值时的消费不能实现充分就业，那说明消费是不足的。</p>
 <p>资本边际效率递减：原因是在经济萧条的情况下，投资的收益率（资本的边际效率）低，投资者不投资或少投资，这样经济更加萧条，投资的收益率（资本的边际效率）更低，更不投资……形成恶性循环。资本边际效率递减的后果是：投资的增加存在一个上限，存在一个极大值，不可能无限制地增加。</p>
 <p>流动性陷阱：当利率极低时，有价债券的价格会达到很高，人们为了避免因有价债券价格跌落而遭受损失，几乎每个人都宁愿持有现金而不愿持有有价债券，这意味着货币需求会变得完全有弹性，人们对货币的需求量趋于无限大，表现为流动偏好曲线或货币需求曲线的右端会变成水平线。在此情况下，货币供给的增加不会使利率下降，从而也就不会增加投资引诱和有效需求，当经济出现上述状态时，就称之为流动性陷阱。由此可见，货币的价格利率也存在刚性，货币政策会失效。</p>
@@ -2640,11 +2658,11 @@ q = AK^\alpha L^\beta</script>]]></content>
 <p>人文社会科学、经济科学本质上来讲是一门历史的科学。</p>
 </blockquote>
 <p>本文系浙大叶航宏观经济学课程系列笔记（一），主要包括导论和第一篇宏观经济变量。</p>
+<a id="more"></a>
 <p>B 站视频：<a href="https://www.bilibili.com/video/BV1Yx411x7Ba?p=1">浙江大学叶航宏观经济学全84课</a></p>
 <p>配套教材、课件和课后习题答案：</p>
 <p>链接: <a href="https://pan.baidu.com/s/1fMGW-0a2VqoLq_6Y8H35FA">https://pan.baidu.com/s/1fMGW-0a2VqoLq_6Y8H35FA</a>  </p>
 <p>密码: w277</p>
-<a id="more"></a>
 <p>其他篇章的链接为：</p>
 <ul>
 <li><a href="http://lgspace.top/2021/03/23/MacroEcon-Notes-ZJU-YeHang-1/">导论与宏观经济变量</a></li>
