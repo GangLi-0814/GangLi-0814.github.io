@@ -6,7 +6,7 @@
   <link href="http://lgspace.top/atom.xml" rel="self"/>
   
   <link href="http://lgspace.top/"/>
-  <updated>2021-03-31T08:09:28.394Z</updated>
+  <updated>2021-04-07T10:02:43.321Z</updated>
   <id>http://lgspace.top/</id>
   
   <author>
@@ -15,6 +15,89 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Notes-of-mixtape</title>
+    <link href="http://lgspace.top/2021/04/07/Notes-of-mixtape/"/>
+    <id>http://lgspace.top/2021/04/07/Notes-of-mixtape/</id>
+    <published>2021-04-07T09:23:25.000Z</published>
+    <updated>2021-04-07T10:02:43.321Z</updated>
+    
+    <content type="html"><![CDATA[<p>This book is an introduction to research designs that can recover causal effects. But just as importantly, it provides you with hands-on practice to implement these designs. Implementing these designs means writing code in some type of software. I have chosen to illustrate these designs using two popular software languages: Stata (most commonly used by economists) and R (most commonly used by everyone else).</p><a id="more"></a><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Correlation not equals to causality</p><p>two types of data: </p><ul><li>experimental data(usually collected through surveys, or by-product of some other business activity)</li><li>non-experimental data (observational data)</li></ul><p>To put it as bluntly as I can, economic theory says choices are endogenous, and therefore since they are, the correlations between those choices and outcomes in the aggregate will rarely, if ever, represent a causal effect.</p><p>Emprical analysis: using data to test a theory or to estimate a relationship between variables.</p><h3 id="Probability-and-Regression-Review"><a href="#Probability-and-Regression-Review" class="headerlink" title="Probability and Regression Review"></a>Probability and Regression Review</h3><h2 id="Directed-Acyclic-Graphs"><a href="#Directed-Acyclic-Graphs" class="headerlink" title="Directed Acyclic Graphs"></a>Directed Acyclic Graphs</h2><p>DAGs are a graphical tool which provide a way to visually represent and better understand the key concepts of exposure, outcome, causation, confounding, and bias (Williams et al., 2018). </p><p>DAG Notation</p><p>direct</p><p>mediated by a third variable</p><p>backdoor criterion</p><p>collider bias</p><h2 id="Potential-Outcomes-Causal-Model"><a href="#Potential-Outcomes-Causal-Model" class="headerlink" title="Potential Outcomes Causal Model"></a>Potential Outcomes Causal Model</h2>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;This book is an introduction to research designs that can recover causal effects. But just as importantly, it provides you with hands-on practice to implement these designs. Implementing these designs means writing code in some type of software. I have chosen to illustrate these designs using two popular software languages: Stata (most commonly used by economists) and R (most commonly used by everyone else).&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="经济学" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+    <category term="笔记" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/%E7%BB%8F%E6%B5%8E%E5%AD%A6/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="计量经济学" scheme="http://lgspace.top/tags/%E8%AE%A1%E9%87%8F%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+    <category term="Casual Inference" scheme="http://lgspace.top/tags/Casual-Inference/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>📒 English-Notes</title>
+    <link href="http://lgspace.top/2021/04/07/English-Notes/"/>
+    <id>http://lgspace.top/2021/04/07/English-Notes/</id>
+    <published>2021-04-07T08:38:53.000Z</published>
+    <updated>2021-04-07T10:04:11.482Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>So, desperate, I did what I always do when I want to learn something new—I developed a course on causality to force myself to learn all the things I didn’t know.</p></blockquote><a id="more"></a><p>be intrigued with</p><p>falsify</p><p>This is overwhelmingly exciting, and a seed had been planted.</p><p>enamore</p><p>fascinating topics</p><p>I struggled to understand econometrics at a deep level.</p><p>I was restless the second I got here.</p><p>I couldn’t really find an example of the sort of class I was looking for, so I cobbled together a patchwork of ideas from several disciplines and authors.</p><p>to put it bluntly</p><p>Competency in the sense that they can take data, write code and, using theoretical and contextual knowledge, implement a reasonable design in one of their own projects.</p><p>through a somewhat labyrinthine path to these methods.</p><p>It’s a thorny task.</p><p>be suspicious of </p><p>retrospective</p><p>cornerstone</p><p>phenomena</p><p>confound</p><p>expound</p><p>immensely</p><p>straightforward</p><p>preoccupation</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;So, desperate, I did what I always do when I want to learn something new—I developed a course on causality to force myself to learn all the things I didn’t know.&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="笔记" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="English" scheme="http://lgspace.top/tags/English/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DataVisual-WuHan-Hospital</title>
+    <link href="http://lgspace.top/2021/04/01/DataVisual-WuHan-Hospital/"/>
+    <id>http://lgspace.top/2021/04/01/DataVisual-WuHan-Hospital/</id>
+    <published>2021-04-01T14:03:33.000Z</published>
+    <updated>2021-04-01T14:14:28.404Z</updated>
+    
+    <content type="html"><![CDATA[<p>获取数据源</p><ul><li>现成的公开数据，如医院、学校、上市公司名称等。</li></ul><p><a href="http://wjw.wuhan.gov.cn/bsfw_28/bjcx/yljgmd/">武汉市卫健委-医疗机构名单</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;获取数据源&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;现成的公开数据，如医院、学校、上市公司名称等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;http://wjw.wuhan.gov.cn/bsfw_28/bjcx/yljgmd/&quot;&gt;武汉市卫健委-医疗机构名单&lt;/a&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Python" scheme="http://lgspace.top/tags/Python/"/>
+    
+    <category term="Stata" scheme="http://lgspace.top/tags/Stata/"/>
+    
+  </entry>
   
   <entry>
     <title>就业、工资与总供给曲线</title>
@@ -279,9 +362,9 @@
     <link href="http://lgspace.top/2021/03/30/MacroEcon-EconGrowth-Models-1/"/>
     <id>http://lgspace.top/2021/03/30/MacroEcon-EconGrowth-Models-1/</id>
     <published>2021-03-30T02:07:17.000Z</published>
-    <updated>2021-03-30T08:39:59.316Z</updated>
+    <updated>2021-04-06T00:50:23.907Z</updated>
     
-    <content type="html"><![CDATA[<p>宏观经济学中的经济增长模型（一）：哈罗德-多马模型，哈罗德-多马模型提出于 20 世纪 40 年代，它将凯恩斯的分析加以长期化和动态化。</p><a id="more"></a><h3 id="经济增长"><a href="#经济增长" class="headerlink" title="经济增长"></a>经济增长</h3><h5 id="经济增长的定义"><a href="#经济增长的定义" class="headerlink" title="经济增长的定义"></a>经济增长的定义</h5><p>经济增长是指一国生产的商品和劳务总量的增加。通常用实际国内生产总值（GDP）增长率或人均国内生产总值（GDP）增长率表示。假定一国某年GDP总量为 $Y<em>t$ ，上一年 GDP 总量为 $Y</em>{t-1}$ ，则经济增长率为 $\Delta Y / Y=(Y<em>t-Y</em>{t-1})/Y_{t-1}$ 。</p><p>【观点】现在构建许多新的指标，如绿色 GDP ，将其他维度的含义包含其中。经济增长是一个单纯的问题，其他维度的体现可以通过其他指标衡量。</p><h5 id="经济增长与经济发展"><a href="#经济增长与经济发展" class="headerlink" title="经济增长与经济发展"></a>经济增长与经济发展</h5><p>经济增长与经济发展都包含一国总产出的增加。但经济增长纯粹指总产出的规模及其增长速度；经济发展则不仅包括GDP的增加，而且还包括因 GDP的增加而相应出现的产出与投入结构上的变化，以及一般经济条件（包括技术与制度）的变化。《发展经济学》专门研究一个国家的经济发展问题。</p><h5 id="经济增长理论研究的主要问题"><a href="#经济增长理论研究的主要问题" class="headerlink" title="经济增长理论研究的主要问题"></a>经济增长理论研究的主要问题</h5><p><strong>（1）存在性问题：</strong>即一个国家的经济是否存在着一种长期增长的可能性？</p><p>18世纪，马尔萨斯的人口论（人口增长几何增长，粮食的增长算术增长），这个问题在平狄克微观经济学教材中有案例。（平狄克，马尔萨斯陷阱（表6.2））</p><p>罗马俱乐部提出：随着人类不断增加，地球上的各类资源，尤其是重要的工业原料（原油、煤炭和矿产等）最终会消耗殆尽。当资源全部消耗完，人类将面临灭顶之灾。</p><p><strong>（2）稳定性问题：</strong>即一个国家的经济是否存在着一种稳定增长的可能性？</p><p><strong>（3）恢复性问题：</strong>即一个国家的经济偏离正常的增长轨道，怎样才能恢复？</p><p><strong>经济增长的两个基本模型：</strong></p><ul><li><strong>以凯恩斯理论为增长基础的模型</strong></li><li><strong>以马歇尔微观经济学理论为基础的模型</strong></li></ul><p>什么是凯恩斯主义？最关键的是凯恩斯创立的宏观经济学提出的：</p><ul><li>合成谬误假设</li><li>市场非出清假设</li><li>市场失灵</li><li><strong>国家干预</strong></li><li>凯恩斯“看得见的手”</li></ul><h3 id="哈罗德—多马模型"><a href="#哈罗德—多马模型" class="headerlink" title="哈罗德—多马模型"></a>哈罗德—多马模型</h3><p>哈罗德-多马模型提出于 20 世纪 40 年代，它将凯恩斯的分析加以长期化和动态化。</p><h4 id="哈罗德-多马模型的假设条件"><a href="#哈罗德-多马模型的假设条件" class="headerlink" title="哈罗德-多马模型的假设条件"></a>哈罗德-多马模型的假设条件</h4><ol><li>全社会只生产一种产品，这种产品既可以作为消费品，又可以作为资本品；</li><li>储蓄 S 是产出 Y 的函数，即 S = sY ，这里的 s 代表社会的储蓄比例，即储蓄在产出中所占有的份额；</li><li>生产过程中只使用两种生产要素，即劳动与资本。这两种生产要素为固定技术系数，即它们在生产中的比率固定，不能相互替代</li><li>劳动力按照一个固定不变的比率增长；</li><li><strong>不存在技术进步，即生产技术水平是既定的，也不存在资本折旧问题（哈罗德中性假设）；</strong></li><li>生产规模报酬不变，即生产任何一单位产品所需的资本和劳动的数量固定不变。</li></ol><h4 id="基本增长方程式"><a href="#基本增长方程式" class="headerlink" title="基本增长方程式"></a>基本增长方程式</h4><script type="math/tex; mode=display">G_A = s/v</script><ul><li>$G_A$ ：一个国家的经济增长率，$G_A = \Delta Y / Y$ ;</li><li>$s$：一个国家的储蓄率，$s = S/Y$；</li><li>$v$：一个国家的资本-产量比，$v = K/Y$ 。</li></ul><p>推导：</p><p>1.在哈罗德中性假设（边际资本-产量比等于原有资本-产量比）下：$\Delta K / \Delta Y = K/Y = v$；若折旧等于零，即 $I = \Delta K$。则有：$I/\Delta Y = v =&gt; I = v \cdot\Delta Y$ 。</p><p>2.假设储蓄 S 是产出 Y 的函数，则：$ S = s Y$。</p><p>3.宏观经济均衡条件：$I = S$。</p><p>4.将1，2 带入 3，则有：</p><script type="math/tex; mode=display">v \cdot \Delta Y = s Y  \\=> \Delta Y / Y = s / v \\=> G_A = s/v</script><p> 经济含义：要实现均衡的经济增长，一个国家的经济增长率必须等于储蓄率与资本-产量比之比。</p><p>资本-产量比：生产一定产品所需投入的资本，这里的资本往往指机器设备，机器设备间接的表示技术。</p><p>如果 v 比较低，说明劳动占的比重大，即劳动密集型产业。</p><p>v与生产成本的关系：</p><p>机器设备具有一次投入，在生产中可以反复折旧，所以机器设备用的多不一定代表成本高。反过来讲，劳动力用的少，不一定生产成本就低。</p><p>【延伸】刘易斯拐点：指在工业化过程中，随着农村富余劳动力向非农产业的逐步转移，农村富余劳动力逐渐减少，最终枯竭。即劳动力过剩向短缺的转折点。</p><p>刘易斯拐点的对我国的积极影响：</p><ul><li>改变中国国内收入严重不均衡的现状，增加低收入者收入；</li><li>使中国东部沿海地区的企业家将企业办到西部不发达地区成为可能；</li><li>迫使中国企业家（尤其是东部沿海地区的）考虑改变增长模式。</li></ul><p>【⚠️注意】在哈罗德-多马模型中，储蓄越多，经济增长率越高，这和之前的有效需求理论中相悖。这是因为在有效需求理论是静态角度，哈罗德-多马模型是一个动态过程，从长期来看，储蓄越多可用于投资的资金就越多，可以用于转换为投资，从而带动经济增长。</p><h4 id="有保证的增长方程"><a href="#有保证的增长方程" class="headerlink" title="有保证的增长方程"></a>有保证的增长方程</h4><script type="math/tex; mode=display">G_I = s_i /v_i</script><ul><li>$G_I$ ：有保证的经济增长率 ;</li><li>$s$：合意的储蓄率，即一个国家的居民希望保持的储蓄水平；</li><li>$v$：合意的资本-产量比，即一个国家的厂商希望保持的资本-产量比。</li></ul><p>经济含义：要保证均衡的经济增长，一个国家的储蓄率与资本-产量比必须符合居民与厂商的意愿。</p><h4 id="自然增长方程式"><a href="#自然增长方程式" class="headerlink" title="自然增长方程式"></a>自然增长方程式</h4><script type="math/tex; mode=display">G_N = s_n / v_n = n</script><ul><li>$G_N, s_n, v_n$ ：充分就业时的经济增长率、储蓄率和资本-产量比 ;</li><li>$n$：人口增长率。</li></ul><p>经济含义：要实现充分就业，一个国家的经济增长率必须等于该国人口增长率。</p><h4 id="哈罗德—多马模型对基本问题的回答"><a href="#哈罗德—多马模型对基本问题的回答" class="headerlink" title="哈罗德—多马模型对基本问题的回答"></a>哈罗德—多马模型对基本问题的回答</h4><p>1.存在性问题：$G_A = G_I = G_N = n$</p><p>2.不稳定性问题</p><ul><li><p>若 $G_A &gt; G_I =G_N$ ，则 $s &gt;s_i$ 或 $v&lt;v_i$，结果 $s_i$ 进一步收缩或 $v_i$ 进一步扩大，从而使 $G_A$ 更加偏离 $G_I$ 和 $G_N$ 。</p></li><li><p>若 $G_A &lt; G_I =G_N$ ，则 $s &lt; s_i$ 或 $v&gt;v_i$ ，结果 $s_i$ 进一步扩大或 $v_i$ 进一步收缩，从而使 $G_A$ 更加偏离 $G_I$ 和 $G_N$ 。</p></li></ul><p>3.可调控原理</p><ul><li>从短期看，政府应运用财政政策和货币政策使 $G_A$ 与 $G_I$ 保持一致，避免经济增长的波动；</li><li>从长期看，政府应运用产业政策、分配政策和人口政策使 $G_A, G_I$ 与 $G_N$ 保持一致，以实现国民经济持续、稳定的增长。</li></ul><p>经济增长能和人口增长保持一致吗？（利用存在性原理）</p><p>不稳定性原理（利用系统控制论进行论证）</p><p>$G_A &gt; G_I$ : 经济过热</p><p><strong>结论：经济出现偏离，市场无法自行修复。</strong></p><p>因为哈罗德-多马模型认为政府可以使用政策来调控，这与凯恩斯主张国家干预的思想是一致的，因此哈罗德-多马模型也被归为以凯恩斯理论为增长基础的模型。</p><p>20世纪90年代之后，对凯恩斯主义的清算，西方国家又主张自由主义，导致到2008年爆发的次贷危机，是因为金融领域金融衍生品的。强调金融创新实质上也是一种自由主义（金融创新是政府所管不住的）。</p><p>金融创新：变更现有的金融体制和增加新的金融工具，以获取现有的金融体制和金融工具所无法取得的潜在利益。</p><p>【归纳】从历史的规律来看：1905年，马歇尔微观经济学，市场——19世纪30年代之后，政府——70年代之后，凯恩斯主义受到质疑，自由化运动——2008年以后，后危机时代，政府……40年一个周期。</p><h3 id="增长核算"><a href="#增长核算" class="headerlink" title="增长核算"></a>增长核算</h3><h4 id="增长核算的概念"><a href="#增长核算的概念" class="headerlink" title="增长核算的概念"></a>增长核算的概念</h4><p>增长核算是经济学中解释经济增长的一套理论，该理论主要是对经济增长源泉进行衡量。</p><p>一国经济中的国民总收入可以用多种要素建模来解释。在一个简单的模型中主要是资本、劳动力和技术。这里，国民总收入的增长由资本的增长、劳动力的增长以及所采用的技术的提升来解释。国民收入水平、资本存量和劳动力的大小可以通过经济统计来估算。这样数理模型就可以由劳动力、资本和一个余值来解释国民收入水平。这个余值被称为<em>“全要素生产率”</em>，用来解释没有被资本和劳动投入水平变化所解释的部分。这个全要素生产率通常被用来衡量所采用的技术的水平，有时也称为“索洛余值”。</p><p>20 世纪 50 年代，诺贝尔经济学奖获得者索洛提出了具有规模报酬不变特性的总量生产函数和增长方程，形成了现在通常所说的生产率（全要素生产率）含义，并把它归结为是由技术进步而产生的。按照他的理论，<strong>全要素生产率等于产出增长率与资本增长率和劳动增长率加权之差。</strong></p><p>全要素生产率：全要素生产率指生产活动在一定时间内的效率，它一般的含义为资源（包括人力、物力、财力）开发利用的效率。从经济增长的角度来说，生产率与资本、劳动等要素投入都贡献于经济的增长。从效率角度考察，生产率等同于一定时间内国民经济中产出与各种资源要素总投入的比值。从本质上讲，它反映的则是一个国家（地 区）为了摆脱贫困、落后和发展经济在一定时期里表现出来的能力和努力程度，是技术进步对经济发展作用的综合反映。</p><h4 id="增长核算方程及其推导"><a href="#增长核算方程及其推导" class="headerlink" title="增长核算方程及其推导"></a>增长核算方程及其推导</h4><p>增长核算方程用生产函数说明技术进步与经济增长的关系，描述了在规模收益不变的情况下，技术、劳动和资本对于产出的贡献情况。</p><p>设经济的生产函数为：</p><script type="math/tex; mode=display">Y = A F(K,N)</script><p>其中，$Y, K$ 和 $N$ 分别表示总产出、投入的资本量和投入的劳动量，$A$ 表示经济的技术状况，也被称为全要素生产率。</p><p>假设资本变动 $\Delta K$ ，劳动变动为 $\Delta N$ ，技术变动为 $\Delta A$ ，则产出变动为：</p><script type="math/tex; mode=display">\Delta Y = MPN \times \Delta N + MPK \times \Delta K + F(K,N) \times \Delta A</script><p>其中，$MPN$ 与 $MPK$ 分别表示劳动与资本的边际产出。将方程两边同时除以 $Y = A F(K,N)$ ，可得：</p><script type="math/tex; mode=display">\frac{\Delta Y}{Y} = \frac{MPN}{Y} \times \Delta N + \frac{MPK}{Y} \times \Delta K + \frac{\Delta A}{A} \\\frac{\Delta Y}{Y} = (\frac{MPN \times N}{Y}) \times \frac{\Delta N}{N} + (\frac{MPK \times K}{Y}) \times \frac{\Delta K}{K} + \frac{\Delta A}{A}</script><p>在竞争性的市场上，厂商使用生产要素的原则是，将要素需求量固定在<strong>使要素的边际产量等于要素实际价格的水平上</strong>。因此，表达式 $MPN \times N$ 和 $MPK \times K$ 分别表示劳动和资本的收益，从而表达式 $\frac{MPN \times N}{Y}$ 就是劳动收益在产出中的份额，简称<strong>劳动份额</strong>，用 $(1-\theta)$ 表示；表达式 $\frac{MPK \times K}{Y}$ 就是资本收益在产出中所占的份额，简称<strong>资本份额</strong>，用 $\theta$ 表示。则有方程：</p><script type="math/tex; mode=display">\frac{\Delta Y}{Y} = (1- \theta)\times\frac{\Delta N}{N} + \theta \times \frac{\Delta K}{K} + \frac{\Delta A}{A}</script><p> $产出增长 = （劳动份额 \times 劳动增长）+（资本份额 \times 资本增长） + 技术进步$</p><p>其中，$(1-\theta)$ 和 $\theta$ 分别代表收入中劳动获得的份额和收入中资本获得的份额。 </p><h4 id="增长核算方程的含义"><a href="#增长核算方程的含义" class="headerlink" title="增长核算方程的含义"></a>增长核算方程的含义</h4><ul><li><p>劳动和资本各自的贡献量等于它们各自的增长率乘以该投入在收入中所占份额。</p></li><li><p><strong>$\frac{\Delta A}{A}$ 称之为技术进步或全要素生产率增长的技术进步速度，是在所有投入不变的情况下，由于生产方法改进所导致的产出增加的数额。</strong></p></li></ul><h4 id="增长核算方程的人均形式"><a href="#增长核算方程的人均形式" class="headerlink" title="增长核算方程的人均形式"></a>增长核算方程的人均形式</h4><p>人均 GDP 是 GDP 与人口的比值。在研究增长时，传统上用小写字母来表示人均值，因此定义 $y = \frac{Y}{N}, k = \frac{K}{N}$ ，分别表示人均产出和人均资本。</p><p>GDP 的增长率等于人均 GDP 增长率加上人口增长率，即 $\frac{\Delta Y}{Y} = \frac{\Delta y }{y} + \frac{\Delta N}{N}, \frac{\Delta K}{K} = \frac{\Delta k }{k} + \frac{\Delta N}{N}$ 。</p><p>在增长核算方程两边同减去人口增长 $\frac{\Delta N}{N}$ ，重新排列后可得：</p><script type="math/tex; mode=display">\frac{\Delta Y}{Y} - \frac{\Delta N}{N} = \theta \times (\frac{\Delta K}{K} - \frac{\Delta N}{N}) + \frac{\Delta A}{A}</script><p>增长核算方程的人均形式可写成：</p><script type="math/tex; mode=display">\frac{\Delta y}{y} = \theta \times \frac{\Delta k}{k} + \frac{\Delta A}{A}</script><p>其中，$y \equiv Y/N, k \equiv K/N$，分别表示人均产出和人均资本。</p>]]></content>
+    <content type="html"><![CDATA[<p>宏观经济学中的经济增长模型（一）：哈罗德-多马模型，哈罗德-多马模型提出于 20 世纪 40 年代，它将凯恩斯的分析加以长期化和动态化。</p><a id="more"></a><h3 id="经济增长"><a href="#经济增长" class="headerlink" title="经济增长"></a>经济增长</h3><h5 id="经济增长的定义"><a href="#经济增长的定义" class="headerlink" title="经济增长的定义"></a>经济增长的定义</h5><p>经济增长是指一国生产的商品和劳务总量的增加。通常用实际国内生产总值（GDP）增长率或人均国内生产总值（GDP）增长率表示。假定一国某年GDP总量为 $Y<em>t$ ，上一年 GDP 总量为 $Y</em>{t-1}$ ，则经济增长率为 $\Delta Y / Y=(Y<em>t-Y</em>{t-1})/Y_{t-1}$ 。</p><p>【观点】现在构建许多新的指标，如绿色 GDP ，将其他维度的含义包含其中。经济增长是一个单纯的问题，其他维度的体现可以通过其他指标衡量。</p><h5 id="经济增长与经济发展"><a href="#经济增长与经济发展" class="headerlink" title="经济增长与经济发展"></a>经济增长与经济发展</h5><p>经济增长与经济发展都包含一国总产出的增加。但经济增长纯粹指总产出的规模及其增长速度；经济发展则不仅包括 GDP 的增加，而且还包括因 GDP 的增加而相应出现的产出与投入结构上的变化，以及一般经济条件（包括技术与制度）的变化。《发展经济学》专门研究一个国家的经济发展问题。</p><h5 id="经济增长理论研究的主要问题"><a href="#经济增长理论研究的主要问题" class="headerlink" title="经济增长理论研究的主要问题"></a>经济增长理论研究的主要问题</h5><p><strong>（1）存在性问题：</strong>即一个国家的经济是否存在着一种长期增长的可能性？</p><p>18世纪，马尔萨斯的人口论（人口增长几何增长，粮食的增长算术增长），这个问题在平狄克微观经济学教材中有案例。（平狄克，马尔萨斯陷阱（表6.2））</p><p>罗马俱乐部提出：随着人类不断增加，地球上的各类资源，尤其是重要的工业原料（原油、煤炭和矿产等）最终会消耗殆尽。当资源全部消耗完，人类将面临灭顶之灾。</p><p><strong>（2）稳定性问题：</strong>即一个国家的经济是否存在着一种稳定增长的可能性？</p><p><strong>（3）恢复性问题：</strong>即一个国家的经济偏离正常的增长轨道，怎样才能恢复？</p><p><strong>经济增长的两个基本模型：</strong></p><ul><li><strong>以凯恩斯理论为增长基础的模型</strong></li><li><strong>以马歇尔微观经济学理论为基础的模型</strong></li></ul><p>什么是凯恩斯主义？最关键的是凯恩斯创立的宏观经济学提出的：</p><ul><li>合成谬误假设</li><li>市场非出清假设</li><li>市场失灵</li><li><strong>国家干预</strong></li><li>凯恩斯“看得见的手”</li></ul><h3 id="哈罗德—多马模型"><a href="#哈罗德—多马模型" class="headerlink" title="哈罗德—多马模型"></a>哈罗德—多马模型</h3><p>哈罗德-多马模型提出于 20 世纪 40 年代，它将凯恩斯的分析加以长期化和动态化。</p><h4 id="哈罗德-多马模型的假设条件"><a href="#哈罗德-多马模型的假设条件" class="headerlink" title="哈罗德-多马模型的假设条件"></a>哈罗德-多马模型的假设条件</h4><ol><li>全社会只生产一种产品，这种产品既可以作为消费品，又可以作为资本品；</li><li>储蓄 S 是产出 Y 的函数，即 S = sY ，这里的 s 代表社会的储蓄比例，即储蓄在产出中所占有的份额；</li><li>生产过程中只使用两种生产要素，即劳动与资本。这两种生产要素为固定技术系数，即它们在生产中的比率固定，不能相互替代；</li><li>劳动力按照一个固定不变的比率增长；</li><li><strong>不存在技术进步，即生产技术水平是既定的，也不存在资本折旧问题（哈罗德中性假设）；</strong></li><li>生产规模报酬不变，即生产任何一单位产品所需的资本和劳动的数量固定不变。</li></ol><h4 id="基本增长方程式"><a href="#基本增长方程式" class="headerlink" title="基本增长方程式"></a>基本增长方程式</h4><script type="math/tex; mode=display">G_A = s/v</script><ul><li>$G_A$ ：一个国家的经济增长率，$G_A = \Delta Y / Y$ ;</li><li>$s$：一个国家的储蓄率，$s = S/Y$；</li><li>$v$：一个国家的资本-产量比，$v = K/Y$ 。</li></ul><p>推导：</p><p>1.在哈罗德中性假设（边际资本-产量比等于原有资本-产量比）下：$\Delta K / \Delta Y = K/Y = v$；若折旧等于零，即 $I = \Delta K$。则有：$I/\Delta Y = v =&gt; I = v \cdot\Delta Y$ 。</p><p>2.假设储蓄 S 是产出 Y 的函数，则：$ S = s Y$。</p><p>3.宏观经济均衡条件：$I = S$。</p><p>4.将1，2 带入 3，则有：</p><script type="math/tex; mode=display">v \cdot \Delta Y = s Y  \\=> \Delta Y / Y = s / v \\=> G_A = s/v</script><p> 经济含义：要实现均衡的经济增长，一个国家的经济增长率必须等于储蓄率与资本-产量比之比。</p><p>资本-产量比：生产一定产品所需投入的资本，这里的资本往往指机器设备，机器设备间接的表示技术。</p><p>如果 v 比较低，说明劳动占的比重大，即劳动密集型产业。</p><p>v与生产成本的关系：</p><p>机器设备具有一次投入，在生产中可以反复折旧，所以机器设备用的多不一定代表成本高。反过来讲，劳动力用的少，不一定生产成本就低。</p><p>【延伸】刘易斯拐点：指在工业化过程中，随着农村富余劳动力向非农产业的逐步转移，农村富余劳动力逐渐减少，最终枯竭。即劳动力过剩向短缺的转折点。</p><p>刘易斯拐点的对我国的积极影响：</p><ul><li>改变中国国内收入严重不均衡的现状，增加低收入者收入；</li><li>使中国东部沿海地区的企业家将企业办到西部不发达地区成为可能；</li><li>迫使中国企业家（尤其是东部沿海地区的）考虑改变增长模式。</li></ul><p>【⚠️注意】在哈罗德-多马模型中，储蓄越多，经济增长率越高，这和之前的有效需求理论中相悖。这是因为在有效需求理论是静态角度，哈罗德-多马模型是一个动态过程，从长期来看，储蓄越多可用于投资的资金就越多，可以用于转换为投资，从而带动经济增长。</p><h4 id="有保证的增长方程"><a href="#有保证的增长方程" class="headerlink" title="有保证的增长方程"></a>有保证的增长方程</h4><script type="math/tex; mode=display">G_I = s_i /v_i</script><ul><li>$G_I$ ：有保证的经济增长率 ;</li><li>$s$：合意的储蓄率，即一个国家的居民希望保持的储蓄水平；</li><li>$v$：合意的资本-产量比，即一个国家的厂商希望保持的资本-产量比。</li></ul><p>经济含义：要保证均衡的经济增长，一个国家的储蓄率与资本-产量比必须符合居民与厂商的意愿。</p><h4 id="自然增长方程式"><a href="#自然增长方程式" class="headerlink" title="自然增长方程式"></a>自然增长方程式</h4><script type="math/tex; mode=display">G_N = s_n / v_n = n</script><ul><li>$G_N, s_n, v_n$ ：充分就业时的经济增长率、储蓄率和资本-产量比 ;</li><li>$n$：人口增长率。</li></ul><p>经济含义：要实现充分就业，一个国家的经济增长率必须等于该国人口增长率。</p><h4 id="哈罗德—多马模型对基本问题的回答"><a href="#哈罗德—多马模型对基本问题的回答" class="headerlink" title="哈罗德—多马模型对基本问题的回答"></a>哈罗德—多马模型对基本问题的回答</h4><p>1.存在性问题：$G_A = G_I = G_N = n$</p><p>2.不稳定性问题</p><ul><li><p>若 $G_A &gt; G_I =G_N$ ，则 $s &gt;s_i$ 或 $v&lt;v_i$，结果 $s_i$ 进一步收缩或 $v_i$ 进一步扩大，从而使 $G_A$ 更加偏离 $G_I$ 和 $G_N$ 。</p></li><li><p>若 $G_A &lt; G_I =G_N$ ，则 $s &lt; s_i$ 或 $v&gt;v_i$ ，结果 $s_i$ 进一步扩大或 $v_i$ 进一步收缩，从而使 $G_A$ 更加偏离 $G_I$ 和 $G_N$ 。</p></li></ul><p>3.可调控原理</p><ul><li>从短期看，政府应运用财政政策和货币政策使 $G_A$ 与 $G_I$ 保持一致，避免经济增长的波动；</li><li>从长期看，政府应运用产业政策、分配政策和人口政策使 $G_A, G_I$ 与 $G_N$ 保持一致，以实现国民经济持续、稳定的增长。</li></ul><p>经济增长能和人口增长保持一致吗？（利用存在性原理）</p><p>不稳定性原理（利用系统控制论进行论证）</p><p>$G_A &gt; G_I$ : 经济过热</p><p><strong>结论：经济出现偏离，市场无法自行修复。</strong></p><p>因为哈罗德-多马模型认为政府可以使用政策来调控，这与凯恩斯主张国家干预的思想是一致的，因此哈罗德-多马模型也被归为以凯恩斯理论为增长基础的模型。</p><p>20世纪90年代之后，对凯恩斯主义的清算，西方国家又主张自由主义，导致到2008年爆发的次贷危机，是因为金融领域金融衍生品的。强调金融创新实质上也是一种自由主义（金融创新是政府所管不住的）。</p><p>金融创新：变更现有的金融体制和增加新的金融工具，以获取现有的金融体制和金融工具所无法取得的潜在利益。</p><p>【归纳】从历史的规律来看：1905年，马歇尔微观经济学，市场——19世纪30年代之后，政府——70年代之后，凯恩斯主义受到质疑，自由化运动——2008年以后，后危机时代，政府……40年一个周期。</p><hr><h3 id="增长核算"><a href="#增长核算" class="headerlink" title="增长核算"></a>增长核算</h3><h4 id="增长核算的概念"><a href="#增长核算的概念" class="headerlink" title="增长核算的概念"></a>增长核算的概念</h4><p>增长核算是经济学中解释经济增长的一套理论，该理论主要是对经济增长源泉进行衡量。</p><p>一国经济中的国民总收入可以用多种要素建模来解释。在一个简单的模型中主要是资本、劳动力和技术。这里，国民总收入的增长由资本的增长、劳动力的增长以及所采用的技术的提升来解释。国民收入水平、资本存量和劳动力的大小可以通过经济统计来估算。这样数理模型就可以由劳动力、资本和一个余值来解释国民收入水平。这个余值被称为<em>“全要素生产率”</em>，用来解释没有被资本和劳动投入水平变化所解释的部分。这个全要素生产率通常被用来衡量所采用的技术的水平，有时也称为“索洛余值”。</p><p>20 世纪 50 年代，诺贝尔经济学奖获得者索洛提出了具有规模报酬不变特性的总量生产函数和增长方程，形成了现在通常所说的生产率（全要素生产率）含义，并把它归结为是由技术进步而产生的。按照他的理论，<strong>全要素生产率等于产出增长率与资本增长率和劳动增长率加权之差。</strong></p><p>全要素生产率：全要素生产率指生产活动在一定时间内的效率，它一般的含义为资源（包括人力、物力、财力）开发利用的效率。从经济增长的角度来说，生产率与资本、劳动等要素投入都贡献于经济的增长。从效率角度考察，生产率等同于一定时间内国民经济中产出与各种资源要素总投入的比值。从本质上讲，它反映的则是一个国家（地 区）为了摆脱贫困、落后和发展经济在一定时期里表现出来的能力和努力程度，是技术进步对经济发展作用的综合反映。</p><h4 id="增长核算方程及其推导"><a href="#增长核算方程及其推导" class="headerlink" title="增长核算方程及其推导"></a>增长核算方程及其推导</h4><p>增长核算方程用生产函数说明技术进步与经济增长的关系，描述了在规模收益不变的情况下，技术、劳动和资本对于产出的贡献情况。</p><p>设经济的生产函数为：</p><script type="math/tex; mode=display">Y = A F(K,N)</script><p>其中，$Y, K$ 和 $N$ 分别表示总产出、投入的资本量和投入的劳动量，$A$ 表示经济的技术状况，也被称为全要素生产率。</p><p>假设资本变动 $\Delta K$ ，劳动变动为 $\Delta N$ ，技术变动为 $\Delta A$ ，则产出变动为：</p><script type="math/tex; mode=display">\Delta Y = MPN \times \Delta N + MPK \times \Delta K + F(K,N) \times \Delta A</script><p>其中，$MPN$ 与 $MPK$ 分别表示劳动与资本的边际产出。将方程两边同时除以 $Y = A F(K,N)$ ，可得：</p><script type="math/tex; mode=display">\frac{\Delta Y}{Y} = \frac{MPN}{Y} \times \Delta N + \frac{MPK}{Y} \times \Delta K + \frac{\Delta A}{A} \\\frac{\Delta Y}{Y} = (\frac{MPN \times N}{Y}) \times \frac{\Delta N}{N} + (\frac{MPK \times K}{Y}) \times \frac{\Delta K}{K} + \frac{\Delta A}{A}</script><p>在竞争性的市场上，厂商使用生产要素的原则是，将要素需求量固定在<strong>使要素的边际产量等于要素实际价格的水平上</strong>。因此，表达式 $MPN \times N$ 和 $MPK \times K$ 分别表示劳动和资本的收益，从而表达式 $\frac{MPN \times N}{Y}$ 就是劳动收益在产出中的份额，简称<strong>劳动份额</strong>，用 $(1-\theta)$ 表示；表达式 $\frac{MPK \times K}{Y}$ 就是资本收益在产出中所占的份额，简称<strong>资本份额</strong>，用 $\theta$ 表示。则有方程：</p><script type="math/tex; mode=display">\frac{\Delta Y}{Y} = (1- \theta)\times\frac{\Delta N}{N} + \theta \times \frac{\Delta K}{K} + \frac{\Delta A}{A}</script><p> $产出增长 = （劳动份额 \times 劳动增长）+（资本份额 \times 资本增长） + 技术进步$</p><p>其中，$(1-\theta)$ 和 $\theta$ 分别代表收入中劳动获得的份额和收入中资本获得的份额。 </p><h4 id="增长核算方程的含义"><a href="#增长核算方程的含义" class="headerlink" title="增长核算方程的含义"></a>增长核算方程的含义</h4><ul><li><p>劳动和资本各自的贡献量等于它们各自的增长率乘以该投入在收入中所占份额。</p></li><li><p><strong>$\frac{\Delta A}{A}$ 称之为技术进步或全要素生产率增长的技术进步速度，是在所有投入不变的情况下，由于生产方法改进所导致的产出增加的数额。</strong></p></li></ul><h4 id="增长核算方程的人均形式"><a href="#增长核算方程的人均形式" class="headerlink" title="增长核算方程的人均形式"></a>增长核算方程的人均形式</h4><p>人均 GDP 是 GDP 与人口的比值。在研究增长时，传统上用小写字母来表示人均值，因此定义 $y = \frac{Y}{N}, k = \frac{K}{N}$ ，分别表示人均产出和人均资本。</p><p>GDP 的增长率等于人均 GDP 增长率加上人口增长率，即 $\frac{\Delta Y}{Y} = \frac{\Delta y }{y} + \frac{\Delta N}{N}, \frac{\Delta K}{K} = \frac{\Delta k }{k} + \frac{\Delta N}{N}$ 。</p><p>在增长核算方程两边同减去人口增长 $\frac{\Delta N}{N}$ ，重新排列后可得：</p><script type="math/tex; mode=display">\frac{\Delta Y}{Y} - \frac{\Delta N}{N} = \theta \times (\frac{\Delta K}{K} - \frac{\Delta N}{N}) + \frac{\Delta A}{A}</script><p>增长核算方程的人均形式可写成：</p><script type="math/tex; mode=display">\frac{\Delta y}{y} = \theta \times \frac{\Delta k}{k} + \frac{\Delta A}{A}</script><p>其中，$y \equiv Y/N, k \equiv K/N$，分别表示人均产出和人均资本。</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;宏观经济学中的经济增长模型（一）：哈罗德-多马模型，哈罗德-多马模型提出于 20 世纪 40 年代，它将凯恩斯的分析加以长期化和动态化。&lt;/p&gt;</summary>
@@ -442,80 +525,6 @@
     <category term="宏观经济学" scheme="http://lgspace.top/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
     <category term="经济学" scheme="http://lgspace.top/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>竞争性市场</title>
-    <link href="http://lgspace.top/2021/03/24/MircoEcon-Market-Form-1/"/>
-    <id>http://lgspace.top/2021/03/24/MircoEcon-Market-Form-1/</id>
-    <published>2021-03-24T01:54:34.000Z</published>
-    <updated>2021-03-24T05:47:38.148Z</updated>
-    
-    <content type="html"><![CDATA[<p>本文介绍微观经济学的市场组织形式，竞争性市场及其利润最大化。</p><p>微观经济学生产论中，围绕厂商利润最大化（对称问题是成本最小化），有几组逻辑：将生产分为短期和长期生产；由单一厂商到行业。</p><a id="more"></a><h3 id="完全竞争性市场"><a href="#完全竞争性市场" class="headerlink" title="完全竞争性市场"></a>完全竞争性市场</h3><p>价格接受者：$MR=P$</p><p>产品同质</p><p>自由进入或退出市场</p><h3 id="边际收益、边际成本和利润最大化"><a href="#边际收益、边际成本和利润最大化" class="headerlink" title="边际收益、边际成本和利润最大化"></a>边际收益、边际成本和利润最大化</h3><script type="math/tex; mode=display">收益：R = P\cdot q \\利润：\pi(q) = R(q) - C(q) \\边际收益：\Delta \pi / \Delta q = \Delta R / \Delta q - \Delta C / \Delta q = 0 => MR(q) = MC(q)</script><p>完全竞争市场利润最大化条件：$MR(q) = MC(q) = P$ 。</p><h3 id="选择短期产量"><a href="#选择短期产量" class="headerlink" title="选择短期产量"></a>选择短期产量</h3><h4 id="利润最大化"><a href="#利润最大化" class="headerlink" title="利润最大化"></a>利润最大化</h4><p><img src="/2021/03/24/MircoEcon-Market-Form-1/10-1.png" style="zoom:50%;"></p><p>利润最大化的条件：MC 曲线处于上升阶段时，MR = MC 。</p><p>AB：产量水平 $q^*$ 时价格和平均成本的差额，代表每单位产出的平均利润；</p><p>BC：生产的产品总量；</p><p>$S_{ABCD}$：厂商的总利润。</p><p><img src="/2021/03/24/MircoEcon-Market-Form-1/10-2.png" style="zoom:50%;"></p><p>如果固定成本提高推动 ATC 上升，在 $q^*$ 点 $ATC &gt; P$ ，AB 表示生产的平均亏损，$S_{ABCD}$ 表示厂商的总亏损。</p><h4 id="停止营业点"><a href="#停止营业点" class="headerlink" title="停止营业点"></a>停止营业点</h4><p>如果价格低于平均可变成本，企业就应该关闭。但如果在短期，价格高于平均可变成本，企业就可能生产，这部分取决于企业对未来经营状况的预期。</p><p>问题：为什么一个发生亏损的厂商选择继续生产而不是关闭？</p><p><img src="/2021/03/24/MircoEcon-Market-Form-1/10-0-1.png" style="zoom:60%;"></p><h4 id="竞争性厂商的短期供给曲线"><a href="#竞争性厂商的短期供给曲线" class="headerlink" title="竞争性厂商的短期供给曲线"></a>竞争性厂商的短期供给曲线</h4><p><img src="/2021/03/24/MircoEcon-Market-Form-1/10-3.png" style="zoom:50%;"></p><p>厂商的短期供给曲线：位于 AVC 之上的 MC 曲线。</p><h4 id="短期市场供给曲线"><a href="#短期市场供给曲线" class="headerlink" title="短期市场供给曲线"></a>短期市场供给曲线</h4><p>短期市场供给曲线为单个厂商的供给曲线在水平方向上的加总。</p><h3 id="选择长期产量"><a href="#选择长期产量" class="headerlink" title="选择长期产量"></a>选择长期产量</h3><p>长期中，追求利润最大化的竞争性厂商的产量应该使长期 MC 等于 市场价格 P 。</p><h4 id="行业的长期供给曲线"><a href="#行业的长期供给曲线" class="headerlink" title="行业的长期供给曲线"></a>行业的长期供给曲线</h4><p>成本不变行业</p><p>成本递增行业</p><p>成本递减行业</p><p>税收的短期和长期效应</p><p>长期供给弹性</p><h2 id="竞争性市场分析"><a href="#竞争性市场分析" class="headerlink" title="竞争性市场分析"></a>竞争性市场分析</h2><h3 id="消费者剩余和生产者剩余"><a href="#消费者剩余和生产者剩余" class="headerlink" title="消费者剩余和生产者剩余"></a>消费者剩余和生产者剩余</h3><p>消费者剩余：测度全体消费者的总收益，等于需求曲线与市场价格之间的阴影面积。</p><p>生产者剩余测度：生产者的总利润加上投入的租金，等于供给曲线与市场价格之间的面积。</p><p>总的来看，消费者剩余和生产者剩余测度竞争性市场的福利。</p><p>无谓损失：指市场在非效率条件下运作时，生产者或消费者的福利净损失。</p><p>经济效率：利用经济资源的有效性。高的经济效率表示对资源的充分利用或者能以最有效的方式进行生产；低的经济效率表示对资源的利用不充分或没有以最有效的方式进行生产。不同市场组织下的经济效率是不相同的，市场的竞争程度越高，经济效率越高。</p><h3 id="政府政策的损益评价"><a href="#政府政策的损益评价" class="headerlink" title="政府政策的损益评价"></a>政府政策的损益评价</h3><h4 id="价格管制"><a href="#价格管制" class="headerlink" title="价格管制"></a>价格管制</h4><h5 id="最高价格管制"><a href="#最高价格管制" class="headerlink" title="最高价格管制"></a>最高价格管制</h5><h5 id="最低价格管制"><a href="#最低价格管制" class="headerlink" title="最低价格管制"></a>最低价格管制</h5><h4 id="价格支持和生产配额"><a href="#价格支持和生产配额" class="headerlink" title="价格支持和生产配额"></a>价格支持和生产配额</h4><h5 id="价格支持"><a href="#价格支持" class="headerlink" title="价格支持"></a>价格支持</h5><h5 id="生产配额"><a href="#生产配额" class="headerlink" title="生产配额"></a>生产配额</h5><h4 id="进口配额与关税"><a href="#进口配额与关税" class="headerlink" title="进口配额与关税"></a>进口配额与关税</h4><h5 id="进口配额"><a href="#进口配额" class="headerlink" title="进口配额"></a>进口配额</h5><h5 id="关税政策"><a href="#关税政策" class="headerlink" title="关税政策"></a>关税政策</h5><h4 id="征税或补贴"><a href="#征税或补贴" class="headerlink" title="征税或补贴"></a>征税或补贴</h4><h5 id="征税"><a href="#征税" class="headerlink" title="征税"></a>征税</h5><p>从量税</p><p>从价税</p><h5 id="补贴"><a href="#补贴" class="headerlink" title="补贴"></a>补贴</h5>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;本文介绍微观经济学的市场组织形式，竞争性市场及其利润最大化。&lt;/p&gt;
-&lt;p&gt;微观经济学生产论中，围绕厂商利润最大化（对称问题是成本最小化），有几组逻辑：将生产分为短期和长期生产；由单一厂商到行业。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="笔记" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="经济学" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/%E7%AC%94%E8%AE%B0/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
-    
-    
-    <category term="微观经济学" scheme="http://lgspace.top/tags/%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>常用数据说明及下载</title>
-    <link href="http://lgspace.top/2021/03/24/Database/"/>
-    <id>http://lgspace.top/2021/03/24/Database/</id>
-    <published>2021-03-24T01:15:30.000Z</published>
-    <updated>2021-03-26T05:56:07.811Z</updated>
-    
-    <content type="html"><![CDATA[<p>本帖收集经管类研究常用的数据及其下载。</p><a id="more"></a><h2 id="微观数据"><a href="#微观数据" class="headerlink" title="微观数据"></a>微观数据</h2><p>微观调查数据</p><p>工业企业数据库</p><p>海关数据库</p><h2 id="宏观数据"><a href="#宏观数据" class="headerlink" title="宏观数据"></a>宏观数据</h2><h2 id="书籍配套数据"><a href="#书籍配套数据" class="headerlink" title="书籍配套数据"></a>书籍配套数据</h2><p>Hill-poe4stata</p><p>Woordriage</p><p>陈强-计量经济学及Stata应用</p><p>陈强-高级计量经济学及Stata应用</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;本帖收集经管类研究常用的数据及其下载。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="经济学" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
-    
-    
-    <category term="数据" scheme="http://lgspace.top/tags/%E6%95%B0%E6%8D%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>生产与成本理论</title>
-    <link href="http://lgspace.top/2021/03/24/MicroEcon-Product-CostCruve/"/>
-    <id>http://lgspace.top/2021/03/24/MicroEcon-Product-CostCruve/</id>
-    <published>2021-03-24T00:51:33.000Z</published>
-    <updated>2021-03-24T01:55:37.564Z</updated>
-    
-    <content type="html"><![CDATA[<p>梳理微观经济学生产理论。</p><a id="more"></a><h2 id="生产"><a href="#生产" class="headerlink" title="生产"></a>生产</h2><h3 id="厂商及其生产决策"><a href="#厂商及其生产决策" class="headerlink" title="厂商及其生产决策"></a>厂商及其生产决策</h3><p>1.厂商存在的原因</p><p>科斯《企业的本质》</p><p>2.生产要素</p><p>3.生产函数</p><p>$q = F(L,K)$</p><h3 id="短期生产和长期生产"><a href="#短期生产和长期生产" class="headerlink" title="短期生产和长期生产"></a>短期生产和长期生产</h3><p>在平狄克的教材中将其区分为一种可变要素投入和两种可变要素投入，高鸿业和范里安区分为短期生产和长期生产。</p><h4 id="短期生产"><a href="#短期生产" class="headerlink" title="短期生产"></a>短期生产</h4><p>边际报酬递减规模</p><p>劳动生产率</p><h4 id="长期生产"><a href="#长期生产" class="headerlink" title="长期生产"></a>长期生产</h4><p>等产量线</p><p>边际报酬递减</p><p>边际技术替代率递减规律</p><p>生产函数的特例</p><h3 id="规模报酬"><a href="#规模报酬" class="headerlink" title="规模报酬"></a>规模报酬</h3><p>以 C-D 函数为例：</p><h2 id="生产成本"><a href="#生产成本" class="headerlink" title="生产成本"></a>生产成本</h2><h3 id="成本的测度"><a href="#成本的测度" class="headerlink" title="成本的测度"></a>成本的测度</h3><h3 id="短期成本"><a href="#短期成本" class="headerlink" title="短期成本"></a>短期成本</h3><h3 id="长期成本"><a href="#长期成本" class="headerlink" title="长期成本"></a>长期成本</h3><h3 id="长期与短期成本曲线"><a href="#长期与短期成本曲线" class="headerlink" title="长期与短期成本曲线"></a>长期与短期成本曲线</h3><h3 id="两种产品的生产——范围经济"><a href="#两种产品的生产——范围经济" class="headerlink" title="两种产品的生产——范围经济"></a>两种产品的生产——范围经济</h3><h3 id="学习曲线"><a href="#学习曲线" class="headerlink" title="学习曲线"></a>学习曲线</h3><h2 id="数学处理"><a href="#数学处理" class="headerlink" title="数学处理"></a>数学处理</h2><h3 id="成本最小化"><a href="#成本最小化" class="headerlink" title="成本最小化"></a>成本最小化</h3><p>假设有生产函数：</p><script type="math/tex; mode=display">q = F(L,K)</script><p>构造拉格朗日函数</p><h3 id="边际技术替代率"><a href="#边际技术替代率" class="headerlink" title="边际技术替代率"></a>边际技术替代率</h3><script type="math/tex; mode=display">MP_K(K,L)dK + MP_L(K,L)dL = dq = 0 \\- dK/dL = MRTS_{LK} = MP_L(K,L)/MP_K(K,L) \\MP_L(K,L)/MP_K(K,L) = w/r</script><h3 id="生产与成本理论的对偶性"><a href="#生产与成本理论的对偶性" class="headerlink" title="生产与成本理论的对偶性"></a>生产与成本理论的对偶性</h3><h3 id="C-D-成本函数和生产函数"><a href="#C-D-成本函数和生产函数" class="headerlink" title="C-D 成本函数和生产函数"></a>C-D 成本函数和生产函数</h3><script type="math/tex; mode=display">q = AK^\alpha L^\beta</script>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;梳理微观经济学生产理论。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="笔记" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="经济学" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/%E7%AC%94%E8%AE%B0/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
-    
-    
-    <category term="微观经济学" scheme="http://lgspace.top/tags/%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
   </entry>
   
