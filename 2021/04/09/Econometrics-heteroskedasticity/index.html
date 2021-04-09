@@ -39,10 +39,13 @@ c_i = \alpha + \beta y_i + \epsilon_i</script><p>其中，$c_i$ 为消费， $y_
 <h4 id="BP-检验（Breusch-and-Pagan-1979）"><a href="#BP-检验（Breusch-and-Pagan-1979）" class="headerlink" title="BP 检验（Breusch and Pagan, 1979）"></a>BP 检验（Breusch and Pagan, 1979）</h4><p>假设回归模型：</p>
 <script type="math/tex; mode=display">
 y_i = \beta_1 + \beta_2x_{i2} + \cdots + \beta_Kx_{iK}+\epsilon_i</script><p>记 $X<em>i = \begin{matrix}(1 &amp; x</em>{i2} &amp; \cdots &amp; x_{iK}）\end{matrix}$ 。</p>
-<p><strong>假设样本数据为 iid</strong> ，则 $Var(\epsilon_i |X)= Var(\epsilon_i|X_i)$ 。</p>
-<p>“条件同方差”的原假设为：</p>
+<p><strong>假设样本数据为 iid</strong> ，则 </p>
 <script type="math/tex; mode=display">
-H_0: Var(\epsilon_i|X_i) = \sigma^2</script><p>由于 $Var(\epsilon<em>i|X_i) = E(\epsilon</em>{i}^2|X<em>i)-[\underbrace{E(\epsilon_i|X_i)}</em>{=0}]^2=E(\epsilon_i^2|X_i)$ ，原假设可写为：</p>
+Var(\epsilon_i |X)= Var(\epsilon_i|X_i)</script><p>“条件同方差”的原假设为：</p>
+<script type="math/tex; mode=display">
+H_0: Var(\epsilon_i|X_i) = \sigma^2</script><p>由于</p>
+<script type="math/tex; mode=display">
+Var(\epsilon_i|X_i) = E(\epsilon_{i}^2|X_i)-[\underbrace{E(\epsilon_i|X_i)}_{=0}]^2=E(\epsilon_i^2|X_i)</script><p> 原假设可写为：</p>
 <script type="math/tex; mode=display">
 H_0: E(\epsilon_i^2|X_i) = \sigma_i^2</script><p><strong>如果 $H_0$ 不成立</strong>，则条件方差 $E(\epsilon_i^2|X_i)$ 是 $X_i$ 的函数，称为“条件方差函数”（conditional variance function）。</p>
 <p>假设此条件方差函数为线性函数：</p>
@@ -77,9 +80,12 @@ e_i^2 = \delta_1 +\delta_2 \hat y_i + error_i</script><p>然后检验 $H_0: \del
 <ol>
 <li><p>使用 OLS 估计原模型 $y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_kx_k + u$，得到OLS 残差平方 $\hat u^2$ （每次观测得到一个）。</p>
 </li>
-<li><p>做 $\hat u^2 = \delta<em>0 + \delta_1 x_1 + \delta_2 x_2 + \cdots + \delta_k x_k + 误差$ 回归，记下此回归的 $R^2 \rarr R</em>{\hat u ^2}^2$ 。</p>
+<li><p>做 </p>
+<script type="math/tex; mode=display">
+\hat u^2 = \delta_0 + \delta_1 x_1 + \delta_2 x_2 + \cdots + \delta_k x_k + 误差</script><p>回归，记下此回归的 $R^2 \rarr R_{\hat u ^2}^2$ 。</p>
 </li>
-<li>计算 F 统计量或者 LM 统计量并计算 p 值。（前者使用 $F_{k, n-k-1}$ 分布，后者使用 $\chi_k^2$ 分布）。<strong>如果这个 p 值很小，即低于选定的显著性水平，那么就拒绝同方差性的原假设。</strong></li>
+<li><p>计算 F 统计量或者 LM 统计量并计算 p 值。（前者使用 $F_{k, n-k-1}$ 分布，后者使用 $\chi_k^2$ 分布）。<strong>如果这个 p 值很小，即低于选定的显著性水平，那么就拒绝同方差性的原假设。</strong></p>
+</li>
 </ol>
 <p>如果 BP 检验得到一个足够小的 p 值，那么就应该采取修正措施，使用异方差-稳健标准误，或者 WLS 。</p>
 <hr>
@@ -108,7 +114,7 @@ y = \beta_0 + \beta_1x_1 + \beta_2 x_2 + \cdots + \beta_k x_k + u</script><p>在
 <p><strong>WLS 的基本思想是：通过变量转换，使得变换后的模型满足球形扰动项的假定（变为同方差），然后进行 OLS 估计，即为最有效率的 BLUE 。</strong></p>
 <p>考虑线性回归模型：</p>
 <script type="math/tex; mode=display">
-y_i = \beta_1 + \beta_2x_{i2} + \cdots+\beta_K x_{iK} + \epsilon_i</script><p><em>假定 $Var(\epsilon<em>i|x_i) \equiv \sigma_i^2 = \sigma_i^2v_i$ ，且 ${v_i}</em>{i=1}^n$ 已知。</em></p>
+y_i = \beta_1 + \beta_2x_{i2} + \cdots+\beta_K x_{iK} + \epsilon_i</script><p>假定 $Var(\epsilon<em>i|x_i) \equiv \sigma_i^2 = \sigma_i^2v_i$ ，且 ${v_i}</em>{i=1}^n$ 已知。</p>
 <p>两边同乘权重 $1/\sqrt{v_i}$ 可得：</p>
 <script type="math/tex; mode=display">
 \frac{y_i}{\sqrt{v_i}} = \beta_1\frac{1}{\sqrt{v_i}} + \beta_2\frac{x_{i2}}{\sqrt{v_i}} + \cdots+\beta_K \frac{x_{iK}}{\sqrt{v_i}} + \frac{\epsilon_i}{\sqrt{v_i}}</script><p>新扰动项 $\epsilon_i/\sqrt{v_i}$ 不再有异方差，因为：</p>
