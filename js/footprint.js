@@ -27,7 +27,7 @@ var geoCoordMap = {
     '潜江': [112.899, 30.401]
 };
 
-var convertData = function(data) {
+var convertData = function (data) {
     var res = [];
     for (var i = 0; i < data.length; i++) {
         var geoCoord = geoCoordMap[data[i].name];
@@ -36,30 +36,32 @@ var convertData = function(data) {
                 name: data[i].name,
                 value: geoCoord.concat(data[i].value)
             });
+            //console.log(res)
         }
     }
     return res;
 };
 
 option = {
-    backgroundColor: '#404a59',
-    title: {},
+    // backgroundColor: '#404a59',
+    title: {
+    },
     tooltip: {
         trigger: 'item',
         padding: 10,
         backgroundColor: '#222',
         borderColor: '#777',
         borderWidth: 1,
-        formatter: function(params) {
+        formatter: function (params) {
             name = params.name
             time = params.value[2]
             describe = params.value[3]
-            return '<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">' +
-                name +
-                '</div>' +
-                time +
-                '<br>' +
-                describe;
+            return '<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">'
+                + name
+                + '</div>'
+                + time
+                + '<br>'
+                + describe;
         }
     },
     geo: {
@@ -72,40 +74,42 @@ option = {
         roam: false,
         itemStyle: {
             normal: {
-                areaColor: '#323c48',
+                areaColor: '#e6e6e6',
                 borderColor: '#111'
             },
             emphasis: {
-                areaColor: '#2a333d'
+                areaColor: '#cccccc'
             }
         }
     },
-    series: [{
-        name: '足迹',
-        type: 'effectScatter',
-        coordinateSystem: 'geo',
-        data: convertData(data),
-        showEffectOn: 'render',
-        rippleEffect: {
-            brushType: 'stroke'
-        },
-        hoverAnimation: true,
-        label: {
-            normal: {
-                formatter: '{b}',
-                position: 'right',
-                show: true
-            }
-        },
-        itemStyle: {
-            normal: {
-                color: '#f4e925',
-                shadowBlur: 10,
-                shadowColor: '#333'
-            }
-        },
-        zlevel: 1
-    }]
+    series : [
+        {
+            name: '足迹',
+            type: 'effectScatter',
+            coordinateSystem: 'geo',
+            data: convertData(data),
+            showEffectOn: 'render',
+            rippleEffect: {
+                brushType: 'stroke'
+            },
+            hoverAnimation: true,
+            label: {
+                normal: {
+                    formatter: '{b}',
+                    position: 'right',
+                    show: true
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: '#4d4d4d',
+                    shadowBlur: 10,
+                    shadowColor: '#333'
+                }
+            },
+            zlevel: 1
+        }
+    ]
 };
 
 myChart.setOption(option);
