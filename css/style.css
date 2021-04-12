@@ -1521,3 +1521,15 @@ em.search-keyword {
   color: #fff;
   background-color: #999999;
   text-shadow: 0; }
+
+/* hypothes.is hypothesis highlight style */
+.hypothesis-highlight {
+  font-weight: bold;
+  padding-bottom: 2px;
+  word-break: break-all;
+  text-decoration: none;
+  border-bottom: 0.5px solid;
+  background: linear-gradient(white 20%, #fcf69a 43%, white 90%); }
+  .hypothesis-highlight:hover {
+    font-weight: normal;
+    border-bottom-style: none; }
