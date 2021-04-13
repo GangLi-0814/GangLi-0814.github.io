@@ -15,10 +15,6 @@
           
           <category> 学习 </category>
           
-          <category> 笔记 </category>
-          
-          <category> 经济学 </category>
-          
       </categories>
       
       
@@ -71,8 +67,6 @@
           
           <category> 学习 </category>
           
-          <category> 笔记 </category>
-          
       </categories>
       
       
@@ -100,10 +94,6 @@
           
           <category> 学习 </category>
           
-          <category> 经济学 </category>
-          
-          <category> 笔记 </category>
-          
       </categories>
       
       
@@ -130,8 +120,6 @@
       <categories>
           
           <category> 学习 </category>
-          
-          <category> 笔记 </category>
           
       </categories>
       
@@ -210,10 +198,6 @@
           
           <category> 学习 </category>
           
-          <category> 经济学 </category>
-          
-          <category> 笔记 </category>
-          
       </categories>
       
       
@@ -238,10 +222,6 @@
       <categories>
           
           <category> 学习 </category>
-          
-          <category> 经济学 </category>
-          
-          <category> 笔记 </category>
           
       </categories>
       
@@ -268,10 +248,6 @@
           
           <category> 学习 </category>
           
-          <category> 经济学 </category>
-          
-          <category> 笔记 </category>
-          
       </categories>
       
       
@@ -296,10 +272,6 @@
       <categories>
           
           <category> 学习 </category>
-          
-          <category> 经济学 </category>
-          
-          <category> 笔记 </category>
           
       </categories>
       
@@ -326,10 +298,6 @@
           
           <category> 学习 </category>
           
-          <category> 经济学 </category>
-          
-          <category> 笔记 </category>
-          
       </categories>
       
       
@@ -354,10 +322,6 @@
       <categories>
           
           <category> 学习 </category>
-          
-          <category> 经济学 </category>
-          
-          <category> 笔记 </category>
           
       </categories>
       
@@ -384,10 +348,6 @@
           
           <category> 学习 </category>
           
-          <category> 经济学 </category>
-          
-          <category> 笔记 </category>
-          
       </categories>
       
       
@@ -413,10 +373,6 @@
           
           <category> 学习 </category>
           
-          <category> 经济学 </category>
-          
-          <category> 笔记 </category>
-          
       </categories>
       
       
@@ -441,8 +397,6 @@
       <categories>
           
           <category> 学习 </category>
-          
-          <category> 经济学 </category>
           
       </categories>
       
@@ -471,8 +425,6 @@
           
           <category> 学习 </category>
           
-          <category> 经济学 </category>
-          
       </categories>
       
       
@@ -500,8 +452,6 @@
           
           <category> 学习 </category>
           
-          <category> 经济学 </category>
-          
       </categories>
       
       
@@ -528,8 +478,6 @@
       <categories>
           
           <category> 学习 </category>
-          
-          <category> 经济学 </category>
           
       </categories>
       
@@ -582,10 +530,6 @@
       <categories>
           
           <category> 学习 </category>
-          
-          <category> 经济学 </category>
-          
-          <category> 笔记 </category>
           
       </categories>
       
@@ -650,10 +594,6 @@
           
           <category> 学习 </category>
           
-          <category> 笔记 </category>
-          
-          <category> 经济学 </category>
-          
       </categories>
       
       
@@ -680,10 +620,6 @@
       <categories>
           
           <category> 学习 </category>
-          
-          <category> 笔记 </category>
-          
-          <category> 经济学 </category>
           
       </categories>
       
@@ -712,14 +648,12 @@
           
           <category> 学习 </category>
           
-          <category> 笔记 </category>
-          
-          <category> 经济学 </category>
-          
       </categories>
       
       
         <tags>
+            
+            <tag> 经济学 </tag>
             
             <tag> 微观经济学 </tag>
             
@@ -740,8 +674,6 @@
       <categories>
           
           <category> 学习 </category>
-          
-          <category> 经济学 </category>
           
       </categories>
       
@@ -768,14 +700,12 @@
           
           <category> 学习 </category>
           
-          <category> 笔记 </category>
-          
-          <category> 经济学 </category>
-          
       </categories>
       
       
         <tags>
+            
+            <tag> 经济学 </tag>
             
             <tag> 微观经济学 </tag>
             
@@ -796,8 +726,6 @@
       <categories>
           
           <category> 学习 </category>
-          
-          <category> 笔记 </category>
           
       </categories>
       
@@ -826,8 +754,6 @@
           
           <category> 学习 </category>
           
-          <category> 笔记 </category>
-          
       </categories>
       
       
@@ -855,10 +781,6 @@
           
           <category> 学习 </category>
           
-          <category> 笔记 </category>
-          
-          <category> 经济学 </category>
-          
       </categories>
       
       
@@ -885,8 +807,6 @@
       <categories>
           
           <category> 学习 </category>
-          
-          <category> 笔记 </category>
           
       </categories>
       
@@ -973,27 +893,6 @@
     
     
     <entry>
-      <title>宜昌之行</title>
-      <link href="2020/11/16/%E5%AE%9C%E6%98%8C%E4%B9%8B%E8%A1%8C/"/>
-      <url>2020/11/16/%E5%AE%9C%E6%98%8C%E4%B9%8B%E8%A1%8C/</url>
-      
-        <content type="html"><![CDATA[<p><img src="/2020/11/16/%E5%AE%9C%E6%98%8C%E4%B9%8B%E8%A1%8C/IMG_E3951.JPG" alt="IMG_E3951"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 生活 </category>
-          
-          <category> 旅行 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>宜昌游玩备选去处</title>
       <link href="2020/11/10/%E5%AE%9C%E6%98%8C%E6%B8%B8%E7%8E%A9%E5%A4%87%E9%80%89%E5%8E%BB%E5%A4%84/"/>
       <url>2020/11/10/%E5%AE%9C%E6%98%8C%E6%B8%B8%E7%8E%A9%E5%A4%87%E9%80%89%E5%8E%BB%E5%A4%84/</url>
@@ -1004,8 +903,6 @@
       <categories>
           
           <category> 生活 </category>
-          
-          <category> 旅行 </category>
           
       </categories>
       
@@ -1050,8 +947,6 @@
       <categories>
           
           <category> 生活 </category>
-          
-          <category> 想法 </category>
           
       </categories>
       
@@ -1102,8 +997,6 @@
       <categories>
           
           <category> 生活 </category>
-          
-          <category> 旅行 </category>
           
       </categories>
       
@@ -1187,8 +1080,6 @@
       <categories>
           
           <category> 生活 </category>
-          
-          <category> 想法 </category>
           
       </categories>
       
@@ -1367,8 +1258,6 @@
           
           <category> 生活 </category>
           
-          <category> 想法 </category>
-          
       </categories>
       
       
@@ -1442,8 +1331,6 @@
           
           <category> 生活 </category>
           
-          <category> 想法 </category>
-          
       </categories>
       
       
@@ -1494,10 +1381,14 @@
           
           <category> 学习 </category>
           
-          <category> 笔记 </category>
-          
       </categories>
       
+      
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -1571,8 +1462,6 @@
           
           <category> 生活 </category>
           
-          <category> 想法 </category>
-          
       </categories>
       
       
@@ -1591,8 +1480,6 @@
       <categories>
           
           <category> 学习 </category>
-          
-          <category> 笔记 </category>
           
       </categories>
       
@@ -1793,8 +1680,6 @@
           
           <category> 学习 </category>
           
-          <category> 笔记 </category>
-          
       </categories>
       
       
@@ -1821,8 +1706,6 @@
       <categories>
           
           <category> 学习 </category>
-          
-          <category> 笔记 </category>
           
       </categories>
       
@@ -1851,8 +1734,6 @@
           
           <category> 学习 </category>
           
-          <category> 笔记 </category>
-          
       </categories>
       
       
@@ -1879,8 +1760,6 @@
       <categories>
           
           <category> 学习 </category>
-          
-          <category> 笔记 </category>
           
       </categories>
       
