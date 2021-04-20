@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>LG&#39;s Blog</title>
   
-  <subtitle>凡是过往，皆为序章。</subtitle>
+  <subtitle>风宜长物放眼量</subtitle>
   <link href="http://lgspace.top/atom.xml" rel="self"/>
   
   <link href="http://lgspace.top/"/>
-  <updated>2021-04-19T09:00:53.759Z</updated>
+  <updated>2021-04-20T08:48:39.521Z</updated>
   <id>http://lgspace.top/</id>
   
   <author>
@@ -17,13 +17,71 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>MacroEcon-Mankin-Outline-ClassicalTheory</title>
+    <title>MacroEcon-Mankin-Business-Cycle-Theory</title>
+    <link href="http://lgspace.top/2021/04/20/MacroEcon-Mankin-Business-Cycle-Theory/"/>
+    <id>http://lgspace.top/2021/04/20/MacroEcon-Mankin-Business-Cycle-Theory/</id>
+    <published>2021-04-20T07:34:10.000Z</published>
+    <updated>2021-04-20T08:48:39.521Z</updated>
+    
+    <content type="html"><![CDATA[<p>经济周期理论：短期中的经济</p><a id="more"></a><p>经济周期：衰退、谷底、扩张和顶峰</p><p>奥肯定律：GDP+2%，失业率-1%</p><p>短期：价格具有黏性，价格不能迅速对货币政策做出反应，因此产出和就业会波动。</p><p>长期：价格具有弹性，货币供给变动时，价格能够调整使得总供给和总需求相等。</p><p>AD-AS 模型</p><p>总需求：</p><p>由货币数量论，假定货币供给和货币流通速度固定，得到价格水平 $P$ 和产出 $Y$ 之间的负相关关系，即向下倾斜的总需求曲线。</p><p>货币供给增加使得总需求曲线向右移动。</p><p>总供给：</p><p>长期总供给曲线（古典总供给曲线）垂直：古典模型中，产出取决于技术、劳动力和资本，不取决于价格。</p><p>短期总供给曲线（凯恩斯总供给曲线）水平：短期中，价格具有黏性，若所有价格都是固定的，则 SRAS 水平。但现实中，价格水平并不是完全固定的，因此 SRAS 一般向右上方倾斜。</p><p>稳定化政策：</p><p>总需求冲击：</p><p>需求冲击会使得需求曲线移动。比如货币流通速度加快使得总需求增加。</p><p>中央银行为减缓总需求冲击导致的短期波动，可以采取扩张性或紧缩性货币政策。在经济高涨时，采取紧缩性货币政策，减少货币供给，抑制总需求增加；经济衰退时，采取扩张性货币政策，增加货币供给，刺激总需求增加。</p><p>总供给冲击：</p><p>总供给冲击会使总供给曲线移动，不利的供给冲击拉动成本和价格上升，使短期总供给曲线向上移动，如果总需求保持不变，经济由 A 到 B 引起滞胀，即物价上升和产出减少同时存在，在长期，随着物价下降，经济恢复到自然率 A 点。</p><p>面对不利的供给冲击，央行可以保持总需求不变：但是会导致产出和就业低于自然率；或者采取扩张性货币政策，使总需求右移，但是会导致持久、较高的价格水平。</p><p>凯恩斯有效需求理论</p><p>1.凯恩斯交叉（基本的收入决定模型）</p><p>实际支出等于计划支出的国民收入水平，还说明财政政策的变动对收入有乘数效应。</p><p>假设：经济是封闭的；投资外生固定 $I=\bar I$；财政政策固定 $G=\bar G, T = \bar T$；当实际支出等于计划支出，经济处于均衡状态。</p><p>推导</p><script type="math/tex; mode=display">E = C + I +G \\E = C(Y-\bar T)+\bar I + \bar G</script><p>财政政策与乘数</p><p>2.流动性偏好理论（基本的利率决定模型）</p><p>假设：$\bar M$, $\bar P$, 利率是人们持有多少货币的决定性因素。</p><p>推导</p><script type="math/tex; mode=display">(M/P)^s = \bar M / \bar P \\(M/P)^d = L(r)</script><p>结论：实际货币余额的供求决定利率，即利率的调整使货币市场均衡。</p><p>货币政策</p><p>货币供给的变化或物价的变化，会使实际货币余额的供给变动，从而使实际货币余额供给曲线移动，利率变动。</p><p>IS-LM 模型</p><p>IS-LM模型结合了凯恩斯交叉和流动性偏好理论。</p><p>IS 曲线</p><p>图形推导：将凯恩斯交叉投资外生假定的条件放松，把计划投资写为 </p><p>$I=I(r)$ 。将投资函数和凯恩斯交叉结合可推出 IS 曲线。</p><p>LM 曲线</p><script type="math/tex; mode=display">(M/P)^d = L(r,Y)</script><p><img src="/2021/04/20/MacroEcon-Mankin-Business-Cycle-Theory/1.png" style="zoom:50%;"></p><p>财政政策和货币政策（应用 IS-LM 模型）</p><p>蒙代尔-弗莱明模型与汇率制度</p><p>总供给与通货膨胀和失业之间的短期权衡</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;经济周期理论：短期中的经济&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="宏观经济学" scheme="http://lgspace.top/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+    <category term="经济学" scheme="http://lgspace.top/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+    <category term="Mankin" scheme="http://lgspace.top/tags/Mankin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>增长理论：超长期中的经济</title>
+    <link href="http://lgspace.top/2021/04/20/MacroEcon-Mankin-GrowthTheory/"/>
+    <id>http://lgspace.top/2021/04/20/MacroEcon-Mankin-GrowthTheory/</id>
+    <published>2021-04-20T04:13:20.000Z</published>
+    <updated>2021-04-20T07:33:09.645Z</updated>
+    
+    <content type="html"><![CDATA[<p>经济增长：资本积累与人口增长</p><p>1.资本积累</p><p>单位劳动生产函数：</p><p>$i=y-c=sy=sf(k)$</p><p>资本存量的增长和稳定状态：</p><p>资本存量变动等于同期投资减折旧：$\Delta k = i - \delta k$</p><p>索洛模型的核心方程：$\Delta k = sf(k)-\delta k$</p><p>稳态：投资和折旧相等时，就有 $\Delta k = sf(k)-\delta k = 0$</p><p>人均资本存量保持不变，记为 $k^*$ ，称之为稳定状态的人均资本存量。</p><p>趋近稳定状态：</p><p>储蓄率与增长的关系：</p><p>储蓄率上升会增加投资，从而增加人均资本存量以及人均产出。</p><p>2.资本的黄金律水平</p><p>资本的黄金律水平就是指稳定状态时人均消费最大化所对应的人均资本水平。资本黄金律水平描述了如何将产出在消费和投资间分配才能使经济福利最大化，经济福利通常以人均消费来衡量。</p><script type="math/tex; mode=display">c^* = y^* - i^*= f(k^*) - i^* = f(k^*) - \delta k^*</script><p>求解最大化 $c^*$，可得：</p><script type="math/tex; mode=display">MPK = \delta</script><p>3.人口增长</p><p>资本广化：使人均资本保持不变而进行的投资。</p><p>资本深化：人均资本存量的累积。</p><p>投资 = 资本广化 + 资本深化。</p><p>加入人口增长后：$\Delta k = sf(k)-(\delta+n)k$</p><p>人口增长率 $n$ 的提高会使资本拓展线上移，降低稳定状态的资本水平，从而降低稳定的人均产出。因此，索洛模型预言，从长期看，人口增长率较高的国家，人均资本和人均收入水平较低。</p><p>有人口增长时的黄金律：$MPK-\delta=n$</p><p>4.索洛模型的结论</p><ul><li>从长期来看，一国的人均产出水平与储蓄率正相关，与人口增长率负相关。</li><li>储蓄率的增加会带来长期的产出增加和暂时的增长率提高，但不能提高稳定状态后的增长率。</li><li>如果经济中有高于黄金律水平的资本存量，减少储蓄将会增加所有时点上的消费水平，使每一代人都收益。如果经济中的资本水平低于黄金律水平，增加储蓄将提高将来世代的消费水平，但将减少现在这一代人的消费水平。</li></ul><p>经济增长：技术、经验和政策</p><p>索洛模型中的技术进步</p><p>假设：技术进步是劳动效率，$Y=F(K,L\times E)$</p><p>生产函数：对生产函数两边同除以 $L\times E$，单位效率工人产出函数 $y=f(k)$ 。</p><p>稳定状态：$\Delta k = sf(k)-(\delta+n+g)k=0$</p><p>其中，$gk$ 表示由于技术进步——效率工人的增加而需要补偿的资本。</p><p>黄金律：$MPK-\delta=n+g$，在黄金律稳定状态，资本的边际产出减去折旧率等于人口增长率和技术进步的和。</p><p>促进增长的政策</p><p>储蓄率：比较 $MPK-\delta$ 和 $n+g$ 可评价储蓄率太低还是太高。</p><p>提高储蓄率：减少政府预算赤字；刺激私人储蓄。</p><p>不同资本间配置投资</p><p>鼓励技术进步：知识产权；对 R&amp;D 的税收激励；支持大学基础研究；产业政策。</p><p>国家间的增长差异：人口增长率不同；储蓄率不同；人均资本投资不同；生产效率存在差别。</p><p>超越索洛模型——内生增长理论</p><p>基本模型</p><p>两部门模型</p><p>经济增长源泉的核算（经济增长核算）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;经济增长：资本积累与人口增长&lt;/p&gt;
+&lt;p&gt;1.资本积累&lt;/p&gt;
+&lt;p&gt;单位劳动生产函数：&lt;/p&gt;
+&lt;p&gt;$i=y-c=sy=sf(k)$&lt;/p&gt;
+&lt;p&gt;资本存量的增长和稳定状态：&lt;/p&gt;
+&lt;p&gt;资本存量变动等于同期投资减折旧：$\Delta k = i - \delta </summary>
+      
+    
+    
+    
+    <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="宏观经济学" scheme="http://lgspace.top/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+    <category term="经济学" scheme="http://lgspace.top/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+    <category term="Mankin" scheme="http://lgspace.top/tags/Mankin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>古典理论：长期中的经济</title>
     <link href="http://lgspace.top/2021/04/19/MacroEcon-Mankin-Outline-ClassicalTheory/"/>
     <id>http://lgspace.top/2021/04/19/MacroEcon-Mankin-Outline-ClassicalTheory/</id>
     <published>2021-04-19T08:59:18.000Z</published>
-    <updated>2021-04-19T09:00:53.759Z</updated>
+    <updated>2021-04-20T04:12:15.426Z</updated>
     
-    <content type="html"><![CDATA[<p>曼昆《宏观经济学》（第 9 版）学习笔记。</p><a id="more"></a><p>国民收入的来源与分配</p><p>1.新古典分配理论（一般均衡模型）</p><p>依赖于价格调整使供给和需求平衡的古典假设。</p><p>国民收入如何在生产要素之间进行分配，国民收入的分配由要素价格决定。</p><p>假定；企业的要素需求；收入的分配</p><p>2.柯布-道格拉斯生产函数</p><p>3.总需求的决定因素</p><p>封闭经济中，$Y=C+I+G$</p><p>4.产品与服务供求的均衡</p><p>实际利率起到重要调节作用，一是考虑利率如何影响产品或服务的供求；二是考虑利率如何影响可贷资金的供求。</p><p>储蓄和投资曲线的交点决定了均衡的利率</p><p>5.各种因素发生变化时的分析</p><p>财政政策：</p><p>政府购买：使得 S 向内移动-利率上升-挤出部分投资</p><p>税收优惠：C(Y-T) 上升-消费增加-投资减少-挤出投资、提高利率</p><p>投资需求的变动</p><p>货币系统</p><p>1.货币的职能：价值储藏手段、计价单位、交换媒介</p><p>3.如何控制货币量？</p><p>3.货币量的衡量</p><p>4.银行在货币系统中的作用</p><p>货币供给=通货+活期存款（M=C+D）</p><p>准备金制度</p><p>银行资本、杠杆和资本要求</p><p>5.中央银行如何影响货币供给</p><p>货币供给模型</p><p>6.货币政策工具：公开市场业务、法定准备金率、贴现再贴现率</p><p>通货膨胀</p><p>1.货币数量论</p><script type="math/tex; mode=display">MV = PT \\MV = PY \\(M/P)^d = kY</script><p>货币需求函数和数量方程式</p><p>货币、物价和通胀率的关系</p><script type="math/tex; mode=display">\underbrace{\% \Delta M}_{央行控制} + \underbrace{\% \Delta \bar V}_{货币需求，假设给定}= \underbrace{\% \Delta P}_{通胀} +\underbrace{\% \Delta \bar Y}_{生产要素、技术，假设给定}</script><p>假设 $\% V =0, \bar Y$，货币供给量决定了通胀率。</p><p>2.货币铸造税</p><p>3.通货膨胀与利率</p><p>费雪方程：$r=i-\pi$</p><p>费雪效应：货币数量论+费雪方程 =&gt; 货币增长如何影响通胀率</p><p>货币市场的均衡：$M/P=L(r+E\pi, Y)$，实际货币余额的水平取决于预期的通货膨胀率。</p><p><strong>货币、物价与利率的关系</strong></p><p>4.通货膨胀的社会成本</p><p>是否预期</p><p>5.恶性通货膨胀</p><p>成因、原因、对策</p><p>6.古典二分法</p><p>将变量划分为实际变量和名义变量</p><p>货币中性：货币对实际经济变量不产生影响，古典经济学把变量分为实际变量和名义变量，认为货币对名义变量产生影响，而不会对实际变量产生影响。</p><p>开放的经济</p><p>1.资本和产品的国家流动</p><p>在国民收入核算恒等式加入净出口</p><p>国际资本流动和贸易余额</p><p>2.小型开放经济模型</p><p>3.汇率</p><p>4.大型开放经济的经济模型</p><p>5.大型开放经济的均衡</p>]]></content>
+    <content type="html"><![CDATA[<p>曼昆《宏观经济学》（第 9 版）学习笔记。</p><a id="more"></a><p>国民收入的来源与分配</p><p>1.新古典分配理论（一般均衡模型）</p><p>依赖于价格调整使供给和需求平衡的古典假设。</p><p>国民收入如何在生产要素之间进行分配，国民收入的分配由要素价格决定。</p><p>假定：完全竞争市场；生产函数的边际产量递减；欧拉定理。</p><p>企业的要素需求：$max \quad \pi = P \cdot F(K,L)-W \cdot L - R \cdot K$</p><p>收入的分配：$Y=F(K,L)=MPL \times L + MPK \times K$</p><p>2.柯布-道格拉斯生产函数</p><p>$Y=AK^\alpha L^{1-\alpha}, (0&lt;\alpha&lt;1)$</p><p>规模报酬不变</p><p>要素的边际生产力递减</p><p>要素报酬之和等于总产量，经济利润为零</p><p>3.总需求的决定因素</p><p>封闭经济中，$Y=C+I+G$</p><p>消费：$C=C(Y-T)$</p><p>投资：$I=I(r)$</p><p>政府购买：$G=\bar G, T = \bar T$</p><p>4.产品与服务供求的均衡</p><p>经济产出供求相等：$Y=C(\bar Y - \bar T)+I(r) + \bar G$</p><p>实际利率起到重要调节作用，一是考虑利率如何影响产品或服务的供求；二是考虑利率如何影响可贷资金的供求。</p><p>可贷资金供求的均衡：$\bar S = I(r)$</p><p>储蓄和投资曲线的交点决定了均衡的利率</p><p>5.各种因素发生变化时的分析</p><p>财政政策：</p><ul><li><p>政府购买：使得 S 向内移动-利率上升-挤出部分投资</p></li><li><p>税收优惠：C(Y-T) 上升-消费增加-投资减少-挤出投资、提高利率</p></li></ul><p>投资需求的变动：</p><p>投资需求增加会使投资曲线向右平移</p><p>货币系统</p><p>1.货币的职能：价值储藏手段、计价单位、交换媒介</p><p>3.如何控制货币量？</p><p>央行通过货币政策实现</p><p>3.货币量的衡量</p><p>4.银行在货币系统中的作用</p><p>货币供给=通货+活期存款（M=C+D）</p><p>准备金制度</p><p>银行资本、杠杆和资本要求</p><p>5.中央银行如何影响货币供给</p><p>货币供给模型</p><script type="math/tex; mode=display">M=C+D \\B=C+R \\=> \frac{M}{B} = \frac{C+D}{C+R} \\\frac{M}{B} = \frac{\frac{C}{D}+1}{\frac{C}{D}+\frac{R}{D}} \\=>M = \frac{cr+1}{cr+rr} \times B</script><p>cr：通货存款比</p><p>rr：存款准备金率</p><p>6.货币政策工具</p><p>公开市场业务</p><p>法定准备金率</p><p>贴现率：商业银行同客户办理贴现业务时所使用的利率。</p><p>通货膨胀</p><p>1.货币数量论</p><script type="math/tex; mode=display">MV = PT \\MV = PY \\</script><p>货币需求函数和数量方程式：$(M/P)^d = kY$</p><p>货币、物价和通胀率的关系</p><script type="math/tex; mode=display">\underbrace{\% \Delta M}_{央行控制} + \underbrace{\% \Delta \bar V}_{货币需求，假设给定}= \underbrace{\% \Delta P}_{通胀} +\underbrace{\% \Delta \bar Y}_{生产要素、技术，假设给定}</script><p>假设 $\% V =0, \bar Y$，货币供给量决定了通胀率。</p><p>2.货币铸造税</p><p>$S=(M_{t+1}-M_t)/P_t$</p><p>3.通货膨胀与利率</p><p>实际利率与名义利率</p><p>费雪方程：$r=i-\pi$</p><p>费雪效应：货币数量论+费雪方程 =&gt; 货币增长如何影响通胀率</p><p>货币市场的均衡：$M/P=L(r+E\pi, Y)$，实际货币余额的水平取决于预期的通货膨胀率。</p><p><strong>货币、物价与利率的关系</strong></p><p>4.通货膨胀的社会成本</p><p>是否可以预期</p><p>5.恶性通货膨胀</p><p>成本：鞋底成本、菜单成本</p><p>原因：货币供给过度增长</p><p>对策：深层次原因是财政赤字</p><p>6.古典二分法</p><p>将变量划分为实际变量和名义变量</p><p>货币中性：货币对实际经济变量不产生影响，古典经济学把变量分为实际变量和名义变量，认为货币对名义变量产生影响，而不会对实际变量产生影响。</p><p>开放的经济</p><p>净出口：$NX=Y-(C+I+G)$</p><p>1.资本和产品的国家流动</p><p>在国民收入核算恒等式加入净出口 $NX=Y-(C+I+G)$</p><p>国际资本流动和贸易余额：$S-I=NX$</p><p>2.小型开放经济模型</p><p>假设：</p><p>$r=r^*$; $Y=\bar Y=F(\bar F, \bar L)$; $C=C(Y-T)$; $I=I(r)$；财政政策固定。</p><p>模型：$NX=[\bar Y-C(\bar Y-T)-G]-I(r^<em>)=\bar S - I(r^</em>)$</p><p>政策对贸易余额的影响（国内财政政策、国外财政政策、投资需求的移动）</p><p>经济政策评价</p><p>通过考察经济政策对国内储蓄和国内投资的影响，来找出经济政策对贸易余额的影响。</p><p>3.汇率</p><p>$\epsilon=e\times(P/P^*)$</p><p>一价定律：同一时间，同一种商品在世界各地用同一种货币表示的价格相同。国际间商品套利交易保证了一价定律的成立。</p><p>购买力平价</p><p>4.大型开放经济的经济模型</p><p>大型开放经济是经济体大到足以影响世界利率，再者，其资本不是完全流动的。</p><p>5.大型开放经济的均衡</p><p>把大型开放经济的可贷资金市场和外汇市场结合起来就可以得到该经济体中的实际利率 $r$ 和实际汇率 $\epsilon$ 。</p><p>失业</p><p>1.自然失业率</p><p>$\frac{U}{L} = \frac{s}{s+f}$</p><p>自然失业率取决于离职率和入职率。</p><p>2.自然失业</p><p>摩擦性失业：工作转换中的失业。</p><p>结构性失业：由于工资刚性（指工作不能调整到劳动供给等于劳动需求的水平）与工作配额配给所引起的失业。</p><p>局内人与局外人</p><p>效率工资</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;曼昆《宏观经济学》（第 9 版）学习笔记。&lt;/p&gt;</summary>
@@ -38,6 +96,8 @@
     <category term="宏观经济学" scheme="http://lgspace.top/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
     <category term="经济学" scheme="http://lgspace.top/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+    <category term="Mankin" scheme="http://lgspace.top/tags/Mankin/"/>
     
   </entry>
   
@@ -435,52 +495,6 @@
     <category term="经济学" scheme="http://lgspace.top/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
     <category term="叶航" scheme="http://lgspace.top/tags/%E5%8F%B6%E8%88%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>08_经济增长模型（三）：内生增长模型</title>
-    <link href="http://lgspace.top/2021/03/30/MacroEcon-EconGrowth-Models-3/"/>
-    <id>http://lgspace.top/2021/03/30/MacroEcon-EconGrowth-Models-3/</id>
-    <published>2021-03-30T06:19:49.000Z</published>
-    <updated>2021-04-14T14:44:16.265Z</updated>
-    
-    <content type="html"><![CDATA[<p>内生增长理论是指罗默、卢卡斯等经济学家提出的，用<strong>规模收益递增</strong>和<strong>内生技术进步</strong>来说明一个国家长期经济增长和各国增长率差异的一种经济增长理论。该理论试图将增长率解释为社会决策的函数，特别是储蓄率的函数。修改新古典增长模型中假定的生产函数的形状，在一定程度上就会出现容许自我持续的（即内生的）增长。</p><a id="more"></a><p>基本公式：$\frac{\Delta y}{y} = \frac{\Delta k}{k}=g=\frac{sy}{k} - (n+d)=sa-(n+d)$ 。</p><h3 id="基本假设"><a href="#基本假设" class="headerlink" title="基本假设"></a>基本假设</h3><ol><li>社会储蓄函数为 $S = sy$ ，其中 $s$ 为储蓄率；</li><li>劳动增长率 $n$ 不变；</li><li>资本的边际产品不变；</li><li>存在外部经济且外部报酬相当大；</li><li>技术进步是内生要素，技术与总体经济中每个工人的资本水平成正比例，$A=\alpha K/N = \alpha k$，并假定技术属于劳动增加型。</li></ol><h3 id="基本方程"><a href="#基本方程" class="headerlink" title="基本方程"></a>基本方程</h3><p><img src="/2021/03/30/MacroEcon-EconGrowth-Models-3/1.png" style="zoom:100%;"></p><hr><p>【欧拉定理】如果正整数 $n$ 和整数 $a$ 互质，那么就有：</p><script type="math/tex; mode=display">𝑎^{\phi(𝑛)} \equiv 1 ( \mod n)</script><p>其中：</p><ul><li>欧拉函数 $\phi(𝑛)$ 为小于 $n$ 的正整数中并且与 $n$ 互质的数的个数。</li><li>互质：即自然数 $X$ 和 $Y$ 的最大公因/约数为 1 。比如：7 和 3 公约数只有 1 。</li><li>$\equiv$ ：同余关系。例如：$X \equiv Y (\mod n)$, 即 $X \mod 𝑛$ 和 $𝑌 \mod n$ 的余数相同。</li></ul><p>例题：求正整数 $3^{38}$ 的最后两位数。</p><p>按照定义：如果正整数 $n$ 和 整数 $𝑎$ 互质，那么就有：</p><script type="math/tex; mode=display">𝑎^{\phi(𝑛)} \equiv 1 （\mod n ）</script><p>其中欧拉函数 $\phi(𝑛)$ 为小于 $n$ 的正整数中并且与 $n$ 互质的数的个数。</p><p>$a = 3, n = 100$(因为取后面两位数，即 $\mod 100$), 且 3 和 100 互质，因此：</p><script type="math/tex; mode=display">\phi(100) = 100(1-\frac{1}{2})(1-\frac{1}{5}) = 40 \\3^{\phi{(100)}} = 3^{40} \equiv 1 \mod 100 \\3^{83} =3^3 \times 3^{80} \\=3^3 \times (3^\phi{(100)})^2\equiv 3^3×1 =27 \mod 100</script><hr><p>由公式可知，内生增长模型中人均 GDP 增长率是 $sa-(n+d)$。因此，高储蓄率产生高增长率。高人口增长率与高折旧率导致低增长率。此时，经济进入自我持续，并以固定速率 $sa - (n+d)$ 增长的稳态路径。</p><p><img src="/2021/03/30/MacroEcon-EconGrowth-Models-3/2.png" style="zoom:50%;"></p><h3 id="内生增长的更深层次的经济学"><a href="#内生增长的更深层次的经济学" class="headerlink" title="内生增长的更深层次的经济学"></a>内生增长的更深层次的经济学</h3><p>与新古典增长理论不同的是，内生增长理论坚持“两个不变”的假设——规模报酬不变和资本边际报酬不变同时存在。正确理解和把握“两个不变”同时并存，这里的关键在于当单要素（资本 $K$）的数量变动如果能通过某一途径同时导致其他要素（如劳动生产率 $A$）发生同方向、同比例的数量变动时，即当技术内生化时 ，所有要素的规模报酬不变性质已经与单要素边际收益不变性质合而为一。</p><p>罗默用“资本报酬的外部性”、“人力资本”、“私人报酬”与“社会报酬”区别的引入对此进行了成功地解释。 他提出，投资不仅产生新机器设备，而且产生新的生产方式。尽管厂商攫取了新机器的生产利益（表现为资本的 私人边际报酬递减），但由于思想和方法易于复制，要将发明的新思想和新方法的好处攫取尽并不让其他企业获得好处要困难得多。这就是资本的外部报酬。考虑到人力资本的作用，特别是知识投资，与物质资本的复制相比， 思想复制需要的耗费很少甚至无需耗费。知识的利益只是部分为创造者所攫取，存在相当大的外部好处。考虑到其外部性，就可以理解为什么资本的边际报酬不变而不是递减，这是站在综合考虑资本带给创造者自身和其他人外部好处的角度给出的观点。经济学家认为，一般的人力资本投资和具体的研究与开发是理解长期增长的关键。</p><h3 id="趋同"><a href="#趋同" class="headerlink" title="趋同"></a>趋同</h3><p>“趋同”问题的核心是，原先产出水平不同的经济最终会增长到相同的生活标准。 新古典增长理论预言，具有相同的储蓄率、相同的人口增长率并能得到相同技术的各个经济会出现绝对趋同。</p><p>换言之，它们都会达到同样的稳态收入水平。条件趋同是对储蓄率或人口增长率不同的经济所作的预测，即根据索洛增长图形的预测，稳态收入会不同，但增长率最终将相等。</p><p>将条件趋同与内生增长理论关于高储蓄率导致高增长率的预言相比较，巴罗在其一系列论文中已指出，虽然投资较多的国家趋向于增长得较快，但高投资对增长的影响看来是暂时性的:投资较高的国家将最终达到较高人均收入的稳定，而不是较高增长率的稳态。这意味着这些国家的趋同确实是有条件的。<strong>因此，尽管内生增长理论在解释技术上居领先地位的国家的增长也许十分重要，但在解释增长率的国际差异方面却不太重要。</strong></p><h3 id="内生增长理论的结论"><a href="#内生增长理论的结论" class="headerlink" title="内生增长理论的结论"></a>内生增长理论的结论</h3><ol><li><p>内生增长理论依赖于可积累要素的规模报酬不变，以产生持续增长；</p></li><li><p>作为内生增长理论基础的微观经济学强调，当厂商不能获取某些投资收益时，社会报酬与私人报酬有差异；</p></li><li><p>技术进步率取决于储蓄，特别是致力于人力资本的储蓄；</p></li><li><p>储蓄率的增长在提高产出水平的同时也提高产出增长率，即储蓄的增加会导致产出持续增长；</p></li><li><p>内生增长理论在解释增长率的国际差异方面并不是很重要。</p></li></ol>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;内生增长理论是指罗默、卢卡斯等经济学家提出的，用&lt;strong&gt;规模收益递增&lt;/strong&gt;和&lt;strong&gt;内生技术进步&lt;/strong&gt;来说明一个国家长期经济增长和各国增长率差异的一种经济增长理论。该理论试图将增长率解释为社会决策的函数，特别是储蓄率的函数。修改新古典增长模型中假定的生产函数的形状，在一定程度上就会出现容许自我持续的（即内生的）增长。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="笔记" scheme="http://lgspace.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="宏观经济学" scheme="http://lgspace.top/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>07_经济增长模型（二）：索洛模型</title>
-    <link href="http://lgspace.top/2021/03/30/MacroEcon-EconGrowth-Models-2/"/>
-    <id>http://lgspace.top/2021/03/30/MacroEcon-EconGrowth-Models-2/</id>
-    <published>2021-03-30T06:10:22.000Z</published>
-    <updated>2021-04-14T14:44:12.201Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="新古典增长模型（索洛模型）"><a href="#新古典增长模型（索洛模型）" class="headerlink" title="新古典增长模型（索洛模型）"></a>新古典增长模型（索洛模型）</h3><a id="more"></a><p>索洛模型：$s \cdot f(k) = k’ + nk$</p><h4 id="推导"><a href="#推导" class="headerlink" title="推导"></a>推导</h4><p>设生产函数为 $Y=F(K,L)$ ，若规模报酬不变，有 $\lambda Y = F(\lambda K, \lambda L)$ ，令 $\lambda = 1/L$，有 $Y/L=F(K/L)$ 。</p><p><strong>（索洛模型的数学技巧：将$\lambda = 1/L$ 代入之后，从而 $\lambda$ 可以被消除掉了。背后的含义是劳动和资本可以相互替代，这也是索洛模型广受诟病的一点。）</strong></p><p>上式中，$Y/L$ 为人均产出，$K/L$ 为人均资本，记 $Y/L = y, K/L = k$，有：</p><script type="math/tex; mode=display">y = f(k)</script><p><strong>（增长是动态发展过程，所以需要求导）</strong></p><p>对 $k = K/L$ 求时间 t 的导数，有：</p><script type="math/tex; mode=display">k' = (K/L)' = (K'L - KL')/L^2 = K'L - (K/L)(L'/L) \tag{2}</script><p>（思考上式的经济学含义）</p><script type="math/tex; mode=display">K'L -(\underbrace{K/L}_{人均资本})(\underbrace{L'/L}_{人口增长率})</script><p>所以式（2）可写为：$k’=K’L - nk$，或者：$K’/L = k’+nk$ 。</p><p>若折旧等于 0 ，$K’=I, I=S, S=sY$，代入上式有：</p><script type="math/tex; mode=display">sY/L = k' +nk</script><p>因为 $Y/L = y$，而 $y=f(k)$ ，则上式可进一步写作：</p><script type="math/tex; mode=display">s\cdot f(k) = k' + nk</script><p>其中：</p><ul><li>$s$ 为储蓄率，$s = S/Y$ ;</li><li>$f(k)$ 为集约形式的生产函数（人均产出与资本劳动比率之间的关系），$f(k) = F(K/L)$；</li><li>$k’$ 为原有人口人均资本增量，$k’ = K’/L -nk$ ；</li><li>$n$ 为人口增长率，$n = L’/L$；</li><li>$k$ 为人均资本，$k = K/L$ ；</li><li>$nk$ 为新增人口人均资本增量。</li></ul><p>经济含义：索洛模型说明，一个社会的经济增长取决于三个因素，即（1）储蓄率；（2）原有人口人均资本增量，称资本深化；（3）新增人口人均资本增量，称资本广化。</p><h4 id="基本问题的回答"><a href="#基本问题的回答" class="headerlink" title="基本问题的回答"></a>基本问题的回答</h4><p><strong>存在性问题：$\Delta Y /Y = n$</strong></p><p>证明：若人口人均资本增量 $k’ =0$<strong>（稳态分析：指的是一种长期均衡状态，当人均收入与人均资本不变时，经济处于稳定状态。）</strong>，有 $s \cdot f(k)= nk$，即 $[s\cdot f(k)]/k = n$；</p><p>因为$f(k)=y=Y/L, k = K/L$，则有：$s\cdot Y/L \cdot L/K = s \cdot Y/K$；</p><p>因 $s \cdot Y = S$，而 $S =I$，若折旧等于零，则 $I = \Delta K$，如此则有 $\Delta K /K = n$ 。</p><p>因哈罗德中性假设为 $K/L = \Delta K / \Delta Y$，即 $\Delta Y /Y = \Delta K /K$，所以有 $\Delta Y / Y = n$ 。</p><p><strong>稳定性原理：$s \cdot f(k) = k’ + nk$</strong></p><ul><li>若 $k’&gt; 0$，即 $s·f(k) &gt; nk$，则 $f(k)$ 将趋于增加；</li><li>若 $k’&lt; 0$，即 $s·f(k) &lt; nk$，则 $f(k)$ 和将趋于减少；</li><li>若 $k ‘ = 0$，即 $s·f(k) = nk$，则 $f(k)$将趋于稳定。</li></ul><p><img src="/2021/03/30/MacroEcon-EconGrowth-Models-2/1.png" style="zoom:70%;"></p><p><strong>反国家干预原理：</strong>由于经济增长能自动稳定，所以国家不应该对经济进行干预。</p><p>存在性原理：人口的增长是能和经济增长相匹配的</p><p>k’表示原有人口人均资本增量，为何假设k’=0？</p><p>稳定性原理说明了经济波动向 k’=0 收敛。</p><p><strong>结论：经济出现偏离，总是可以收敛于 k’=0，即市场自行调节至均衡。</strong></p><p>亚当斯密：在资本主义经济萌芽时期，亚当斯密主张自由市场是向封建社会（旧势力）的突破。</p><p>而马歇尔和索洛还主张市场，是在为旧势力、旧制度唱赞歌。</p><p>这是为什么将凯恩斯主义称之为革命，是因为他主张政府调控。</p><p>索洛模型从公式来看是均衡的，但是均衡是在什么时间？</p><p>凯恩斯回应：长远是对当前事务错误的指导。从长远看，我们都已经死了。</p><h4 id="索洛余值"><a href="#索洛余值" class="headerlink" title="索洛余值"></a>索洛余值</h4><p><img src="/2021/03/30/MacroEcon-EconGrowth-Models-2/6.png" style="zoom:70%;"></p><h4 id="影响产出增加的因素"><a href="#影响产出增加的因素" class="headerlink" title="影响产出增加的因素"></a>影响产出增加的因素</h4><p>（此部分补充自多恩布什）</p><h5 id="储蓄率对产出增长的影响"><a href="#储蓄率对产出增长的影响" class="headerlink" title="储蓄率对产出增长的影响"></a>储蓄率对产出增长的影响</h5><p><img src="/2021/03/30/MacroEcon-EconGrowth-Models-2/2.png" style="zoom:70%;"></p><p>经济最初位于 $C$ 点的稳态均衡。假定经济活动主体一次性把储蓄率从 $s$ 提高到 $s’$，形成新的稳态为 $C’$ 。在 $C’$ 点，人均资本与人均产出也都有了增长。但是，在长期中，储蓄率的增加只是提高人均产出水平 和人均资本水平，而不是提高人均产出增长率。换句话来说，提高储蓄率将带来短期增长，但不能够带来长期经济增长。</p><p><img src="/2021/03/30/MacroEcon-EconGrowth-Models-2/3.png" style="zoom:70%;"></p><p>储蓄率增加引起人均资本存量和人均产出的增长，这个过程将以递减的速率持续下去。储蓄率的提高立即提高了产出增长率。随着资本的积累，增长率下降，回落到人口增长的水平。</p><h5 id="人口增长对产出增长的影响"><a href="#人口增长对产出增长的影响" class="headerlink" title="人口增长对产出增长的影响"></a>人口增长对产出增长的影响</h5><p><img src="/2021/03/30/MacroEcon-EconGrowth-Models-2/4.png" style="zoom:70%;"></p><ul><li>增长率的增加降低了人均资本的稳态水平，进而降低了人均产出的稳态水平。</li><li>人口增长率的上升增加了总产量的稳态增长率。</li></ul><h5 id="有外生技术变革的增长"><a href="#有外生技术变革的增长" class="headerlink" title="有外生技术变革的增长"></a>有外生技术变革的增长</h5><p><img src="/2021/03/30/MacroEcon-EconGrowth-Models-2/5.png" style="zoom:70%;"></p><ul><li>外生技术水平的提高引起生产函数和储蓄曲线的上升，从而在更高的人均产出与更高 的人均资本处达到新的稳态。</li><li>人均产出增长率和总产出增长率稳定于 $n+g$ ，独立于储蓄率。</li></ul><h4 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h4><ul><li>稳态中的产出增长率是外生的；在这种情况下它等于 $n$ ，独立于储蓄率$s$。 </li><li>尽管储蓄率的增加不影响稳态增长率，但通过提高资本—产出比率可以提高稳态收入水平。</li><li>产量的稳态增长率保持外生。稳态的人均收入增长率由技术进步率决定。总产出的稳 态增长率是技术 进步率和人口增长率之和。</li><li>趋同是新古典理论的最后判断:如果两国人口增长率、储蓄率和生产函数相同，那么它们最终将达到 相同的收入水平。如果两个国家之间有着不同的储蓄率，那么它们会在稳态中达到不同的收入水平，但是如果它们的技术进步率和人口增长率相同，那么它们的稳态增长率也将相同。</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;新古典增长模型（索洛模型）&quot;&gt;&lt;a href=&quot;#新古典增长模型（索洛模型）&quot; class=&quot;headerlink&quot; title=&quot;新古典增长模型（索洛模型）&quot;&gt;&lt;/a&gt;新古典增长模型（索洛模型）&lt;/h3&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="笔记" scheme="http://lgspace.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="宏观经济学" scheme="http://lgspace.top/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
   </entry>
   
