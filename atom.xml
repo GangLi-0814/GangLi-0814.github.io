@@ -6,7 +6,7 @@
   <link href="http://lgspace.top/atom.xml" rel="self"/>
   
   <link href="http://lgspace.top/"/>
-  <updated>2021-04-20T08:48:39.521Z</updated>
+  <updated>2021-04-20T16:29:08.495Z</updated>
   <id>http://lgspace.top/</id>
   
   <author>
@@ -15,6 +15,79 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MacroEcon-Mankin-DynamicAD-AS</title>
+    <link href="http://lgspace.top/2021/04/21/MacroEcon-Mankin-DynamicAD-AS/"/>
+    <id>http://lgspace.top/2021/04/21/MacroEcon-Mankin-DynamicAD-AS/</id>
+    <published>2021-04-20T16:21:35.000Z</published>
+    <updated>2021-04-20T16:29:08.495Z</updated>
+    
+    <content type="html"><![CDATA[<p>动态 AD-AS 模型，研究产出和<strong>通货膨胀</strong>随着时间推移如何对经济环境的外生变化作出反应的模型，强调变量随时间发生变化所产生的影响。</p><a id="more"></a>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;动态 AD-AS 模型，研究产出和&lt;strong&gt;通货膨胀&lt;/strong&gt;随着时间推移如何对经济环境的外生变化作出反应的模型，强调变量随时间发生变化所产生的影响。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="经济学" scheme="http://lgspace.top/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+    <category term="宏观经济学" scheme="http://lgspace.top/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+    <category term="Mankin" scheme="http://lgspace.top/tags/Mankin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>公平与发展</title>
+    <link href="http://lgspace.top/2021/04/20/DevelopEcon-ZhangPeiGang-Notes/"/>
+    <id>http://lgspace.top/2021/04/20/DevelopEcon-ZhangPeiGang-Notes/</id>
+    <published>2021-04-20T14:07:48.000Z</published>
+    <updated>2021-04-20T15:44:17.369Z</updated>
+    
+    <content type="html"><![CDATA[<p>张培刚《发展经济学》笔记。</p><a id="more"></a><p>公平与发展</p><p>公平是指机会均等、过程公平、结果均等。但是这三者之间是有矛盾的，机会均等和过程公平往往带来结果不均等，于是按照世界银行的相关定义，公平是指机会均等、过程公平和避免结果的极端贫困。</p><p>收入分配差别与洛伦兹曲线</p><p><img src="/2021/04/20/DevelopEcon-ZhangPeiGang-Notes/1.png" style="zoom:50%;"></p><p>将一定人口比例所对应的收入比例在图上描出，就可以得到该国该年收入分配的洛伦兹曲线。</p><p>洛伦兹曲线弯曲程度可以观察各个阶层的收入差别情况，从不同曲线对比中可以比较不同社会经济的收入差别的变化情况。但是这种方法的不足之处在于难以准确确定收入差别的大小。</p><p>收入分配不平等的指标度量方法：</p><p>1.基尼系数：计算洛伦兹曲线与对角线之间的面积除以对角线与 90 度线所围的面积而得到。</p><p><img src="/2021/04/20/DevelopEcon-ZhangPeiGang-Notes/2.png" style="zoom:50%;"></p><p>6.广义熵指数</p><p>收入分配与增长的关系：库兹涅茨倒 U 型假说及其检验</p><p><img src="/2021/04/20/DevelopEcon-ZhangPeiGang-Notes/3.png" style="zoom:50%;"></p><p>收入分配不均是否是创造经济高速增长的必要条件？</p><p>收入分配不均利于经济高速增长：</p><ul><li>一是富人集聚财富，用于储蓄和投资，穷人用于消费，因此不公平会带来更多的储蓄和更快的增长；</li><li>二是国民收入和人均收入足够高时，就会通过税收和补贴实施收入再分配，在此之前再分配的尝试会降低效率。</li></ul><p>较高的收入均等程度利于经济自我持续增长：</p><ul><li>异于发达国家，发展中国家富人不见得节俭或有欲望再投资，反而用于炫耀性消费或转移到海外避风港。</li><li>穷人收入低，生活水平低，无法用于健康和教育投资，由此降低劳动生产率，进而直接或间接地推迟经济增长。</li><li>提高穷人的收入水平利于生活必需品的消费需求，从而刺激当地生产、就业和投资；而富人倾向进口奢侈品消费。<em>（“家电下乡”，强化基层基础设施，“软着陆”）</em></li><li>大规模减贫利于形成广泛参与的公众形成物质和心理上的激励，从而促进经济健康发展；反之带来社会问题。</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;张培刚《发展经济学》笔记。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="经济学" scheme="http://lgspace.top/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+    <category term="发展经济学" scheme="http://lgspace.top/tags/%E5%8F%91%E5%B1%95%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+    <category term="笔记" scheme="http://lgspace.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MacroEcon-Models</title>
+    <link href="http://lgspace.top/2021/04/20/MacroEcon-Models/"/>
+    <id>http://lgspace.top/2021/04/20/MacroEcon-Models/</id>
+    <published>2021-04-20T09:18:41.000Z</published>
+    <updated>2021-04-20T14:03:27.605Z</updated>
+    
+    <content type="html"><![CDATA[<p>梳理宏观经济学模型。</p><a id="more"></a><p><strong>长期经济增长：</strong></p><p>凯恩斯有效需求理论</p><p>哈罗德-多马模型：$g = \frac{s}{v}$</p><p>新古典增长理论</p><ul><li>A 的内生化：<ul><li>索洛模型：$\Delta k = sy-(n+d)k$</li></ul></li><li>C 的内生化：<ul><li>Ramsey 模型</li><li>OLG 模型</li></ul></li></ul><p>内生增长模型</p><p>罗默模型</p><p><strong>短期经济波动：</strong></p><p>凯恩斯交叉和流动性陷阱</p><p>IS-LM 模型</p><p>AD-AS 模型</p><hr><p>现代主流宏观经济学的中心思想：宏观模型应该是建立在微观基础上的、动态的、满足理性预期条件的一般均衡模型。</p><p>卢卡斯批判：宏观经济学必须有微观基础</p><p>一般均衡模型</p><p>理性预期革命（ 20 世纪 70 年代）</p><ul><li>静态预期：$P<em>t^e = P</em>{t-1}$</li><li>适应性预期：$P<em>t^e=P</em>{t-1}^e + \lambda(P<em>{t-1}-P</em>{t-1}^e)$</li><li>理性预期：利用所有的信息，做出预期<ul><li>无不确定性时的理性预期</li><li>不确定性下的理性预期</li></ul></li></ul><p>动态随机一般均衡模型（DSGE）</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;梳理宏观经济学模型。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="经济学" scheme="http://lgspace.top/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+    <category term="宏观经济学" scheme="http://lgspace.top/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>MacroEcon-Mankin-Business-Cycle-Theory</title>
@@ -33,9 +106,9 @@
     <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="宏观经济学" scheme="http://lgspace.top/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
-    
     <category term="经济学" scheme="http://lgspace.top/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+    <category term="宏观经济学" scheme="http://lgspace.top/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
     <category term="Mankin" scheme="http://lgspace.top/tags/Mankin/"/>
     
@@ -66,9 +139,9 @@
     <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="宏观经济学" scheme="http://lgspace.top/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
-    
     <category term="经济学" scheme="http://lgspace.top/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+    <category term="宏观经济学" scheme="http://lgspace.top/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
     <category term="Mankin" scheme="http://lgspace.top/tags/Mankin/"/>
     
@@ -91,11 +164,11 @@
     <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
+    <category term="经济学" scheme="http://lgspace.top/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
     <category term="笔记" scheme="http://lgspace.top/tags/%E7%AC%94%E8%AE%B0/"/>
     
     <category term="宏观经济学" scheme="http://lgspace.top/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
-    
-    <category term="经济学" scheme="http://lgspace.top/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
     <category term="Mankin" scheme="http://lgspace.top/tags/Mankin/"/>
     
@@ -118,9 +191,9 @@
     <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="宏观经济学" scheme="http://lgspace.top/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
-    
     <category term="经济学" scheme="http://lgspace.top/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+    <category term="宏观经济学" scheme="http://lgspace.top/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
   </entry>
   
@@ -424,77 +497,6 @@
     
     
     <category term="宏观经济学" scheme="http://lgspace.top/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MacroEcon-PhillipsCurve</title>
-    <link href="http://lgspace.top/2021/03/31/MacroEcon-PhillipsCurve/"/>
-    <id>http://lgspace.top/2021/03/31/MacroEcon-PhillipsCurve/</id>
-    <published>2021-03-31T01:31:29.000Z</published>
-    <updated>2021-04-13T09:41:17.934Z</updated>
-    
-    <content type="html"><![CDATA[<p>菲利普斯曲线由新西兰经济学家 A·W·菲利普斯根据英国 1861~1957 年的统计资料提出来的，用来表示货币工资变动率与失业率之间交替取舍关系的曲线。 </p><a id="more"></a><h3 id="通货膨胀与失业"><a href="#通货膨胀与失业" class="headerlink" title="通货膨胀与失业"></a>通货膨胀与失业</h3><h4 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h4><p>菲利普斯曲线表示失业率和工资增长率之间的反向关系，当失业率高时，货币工资的增长率低；反之，当失业率低时，货币工资增长率高。</p><p>根据成本推动型通货膨胀（<strong>成本推动型通货膨胀</strong>又称成本通货膨胀或“供给通货膨胀”，是指在没有超额需求的条件下，由于供给方面成本的提高所引起的价格水平的普遍持续上涨），货币工资决定了通货膨胀率。因此，菲利普斯曲线也可以表示通货膨胀率和失业率之间的交替关系，当失业率高时，通货膨胀率低；反之，当失业率低时，通货膨胀率高。</p><p><img src="/2021/03/31/MacroEcon-PhillipsCurve/1.png" style="zoom:50%;"></p><h4 id="代数表达式"><a href="#代数表达式" class="headerlink" title="代数表达式"></a>代数表达式</h4><p>定义工资膨胀率（名义工资增长速度）：$g<em>w = \frac{W</em>{t+1}-W_t}{W_t}$ 。</p><p>令 $u^*$ 表示自然失业率，则有：</p><script type="math/tex; mode=display">g_w = - \epsilon(\underbrace{u-u^*}_{失业缺口})</script><p>其中，$\epsilon$ 衡量工资对失业率的反应程度。该方程的含义是：当失业率超过自然失业率，即 $u &gt; u^*$ 时，工资下降；反之，工资上升。</p><p>为考察相对于上期水平的本期工资水平，根据通胀的定义有：</p><script type="math/tex; mode=display">W_{t+1} = W_t\cdot g_w = W_t [1-\epsilon(u-u^*)]</script><p>因此，为使工资上涨超过上期水平，失业率必须降至自然失业率之下。</p><h4 id="政策含义"><a href="#政策含义" class="headerlink" title="政策含义"></a>政策含义</h4><p>菲利普斯曲线可以表示通货膨胀率和失业率之间的交替关系：即当失业率高时，通货膨胀率低；反之，当失业率低时，通货膨胀率高。作为宏观经济政策分析的基石，菲利普斯曲线表明政策制定者可以选择不同的失业和通货膨胀率的组合。如果能够容忍高通货膨胀率就可以拥有较低的失业率；另外也可以通过高失业率来维持低通货膨胀率。</p><ol><li>失业和通货膨胀之间存在着一种短期的替代关系。</li><li>菲利普斯曲线（因而得出的总供给曲线）在短期内是相当平坦的。在非常低的失业率上，通货膨胀和失业率的替代关系就变得更大一些了。</li><li>由于长期总供给曲线是垂直的，长久性的失业—通货膨胀的替代关系不成立。</li></ol><h3 id="附加预期的菲利普斯曲线"><a href="#附加预期的菲利普斯曲线" class="headerlink" title="附加预期的菲利普斯曲线"></a>附加预期的菲利普斯曲线</h3><h4 id="预期通货膨胀"><a href="#预期通货膨胀" class="headerlink" title="预期通货膨胀"></a>预期通货膨胀</h4><p>预期通货膨胀是指：由于公众对未来经济发展及物价变化趋势的预测及采取相应的经济行为而引起的通货膨胀。关于预期通货膨胀对实际经济变量产生的影响，主要有三种不同的观点：</p><ol><li>较高的预期通货膨胀率会导致经济走上更高的资本总额调整的路径，从而带来较高水平的产出以及较高的经济福利；</li><li>较高的预期通货膨胀率会导致较低的投资率和较低的资本总额，从而导致较低的经济暂时增长率和较低的永久性收入水平；</li><li>前两种观点成立的前提条件是“持有的货币是没有利息的”，否则，完全预期到的通货膨胀就没有任何实际效应。</li></ol><h4 id="附加预期的菲利普斯曲线-1"><a href="#附加预期的菲利普斯曲线-1" class="headerlink" title="附加预期的菲利普斯曲线"></a>附加预期的菲利普斯曲线</h4><p>预期调整的通货膨胀由弗里德曼和费尔普斯提出，将通货膨胀预期作为通货膨胀率的一个决定因素考虑的菲利普斯曲线，认为<strong>失业并不取决于通货膨胀水平，而是取决于超过预期通货膨胀之上的、过度的通货膨胀。</strong>在短期内，人们的预期来不及调整，当实际通货膨胀率大于预期的通货膨胀率时，实际工资下降，就业与国民收入增加，通货膨胀与失业之间存在着交替关系。长期内，人们可以根据过去预期的失误来调整预期，使实际的通货膨胀率等于预期的通货膨胀率，通货膨胀不会导致实际工资下降，也不会增加就业和国民收入，通货膨胀与失业之间不存在交替关系。</p><p>预期调整的菲利普斯曲线方程：</p><script type="math/tex; mode=display">\pi = \pi^e - \epsilon(u-u^*)</script><p>其中 $\pi^e$ 表示预期的通货膨胀水平，方程表明：</p><ul><li>预期通货膨胀一个接着一个成为实际通货膨胀；</li><li>当 $\pi = \pi^e$ 时，$u = u^*$ 。</li></ul><p>现代菲利普斯曲线于自然失业率不是在零点相交，而是在预期通货膨胀水平上相交。</p><h4 id="滞胀"><a href="#滞胀" class="headerlink" title="滞胀"></a>滞胀</h4><p>滞胀又称为萧条膨胀或膨胀衰退，指经济生活中出现了生产停滞、失业增加和物价水平居高不下同时存在的现象，它是通货膨胀长期发展的结果。西方经济学家把这种经济停滞或衰退、大量失业和严重通货膨胀以及物价持续上涨同时发生的经济现象称为滞胀。</p><p>滞胀产生的原因：一旦经济处于高通货膨胀预期的菲利普斯曲线上，衰退将实际通货膨胀推到低于预期通货膨胀的水平，但是通货膨胀的绝对水平仍然保持在高水平。换言之，通货膨胀将低于预期通货膨胀但仍大大高于零。当高预期通货膨胀的短期菲利普斯曲线上存在经济衰退时，滞胀就会产生。</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol><li>菲利普斯曲线表明，当实际通货膨胀等于预期通货膨胀时，产量处于充分就业水平。</li><li>现代菲利普斯曲线表明，当实际失业率低于充分就业时，通货膨胀率高于预期通货膨胀率。</li><li>当沿着高预期通货膨胀的短期菲利普斯曲线有了衰退时，滞胀就产生了。 </li><li>预期通货膨胀的调节，增加供给曲线进一步的自动调节机制，而加速了从短期总供 给曲线向长期总供给曲线行进的进程。 </li><li>短期菲利普斯曲线是相当平缓的。</li></ol>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;菲利普斯曲线由新西兰经济学家 A·W·菲利普斯根据英国 1861~1957 年的统计资料提出来的，用来表示货币工资变动率与失业率之间交替取舍关系的曲线。 &lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="宏观经济学" scheme="http://lgspace.top/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>宏观经济学主要流派</title>
-    <link href="http://lgspace.top/2021/03/30/MacroEcon-Theories/"/>
-    <id>http://lgspace.top/2021/03/30/MacroEcon-Theories/</id>
-    <published>2021-03-30T13:53:28.000Z</published>
-    <updated>2021-04-13T09:41:27.700Z</updated>
-    
-    <content type="html"><![CDATA[<p>梳理宏观经济学主要流派。</p><a id="more"></a><p><img src="/2021/03/30/MacroEcon-Theories/1.png" style="zoom:50%;"></p><h3 id="新古典综合派"><a href="#新古典综合派" class="headerlink" title="新古典综合派"></a>新古典综合派</h3><p>代表人物：汉森、希克斯、萨缪尔森、索洛等。</p><p>理论特征：</p><ul><li>继承并发扬了凯恩斯主义的宏观经济理论；</li><li>在充分就业的前提下肯定了以马歇尔为代表的新古典经济学（微观经济理论），并把均衡方法引入凯恩斯的宏观经济分析。</li></ul><p>基本理论：</p><ol><li>IS-LM 模型和 AD-AS 模型</li><li>菲利普斯曲线和通货膨胀理论</li><li>哈罗德-多马模型与新古典增长理论</li><li>乘数-加速数模型和经济周期理论</li><li>开放的宏观经济模型</li></ol><p>基本观点：</p><ol><li>兼顾效率和公平</li><li>混合经济制度</li></ol><p>政策主张：</p><ol><li>补偿性的财政政策和货币政策</li><li>多种政策的综合运用<ul><li>财政政策与货币政策的松紧搭配；</li><li>财政政策和货币政策的微观化；</li><li>收入政策、就业政策、浮动汇率政策、外汇管制政策和人口政策等。</li></ul></li></ol><h3 id="货币学派"><a href="#货币学派" class="headerlink" title="货币学派"></a>货币学派</h3><p>代表人物：弗里德曼、布伦纳、安德森、罗宾斯、沃尔特斯、莱德勒和帕金等。</p><p>理论特征：</p><ol><li>反对凯恩斯主义的宏观经济理论；</li><li>主张全面回复新古典经济学的传统。</li></ol><p>基本理论：</p><ol><li>新货币数量论</li><li>自然率假说</li></ol><p>基本观点：</p><ol><li>货币供给对名义收入变动起决定作用；</li><li>在长期中，货币数量不影响就业量和实际国民收入；</li><li>在短期中，货币供给量可以影响实际变量，如就业量和实际国民收入；</li><li>私人经济具有内在稳定性，国家干预反而导致宏观经济的严重失衡。</li></ol><p>政策主张：</p><ol><li>主张经济自由，反对相机抉择的宏观经济政策；</li><li>提倡实行“单一规则”的货币政策；</li><li>提倡“收入指数化”；</li><li>实行负所得税制度；</li><li>提倡浮动汇率制。</li></ol><h3 id="供给学派"><a href="#供给学派" class="headerlink" title="供给学派"></a>供给学派</h3><p>代表人物：拉弗、费尔德斯坦、巴雷、罗伯茨、蒙代尔等。</p><p>理论特征：</p><ol><li>否定凯恩斯的有效需求理论；</li><li>肯定萨伊“供给创造需求”的定律。</li></ol><p>基本理论：</p><ol><li>萨伊定律</li><li>拉弗曲线</li></ol><p>基本观点：</p><ol><li>产量的增长决定于生产要素的投入和生产率的增长；</li><li>生产要素的变动取决于对各种生产要素的激励机制；</li><li>降低税率能刺激供给。</li></ol><p>政策主张：</p><ol><li>减税；</li><li>削减社会福利支出；</li><li>减少政府对经济的干预。</li></ol><h3 id="理性预期学派"><a href="#理性预期学派" class="headerlink" title="理性预期学派"></a>理性预期学派</h3><p>代表人物：卢卡斯、萨金特、华莱士、巴罗、泰勒和普雷斯科特。</p><p>理论特征：</p><ol><li>在引入理性预期假说的基础上，全面恢复新古典经济学的传统；</li><li>反对凯恩斯主义的宏观经济理论和政策主张。</li></ol><p>基本理论：</p><ol><li>理性预期假说</li><li>自然律假说</li><li>李嘉图等价定理</li></ol><p>基本观点：</p><ol><li>用附加预期变量补充传统的总供给曲线；</li><li>用理性预期来解释价格水平与产量水平的均衡。</li></ol><p>政策主张：</p><ol><li>宏观经济政策无效论</li><li>政策目标单一论</li><li>信誉重于规则。</li></ol><h3 id="新凯恩斯主义"><a href="#新凯恩斯主义" class="headerlink" title="新凯恩斯主义"></a>新凯恩斯主义</h3><p>代表人物：曼丘、萨默斯、布兰查德、罗泰姆伯格、费尔普斯、斯蒂格利茨、格特勒和伯南克等。</p><p>理论特征：</p><ol><li>反对恢复新古典经济学的传统；</li><li>反对凯恩斯主义宏观理论与新古典微观理论的机械结合，试图给凯恩斯主义的宏观经济学建立一个不同于新古典传统的微观基础。</li></ol><p>基本理论：</p><ol><li>非市场出清假设</li><li>价格黏性和工资黏性假设</li></ol><p>基本观点：</p><ol><li>厂商只有在调整价格后的利润增量大于菜单成本时，才会调整价格；</li><li>交错调整是成本量最小的价格调整方法；</li><li>劳资双方通过雇佣合同调整工资，所以工资调整也是交替地作出的；</li><li>信贷市场是信息不完全的市场，借贷双方的信息是不对称的，存在着逆向选择。因此，市场出清的利率与银行最优利率往往不相吻合。</li></ol><p>政策主张：</p><ol><li>抑制价格黏性，修复市场机制；</li><li>国家干预劳工合同，增加工资弹性，减少失业；</li><li>国家干预信贷市场，利用贷款补贴或贷款担保降低市场利率。</li></ol>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;梳理宏观经济学主要流派。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="宏观经济学" scheme="http://lgspace.top/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>09_宏观经济运行（二）：经济周期</title>
-    <link href="http://lgspace.top/2021/03/30/MacroEcon-EconCycle/"/>
-    <id>http://lgspace.top/2021/03/30/MacroEcon-EconCycle/</id>
-    <published>2021-03-30T06:26:33.000Z</published>
-    <updated>2021-04-14T14:44:25.428Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a><h2 id="经济周期"><a href="#经济周期" class="headerlink" title="经济周期"></a>经济周期</h2><h3 id="经济周期概述"><a href="#经济周期概述" class="headerlink" title="经济周期概述"></a>经济周期概述</h3><h5 id="经济周期的定义与特征"><a href="#经济周期的定义与特征" class="headerlink" title="经济周期的定义与特征"></a>经济周期的定义与特征</h5><p>经济增长过程中反复出现并具有规律性的扩张与衰退相互交替的经济现象。它具有以下特征：</p><p>（1）经济周期是市场经济不可避免的经济现象。</p><p>（2）经济周期是经济活动总体性、全局性的波动。</p><p>（3）一个完整的周期由繁荣、衰退、萧条、复苏四个阶段组成。</p><p>（4）周期的长短和振幅由周期的具体性质所决定。</p><p><img src="/2021/03/30/MacroEcon-EconCycle/9-1.png" style="zoom:50%"></p><p>左图是经济总产出。右图是经济增长速率。</p><h5 id="经济周期的类型"><a href="#经济周期的类型" class="headerlink" title="经济周期的类型"></a>经济周期的类型</h5><p>（1）基钦周期：短周期，平均长度为3.5年。（英国统计学家基钦1923年发现）</p><p>(2)朱格拉周期：中周期，平均长度为8~10年。（法国经济学家朱格拉1860年发现）</p><p> (3)库兹涅茨周期：中长周期，平均长度为20年。（美国经济学家库氏1930年发现）</p><p>(4)康德拉季耶夫周期：长周期，平均长度为50年。（俄国经济学家康氏1925年发现）</p><p> (5)熊彼特周期：综合周期，每一个平均长度为60年的长周期包括6个8~10年的中周期，每一个中周期包括三个长度约40个月的短周期。他在1939年提出，人类进入工业社 会后大约经历了三个长周期（四、五周期是根据熊彼特综合周期进行的推断）：</p><p>第一个长周期：18世纪80年代~1842年，为“纺织机时代” </p><p>第二个长周期：1842年~1897年，为“蒸汽机和钢铁时代” </p><p>第三个长周期：1897年~1956年，为“电气化和汽车时代” </p><p>第四个长周期：1956年~ 2020年, 为“计算机和互联网时代” </p><p>第五个长周期：21世纪20年代~ ，为“ 生物工程和遗传基因时代”</p><h5 id="经济周期的原因"><a href="#经济周期的原因" class="headerlink" title="经济周期的原因"></a>经济周期的原因</h5><p>（1）传统经济周期理论</p><p> A、内生经济周期理论：</p><p>消费不足理论（如马克思对资本主义经济危机解释）</p><p>投资过度理论（如对固定资产投资导致的周期性震荡）</p><p>货币信用过度论等（如次贷危机<a href="https://www.youtube.com/watch?v=JhSKLEkrV0c">李永乐-资产证券化如何导致美国次贷危机？</a>。金融资本家的贪婪和投资冲动，降低贷款利率但是要求风险小的担保物，<em>金融资本家的激进瓜分实体经济的利润</em>，但天下没有免费的午餐）</p><p>B、外生经济周期理论：</p><ul><li>太阳黑子理论</li><li>心理理论</li><li>创新理论</li><li>政治周期理论等    </li></ul><p>（2）现代经济周期理论：</p><p>乘数-加速理论（由萨缪尔森创立）</p><h3 id="乘数—加速数理论"><a href="#乘数—加速数理论" class="headerlink" title="乘数—加速数理论"></a>乘数—加速数理论</h3><h5 id="加速原理"><a href="#加速原理" class="headerlink" title="加速原理"></a>加速原理</h5><p><img src="/2021/03/30/MacroEcon-EconCycle/9-2.png" style="zoom:50%"></p><p>（2）产品的生命周期</p><p><img src="/2021/03/30/MacroEcon-EconCycle/9-3.png" style="zoom:50%"></p><p><img src="/2021/03/30/MacroEcon-EconCycle/9-3-1.png" style="zoom:50%"></p><h5 id="乘数——加速数模型"><a href="#乘数——加速数模型" class="headerlink" title="乘数——加速数模型"></a>乘数——加速数模型</h5><p><img src="/2021/03/30/MacroEcon-EconCycle/9-4.png" style="zoom:50%"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;经济周期&quot;&gt;&lt;a href=&quot;#经济周期&quot; class=&quot;headerlink&quot; title=&quot;经济周期&quot;&gt;&lt;/a&gt;经济周期&lt;/h2&gt;&lt;h3 id=&quot;经济周期概述&quot;&gt;&lt;a href=&quot;#经济周期概述&quot; class=&quot;header</summary>
-      
-    
-    
-    
-    <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="宏观经济学" scheme="http://lgspace.top/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
-    
-    <category term="经济学" scheme="http://lgspace.top/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
-    
-    <category term="叶航" scheme="http://lgspace.top/tags/%E5%8F%B6%E8%88%AA/"/>
     
   </entry>
   
