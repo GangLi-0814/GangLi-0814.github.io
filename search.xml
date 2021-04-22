@@ -27104,4 +27104,109 @@ dtype: object
         <tag>工具</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Markdown-Typora-Brief-Intro</title>
+    <url>/2021/04/22/Markdown-Typora-Brief-Intro/</url>
+    <content><![CDATA[<p><img src="https://7.dusays.com/2021/04/17/6031154d86d20.jpeg" style="zoom:50%;"></p>
+<p>🐱 的 Markdown &amp; Typora 简明教程。</p>
+<a id="more"></a>
+<p>[TOC]</p>
+<hr>
+<h3 id="Markdown-简介"><a href="#Markdown-简介" class="headerlink" title="Markdown 简介"></a>Markdown 简介</h3><h4 id="何为-Markdown"><a href="#何为-Markdown" class="headerlink" title="何为 Markdown ?"></a>何为 Markdown ?</h4><h5 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h5><p>Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
+<h5 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h5><ul>
+<li>轻量易上手，不像 <code>LaTeX</code> 需要搭建环境；</li>
+<li>颜值高，使用 Typora 编辑器更换主题；</li>
+<li>排脱格式困扰，沉浸式写作。  </li>
+</ul>
+<h4 id="可以用来做什么？"><a href="#可以用来做什么？" class="headerlink" title="可以用来做什么？"></a>可以用来做什么？</h4><ul>
+<li>记笔记、做攻略</li>
+<li>公众号创作、Readme</li>
+<li>沉浸式写作，需要文字的地方都能用到…</li>
+</ul>
+<h4 id="怎么使用？"><a href="#怎么使用？" class="headerlink" title="怎么使用？"></a>怎么使用？</h4><h5 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h5><h6 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题</span><br><span class="line">##### 这是五级标题</span><br><span class="line">###### 这是六级标题</span><br></pre></td></tr></table></figure>
+<h6 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**这是加粗的文字**</span><br><span class="line">*这是倾斜的文字*&#96;</span><br><span class="line">***这是斜体加粗的文字***</span><br><span class="line">~~这是加删除线的文字~~</span><br></pre></td></tr></table></figure>
+<h6 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 语法1</span><br><span class="line">![](https:&#x2F;&#x2F;7.dusays.com&#x2F;2021&#x2F;04&#x2F;17&#x2F;6031154d86d20.jpeg)</span><br><span class="line"></span><br><span class="line"># 语法2（HTML 标签，缩放）</span><br><span class="line">&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;7.dusays.com&#x2F;2021&#x2F;04&#x2F;17&#x2F;6031154d86d20.jpeg&quot; style&#x3D;&quot;zoom:50%;&quot; &#x2F;&gt;</span><br></pre></td></tr></table></figure>
+<h6 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">​&#96;&#96;&#96;R</span><br><span class="line">print(&quot;Hello World!&quot;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">###### 公式</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<script type="math/tex; mode=display">
+b^2 - 4ac</script><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">###### 列表</span><br><span class="line"></span><br><span class="line">无序列表</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>list 1</li>
+<li>list 2</li>
+<li>list 3<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">有序列表</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol>
+<li>list 1</li>
+<li>list 2</li>
+<li>list 3<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">###### 选项</span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>[ ] 待办事项 1</li>
+<li>[ ] 待办事项 2 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">###### 目录</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+[TOC]<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">###### 分割线</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">###### 表格</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">姓名</th>
+<th style="text-align:center">技能</th>
+<th style="text-align:center">排行</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">刘备</td>
+<td style="text-align:center">哭</td>
+<td style="text-align:center">大哥</td>
+</tr>
+<tr>
+<td style="text-align:center">关羽</td>
+<td style="text-align:center">打</td>
+<td style="text-align:center">二哥</td>
+</tr>
+<tr>
+<td style="text-align:center">张飞</td>
+<td style="text-align:center">骂</td>
+<td style="text-align:center">三弟</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">###### 引用</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这是引用的内容</p>
+<blockquote>
+<p>这是引用的内容</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>这是引用的内容<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">###### 超链接</span><br><span class="line"></span><br></pre></td></tr></table></figure><br><a href="http://lgspace.top">博客</a><br><a href="http://baidu.com">百度</a><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">###### 流程图</span><br><span class="line"></span><br></pre></td></tr></table></figure><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">st&#x3D;&gt;start: 开始</span><br><span class="line">op&#x3D;&gt;operation: My Operation</span><br><span class="line">cond&#x3D;&gt;condition: Yes or No?</span><br><span class="line">e&#x3D;&gt;end</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br><span class="line">&amp;&#96;&#96;&#96;</span><br></pre></td></tr></table></figure><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">st&#x3D;&gt;start: 开始</span><br><span class="line">op&#x3D;&gt;operation: My Operation</span><br><span class="line">cond&#x3D;&gt;condition: Yes or No?</span><br><span class="line">e&#x3D;&gt;end</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br><span class="line">&amp;&#96;&#96;&#96;</span><br><span class="line"></span><br><span class="line">##### 进阶用法（略）</span><br><span class="line"></span><br><span class="line">###### 支持 HTML</span><br><span class="line">​&#96;&#96;&#96;html</span><br><span class="line">&lt;iframe frameborder&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; marginwidth&#x3D;&quot;0&quot; marginheight&#x3D;&quot;0&quot; width&#x3D;330 height&#x3D;86 src&#x3D;&quot;&#x2F;&#x2F;music.163.com&#x2F;outchain&#x2F;player?type&#x3D;2&amp;id&#x3D;1432178626&amp;auto&#x3D;1&amp;height&#x3D;66&quot;&gt;&lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 id="Typora-简介"><a href="#Typora-简介" class="headerlink" title="Typora 简介"></a>Typora 简介</h3><h4 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h4><h5 id="切换源代码模式"><a href="#切换源代码模式" class="headerlink" title="切换源代码模式"></a>切换源代码模式</h5><p><code>CTRL+/</code></p>
+<h5 id="目录-大纲"><a href="#目录-大纲" class="headerlink" title="目录/大纲"></a>目录/大纲</h5><h5 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h5><h5 id="导出为其他格式（PDF-Word）"><a href="#导出为其他格式（PDF-Word）" class="headerlink" title="导出为其他格式（PDF/Word）"></a>导出为其他格式（PDF/Word）</h5>]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
 </search>
