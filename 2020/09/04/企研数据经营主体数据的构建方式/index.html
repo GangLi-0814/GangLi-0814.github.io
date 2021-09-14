@@ -1,0 +1,196 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="2020.10.26❤️🐱 📝💻🏸️🏃🏊"><title>企研数据经营主体数据的构建方式 | LG's Blog</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><script class="js-hypothesis-config" type="application/json">{"showHighlights": true}</script><script src="https://hypothes.is/embed.js" async=""></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><meta name="generator" content="Hexo 5.0.2"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">企研数据经营主体数据的构建方式</h1><a id="logo" href="/.">LG's Blog</a><p class="description">任尔东西南北风</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/tag/"><i class="fa fa-tag"> 标签</i></a><a href="/foodie/"><i class="fa fa-heart"> 菜谱</i></a><a href="/shuoshuo/"><i class="fa fa-cloud"> 便签</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">企研数据经营主体数据的构建方式</h1><div class="post-meta">2020-09-04<span> | </span><span class="category"><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span><span class="post-time"><span class="post-meta-item-text"> | </span><span class="post-meta-item-icon"><i class="fa fa-keyboard-o"></i><span class="post-count"> 4.9k</span><span class="post-meta-item-text"> 字</span></span></span><span class="post-time"> | <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i><span class="post-count"> 16</span><span class="post-meta-item-text"> 分钟</span></span></span></div><a class="disqus-comment-count" href="/2020/09/04/%E4%BC%81%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%8F%E8%90%A5%E4%B8%BB%E4%BD%93%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9E%84%E5%BB%BA%E6%96%B9%E5%BC%8F/#vcomment"><span class="valine-comment-count" data-xid="/2020/09/04/%E4%BC%81%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%8F%E8%90%A5%E4%B8%BB%E4%BD%93%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9E%84%E5%BB%BA%E6%96%B9%E5%BC%8F/"></span><span> 条评论</span></a><div class="post-content"><h1 id="一、家庭农场专题数据库"><a href="#一、家庭农场专题数据库" class="headerlink" title="一、家庭农场专题数据库"></a><strong>一、家庭农场专题数据库</strong></h1><h2 id="（一）家庭农场的定义"><a href="#（一）家庭农场的定义" class="headerlink" title="（一）家庭农场的定义"></a><strong>（一）家庭农场的定义</strong></h2><p>自2008 年10月12日党的十七届三中全会通过的<strong><a target="_blank" rel="noopener" href="https://file.qiyandata.cn:10443/FTPshare/20200211110722Ih3m.pdf">《中共中央关于推进农村改革发展若干重大问题的决定》</a></strong>中<strong>首次提出“家庭农场”</strong>的概念后，“家庭农场”的具体内涵一直备受争议。</p>
+<p>2012年12月31日，中共中央、国务院发布<strong><a target="_blank" rel="noopener" href="https://file.qiyandata.cn:10443/FTPshare/20200211111543ruft.pdf">《中共中央国务院关于加快发展现代农业进一步增强农村发展活力的若干意见（中发〔2013〕1号）》（以下简称“2013年中央一号文件”）</a></strong>，<strong>再次提到“家庭农场”</strong>，称“继续增加农业补贴资金规模，新增补贴向主产区和优势产区集中，向专业大户、<strong>家庭农场</strong>、农民合作社等新型生产经营主体倾斜；坚持依法自愿有偿原则，引导农村土地承包经营权有序流转，鼓励和支持承包土地向专业大户、<strong>家庭农场</strong>、农民合作社流转，发展多种形式的适度规模经营；创造良好的政策和法律环境，采取奖励补助等多种办法，扶持联户经营、专业大户、<strong>家庭农场</strong>。”</p>
+<p>随后，<strong><a target="_blank" rel="noopener" href="https://file.qiyandata.cn:10443/FTPshare/20200211113002RNPL.pdf">农业部农村经济体制与经营管理司负责人</a></strong>基于<a target="_blank" rel="noopener" href="https://file.qiyandata.cn:10443/FTPshare/20200211111543ruft.pdf">2013年中央一号文件</a>，<strong>对家庭农场的内涵作了初步界定</strong>，指出“<strong>家庭农场是指以家庭成员为主要劳动力，从事农业规模化、集约化、商品化生产经营，并以农业收入为家庭主要收入来源的新型农业经营主体</strong>。”</p>
+<h2 id="（二）家庭农场专题数据库概况"><a href="#（二）家庭农场专题数据库概况" class="headerlink" title="（二）家庭农场专题数据库概况"></a><strong>（二）家庭农场专题数据库概况</strong></h2><p>家庭农场专题数据库囊括了至今在各级工商行政管理部门登记在册的约<strong>89万</strong>户家庭农场的工商注册信息，其中<strong>65万</strong>户登记为<strong>个体工商户</strong>组织形式，<strong>24万</strong>户登记为个人独资企业、合伙企业和有限责任公司等<strong>企业组织形式</strong>。因此，根据家庭农场的组织形式不同，可进一步划分为家庭农场（企业）专题数据库和家庭农场（个体户）专题数据库。</p>
+<h4 id="1、家庭农场（企业）专题数据库"><a href="#1、家庭农场（企业）专题数据库" class="headerlink" title="1、家庭农场（企业）专题数据库"></a><strong>1、家庭农场（企业）专题数据库</strong></h4><ul>
+<li>家庭农场（企业）基本信息表</li>
+<li>家庭农场（企业）股东信息表</li>
+<li>家庭农场（企业）人员信息表</li>
+<li>家庭农场（企业）变更信息表</li>
+<li>家庭农场（企业）分支机构信息表</li>
+<li>家庭农场（企业）年报基本信息表</li>
+<li>家庭农场（企业）年报资产信息表</li>
+<li>家庭农场（企业）专利信息表</li>
+<li>家庭农场（企业）商标信息表</li>
+<li>家庭农场（企业）食品农产品认证信息表</li>
+<li>家庭农场（企业）行政处罚信息表</li>
+<li>家庭农场（企业）经营异常信息表</li>
+</ul>
+<h4 id="2、家庭农场（个体户）专题数据库"><a href="#2、家庭农场（个体户）专题数据库" class="headerlink" title="2、家庭农场（个体户）专题数据库"></a><strong>2、家庭农场（个体户）专题数据库</strong></h4><ul>
+<li>家庭农场（个体）基本信息表</li>
+<li>家庭农场（个体）经营异常信息表</li>
+<li>家庭农场（个体）变更信息表</li>
+<li>家庭农场（个人）年报基本信息表</li>
+</ul>
+<h2 id="（三）家庭农场专题数据库建库思路"><a href="#（三）家庭农场专题数据库建库思路" class="headerlink" title="（三）家庭农场专题数据库建库思路"></a><strong>（三）家庭农场专题数据库建库思路</strong></h2><p>为贯彻落实党的十八届三中全会、中央农村工作会议精神和<a target="_blank" rel="noopener" href="https://file.qiyandata.cn:10443/FTPshare/20200211111543ruft.pdf">2013年中央一号文件</a>要求，鼓励和支持家庭农场发展，规范登记管理工作，各地方政府相继出台了<strong>家庭农场认定和登记管理办法</strong>。据不完全统计，截止2020年2月10日，中国已有江苏、浙江、辽宁、湖北、河南等<strong>18个</strong>省份制定了相应的家庭农场认定和登记管理办法，具体请参见<strong><a target="_blank" rel="noopener" href="https://ccad.qiyandata.com/subject?id=82565dfa-e546-4464-97cc-78864b80dfe1&amp;subdivision=policy_law">【政策文件&amp;法律法规】</a></strong>板块。其中，江苏、浙江、辽宁等<strong>15个</strong>省份在其家庭农场认定和登记管理办法中明确指出，<strong>家庭农场的登记名称应包含“家庭农场”（或“家庭养殖场”、“家庭牧场”、“家庭农牧场”）字样。</strong>因此，我们初步以名称是否包含“家庭农场”、“家庭养殖场”、“家庭牧场”、“家庭农牧场”任一字样，作为家庭农场的筛选依据，并以此为基础，构建家庭农场专题数据库，具体建库思路如图1所示。</p>
+<p><img src="https://oss-images-qyum.oss-cn-zhangjiakou.aliyuncs.com/20200813192221Q1Io_%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20200813192130.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,text_5Y2h54m5LeS8geeglCAgQ0NBRA,type_d3F5LXplbmhlaQ,color_c6c6c6,size_30,rotate_45,fill_1,shadow_19,t_50,x_10,y_10" alt="img"></p>
+<p><strong>图1 家庭农场专题数据库建库思路</strong></p>
+<h1 id="二、农民专业合作社专题数据库"><a href="#二、农民专业合作社专题数据库" class="headerlink" title="二、农民专业合作社专题数据库"></a><strong>二、农民专业合作社专题数据库</strong></h1><h2 id="（一）农民专业合作社的发展"><a href="#（一）农民专业合作社的发展" class="headerlink" title="（一）农民专业合作社的发展"></a><strong>（一）农民专业合作社的发展</strong></h2><p>根据<strong>2007年7月1日</strong>实施的<a target="_blank" rel="noopener" href="https://file.qiyandata.cn:10443/FTPshare/202001071720530Taj.pdf">《中华人民共和国农民专业合作社法》</a>第二条相关规定，“农民专业合作社是在农村家庭承包经营基础上，同类农产品的生产经营者或者同类农业生产经营服务的提供者、利用者，自愿联合、民主管理的互助性经济组织。 农民专业合作社以其成员为主要服务对象，提供农业生产资料的购买，农产品的销售、加工、运输、贮藏以及与农业生产经营有关的技术、信息等服务”。</p>
+<p>根据<strong>2018年7月1日</strong>实施的<a target="_blank" rel="noopener" href="https://file.qiyandata.cn:10443/FTPshare/20200107150049KfS7.pdf">《中华人民共和国农民专业合作社法(2017修订)》</a>第二条相关规定，“农民专业合作社，是指在农村家庭承包经营基础上，农产品的生产经营者或者农业生产经营服务的提供者、利用者，自愿联合、民主管理的互助性经济组织”。</p>
+<h2 id="（二）农民专业合作社专题数据库概况"><a href="#（二）农民专业合作社专题数据库概况" class="headerlink" title="（二）农民专业合作社专题数据库概况"></a><strong>（二）农民专业合作社专题数据库概况</strong></h2><p>根据2007年7月1日起实施的<a target="_blank" rel="noopener" href="https://file.qiyandata.cn:10443/FTPshare/20200107172501O5la.pdf"><strong>《农民专业合作社登记管理条例》</strong></a>第六条相关规定，“农民专业合作社的名称应当<strong>含有“专业合作社”字样</strong>，并符合国家有关企业名称登记管理的规定”。此外，第三十二条规定，“本条例施行前设立的农民专业合作社，应当自本条例施行之日起1年内依法办理登记”。因此，我们以名称是否包含“<strong>专业合作社</strong>”字样，作为农民专业合作社的筛选依据，并以此为基础，构建<strong>农民专业合作社专题数据库</strong>。</p>
+<p><strong>农民专业合作社专题数据库</strong>囊括了自2007年至2019年年底在各级工商行政管理部门登记在册的约<strong>253万</strong>家农民专业合作社的工商注册信息，并融合了专利、商标等知识产权信息，以及招投标、资质认证（食品农产品认证）等其他相关信息。该专题数据库共涵盖农民专业合作社基本信息表、股东及出资信息表、主要管理人员表等表格，具体包括农民专业合作社的成立时间、经营范围、行业门类、注册地址和死亡时间等字段。</p>
+<ul>
+<li>农民专业合作社基本信息表</li>
+<li>农民专业合作社股东信息表</li>
+<li>农民专业合作社对外股权投资信息表</li>
+<li>农民专业合作社接受股权投资信息表</li>
+<li>农民专业合作社人员信息表</li>
+<li>农民专业合作社变更信息表</li>
+<li>农民专业合作社分支机构信息表</li>
+<li>年报-农民专业合作社基本信息表</li>
+<li>年报-农民专业合作社分支机构信息表</li>
+<li>年报-农民专业合作社行政许可信息表</li>
+<li>年报-农民专业合作社网站网店信息表</li>
+<li>农民专业合作社GIS坐标信息表</li>
+<li>农民专业合作社专利数据主表</li>
+<li>农民专业合作社商标基本信息表</li>
+<li>农民专业合作社资质认证信息表</li>
+<li>农民专业合作社食品农产品认证信息表</li>
+<li>农民专业合作社绿色食品认证信息表</li>
+<li>农民专业合作社荣誉信息表</li>
+<li>农民专业合作社行政处罚信息表</li>
+<li>农民专业合作社失信被执行人信息表</li>
+<li>农民专业合作社招投标信息表</li>
+<li>农民专业合作社经营异常信息表</li>
+</ul>
+<h2 id="（三）农民专业合作社专题数据库建库思路"><a href="#（三）农民专业合作社专题数据库建库思路" class="headerlink" title="（三）农民专业合作社专题数据库建库思路"></a><strong>（三）农民专业合作社专题数据库建库思路</strong></h2><p>根据2007年7月1日起实施的<a target="_blank" rel="noopener" href="https://file.qiyandata.cn:10443/FTPshare/20200107172501O5la.pdf"><strong>《农民专业合作社登记管理条例》</strong></a>第六条相关规定，“农民专业合作社的名称应当<strong>含有“专业合作社”字样</strong>，并符合国家有关企业名称登记管理的规定”。此外，第三十二条规定，“本条例施行前设立的农民专业合作社，应当自本条例施行之日起1年内依法办理登记”。因此，我们以名称是否包含“专业合作社”字样，作为农民专业合作社的筛选依据，并以此为基础，构建农民专业合作社专题数据库，具体建库思路如图1所示。</p>
+<p><img src="https://oss-images-qyum.oss-cn-zhangjiakou.aliyuncs.com/20200402095424dvyY_%E5%86%9C%E6%B0%91%E4%B8%93%E4%B8%9A%E5%90%88%E4%BD%9C%E7%A4%BE%E4%B8%93%E9%A2%98%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BB%BA%E5%BA%93%E6%80%9D%E8%B7%AF-%E6%96%BD%E4%B8%B9%E7%87%9520200402.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,text_5Y2h54m5LeS8geeglCAgQ0NBRA,type_d3F5LXplbmhlaQ,color_c6c6c6,size_30,rotate_45,fill_1,shadow_19,t_50,x_10,y_10" alt="img"></p>
+<h1 id="三、农业企业专题数据库"><a href="#三、农业企业专题数据库" class="headerlink" title="三、农业企业专题数据库"></a><strong>三、农业企业专题数据库</strong></h1><h2 id="（一）农业企业的定义"><a href="#（一）农业企业的定义" class="headerlink" title="（一）农业企业的定义"></a><strong>（一）农业企业的定义</strong></h2><p>农业是国民经济的基础，也是经济社会发展和社会运行过程中的重要基石，是以土地资源为生产对象，通过培育动植物产品从而生产食品及工业原料的产业。农业企业是指通过种植、养殖、采集、渔猎等生产经营而取得产品的盈利性经济组织。有广义与狭义之分。前者包括从事农作物栽培业、林业、畜牧业、渔业和副业等生产经营活动的企业；后者仅指种植业，或指从事作物栽培的企业。CCAD将国民经济行业中的农、林、牧、渔业（A行业）纳入农业企业，即为广义上的农业企业。</p>
+<h2 id="（二）农业企业专题数据库概况"><a href="#（二）农业企业专题数据库概况" class="headerlink" title="（二）农业企业专题数据库概况"></a><strong>（二）农业企业专题数据库概况</strong></h2><p>农业企业专题数据库囊括了至今在各级工商行政管理部门登记在册的约<strong>212万</strong>家农业企业的工商注册信息，并融合了专利、商标等企业知识产权信息，以及招投标、资质荣誉、食品认证产品等其他企业相关信息。该专题数据库共涵盖农业企业基本信息表、股东及出资信息表、主要管理人员表等43张表格，具体包括企业成立时间、经营范围、行业门类、注册地址和死亡时间等580多个变量。</p>
+<ul>
+<li>农业企业基本信息表</li>
+<li>农业企业曾用名表</li>
+<li>农业企业股东信息表</li>
+<li>农业企业对外股权投资信息表</li>
+<li>农业企业接受股权投资信息表</li>
+<li>农业企业历史退出投资信息表</li>
+<li>农业企业司法协助信息表</li>
+<li>农业企业司法协助股权冻结信息表</li>
+<li>农业企业人员信息表</li>
+<li>农业企业变更信息表</li>
+<li>农业企业分支机构信息表</li>
+<li>农业企业年报基本信息表</li>
+<li>农业企业年报股东出资信息表</li>
+<li>农业企业年报股权投资信息表</li>
+<li>农业企业年报股权变更信息表</li>
+<li>农业企业年报资产信息表</li>
+<li>农业企业年报对外提供保证担保信息表</li>
+<li>农业企业年报修改信息表</li>
+<li>农业企业年报网站网店信息表</li>
+<li>全国农业企业GIS坐标信息表</li>
+<li>农业企业清算信息表</li>
+<li>农业企业专利信息表</li>
+<li>农业企业商标基本信息表</li>
+<li>农业企业计算机软件著作权信息表</li>
+<li>农业企业资质认证信息表</li>
+<li>农业企业拟认定高新企业信息表</li>
+<li>农业企业食品农产品认证信息表</li>
+<li>农业企业绿色食品认证企业信息表</li>
+<li>农业企业绿色食品认证产品信息表</li>
+<li>农业企业CNCA管理体系认证表</li>
+<li>农业企业荣誉信息表</li>
+<li>农业企业国税A级纳税人信息表</li>
+<li>农业企业招聘信息表</li>
+<li>农业企业行政处罚信息</li>
+<li>农业企业海关信用注册信息表</li>
+<li>农业企业对外贸易经营者信息表</li>
+<li>农业企业招投标公司表</li>
+<li>农业企业商品信息列表</li>
+<li>农业企业网店商铺信息表</li>
+<li>农业企业动产抵押信息表</li>
+<li>农业企业股权出质信息表</li>
+<li>农业企业抽查检查信息表</li>
+<li>农业企业经营异常信息表</li>
+</ul>
+<h2 id="（三）农业企业专题数据库建库思路"><a href="#（三）农业企业专题数据库建库思路" class="headerlink" title="（三）农业企业专题数据库建库思路"></a><strong>（三）农业企业专题数据库建库思路</strong></h2><p>CCAD结合农业的概念以及《国民经济行业分类（GB/T 4754-2017）》，将国民经济行业中的农、林、牧、渔业（A行业）纳入到农业企业专题数据库中，进而联合其他诸如专利、商标、招聘等信息构建出农业企业专题数据库。具体建库思路如下图所示。</p>
+<p><img src="https://oss-images-qyum.oss-cn-zhangjiakou.aliyuncs.com/20200810112803Oe9z_%E5%86%9C%E4%B8%9A%E4%BC%81%E4%B8%9A%E5%BB%BA%E5%BA%93%E6%80%9D%E8%B7%AF.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,text_5Y2h54m5LeS8geeglCAgQ0NBRA,type_d3F5LXplbmhlaQ,color_c6c6c6,size_30,rotate_45,fill_1,shadow_19,t_50,x_10,y_10" alt="img"></p>
+<h1 id="四、农产品加工业专题数据库"><a href="#四、农产品加工业专题数据库" class="headerlink" title="四、农产品加工业专题数据库"></a><strong>四、农产品加工业专题数据库</strong></h1><h2 id="（一）农产品加工业的定义"><a href="#（一）农产品加工业的定义" class="headerlink" title="（一）农产品加工业的定义"></a><strong>（一）农产品加工业的定义</strong></h2><p><strong>农产品加工业是以人工生产的农产物料和野生动植物资源及其加工品为原料进行工业生产活动的总称</strong>。国际上通常将农产品加工业划分为5类，即：食品、饮料和烟草加工；纺织、服装和皮革工业；木材和木材产品包括家具制造；纸张和纸产品加工、印刷和出版；橡胶产品加工。我国在统计上一般认为农产品加工业包括国民经济行业分类中的农副食品加工业、食品制造业、酒饮料和精制茶制造业、烟草制造业、纺织业、纺织服装服饰业、皮革毛皮羽绒及其制品和制鞋业、木材加工及竹藤棕草制品业、家具制造业、造纸及纸制品业、印刷和记录媒介的复制业、橡胶和塑料制品业的12个大类行业。</p>
+<h2 id="（二）农产品加工业产业分类"><a href="#（二）农产品加工业产业分类" class="headerlink" title="（二）农产品加工业产业分类"></a><strong>（二）农产品加工业产业分类</strong></h2><p>企研数据主要参考国民经济行业分类（GB/T4754-2017），构建出<strong>农产品加工企业专题数据库</strong>。首先将上文提到的12个行业中与农产品关联度不高的行业删除，主要包括<strong>采盐业、塑料制品业、纺织服装服饰业、印刷和记录媒介的复制业</strong>等行业，此外，由于医药制造业中的<strong>中药饮品加工、中成药生产</strong>与农产品关联度较高，故将其纳入农产品加工业统计范畴，最终包括<strong>农副食品加工业、食品制造业、酒饮料及精制茶制造业、烟草制品业、纺织业、皮革毛皮羽毛及其制品和制鞋业、木材加工和木竹藤棕草制品业、家具制造业、造纸和纸制品业、医药制造业、橡胶和塑料制品业</strong>十一个行业，如下图所示。</p>
+<p><img src="https://oss-images-qyum.oss-cn-zhangjiakou.aliyuncs.com/20200724190845aEDo_%E5%86%9C%E4%BA%A7%E5%93%81%E5%8A%A0%E5%B7%A5%E4%B8%9A.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,text_5LyB56CU5pWw5o2u,type_d3F5LXplbmhlaQ,color_c6c6c6,size_30,rotate_45,fill_1,shadow_19,t_50,x_10,y_10" alt="img"></p>
+<p><strong>图1 农产品加工业分类情况(点击查看高清图)</strong></p>
+<h2 id="（三）农产品加工企业专题数据库概况"><a href="#（三）农产品加工企业专题数据库概况" class="headerlink" title="（三）农产品加工企业专题数据库概况"></a><strong>（三）农产品加工企业专题数据库概况</strong></h2><p>农产品加工企业专题数据库囊括了自1949年1月至今在各级工商行政管理部门登记在册的约<strong>155万</strong>家农产品加工业企业的工商注册信息，并融合了专利、商标等企业知识产权信息，以及招投标、资质荣誉、食品认证产品等其他企业相关信息。该专题数据库共涵盖农产品加工业企业基本信息表、股东及出资信息表、主要管理人员表等表格，具体包括企业成立时间、经营范围、行业门类、注册地址和死亡时间等变量。</p>
+<ul>
+<li>农产品加工企业基本信息表</li>
+<li>农产品加工企业曾用名表</li>
+<li>农产品加工企业股东信息表</li>
+<li>农产品加工企业对外股权投资信息表</li>
+<li>农产品加工企业接受股权投资信息表</li>
+<li>农产品加工企业历史退出投资信息表</li>
+<li>农产品加工企业司法协助信息表</li>
+<li>农产品加工企业司法协助股权冻结信息表</li>
+<li>农产品加工企业人员信息表</li>
+<li>农产品加工企业变更信息表</li>
+<li>农产品加工企业分支机构信息表</li>
+<li>农产品加工企业年报基本信息表</li>
+<li>农产品加工企业年报股东出资信息表</li>
+<li>农产品加工企业年报股权投资信息表</li>
+<li>农产品加工企业年报股权变更信息表</li>
+<li>农产品加工企业年报资产信息表</li>
+<li>农产品加工企业年报对外提供保证担保信息表</li>
+<li>农产品加工企业年报修改信息表</li>
+<li>农产品加工企业年报网站网店信息表</li>
+<li>农产品加工企业GIS坐标信息表</li>
+<li>农产品加工企业清算信息表</li>
+<li>农产品加工企业专利信息表</li>
+<li>农产品加工企业商标信息表</li>
+<li>农产品加工企业资质认证信息表</li>
+<li>农产品加工业国家火炬计划重点高新企业表</li>
+<li>农产品加工业拟认定高新企业信息表</li>
+<li>农产品加工企业食品农产品认证信息表</li>
+<li>农产品加工业绿色食品认证企业信息表</li>
+<li>农产品加工企业绿色食品认证产品信息表</li>
+<li>农产品加工企业强制性产品认证信息表</li>
+<li>农产品加工企业CNCA管理体系认证表</li>
+<li>农产品加工企业自愿性工业产品认证表</li>
+<li>农产品加工企业荣誉信息表</li>
+<li>农产品加工企业国税A级纳税人信息表</li>
+<li>农产品加工企业招聘信息表</li>
+<li>农产品加工企业行政处罚信息</li>
+<li>农产品加工企业海关信用注册信息</li>
+<li>农产品加工企业海关信用等级表</li>
+<li>农产品加工企业海关信用行政处罚信息</li>
+<li>农产品加工企业对外贸易经营者信息</li>
+<li>农产品加工业招投标公司表</li>
+<li>农产品加工企业商品信息列表</li>
+<li>农产品加工企业网店商铺信息表</li>
+<li>农产品加工企业动产抵押信息</li>
+<li>农产品加工企业股权出质信息</li>
+<li>农产品加工企业抽查检查信息表</li>
+<li>农产品加工企业经营异常信息表</li>
+</ul>
+<h2 id="（四）农产品加工业专题数据建库思路"><a href="#（四）农产品加工业专题数据建库思路" class="headerlink" title="（四）农产品加工业专题数据建库思路"></a><strong>（四）农产品加工业专题数据建库思路</strong></h2><p>在国民经济行业分类（GB/T4754-2017）的基础上，结合农业农村部发布的文件<strong><a target="_blank" rel="noopener" href="https://file.qiyandata.cn:10443/FTPshare/20200813180848j6Xq.pdf">《农产品加工业行业划分方式（试行）》</a></strong> 以及农业部规划设计研究院发表的文章<strong>《中国农产品加工业的区域布局与产业集聚》</strong>，确定出农产品加工业的细分行业为农副食品加工业、食品制造业、酒饮料和精制茶制造业、烟草制造业、纺织业、纺织服装服饰业、皮革毛皮羽绒及其制品和制鞋业、木材加工及竹藤棕草制品业、家具制造业、造纸及纸制品业、印刷和记录媒介的复制业、橡胶和塑料制品业12类，进而构建出农产品加工业专题数据库。具体的建库流程如下所示：</p>
+<p><img src="https://oss-images-qyum.oss-cn-zhangjiakou.aliyuncs.com/20200810112035ngJX_%E5%86%9C%E4%BA%A7%E5%93%81%E5%8A%A0%E5%B7%A5%E4%B8%9A%E5%BB%BA%E5%BA%93%E6%B5%81%E7%A8%8B.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,text_5Y2h54m5LeS8geeglCAgQ0NBRA,type_d3F5LXplbmhlaQ,color_c6c6c6,size_30,rotate_45,fill_1,shadow_19,t_50,x_10,y_10" alt="img"></p>
+<p><strong>图2 农产品加工业专题数据库建库思路(点击查看高清图)</strong></p>
+<p>参考文献：冯伟,蔡学斌,杨琴,石汝娟,夏虹.中国农产品加工业的区域布局与产业集聚.中国农业资源与区划，2016(8)：97-102</p>
+</div><div id="donate"><link rel="stylesheet" type="text/css" href="/css/donate.css"><script type="text/javascript" src="/js/donate.js" successtext="复制成功!"></script><a class="pos-f tr3" id="github" target="_blank" rel="noopener" href="https://github.com/Kaiyuan/donate-page" arget="_blank" title="Github"></a><div id="DonateText">Donate</div><ul class="list pos-f" id="donateBox"><li id="AliPay" qr="/img/alipayQR.jpg"></li><li id="WeChat" qr="/img/wechatQR.jpg"></li></ul><div class="pos-f left-100" id="QRBox"><div id="MainBox"></div></div></div><div class="post-copyright"><script type="text/javascript" src="/js/copyright.js" successtext="复制成功!"></script><link rel="stylesheet" type="text/css" href="/css/copyright.css"><p><span>本文标题：</span>企研数据经营主体数据的构建方式</p><p><span>文章作者：</span>Gang Li</p><p><span>发布时间：</span>2020-09-04</p><p><span>最后更新：</span>2021-03-22</p><p><span>原始链接：</span><a href="/2020/09/04/企研数据经营主体数据的构建方式/">http://lgspace.top/2020/09/04/%E4%BC%81%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%8F%E8%90%A5%E4%B8%BB%E4%BD%93%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9E%84%E5%BB%BA%E6%96%B9%E5%BC%8F/</a><span class="copy-path"><i class="fa fa-clipboard" data-clipboard-text="http://lgspace.top/2020/09/04/%E4%BC%81%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%8F%E8%90%A5%E4%B8%BB%E4%BD%93%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9E%84%E5%BB%BA%E6%96%B9%E5%BC%8F/"></i></span></p><p><span>版权声明：</span>本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</p></div><br><script type="text/javascript" src="/js/share.js?v=1.0.0" async></script><a class="article-share-link" data-url="http://lgspace.top/2020/09/04/%E4%BC%81%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%8F%E8%90%A5%E4%B8%BB%E4%BD%93%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9E%84%E5%BB%BA%E6%96%B9%E5%BC%8F/" data-id="cktjvhcle00ah8cor3p7p33br" data-qrcode="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAAE+CAAAAAAxUyPsAAAFL0lEQVR42u3aQXLbMBAEQP//08o1KVnkzC7oHNw8uWQJJBqq0mIWX1/x9Xq7/n79/Z3X4ySfff/70yufxrl+kmScYxc+fPjw4cN3OUTClHz2+rHaSbbLeb0A109SzAUfPnz48OEb8SVFxuwhcrjks+2Tt2VQOzI+fPjw4cP3NN+m6EkevS1NNmVHUvTgw4cPHz58/4tvtsHOJzkLDtqyZtaEwIcPHz58+M7y5VPNW+CzKD+PJ/JPzcqjw70OfPjw4cOHrzyF9Xv+Pnzhw4cPHz58o/JiFrXPlmEWTCRt+1MXPnz48OHDN9unb6aUbODbYqgN1tuAPseNjq/hw4cPHz58JV97g/Zm+933bJ++eX+7bPjw4cOHD1/O1xYus8NtbWnSLlh7iC2HPtbHwIcPHz58+EaB+2yEWYiQk+Vh/eaI28fEBR8+fPjw4Qv4Tm2884JgVlKcDevzZsPN3fHhw4cPH76Sb9Me3sTxm7CgfbY2aKgDfXz48OHDhy/ma7foq1UK0Pf/bdvemyNu+PDhw4cP36iiKB6l/W+7/W7Di32ptG/S48OHDx8+fC1fcoOz4fj+9U2Q0ZZTN+/Bhw8fPnz44lnkpUN7m7Ziylvpr/jKR54dCMCHDx8+fPg2fHnInhC0be+8pJg1APLQoWgY4MOHDx8+fAu+PLgvUv9yhLaYmIXvm9f/eQ8+fPjw4cM36TsfOEidT3JTcFwXUu1ytrVHPRw+fPjw4cM3Kin2cfmmDGqLjPYLMRsfHz58+PDhm/G1G/K22dzG/e04s1B+Ez0U30F8+PDhw4fvcnfctpOTrfWsmKgPii2gr+dbhBH48OHDhw9fXLIUuX4co2/C9Hap2s3//l748OHDhw/fhq/dWuc/9ptwIS8s8mW7LoPy++LDhw8fPnwzvvbwWV4QbDb87d/5su3vdRMc4MOHDx8+fF2H+tiR680CbAqXdoHb++LDhw8fPnwbvk1Y37afZ2PmbYP9QbS6RYEPHz58+PDNu9s3W/3NRjrZ6s8KoPyZ83kVWPjw4cOHD9/idzbfTs8ChVkJcqo1nocjRVGFDx8+fPjwjfg22/J9EZMvVVsG5VFC+wz48OHDhw/fni9/lPz1WaA/i9FnocYqFsGHDx8+fPjmiXpdrDxRsszC9wToVNsAHz58+PDhO8u3P8zdxgGnmgH5Mzx3IAAfPnz48OHL+doJvOJrthhJAZGXOG1YXy8hPnz48OHDF/DNjnC12/izG/t2kkmQkTQqvhkNHz58+PDhG/G1BcEG9BpuU07lr+dkN2UQPnz48OHDt+bLN/kzmlPBxNnwov0y4cOHDx8+fDO+NhBPgoB8nLZYaQ+9ta36VdseHz58+PDhO8SXlzj5BHKsFrENJtpyBx8+fPjw4TvFt7nxrP3chvX59NrPtg1yfPjw4cOHb8/384XLLLJPnrBtoq++X/jw4cOHD1/Mt2lLbwqR2VPlJVGO1S4JPnz48OHDt+fbhOz7kqh9z6yJnozT3hcfPnz48OHb882OVs9igrx42oy8CfdvGvn48OHDhw9fyddG+ac24bPQPLlv2wBoG+TDCx8+fPjw4Qt+4Nv4O/mZ30973xrfFy748OHDhw/fni9vErelSRuytw2AhHt/34/j48OHDx8+fI/xbR66jRg2hcj1p041A/Dhw4cPH76n+Tab7TbuTyaWL+GpqOKb/+LDhw8fPnwjvn1Y3zaeZxOeAbWfLUIHfPjw4cOH74G8evbhs8uwCf3z9yQN9QO9BXz48OHD9xv5/gACYH0c8Wco1AAAAABJRU5ErkJggg==">分享</a><div class="tags"><a href="/tags/Data/"><i class="fa fa-tag"></i>Data</a></div><div class="post-nav"><a class="pre" href="/2020/09/04/CCAD%E6%95%B0%E6%8D%AE%E5%8F%98%E9%87%8F%E8%AF%A6%E8%A7%A3/">CCAD数据变量详解</a><a class="next" href="/2020/09/03/%E6%B6%89%E5%86%9C%E6%95%B0%E6%8D%AE%E5%BA%93/">涉农数据库</a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == 'true' ? true : false;
+var verify = 'false' == 'true' ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'4r3jOS497uyoVjem8hrofuye-MdYXbMMI',
+  appKey:'dRzNUi4hOYKfUV95GTwK8hoH',
+  placeholder:'给我留言吧～',
+  avatar:'retro',
+  guest_info:guest_info,
+  pageSize:'7'
+})
+</script></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="sidebar"><div class="widget"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"/><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script><div class="aplayer" data-id="5305796974" data-server="netease" data-type="playlist" data-listmaxheight="98px" data-theme="#555555"></div></div><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">69</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><span class="category-list-count">11</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/" style="font-size: 15px;">微观经济学</a> <a href="/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" style="font-size: 15px;">课程笔记</a> <a href="/tags/HUST/" style="font-size: 15px;">HUST</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Stata/" style="font-size: 15px;">Stata</a> <a href="/tags/%E6%95%B0%E6%8D%AE/" style="font-size: 15px;">数据</a> <a href="/tags/Casual-Inference/" style="font-size: 15px;">Casual Inference</a> <a href="/tags/%E6%96%87%E7%8C%AE/" style="font-size: 15px;">文献</a> <a href="/tags/Data/" style="font-size: 15px;">Data</a> <a href="/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/" style="font-size: 15px;">经济学</a> <a href="/tags/%E5%8F%91%E5%B1%95%E7%BB%8F%E6%B5%8E%E5%AD%A6/" style="font-size: 15px;">发展经济学</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 15px;">笔记</a> <a href="/tags/%E8%AE%A1%E9%87%8F/" style="font-size: 15px;">计量</a> <a href="/tags/English/" style="font-size: 15px;">English</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 15px;">工具</a> <a href="/tags/%E6%96%87%E4%BB%B6/" style="font-size: 15px;">文件</a> <a href="/tags/IELTS/" style="font-size: 15px;">IELTS</a> <a href="/tags/Notes/" style="font-size: 15px;">Notes</a> <a href="/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/" style="font-size: 15px;">宏观经济学</a> <a href="/tags/%E5%8F%B6%E8%88%AA/" style="font-size: 15px;">叶航</a> <a href="/tags/Jupyter-Notebook/" style="font-size: 15px;">Jupyter Notebook</a> <a href="/tags/Mankin/" style="font-size: 15px;">Mankin</a> <a href="/tags/%E8%AE%A1%E9%87%8F%E7%BB%8F%E6%B5%8E%E5%AD%A6/" style="font-size: 15px;">计量经济学</a> <a href="/tags/%E5%8C%97%E4%BA%AC/" style="font-size: 15px;">北京</a> <a href="/tags/%E7%94%B5%E5%BD%B1/" style="font-size: 15px;">电影</a> <a href="/tags/%E8%A7%82%E5%90%8E%E6%84%9F/" style="font-size: 15px;">观后感</a> <a href="/tags/Zotero/" style="font-size: 15px;">Zotero</a> <a href="/tags/%E6%83%B3%E6%B3%95/" style="font-size: 15px;">想法</a> <a href="/tags/%E6%97%85%E8%A1%8C/" style="font-size: 15px;">旅行</a> <a href="/tags/%E5%8A%A0%E5%AF%86/" style="font-size: 15px;">加密</a> <a href="/tags/%E7%BE%8E%E9%A3%9F/" style="font-size: 15px;">美食</a> <a href="/tags/LaTeX/" style="font-size: 15px;">LaTeX</a> <a href="/tags/%E4%BF%A1%E5%8F%A3%E8%83%A1%E8%AF%8C/" style="font-size: 15px;">信口胡诌</a> <a href="/tags/%E8%8B%B1%E8%AF%AD/" style="font-size: 15px;">英语</a> <a href="/tags/%E8%80%83%E5%8D%9A/" style="font-size: 15px;">考博</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/09/14/Advanced-MicroEcon-Notes-1/">高级微观经济学II课程笔记（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/05/19/Guide-to-Writing-in-Economics/">Guide to Writing in Economics</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/04/28/Exporting-Data-from-PDFs/">从 PDF 文件提取文本内容</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/04/22/Markdown-Typora-Brief-Intro/">Markdown-Typora-Brief-Intro</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/04/21/MacroEcon-Mankin-DynamicAD-AS/">MacroEcon-Mankin-DynamicAD-AS</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/04/20/DevelopEcon-ZhangPeiGang-Notes/">公平与发展</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/04/20/MacroEcon-Models/">MacroEcon-Models</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/04/20/MacroEcon-Mankin-Business-Cycle-Theory/">MacroEcon-Mankin-Business-Cycle-Theory</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/04/20/MacroEcon-Mankin-GrowthTheory/">增长理论：超长期中的经济</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/04/19/MacroEcon-Mankin-Outline-ClassicalTheory/">古典理论：长期中的经济</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://magi.com/" title="magi 搜索" target="_blank">magi 搜索</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2021 <a href="/." rel="nofollow">LG's Blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"><link rel="stylesheet" type="text/css" href="/css/search.css?v=1.0.0"><script type="text/javascript" src="/js/search.js?v=1.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" color="0,0,0" opacity="0.5" zIndex="-2" count="50" src="//cdn.jsdelivr.net/npm/canvas-nest.js/dist/canvas-nest.min.js"></script><script type="text/javascript" src="/js/love.js"></script><script type="text/javascript" src="/js/copycode.js" successtext="复制成功!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=1.0.0"></script><script>(function(d) {
+  var config = {
+    kitId: 'qpn2tap',
+    scriptTimeout: 3000,
+    async: true
+  },
+  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+})(document);</script></div></body></html>

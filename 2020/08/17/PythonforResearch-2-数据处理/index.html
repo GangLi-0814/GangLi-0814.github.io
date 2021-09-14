@@ -1,0 +1,5092 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="2020.10.26❤️🐱 📝💻🏸️🏃🏊"><title>PythonforResearch|2_数据处理 | LG's Blog</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><script class="js-hypothesis-config" type="application/json">{"showHighlights": true}</script><script src="https://hypothes.is/embed.js" async=""></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><meta name="generator" content="Hexo 5.0.2"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">PythonforResearch|2_数据处理</h1><a id="logo" href="/.">LG's Blog</a><p class="description">任尔东西南北风</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/tag/"><i class="fa fa-tag"> 标签</i></a><a href="/foodie/"><i class="fa fa-heart"> 菜谱</i></a><a href="/shuoshuo/"><i class="fa fa-cloud"> 便签</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">PythonforResearch|2_数据处理</h1><div class="post-meta">2020-08-17<span> | </span><span class="category"><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span><span class="post-time"><span class="post-meta-item-text"> | </span><span class="post-meta-item-icon"><i class="fa fa-keyboard-o"></i><span class="post-count"> 8.3k</span><span class="post-meta-item-text"> 字</span></span></span><span class="post-time"> | <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i><span class="post-count"> 46</span><span class="post-meta-item-text"> 分钟</span></span></span></div><a class="disqus-comment-count" href="/2020/08/17/PythonforResearch-2-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/#vcomment"><span class="valine-comment-count" data-xid="/2020/08/17/PythonforResearch-2-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"></span><span> 条评论</span></a><div class="post-content"><p><strong>创建日期：</strong> 20200805 15:20<br><strong>上次修改：</strong> 20200805 19:27<br><strong>Python版本：</strong> Python 3.7  </p>
+<p>项目介绍：一直想写一份适合经济学等社科背景、学术科研向的Python教程。因为学经济学的多少会对Stata有所了解，有一些写~代码~命令的经历，这份教程应该：</p>
+<ul>
+<li>简洁好理解，花最少的时间了解 Python 的核心用法；</li>
+<li>实用易操作，最好是能够看完上手即用。</li>
+</ul>
+<p>在构思了一段时间之后，偶然发现 Ties de Kok 的 <a target="_blank" rel="noopener" href="https://github.com/TiesdeKok/LearnPythonforResearch">Get started with Python for research tutorial</a>项目已经搭建出了我想要的框架。于是打算在这个项目的基础上进行完善，首先将其主要内容“汉化”成中文，之后对用法进行扩充、加入典型用法和案例。</p>
+<blockquote>
+<p>原作者简介：Ties de Kok (<a target="_blank" rel="noopener" href="http://www.tiesdekok.com">Personal Website</a>)为华盛顿大学福斯特商学院的助理教授，他专注于将计算机科学与实证会计研究相结合，研究兴趣是财务会计、资本市场、计算机科学、自然语言处理和经验管理会计。</p>
+</blockquote>
+<p>本部分基于 PyCon 2015 tutorial/talk by Brandon Rhodes，如果想了解更多，建议观看：</p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=5JnMutdy6Fw">https://www.youtube.com/watch?v=5JnMutdy6Fw</a><br><a target="_blank" rel="noopener" href="https://github.com/brandon-rhodes/pycon-pandas-tutorial">https://github.com/brandon-rhodes/pycon-pandas-tutorial</a></p>
+<p>往期目录：</p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/rA5kgJvA8eQHRjx9pUGoXA">PythonforResearch | 0_语法基础</a></p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/f9q7vVG5iT7w9HQTfQmIHw">PythonforResearch | 1_文件操作</a></p>
+<h1 id="导入-Pandas-库"><a href="#导入-Pandas-库" class="headerlink" title="导入 Pandas 库"></a>导入 Pandas 库</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> os.path <span class="keyword">import</span> join</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义路径</span></span><br><span class="line">data_path = join(os.getcwd(), <span class="string">&#x27;data&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="创建-dataframe"><a href="#创建-dataframe" class="headerlink" title="创建 dataframe"></a>创建 dataframe</h1><h2 id="导入本地数据"><a href="#导入本地数据" class="headerlink" title="导入本地数据"></a>导入本地数据</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto = pd.read_csv(join(data_path, <span class="string">&#x27;auto_df.csv&#x27;</span>), sep=<span class="string">&#x27;;&#x27;</span>, index_col=<span class="string">&#x27;Unnamed: 0&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="创建并传入数据"><a href="#创建并传入数据" class="headerlink" title="创建并传入数据"></a>创建并传入数据</h2><p>可以传入多种类型的数据到 <code>pd.DataFrame()</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">d = &#123;<span class="string">&#x27;col1&#x27;</span>: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>], <span class="string">&#x27;col2&#x27;</span>: [<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]&#125;</span><br><span class="line">df = pd.DataFrame(data=d)</span><br><span class="line">df</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>col1</th>
+      <th>col2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">d = [(<span class="number">1</span>, <span class="number">2</span> ,<span class="number">3</span> ,<span class="number">4</span>), (<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>)]</span><br><span class="line">df = pd.DataFrame(data=d)</span><br><span class="line">df</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="由字典创建"><a href="#由字典创建" class="headerlink" title="由字典创建"></a>由字典创建</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">d = &#123;<span class="string">&#x27;row1&#x27;</span>: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>], <span class="string">&#x27;row2&#x27;</span>: [<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]&#125;</span><br><span class="line">df = pd.DataFrame.from_dict(d, orient=<span class="string">&#x27;index&#x27;</span>)</span><br><span class="line">df</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>row1</th>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>row2</th>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<p>也可以直接传入字典：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df = pd.DataFrame.from_dict(&#123;<span class="string">&#x27;row1&#x27;</span>: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>], <span class="string">&#x27;row2&#x27;</span>: [<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]&#125;, orient=<span class="string">&#x27;index&#x27;</span>)</span><br><span class="line">df</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>row1</th>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>row2</th>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h1 id="操作-dataframe"><a href="#操作-dataframe" class="headerlink" title="操作 dataframe"></a>操作 dataframe</h1><h2 id="添加列（Add-columns）"><a href="#添加列（Add-columns）" class="headerlink" title="添加列（Add columns）"></a>添加列（Add columns）</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">&#x27;col5&#x27;</span>] = [<span class="number">10</span>, <span class="number">10</span>]</span><br><span class="line">df</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>col5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>row1</th>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>row2</th>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="添加行（Add-row）"><a href="#添加行（Add-row）" class="headerlink" title="添加行（Add row）"></a>添加行（Add row）</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df.loc[<span class="string">&#x27;row3&#x27;</span>] = [<span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">14</span>, <span class="number">15</span>]</span><br><span class="line">df</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>col5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>row1</th>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>row2</th>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>row3</th>
+      <td>11</td>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+      <td>15</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="转置（Inverse-dataframe）"><a href="#转置（Inverse-dataframe）" class="headerlink" title="转置（Inverse dataframe）"></a>转置（Inverse dataframe）</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.T</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>row1</th>
+      <th>row2</th>
+      <th>row3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>5</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>6</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>7</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>8</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>col5</th>
+      <td>10</td>
+      <td>10</td>
+      <td>15</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="删除列（Remove-columns）"><a href="#删除列（Remove-columns）" class="headerlink" title="删除列（Remove columns）"></a>删除列（Remove columns）</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df = df.drop(<span class="string">&#x27;col5&#x27;</span>, axis=<span class="number">1</span>) <span class="comment"># axis =1 : column</span></span><br><span class="line">df</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>row1</th>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>row2</th>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>row3</th>
+      <td>11</td>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="删除行（Remove-row）"><a href="#删除行（Remove-row）" class="headerlink" title="删除行（Remove row）"></a>删除行（Remove row）</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df = df.drop(<span class="string">&#x27;row1&#x27;</span>, axis=<span class="number">0</span>)</span><br><span class="line">df</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>row2</th>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>row3</th>
+      <td>11</td>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="设置索引（Set-index）"><a href="#设置索引（Set-index）" class="headerlink" title="设置索引（Set index）"></a>设置索引（Set index）</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>row2</th>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>row3</th>
+      <td>11</td>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.set_index(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+    <tr>
+      <th>0</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<p>提示：Pandas允许多索引，这在数据分析中非常实用。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.set_index(<span class="number">0</span>, append=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>0</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>row2</th>
+      <th>5</th>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>row3</th>
+      <th>11</th>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="重置索引（Reset-index）"><a href="#重置索引（Reset-index）" class="headerlink" title="重置索引（Reset index）"></a>重置索引（Reset index）</h2><p>使用<code>reset_index()</code>将索引（index）转化为常规的列（regular column）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.reset_index()</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>row2</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>row3</td>
+      <td>11</td>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h1 id="重命名列（Rename-columns）"><a href="#重命名列（Rename-columns）" class="headerlink" title="重命名列（Rename columns）"></a>重命名列（Rename columns）</h1><p>可以直接操作<code>df.columns</code>或使用<code>df.rename()</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df.columns = [<span class="string">&#x27;col1&#x27;</span>,<span class="string">&#x27;col2&#x27;</span>,<span class="string">&#x27;col3&#x27;</span>,<span class="string">&#x27;col4&#x27;</span>]</span><br><span class="line">df</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>col1</th>
+      <th>col2</th>
+      <th>col3</th>
+      <th>col4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>row2</th>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>row3</th>
+      <td>11</td>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.rename(columns=&#123;<span class="string">&#x27;col1&#x27;</span> : <span class="string">&#x27;column1&#x27;</span>, <span class="string">&#x27;col2&#x27;</span> : <span class="string">&#x27;column2&#x27;</span>&#125;)</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>column1</th>
+      <th>column2</th>
+      <th>col3</th>
+      <th>col4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>row2</th>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>row3</th>
+      <td>11</td>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<p>使用<code>df.rename()</code>是复制后修改，不会对原来的df覆盖。要对原来的df进行覆盖，需要使用<code>inplace=True</code>选项。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">df = df.rename(columns=&#123;<span class="string">&#x27;col1&#x27;</span> : <span class="string">&#x27;column1&#x27;</span>, <span class="string">&#x27;col2&#x27;</span> : <span class="string">&#x27;column2&#x27;</span>&#125;)</span><br><span class="line"><span class="comment">#or</span></span><br><span class="line">df.rename(columns=&#123;<span class="string">&#x27;col1&#x27;</span> : <span class="string">&#x27;column1&#x27;</span>, <span class="string">&#x27;col2&#x27;</span> : <span class="string">&#x27;column2&#x27;</span>&#125;, inplace=<span class="literal">True</span>) </span><br></pre></td></tr></table></figure>
+<h1 id="预览-dataframe"><a href="#预览-dataframe" class="headerlink" title="预览 dataframe"></a>预览 dataframe</h1><h2 id="全部"><a href="#全部" class="headerlink" title="全部"></a>全部</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto <span class="comment"># 只显示首部和尾部</span></span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>rep78</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+      <th>turn</th>
+      <th>displacement</th>
+      <th>gear_ratio</th>
+      <th>foreign</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AMC Concord</td>
+      <td>4099</td>
+      <td>22</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>11</td>
+      <td>2930</td>
+      <td>186</td>
+      <td>40</td>
+      <td>121</td>
+      <td>3.58</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AMC Pacer</td>
+      <td>4749</td>
+      <td>17</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>11</td>
+      <td>3350</td>
+      <td>173</td>
+      <td>40</td>
+      <td>258</td>
+      <td>2.53</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AMC Spirit</td>
+      <td>3799</td>
+      <td>22</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>12</td>
+      <td>2640</td>
+      <td>168</td>
+      <td>35</td>
+      <td>121</td>
+      <td>3.08</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Buick Century</td>
+      <td>4816</td>
+      <td>20</td>
+      <td>3.0</td>
+      <td>4.5</td>
+      <td>16</td>
+      <td>3250</td>
+      <td>196</td>
+      <td>40</td>
+      <td>196</td>
+      <td>2.93</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Buick Electra</td>
+      <td>7827</td>
+      <td>15</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>20</td>
+      <td>4080</td>
+      <td>222</td>
+      <td>43</td>
+      <td>350</td>
+      <td>2.41</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>VW Dasher</td>
+      <td>7140</td>
+      <td>23</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>12</td>
+      <td>2160</td>
+      <td>172</td>
+      <td>36</td>
+      <td>97</td>
+      <td>3.74</td>
+      <td>Foreign</td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td>VW Diesel</td>
+      <td>5397</td>
+      <td>41</td>
+      <td>5.0</td>
+      <td>3.0</td>
+      <td>15</td>
+      <td>2040</td>
+      <td>155</td>
+      <td>35</td>
+      <td>90</td>
+      <td>3.78</td>
+      <td>Foreign</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>VW Rabbit</td>
+      <td>4697</td>
+      <td>25</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>15</td>
+      <td>1930</td>
+      <td>155</td>
+      <td>35</td>
+      <td>89</td>
+      <td>3.78</td>
+      <td>Foreign</td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td>VW Scirocco</td>
+      <td>6850</td>
+      <td>25</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>16</td>
+      <td>1990</td>
+      <td>156</td>
+      <td>36</td>
+      <td>97</td>
+      <td>3.78</td>
+      <td>Foreign</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>Volvo 260</td>
+      <td>11995</td>
+      <td>17</td>
+      <td>5.0</td>
+      <td>2.5</td>
+      <td>14</td>
+      <td>3170</td>
+      <td>193</td>
+      <td>37</td>
+      <td>163</td>
+      <td>2.98</td>
+      <td>Foreign</td>
+    </tr>
+  </tbody>
+</table>
+<p>74 rows × 12 columns</p>
+</div>
+
+
+
+<h2 id="首部和尾部"><a href="#首部和尾部" class="headerlink" title="首部和尾部"></a>首部和尾部</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto.head(<span class="number">3</span>) <span class="comment"># 首部3条数据</span></span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>rep78</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+      <th>turn</th>
+      <th>displacement</th>
+      <th>gear_ratio</th>
+      <th>foreign</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AMC Concord</td>
+      <td>4099</td>
+      <td>22</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>11</td>
+      <td>2930</td>
+      <td>186</td>
+      <td>40</td>
+      <td>121</td>
+      <td>3.58</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AMC Pacer</td>
+      <td>4749</td>
+      <td>17</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>11</td>
+      <td>3350</td>
+      <td>173</td>
+      <td>40</td>
+      <td>258</td>
+      <td>2.53</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AMC Spirit</td>
+      <td>3799</td>
+      <td>22</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>12</td>
+      <td>2640</td>
+      <td>168</td>
+      <td>35</td>
+      <td>121</td>
+      <td>3.08</td>
+      <td>Domestic</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto.tail(<span class="number">5</span>) <span class="comment"># 尾部5条数据</span></span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>rep78</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+      <th>turn</th>
+      <th>displacement</th>
+      <th>gear_ratio</th>
+      <th>foreign</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>69</th>
+      <td>VW Dasher</td>
+      <td>7140</td>
+      <td>23</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>12</td>
+      <td>2160</td>
+      <td>172</td>
+      <td>36</td>
+      <td>97</td>
+      <td>3.74</td>
+      <td>Foreign</td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td>VW Diesel</td>
+      <td>5397</td>
+      <td>41</td>
+      <td>5.0</td>
+      <td>3.0</td>
+      <td>15</td>
+      <td>2040</td>
+      <td>155</td>
+      <td>35</td>
+      <td>90</td>
+      <td>3.78</td>
+      <td>Foreign</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>VW Rabbit</td>
+      <td>4697</td>
+      <td>25</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>15</td>
+      <td>1930</td>
+      <td>155</td>
+      <td>35</td>
+      <td>89</td>
+      <td>3.78</td>
+      <td>Foreign</td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td>VW Scirocco</td>
+      <td>6850</td>
+      <td>25</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>16</td>
+      <td>1990</td>
+      <td>156</td>
+      <td>36</td>
+      <td>97</td>
+      <td>3.78</td>
+      <td>Foreign</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>Volvo 260</td>
+      <td>11995</td>
+      <td>17</td>
+      <td>5.0</td>
+      <td>2.5</td>
+      <td>14</td>
+      <td>3170</td>
+      <td>193</td>
+      <td>37</td>
+      <td>163</td>
+      <td>2.98</td>
+      <td>Foreign</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="随机X部分"><a href="#随机X部分" class="headerlink" title="随机X部分"></a>随机X部分</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X = <span class="number">5</span></span><br><span class="line">df_auto.sample(X)</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>rep78</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+      <th>turn</th>
+      <th>displacement</th>
+      <th>gear_ratio</th>
+      <th>foreign</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>13</th>
+      <td>Chev. Chevette</td>
+      <td>3299</td>
+      <td>29</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>9</td>
+      <td>2110</td>
+      <td>163</td>
+      <td>34</td>
+      <td>231</td>
+      <td>2.93</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Chev. Nova</td>
+      <td>3955</td>
+      <td>19</td>
+      <td>3.0</td>
+      <td>3.5</td>
+      <td>13</td>
+      <td>3430</td>
+      <td>197</td>
+      <td>43</td>
+      <td>250</td>
+      <td>2.56</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Ford Fiesta</td>
+      <td>4389</td>
+      <td>28</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>9</td>
+      <td>1800</td>
+      <td>147</td>
+      <td>33</td>
+      <td>98</td>
+      <td>3.15</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AMC Spirit</td>
+      <td>3799</td>
+      <td>22</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>12</td>
+      <td>2640</td>
+      <td>168</td>
+      <td>35</td>
+      <td>121</td>
+      <td>3.08</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Buick Electra</td>
+      <td>7827</td>
+      <td>15</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>20</td>
+      <td>4080</td>
+      <td>222</td>
+      <td>43</td>
+      <td>350</td>
+      <td>2.41</td>
+      <td>Domestic</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="通过行名选取行"><a href="#通过行名选取行" class="headerlink" title="通过行名选取行"></a>通过行名选取行</h2><p><strong>注意：</strong>下面返回的是Pandas的 Series 对象，这与Pandas的 Dataframe 对象不同！</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto[<span class="string">&#x27;make&#x27;</span>].head(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>0    AMC Concord
+1      AMC Pacer
+2     AMC Spirit
+Name: make, dtype: object
+</code></pre><p>如果列名没有空格，则还可以在列名后使用点号(<code>.</code>)：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto.make.head(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>0    AMC Concord
+1      AMC Pacer
+2     AMC Spirit
+Name: make, dtype: object
+</code></pre><p>使用双引号，选择多列：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto[[<span class="string">&#x27;make&#x27;</span>, <span class="string">&#x27;price&#x27;</span>, <span class="string">&#x27;mpg&#x27;</span>]].head(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>mpg</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AMC Concord</td>
+      <td>4099</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AMC Pacer</td>
+      <td>4749</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AMC Spirit</td>
+      <td>3799</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Buick Century</td>
+      <td>4816</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Buick Electra</td>
+      <td>7827</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Buick LeSabre</td>
+      <td>5788</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Buick Opel</td>
+      <td>4453</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Buick Regal</td>
+      <td>5189</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Buick Riviera</td>
+      <td>10372</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Buick Skylark</td>
+      <td>4082</td>
+      <td>19</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="通过索引值选取行"><a href="#通过索引值选取行" class="headerlink" title="通过索引值选取行"></a>通过索引值选取行</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df = df_auto[[<span class="string">&#x27;make&#x27;</span>, <span class="string">&#x27;price&#x27;</span>, <span class="string">&#x27;mpg&#x27;</span>, <span class="string">&#x27;trunk&#x27;</span>, <span class="string">&#x27;headroom&#x27;</span>]].set_index(<span class="string">&#x27;make&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.loc[<span class="string">&#x27;Buick Riviera&#x27;</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>price       10372.0
+mpg            16.0
+trunk          17.0
+headroom        3.5
+Name: Buick Riviera, dtype: float64
+</code></pre><p>注意：返回一个pandas.Series对象而不是pandas.Dataframe对象。</p>
+<h2 id="通过索引位置选取行"><a href="#通过索引位置选取行" class="headerlink" title="通过索引位置选取行"></a>通过索引位置选取行</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.iloc[<span class="number">2</span>:<span class="number">5</span>] <span class="comment"># index location</span></span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>trunk</th>
+      <th>headroom</th>
+    </tr>
+    <tr>
+      <th>make</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>AMC Spirit</th>
+      <td>3799</td>
+      <td>22</td>
+      <td>12</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>Buick Century</th>
+      <td>4816</td>
+      <td>20</td>
+      <td>16</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>Buick Electra</th>
+      <td>7827</td>
+      <td>15</td>
+      <td>20</td>
+      <td>4.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.iloc[<span class="number">2</span>:<span class="number">5</span>, <span class="number">1</span>:<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mpg</th>
+      <th>trunk</th>
+    </tr>
+    <tr>
+      <th>make</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>AMC Spirit</th>
+      <td>22</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>Buick Century</th>
+      <td>20</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>Buick Electra</th>
+      <td>15</td>
+      <td>20</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="条件选择"><a href="#条件选择" class="headerlink" title="条件选择"></a>条件选择</h2><p>条件选择背后的逻辑：</p>
+<ol>
+<li>使用df[<code>condition</code>] 来请求Pandas过滤数据框</li>
+<li><code>conditon</code>是每行的<code>True</code>或者<code>False</code>值序列（因此<code>condition</code>的长度必须和dataframe行的长度相同）</li>
+<li>在Pandas中，只需在整个列上编写一个布尔表达式，就可以为每一行生成True或False值</li>
+<li>Pandas仅会显示行为<code>True</code>的值。</li>
+</ol>
+<p>举例来说：</p>
+<p><code>df_auto[&#39;price&#39;] &lt; 3800</code> 会每行依次判断 <code>df_auto[&#39;price&#39;]</code>，之后会返回条件为<code>True</code> 或者 <code>False</code>:</p>
+<p><code>0     False
+1     False
+2      True
+3     False
+4     False
+5     False</code><br>将条件放入方括号中 <code>df_auto[ df_auto[&#39;price&#39;] &lt; 3800 ]</code>， Pandas首先会生成值为 <code>True</code> / <code>False</code>的序列，之后仅显示为<code>True</code>的行所对应的值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto[ df_auto[<span class="string">&#x27;price&#x27;</span>] &lt; <span class="number">3800</span> ]</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>rep78</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+      <th>turn</th>
+      <th>displacement</th>
+      <th>gear_ratio</th>
+      <th>foreign</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>AMC Spirit</td>
+      <td>3799</td>
+      <td>22</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>12</td>
+      <td>2640</td>
+      <td>168</td>
+      <td>35</td>
+      <td>121</td>
+      <td>3.08</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Chev. Chevette</td>
+      <td>3299</td>
+      <td>29</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>9</td>
+      <td>2110</td>
+      <td>163</td>
+      <td>34</td>
+      <td>231</td>
+      <td>2.93</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Chev. Monza</td>
+      <td>3667</td>
+      <td>24</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>7</td>
+      <td>2750</td>
+      <td>179</td>
+      <td>40</td>
+      <td>151</td>
+      <td>2.73</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>Merc. Zephyr</td>
+      <td>3291</td>
+      <td>20</td>
+      <td>3.0</td>
+      <td>3.5</td>
+      <td>17</td>
+      <td>2830</td>
+      <td>195</td>
+      <td>43</td>
+      <td>140</td>
+      <td>3.08</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>Subaru</td>
+      <td>3798</td>
+      <td>35</td>
+      <td>5.0</td>
+      <td>2.5</td>
+      <td>11</td>
+      <td>2050</td>
+      <td>164</td>
+      <td>36</td>
+      <td>97</td>
+      <td>3.81</td>
+      <td>Foreign</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>Toyota Corolla</td>
+      <td>3748</td>
+      <td>31</td>
+      <td>5.0</td>
+      <td>3.0</td>
+      <td>9</td>
+      <td>2200</td>
+      <td>165</td>
+      <td>35</td>
+      <td>97</td>
+      <td>3.21</td>
+      <td>Foreign</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<p>也可以通过链接布尔表达式来组合多个条件： </p>
+<ul>
+<li>且: <code>&amp;</code></li>
+<li>或: <code>|</code></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto[(df_auto[<span class="string">&#x27;price&#x27;</span>] &lt; <span class="number">3800</span>) &amp; (df_auto[<span class="string">&#x27;foreign&#x27;</span>] == <span class="string">&#x27;Foreign&#x27;</span>)]</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>rep78</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+      <th>turn</th>
+      <th>displacement</th>
+      <th>gear_ratio</th>
+      <th>foreign</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>65</th>
+      <td>Subaru</td>
+      <td>3798</td>
+      <td>35</td>
+      <td>5.0</td>
+      <td>2.5</td>
+      <td>11</td>
+      <td>2050</td>
+      <td>164</td>
+      <td>36</td>
+      <td>97</td>
+      <td>3.81</td>
+      <td>Foreign</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>Toyota Corolla</td>
+      <td>3748</td>
+      <td>31</td>
+      <td>5.0</td>
+      <td>3.0</td>
+      <td>9</td>
+      <td>2200</td>
+      <td>165</td>
+      <td>35</td>
+      <td>97</td>
+      <td>3.21</td>
+      <td>Foreign</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<p>注意：如果我们不分配上述所有新dataframe，则上述所有操作均会返回这些新dataframe。如果我们要将其保留为单独的dataframe，则必须像这样分配它：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df_auto_small = df_auto[(df_auto.price &lt; <span class="number">3800</span>) &amp; (df_auto.foreign == <span class="string">&#x27;Foreign&#x27;</span>)]</span><br><span class="line">df_auto_small</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>rep78</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+      <th>turn</th>
+      <th>displacement</th>
+      <th>gear_ratio</th>
+      <th>foreign</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>65</th>
+      <td>Subaru</td>
+      <td>3798</td>
+      <td>35</td>
+      <td>5.0</td>
+      <td>2.5</td>
+      <td>11</td>
+      <td>2050</td>
+      <td>164</td>
+      <td>36</td>
+      <td>97</td>
+      <td>3.81</td>
+      <td>Foreign</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>Toyota Corolla</td>
+      <td>3748</td>
+      <td>31</td>
+      <td>5.0</td>
+      <td>3.0</td>
+      <td>9</td>
+      <td>2200</td>
+      <td>165</td>
+      <td>35</td>
+      <td>97</td>
+      <td>3.21</td>
+      <td>Foreign</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="dataframe排序"><a href="#dataframe排序" class="headerlink" title="dataframe排序"></a>dataframe排序</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df_auto.sort_values(by=[<span class="string">&#x27;headroom&#x27;</span>, <span class="string">&#x27;trunk&#x27;</span>], inplace=<span class="literal">True</span>) <span class="comment"># df.sort_value()</span></span><br><span class="line">df_auto.head()</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>rep78</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+      <th>turn</th>
+      <th>displacement</th>
+      <th>gear_ratio</th>
+      <th>foreign</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>55</th>
+      <td>Datsun 200</td>
+      <td>6229</td>
+      <td>23</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>6</td>
+      <td>2370</td>
+      <td>170</td>
+      <td>35</td>
+      <td>119</td>
+      <td>3.89</td>
+      <td>Foreign</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Pont. Firebird</td>
+      <td>4934</td>
+      <td>18</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>7</td>
+      <td>3470</td>
+      <td>198</td>
+      <td>42</td>
+      <td>231</td>
+      <td>3.08</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Plym. Sapporo</td>
+      <td>6486</td>
+      <td>26</td>
+      <td>NaN</td>
+      <td>1.5</td>
+      <td>8</td>
+      <td>2520</td>
+      <td>182</td>
+      <td>38</td>
+      <td>119</td>
+      <td>3.54</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Ford Fiesta</td>
+      <td>4389</td>
+      <td>28</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>9</td>
+      <td>1800</td>
+      <td>147</td>
+      <td>33</td>
+      <td>98</td>
+      <td>3.15</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Chev. Monza</td>
+      <td>3667</td>
+      <td>24</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>7</td>
+      <td>2750</td>
+      <td>179</td>
+      <td>40</td>
+      <td>151</td>
+      <td>2.73</td>
+      <td>Domestic</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h1 id="处理数据类型"><a href="#处理数据类型" class="headerlink" title="处理数据类型"></a>处理数据类型</h1><h2 id="当前数据类型"><a href="#当前数据类型" class="headerlink" title="当前数据类型"></a>当前数据类型</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto.dtypes</span><br></pre></td></tr></table></figure>
+<pre><code>make             object
+price             int64
+mpg               int64
+rep78           float64
+headroom        float64
+trunk             int64
+weight            int64
+length            int64
+turn              int64
+displacement      int64
+gear_ratio      float64
+foreign          object
+dtype: object
+</code></pre><h2 id="转换数据类型"><a href="#转换数据类型" class="headerlink" title="转换数据类型"></a>转换数据类型</h2><p>我们可以通过两种方式转换列的数据类型：</p>
+<ol>
+<li>循环遍历值并分别转换；</li>
+<li>使用内置的Pandas函数一次性转换列。</li>
+</ol>
+<h3 id="分别转换值"><a href="#分别转换值" class="headerlink" title="分别转换值"></a>分别转换值</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto[<span class="string">&#x27;length&#x27;</span>].apply(<span class="keyword">lambda</span> x: str(x)).dtypes <span class="comment"># apply() + lambda function</span></span><br></pre></td></tr></table></figure>
+<pre><code>dtype(&#39;O&#39;)
+</code></pre><p>注意: <code>&#39;O&#39;</code> 表示 ‘object’</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto[<span class="string">&#x27;length&#x27;</span>].apply(<span class="keyword">lambda</span> x: int(x)).dtypes</span><br></pre></td></tr></table></figure>
+<pre><code>dtype(&#39;int64&#39;)
+</code></pre><h3 id="直接转换列"><a href="#直接转换列" class="headerlink" title="直接转换列"></a>直接转换列</h3><p>如果想将列转化为<code>string</code>，建议使用<code>.astype(str)</code>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto[<span class="string">&#x27;length&#x27;</span>].astype(str).dtypes</span><br></pre></td></tr></table></figure>
+<pre><code>dtype(&#39;O&#39;)
+</code></pre><p>如果想将列转化为<code>numeric</code>，建议使用<code>df.to_numeric()</code>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.to_numeric(df_auto[<span class="string">&#x27;length&#x27;</span>]).dtypes</span><br></pre></td></tr></table></figure>
+<pre><code>dtype(&#39;int64&#39;)
+</code></pre><h1 id="处理缺失值"><a href="#处理缺失值" class="headerlink" title="处理缺失值"></a>处理缺失值</h1><p><a target="_blank" rel="noopener" href="http://pandas.pydata.org/pandas-docs/stable/missing_data.html">http://pandas.pydata.org/pandas-docs/stable/missing_data.html</a></p>
+<h2 id="添加缺失值"><a href="#添加缺失值" class="headerlink" title="添加缺失值"></a>添加缺失值</h2><p>将缺失值定义为<code>np.nan</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df_auto.loc[<span class="string">&#x27;UvT_Car&#x27;</span>] = [np.nan <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">0</span>,len(df_auto.columns))]</span><br><span class="line">df_auto.loc[<span class="string">&#x27;UvT_Bike&#x27;</span>] = [np.nan <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">0</span>,len(df_auto.columns))]</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto.loc[[<span class="string">&#x27;UvT_Car&#x27;</span>, <span class="string">&#x27;UvT_Bike&#x27;</span>]]</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>rep78</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+      <th>turn</th>
+      <th>displacement</th>
+      <th>gear_ratio</th>
+      <th>foreign</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>UvT_Car</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>UvT_Bike</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="选择缺失或非缺失值"><a href="#选择缺失或非缺失值" class="headerlink" title="选择缺失或非缺失值"></a>选择缺失或非缺失值</h2><p>始终使用<code>pd.isnull()</code> 或<code>pd.notnull()</code> 最为可靠,<code>df_auto.make == np.nan</code> 有时无法取得正确的结果。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto[pd.isnull(df_auto.make)]</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>rep78</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+      <th>turn</th>
+      <th>displacement</th>
+      <th>gear_ratio</th>
+      <th>foreign</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>UvT_Car</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>UvT_Bike</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto[pd.notnull(df_auto.make)].head()</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>rep78</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+      <th>turn</th>
+      <th>displacement</th>
+      <th>gear_ratio</th>
+      <th>foreign</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>55</th>
+      <td>Datsun 200</td>
+      <td>6229.0</td>
+      <td>23.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>6.0</td>
+      <td>2370.0</td>
+      <td>170.0</td>
+      <td>35.0</td>
+      <td>119.0</td>
+      <td>3.89</td>
+      <td>Foreign</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Pont. Firebird</td>
+      <td>4934.0</td>
+      <td>18.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>7.0</td>
+      <td>3470.0</td>
+      <td>198.0</td>
+      <td>42.0</td>
+      <td>231.0</td>
+      <td>3.08</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Plym. Sapporo</td>
+      <td>6486.0</td>
+      <td>26.0</td>
+      <td>NaN</td>
+      <td>1.5</td>
+      <td>8.0</td>
+      <td>2520.0</td>
+      <td>182.0</td>
+      <td>38.0</td>
+      <td>119.0</td>
+      <td>3.54</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Ford Fiesta</td>
+      <td>4389.0</td>
+      <td>28.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>9.0</td>
+      <td>1800.0</td>
+      <td>147.0</td>
+      <td>33.0</td>
+      <td>98.0</td>
+      <td>3.15</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Chev. Monza</td>
+      <td>3667.0</td>
+      <td>24.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>7.0</td>
+      <td>2750.0</td>
+      <td>179.0</td>
+      <td>40.0</td>
+      <td>151.0</td>
+      <td>2.73</td>
+      <td>Domestic</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="填补缺失值"><a href="#填补缺失值" class="headerlink" title="填补缺失值"></a>填补缺失值</h2><p>使用<code>fillna()</code>填补缺失值：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df = df_auto.fillna(<span class="string">&#x27;Missing&#x27;</span>)</span><br><span class="line">df.loc[[<span class="string">&#x27;UvT_Car&#x27;</span>, <span class="string">&#x27;UvT_Bike&#x27;</span>]]</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>rep78</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+      <th>turn</th>
+      <th>displacement</th>
+      <th>gear_ratio</th>
+      <th>foreign</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>UvT_Car</th>
+      <td>Missing</td>
+      <td>Missing</td>
+      <td>Missing</td>
+      <td>Missing</td>
+      <td>Missing</td>
+      <td>Missing</td>
+      <td>Missing</td>
+      <td>Missing</td>
+      <td>Missing</td>
+      <td>Missing</td>
+      <td>Missing</td>
+      <td>Missing</td>
+    </tr>
+    <tr>
+      <th>UvT_Bike</th>
+      <td>Missing</td>
+      <td>Missing</td>
+      <td>Missing</td>
+      <td>Missing</td>
+      <td>Missing</td>
+      <td>Missing</td>
+      <td>Missing</td>
+      <td>Missing</td>
+      <td>Missing</td>
+      <td>Missing</td>
+      <td>Missing</td>
+      <td>Missing</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="删除含缺失值的行"><a href="#删除含缺失值的行" class="headerlink" title="删除含缺失值的行"></a>删除含缺失值的行</h2><p>使用<code>.dropna()</code>删除缺失值：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto[<span class="string">&#x27;make&#x27;</span>].tail(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>45          Plym. Volare
+UvT_Car              NaN
+UvT_Bike             NaN
+Name: make, dtype: object
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df = df_auto.dropna(axis=<span class="number">0</span>)</span><br><span class="line">df[<span class="string">&#x27;make&#x27;</span>].tail(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>36       Olds Cutlass
+22    Dodge St. Regis
+45       Plym. Volare
+Name: make, dtype: object
+</code></pre><h1 id="处理-dataframe"><a href="#处理-dataframe" class="headerlink" title="处理 dataframe"></a>处理 dataframe</h1><h2 id="合并列（Combine-columns）生成新的一列"><a href="#合并列（Combine-columns）生成新的一列" class="headerlink" title="合并列（Combine columns）生成新的一列"></a>合并列（Combine columns）生成新的一列</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df_auto[<span class="string">&#x27;price_trunk_ratio&#x27;</span>] = df_auto.price / df_auto.trunk</span><br><span class="line">df_auto[[<span class="string">&#x27;price&#x27;</span>, <span class="string">&#x27;trunk&#x27;</span>, <span class="string">&#x27;price_trunk_ratio&#x27;</span>]].head()</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>price</th>
+      <th>trunk</th>
+      <th>price_trunk_ratio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>55</th>
+      <td>6229.0</td>
+      <td>6.0</td>
+      <td>1038.166667</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>4934.0</td>
+      <td>7.0</td>
+      <td>704.857143</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>6486.0</td>
+      <td>8.0</td>
+      <td>810.750000</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>4389.0</td>
+      <td>9.0</td>
+      <td>487.666667</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>3667.0</td>
+      <td>7.0</td>
+      <td>523.857143</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="通过遍历（iterate）每行数据框来生成新列"><a href="#通过遍历（iterate）每行数据框来生成新列" class="headerlink" title="通过遍历（iterate）每行数据框来生成新列"></a>通过遍历（iterate）每行数据框来生成新列</h2><p><strong>提出问题：如果是国外车(Foreign)，将价格（Price）乘以1.5。</strong></p>
+<h3 id="法一：使用apply-函数和lambda"><a href="#法一：使用apply-函数和lambda" class="headerlink" title="法一：使用apply()函数和lambda"></a>法一：使用<code>apply()</code>函数和<code>lambda</code></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">logic = <span class="keyword">lambda</span> x: x.price*<span class="number">1.5</span> <span class="keyword">if</span> x.foreign == <span class="string">&#x27;Foreign&#x27;</span> <span class="keyword">else</span> x.price</span><br><span class="line">df_auto[<span class="string">&#x27;new_price&#x27;</span>] = df_auto.apply(logic, axis=<span class="number">1</span>)</span><br><span class="line">df_auto[[<span class="string">&#x27;make&#x27;</span>, <span class="string">&#x27;price&#x27;</span>, <span class="string">&#x27;foreign&#x27;</span>, <span class="string">&#x27;new_price&#x27;</span>]].head()</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>foreign</th>
+      <th>new_price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>55</th>
+      <td>Datsun 200</td>
+      <td>6229.0</td>
+      <td>Foreign</td>
+      <td>9343.5</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Pont. Firebird</td>
+      <td>4934.0</td>
+      <td>Domestic</td>
+      <td>4934.0</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Plym. Sapporo</td>
+      <td>6486.0</td>
+      <td>Domestic</td>
+      <td>6486.0</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Ford Fiesta</td>
+      <td>4389.0</td>
+      <td>Domestic</td>
+      <td>4389.0</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Chev. Monza</td>
+      <td>3667.0</td>
+      <td>Domestic</td>
+      <td>3667.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h3 id="法二：使用apply-和函数"><a href="#法二：使用apply-和函数" class="headerlink" title="法二：使用apply()和函数"></a>法二：使用<code>apply()</code>和函数</h3><p>在上面的示例中，我们使用匿名lambda函数。<br>对于更复杂的处理，可以使用已定义的函数并在<code>.apply()</code>中调用它。<br>比较建议这种方式，因为最灵活并且更易于阅读。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">new_price_function</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x.foreign == <span class="string">&#x27;Foreign&#x27;</span>:</span><br><span class="line">        <span class="keyword">return</span> x.price * <span class="number">1.5</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> x.price</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df_auto[<span class="string">&#x27;new_price&#x27;</span>] = df_auto.apply(new_price_function, axis=<span class="number">1</span>) <span class="comment"># axis =1: iterate over rows</span></span><br><span class="line">df_auto[[<span class="string">&#x27;make&#x27;</span>, <span class="string">&#x27;price&#x27;</span>, <span class="string">&#x27;foreign&#x27;</span>, <span class="string">&#x27;new_price&#x27;</span>]].head()</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>foreign</th>
+      <th>new_price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>55</th>
+      <td>Datsun 200</td>
+      <td>6229.0</td>
+      <td>Foreign</td>
+      <td>9343.5</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Pont. Firebird</td>
+      <td>4934.0</td>
+      <td>Domestic</td>
+      <td>4934.0</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Plym. Sapporo</td>
+      <td>6486.0</td>
+      <td>Domestic</td>
+      <td>6486.0</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Ford Fiesta</td>
+      <td>4389.0</td>
+      <td>Domestic</td>
+      <td>4389.0</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Chev. Monza</td>
+      <td>3667.0</td>
+      <td>Domestic</td>
+      <td>3667.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h3 id="法三：列表推导式"><a href="#法三：列表推导式" class="headerlink" title="法三：列表推导式"></a>法三：列表推导式</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df_auto[<span class="string">&#x27;new_price&#x27;</span>] = [p*<span class="number">1.5</span> <span class="keyword">if</span> f == <span class="string">&#x27;Foreign&#x27;</span> <span class="keyword">else</span> p <span class="keyword">for</span> p, f <span class="keyword">in</span> zip(df_auto.price, df_auto.foreign)]</span><br><span class="line">df_auto[[<span class="string">&#x27;price&#x27;</span>, <span class="string">&#x27;foreign&#x27;</span>, <span class="string">&#x27;new_price&#x27;</span>]].sample(<span class="number">5</span>, random_state=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>price</th>
+      <th>foreign</th>
+      <th>new_price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>58</th>
+      <td>8129.0</td>
+      <td>Foreign</td>
+      <td>12193.5</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>4723.0</td>
+      <td>Domestic</td>
+      <td>4723.0</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>4647.0</td>
+      <td>Domestic</td>
+      <td>4647.0</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>4733.0</td>
+      <td>Domestic</td>
+      <td>4733.0</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>10371.0</td>
+      <td>Domestic</td>
+      <td>10371.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<p>注意：<code>random_state=1</code>保证每次获取同样的随机数样本。</p>
+<h2 id="合并dataframe"><a href="#合并dataframe" class="headerlink" title="合并dataframe"></a>合并dataframe</h2><p>有三种方式合并dataframe：</p>
+<ol>
+<li>Merge  </li>
+<li>Join  </li>
+<li>Append  </li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 数据准备</span></span><br><span class="line">df_auto_p1 = df_auto[[<span class="string">&#x27;make&#x27;</span>, <span class="string">&#x27;price&#x27;</span>, <span class="string">&#x27;mpg&#x27;</span>]]</span><br><span class="line">df_auto_p2 = df_auto[[<span class="string">&#x27;make&#x27;</span>, <span class="string">&#x27;headroom&#x27;</span>, <span class="string">&#x27;trunk&#x27;</span>]]</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto_p1.head(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>mpg</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>55</th>
+      <td>Datsun 200</td>
+      <td>6229.0</td>
+      <td>23.0</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Pont. Firebird</td>
+      <td>4934.0</td>
+      <td>18.0</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Plym. Sapporo</td>
+      <td>6486.0</td>
+      <td>26.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto_p2.head(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>headroom</th>
+      <th>trunk</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>55</th>
+      <td>Datsun 200</td>
+      <td>1.5</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Pont. Firebird</td>
+      <td>1.5</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Plym. Sapporo</td>
+      <td>1.5</td>
+      <td>8.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h3 id="Merge-数据集"><a href="#Merge-数据集" class="headerlink" title="Merge 数据集"></a>Merge 数据集</h3><p><a target="_blank" rel="noopener" href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.merge.html">http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.merge.html</a> </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">merged_auto = pd.merge(df_auto_p1, df_auto_p2, how=<span class="string">&#x27;left&#x27;</span>, on=<span class="string">&#x27;make&#x27;</span>)</span><br><span class="line">merged_auto.head(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>headroom</th>
+      <th>trunk</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Datsun 200</td>
+      <td>6229.0</td>
+      <td>23.0</td>
+      <td>1.5</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Pont. Firebird</td>
+      <td>4934.0</td>
+      <td>18.0</td>
+      <td>1.5</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Plym. Sapporo</td>
+      <td>6486.0</td>
+      <td>26.0</td>
+      <td>1.5</td>
+      <td>8.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h3 id="在索引上Join数据集"><a href="#在索引上Join数据集" class="headerlink" title="在索引上Join数据集"></a>在索引上Join数据集</h3><p>两个dataframe都必须具有与索引相同的列集（column set）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df_auto_p1.set_index(<span class="string">&#x27;make&#x27;</span>, inplace=<span class="literal">True</span>)</span><br><span class="line">df_auto_p2.set_index(<span class="string">&#x27;make&#x27;</span>, inplace=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="Append"><a href="#Append" class="headerlink" title="Append"></a>Append</h3><p><a target="_blank" rel="noopener" href="http://pandas.pydata.org/pandas-docs/stable/merging.html#concatenating-objects">http://pandas.pydata.org/pandas-docs/stable/merging.html#concatenating-objects</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df_auto_i1 = df_auto.iloc[<span class="number">0</span>:<span class="number">3</span>]</span><br><span class="line">df_auto_i2 = df_auto.iloc[<span class="number">3</span>:<span class="number">6</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto_i1</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>rep78</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+      <th>turn</th>
+      <th>displacement</th>
+      <th>gear_ratio</th>
+      <th>foreign</th>
+      <th>price_trunk_ratio</th>
+      <th>new_price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>55</th>
+      <td>Datsun 200</td>
+      <td>6229.0</td>
+      <td>23.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>6.0</td>
+      <td>2370.0</td>
+      <td>170.0</td>
+      <td>35.0</td>
+      <td>119.0</td>
+      <td>3.89</td>
+      <td>Foreign</td>
+      <td>1038.166667</td>
+      <td>9343.5</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Pont. Firebird</td>
+      <td>4934.0</td>
+      <td>18.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>7.0</td>
+      <td>3470.0</td>
+      <td>198.0</td>
+      <td>42.0</td>
+      <td>231.0</td>
+      <td>3.08</td>
+      <td>Domestic</td>
+      <td>704.857143</td>
+      <td>4934.0</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Plym. Sapporo</td>
+      <td>6486.0</td>
+      <td>26.0</td>
+      <td>NaN</td>
+      <td>1.5</td>
+      <td>8.0</td>
+      <td>2520.0</td>
+      <td>182.0</td>
+      <td>38.0</td>
+      <td>119.0</td>
+      <td>3.54</td>
+      <td>Domestic</td>
+      <td>810.750000</td>
+      <td>6486.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto_i2</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>rep78</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+      <th>turn</th>
+      <th>displacement</th>
+      <th>gear_ratio</th>
+      <th>foreign</th>
+      <th>price_trunk_ratio</th>
+      <th>new_price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>23</th>
+      <td>Ford Fiesta</td>
+      <td>4389.0</td>
+      <td>28.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>9.0</td>
+      <td>1800.0</td>
+      <td>147.0</td>
+      <td>33.0</td>
+      <td>98.0</td>
+      <td>3.15</td>
+      <td>Domestic</td>
+      <td>487.666667</td>
+      <td>4389.0</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Chev. Monza</td>
+      <td>3667.0</td>
+      <td>24.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>7.0</td>
+      <td>2750.0</td>
+      <td>179.0</td>
+      <td>40.0</td>
+      <td>151.0</td>
+      <td>2.73</td>
+      <td>Domestic</td>
+      <td>523.857143</td>
+      <td>3667.0</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>Pont. Sunbird</td>
+      <td>4172.0</td>
+      <td>24.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>7.0</td>
+      <td>2690.0</td>
+      <td>179.0</td>
+      <td>41.0</td>
+      <td>151.0</td>
+      <td>2.73</td>
+      <td>Domestic</td>
+      <td>596.000000</td>
+      <td>4172.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<p>使用<code>concat()</code>函数:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.concat([df_auto_i1, df_auto_i2])</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>rep78</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+      <th>turn</th>
+      <th>displacement</th>
+      <th>gear_ratio</th>
+      <th>foreign</th>
+      <th>price_trunk_ratio</th>
+      <th>new_price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>55</th>
+      <td>Datsun 200</td>
+      <td>6229.0</td>
+      <td>23.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>6.0</td>
+      <td>2370.0</td>
+      <td>170.0</td>
+      <td>35.0</td>
+      <td>119.0</td>
+      <td>3.89</td>
+      <td>Foreign</td>
+      <td>1038.166667</td>
+      <td>9343.5</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Pont. Firebird</td>
+      <td>4934.0</td>
+      <td>18.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>7.0</td>
+      <td>3470.0</td>
+      <td>198.0</td>
+      <td>42.0</td>
+      <td>231.0</td>
+      <td>3.08</td>
+      <td>Domestic</td>
+      <td>704.857143</td>
+      <td>4934.0</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Plym. Sapporo</td>
+      <td>6486.0</td>
+      <td>26.0</td>
+      <td>NaN</td>
+      <td>1.5</td>
+      <td>8.0</td>
+      <td>2520.0</td>
+      <td>182.0</td>
+      <td>38.0</td>
+      <td>119.0</td>
+      <td>3.54</td>
+      <td>Domestic</td>
+      <td>810.750000</td>
+      <td>6486.0</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Ford Fiesta</td>
+      <td>4389.0</td>
+      <td>28.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>9.0</td>
+      <td>1800.0</td>
+      <td>147.0</td>
+      <td>33.0</td>
+      <td>98.0</td>
+      <td>3.15</td>
+      <td>Domestic</td>
+      <td>487.666667</td>
+      <td>4389.0</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Chev. Monza</td>
+      <td>3667.0</td>
+      <td>24.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>7.0</td>
+      <td>2750.0</td>
+      <td>179.0</td>
+      <td>40.0</td>
+      <td>151.0</td>
+      <td>2.73</td>
+      <td>Domestic</td>
+      <td>523.857143</td>
+      <td>3667.0</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>Pont. Sunbird</td>
+      <td>4172.0</td>
+      <td>24.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>7.0</td>
+      <td>2690.0</td>
+      <td>179.0</td>
+      <td>41.0</td>
+      <td>151.0</td>
+      <td>2.73</td>
+      <td>Domestic</td>
+      <td>596.000000</td>
+      <td>4172.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<p>使用<code>append()</code>函数:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto_i1.append(df_auto_i2)</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>rep78</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+      <th>turn</th>
+      <th>displacement</th>
+      <th>gear_ratio</th>
+      <th>foreign</th>
+      <th>price_trunk_ratio</th>
+      <th>new_price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>55</th>
+      <td>Datsun 200</td>
+      <td>6229.0</td>
+      <td>23.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>6.0</td>
+      <td>2370.0</td>
+      <td>170.0</td>
+      <td>35.0</td>
+      <td>119.0</td>
+      <td>3.89</td>
+      <td>Foreign</td>
+      <td>1038.166667</td>
+      <td>9343.5</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Pont. Firebird</td>
+      <td>4934.0</td>
+      <td>18.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>7.0</td>
+      <td>3470.0</td>
+      <td>198.0</td>
+      <td>42.0</td>
+      <td>231.0</td>
+      <td>3.08</td>
+      <td>Domestic</td>
+      <td>704.857143</td>
+      <td>4934.0</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Plym. Sapporo</td>
+      <td>6486.0</td>
+      <td>26.0</td>
+      <td>NaN</td>
+      <td>1.5</td>
+      <td>8.0</td>
+      <td>2520.0</td>
+      <td>182.0</td>
+      <td>38.0</td>
+      <td>119.0</td>
+      <td>3.54</td>
+      <td>Domestic</td>
+      <td>810.750000</td>
+      <td>6486.0</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Ford Fiesta</td>
+      <td>4389.0</td>
+      <td>28.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>9.0</td>
+      <td>1800.0</td>
+      <td>147.0</td>
+      <td>33.0</td>
+      <td>98.0</td>
+      <td>3.15</td>
+      <td>Domestic</td>
+      <td>487.666667</td>
+      <td>4389.0</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Chev. Monza</td>
+      <td>3667.0</td>
+      <td>24.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>7.0</td>
+      <td>2750.0</td>
+      <td>179.0</td>
+      <td>40.0</td>
+      <td>151.0</td>
+      <td>2.73</td>
+      <td>Domestic</td>
+      <td>523.857143</td>
+      <td>3667.0</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>Pont. Sunbird</td>
+      <td>4172.0</td>
+      <td>24.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>7.0</td>
+      <td>2690.0</td>
+      <td>179.0</td>
+      <td>41.0</td>
+      <td>151.0</td>
+      <td>2.73</td>
+      <td>Domestic</td>
+      <td>596.000000</td>
+      <td>4172.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="分组操作（Group-by-operations）"><a href="#分组操作（Group-by-operations）" class="headerlink" title="分组操作（Group-by operations）"></a>分组操作（Group-by operations）</h2><p>使用<code>.groupby()</code>实现组内操作，处理流程如下：</p>
+<ol>
+<li><strong>Split</strong>: 根据某些条件将数据分为几组</li>
+<li><strong>Apply</strong>: 分别对每个组应用函数</li>
+<li><strong>Combine</strong>: 将结果组合到数据结构中</li>
+</ol>
+<p>参阅:<a target="_blank" rel="noopener" href="http://pandas.pydata.org/pandas-docs/stable/groupby.html">http://pandas.pydata.org/pandas-docs/stable/groupby.html</a></p>
+<h3 id="通过创建group对象拆分dataframe"><a href="#通过创建group对象拆分dataframe" class="headerlink" title="通过创建group对象拆分dataframe"></a>通过创建group对象拆分dataframe</h3><p>步骤1：创建一个组对象，该对象指定我们要创建的组。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">col_list = [<span class="string">&#x27;price&#x27;</span>, <span class="string">&#x27;mpg&#x27;</span>, <span class="string">&#x27;headroom&#x27;</span>, <span class="string">&#x27;trunk&#x27;</span>, <span class="string">&#x27;weight&#x27;</span>, <span class="string">&#x27;length&#x27;</span>]</span><br><span class="line">grouped = df_auto[col_list + [<span class="string">&#x27;foreign&#x27;</span>]].groupby([<span class="string">&#x27;foreign&#x27;</span>])</span><br></pre></td></tr></table></figure>
+<h3 id="应用示例1：计算均值摘要统计量"><a href="#应用示例1：计算均值摘要统计量" class="headerlink" title="应用示例1：计算均值摘要统计量"></a>应用示例1：计算均值摘要统计量</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grouped.mean()</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+    </tr>
+    <tr>
+      <th>foreign</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Domestic</th>
+      <td>6072.423077</td>
+      <td>19.826923</td>
+      <td>3.153846</td>
+      <td>14.750000</td>
+      <td>3317.115385</td>
+      <td>196.134615</td>
+    </tr>
+    <tr>
+      <th>Foreign</th>
+      <td>6384.681818</td>
+      <td>24.772727</td>
+      <td>2.613636</td>
+      <td>11.409091</td>
+      <td>2315.909091</td>
+      <td>168.545455</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h3 id="应用示例2：检索特定组"><a href="#应用示例2：检索特定组" class="headerlink" title="应用示例2：检索特定组"></a>应用示例2：检索特定组</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grouped.get_group(<span class="string">&#x27;Domestic&#x27;</span>).head()</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+      <th>foreign</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>47</th>
+      <td>4934.0</td>
+      <td>18.0</td>
+      <td>1.5</td>
+      <td>7.0</td>
+      <td>3470.0</td>
+      <td>198.0</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>6486.0</td>
+      <td>26.0</td>
+      <td>1.5</td>
+      <td>8.0</td>
+      <td>2520.0</td>
+      <td>182.0</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>4389.0</td>
+      <td>28.0</td>
+      <td>1.5</td>
+      <td>9.0</td>
+      <td>1800.0</td>
+      <td>147.0</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>3667.0</td>
+      <td>24.0</td>
+      <td>2.0</td>
+      <td>7.0</td>
+      <td>2750.0</td>
+      <td>179.0</td>
+      <td>Domestic</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>4172.0</td>
+      <td>24.0</td>
+      <td>2.0</td>
+      <td>7.0</td>
+      <td>2690.0</td>
+      <td>179.0</td>
+      <td>Domestic</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h3 id="应用示例3：遍历group对象中的组"><a href="#应用示例3：遍历group对象中的组" class="headerlink" title="应用示例3：遍历group对象中的组"></a>应用示例3：遍历<code>group</code>对象中的组</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> name, group <span class="keyword">in</span> grouped:</span><br><span class="line">    print(name)</span><br><span class="line">    print(group.head())</span><br></pre></td></tr></table></figure>
+<pre><code>Domestic
+     price   mpg  headroom  trunk  weight  length   foreign
+47  4934.0  18.0       1.5    7.0  3470.0   198.0  Domestic
+44  6486.0  26.0       1.5    8.0  2520.0   182.0  Domestic
+23  4389.0  28.0       1.5    9.0  1800.0   147.0  Domestic
+17  3667.0  24.0       2.0    7.0  2750.0   179.0  Domestic
+51  4172.0  24.0       2.0    7.0  2690.0   179.0  Domestic
+Foreign
+     price   mpg  headroom  trunk  weight  length  foreign
+55  6229.0  23.0       1.5    6.0  2370.0   170.0  Foreign
+56  4589.0  35.0       2.0    8.0  2020.0   165.0  Foreign
+68  5719.0  18.0       2.0   11.0  2670.0   175.0  Foreign
+72  6850.0  25.0       2.0   16.0  1990.0   156.0  Foreign
+61  4499.0  28.0       2.5    5.0  1760.0   149.0  Foreign
+</code></pre><p>在<code>group</code>对象中应用<code>.apply()</code>函数：</p>
+<p>在<code>.apply（）</code>中使用<code>lambda</code>是迭代数据子集的好方法。<br>例如，假设我们要获得每个<code>trunk</code>尺寸类别中最便宜的汽车：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_auto.groupby(<span class="string">&#x27;trunk&#x27;</span>).apply(<span class="keyword">lambda</span> df: df.sort_values(<span class="string">&#x27;price&#x27;</span>).iloc[<span class="number">0</span>]).head()</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>rep78</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+      <th>turn</th>
+      <th>displacement</th>
+      <th>gear_ratio</th>
+      <th>foreign</th>
+      <th>price_trunk_ratio</th>
+      <th>new_price</th>
+    </tr>
+    <tr>
+      <th>trunk</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>5.0</th>
+      <td>Honda Civic</td>
+      <td>4499.0</td>
+      <td>28.0</td>
+      <td>4.0</td>
+      <td>2.5</td>
+      <td>5.0</td>
+      <td>1760.0</td>
+      <td>149.0</td>
+      <td>34.0</td>
+      <td>91.0</td>
+      <td>3.30</td>
+      <td>Foreign</td>
+      <td>899.800000</td>
+      <td>6748.5</td>
+    </tr>
+    <tr>
+      <th>6.0</th>
+      <td>Datsun 200</td>
+      <td>6229.0</td>
+      <td>23.0</td>
+      <td>4.0</td>
+      <td>1.5</td>
+      <td>6.0</td>
+      <td>2370.0</td>
+      <td>170.0</td>
+      <td>35.0</td>
+      <td>119.0</td>
+      <td>3.89</td>
+      <td>Foreign</td>
+      <td>1038.166667</td>
+      <td>9343.5</td>
+    </tr>
+    <tr>
+      <th>7.0</th>
+      <td>Chev. Monza</td>
+      <td>3667.0</td>
+      <td>24.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>7.0</td>
+      <td>2750.0</td>
+      <td>179.0</td>
+      <td>40.0</td>
+      <td>151.0</td>
+      <td>2.73</td>
+      <td>Domestic</td>
+      <td>523.857143</td>
+      <td>3667.0</td>
+    </tr>
+    <tr>
+      <th>8.0</th>
+      <td>Dodge Colt</td>
+      <td>3984.0</td>
+      <td>30.0</td>
+      <td>5.0</td>
+      <td>2.0</td>
+      <td>8.0</td>
+      <td>2120.0</td>
+      <td>163.0</td>
+      <td>35.0</td>
+      <td>98.0</td>
+      <td>3.54</td>
+      <td>Domestic</td>
+      <td>498.000000</td>
+      <td>3984.0</td>
+    </tr>
+    <tr>
+      <th>9.0</th>
+      <td>Chev. Chevette</td>
+      <td>3299.0</td>
+      <td>29.0</td>
+      <td>3.0</td>
+      <td>2.5</td>
+      <td>9.0</td>
+      <td>2110.0</td>
+      <td>163.0</td>
+      <td>34.0</td>
+      <td>231.0</td>
+      <td>2.93</td>
+      <td>Domestic</td>
+      <td>366.555556</td>
+      <td>3299.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="将groupby对象聚合到新-dataframe"><a href="#将groupby对象聚合到新-dataframe" class="headerlink" title="将groupby对象聚合到新 dataframe"></a>将groupby对象聚合到新 dataframe</h2><p>如果要将每个组汇总到新数据框中的一行，则可以使用以下两个示例中的许多选项：</p>
+<h3 id="grouped-sum-和-gropued-mean"><a href="#grouped-sum-和-gropued-mean" class="headerlink" title="grouped.sum() 和 gropued.mean()"></a><code>grouped.sum()</code> 和 <code>gropued.mean()</code></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grouped.sum()</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+    </tr>
+    <tr>
+      <th>foreign</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Domestic</th>
+      <td>315766.0</td>
+      <td>1031.0</td>
+      <td>164.0</td>
+      <td>767.0</td>
+      <td>172490.0</td>
+      <td>10199.0</td>
+    </tr>
+    <tr>
+      <th>Foreign</th>
+      <td>140463.0</td>
+      <td>545.0</td>
+      <td>57.5</td>
+      <td>251.0</td>
+      <td>50950.0</td>
+      <td>3708.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grouped.mean()</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+    </tr>
+    <tr>
+      <th>foreign</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Domestic</th>
+      <td>6072.423077</td>
+      <td>19.826923</td>
+      <td>3.153846</td>
+      <td>14.750000</td>
+      <td>3317.115385</td>
+      <td>196.134615</td>
+    </tr>
+    <tr>
+      <th>Foreign</th>
+      <td>6384.681818</td>
+      <td>24.772727</td>
+      <td>2.613636</td>
+      <td>11.409091</td>
+      <td>2315.909091</td>
+      <td>168.545455</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h3 id="grouped-count-和-gropued-size"><a href="#grouped-count-和-gropued-size" class="headerlink" title="grouped.count() 和 gropued.size()"></a><code>grouped.count()</code> 和 <code>gropued.size()</code></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grouped.count()</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+    </tr>
+    <tr>
+      <th>foreign</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Domestic</th>
+      <td>52</td>
+      <td>52</td>
+      <td>52</td>
+      <td>52</td>
+      <td>52</td>
+      <td>52</td>
+    </tr>
+    <tr>
+      <th>Foreign</th>
+      <td>22</td>
+      <td>22</td>
+      <td>22</td>
+      <td>22</td>
+      <td>22</td>
+      <td>22</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grouped.size()</span><br></pre></td></tr></table></figure>
+<pre><code>foreign
+Domestic    52
+Foreign     22
+dtype: int64
+</code></pre><h3 id="grouped-first-和-gropued-last"><a href="#grouped-first-和-gropued-last" class="headerlink" title="grouped.first() 和 gropued.last()"></a><code>grouped.first()</code> 和 <code>gropued.last()</code></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grouped.first()</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+    </tr>
+    <tr>
+      <th>foreign</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Domestic</th>
+      <td>4934.0</td>
+      <td>18.0</td>
+      <td>1.5</td>
+      <td>7.0</td>
+      <td>3470.0</td>
+      <td>198.0</td>
+    </tr>
+    <tr>
+      <th>Foreign</th>
+      <td>6229.0</td>
+      <td>23.0</td>
+      <td>1.5</td>
+      <td>6.0</td>
+      <td>2370.0</td>
+      <td>170.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grouped.last()</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>price</th>
+      <th>mpg</th>
+      <th>headroom</th>
+      <th>trunk</th>
+      <th>weight</th>
+      <th>length</th>
+    </tr>
+    <tr>
+      <th>foreign</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Domestic</th>
+      <td>4060.0</td>
+      <td>18.0</td>
+      <td>5.0</td>
+      <td>16.0</td>
+      <td>3330.0</td>
+      <td>201.0</td>
+    </tr>
+    <tr>
+      <th>Foreign</th>
+      <td>12990.0</td>
+      <td>14.0</td>
+      <td>3.5</td>
+      <td>14.0</td>
+      <td>3420.0</td>
+      <td>192.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grouped.agg(&#123;<span class="string">&#x27;price&#x27;</span> : <span class="string">&#x27;first&#x27;</span>, <span class="string">&#x27;mpg&#x27;</span> : [<span class="string">&#x27;mean&#x27;</span>, <span class="string">&#x27;median&#x27;</span>], <span class="string">&#x27;trunk&#x27;</span> : [<span class="string">&#x27;mean&#x27;</span>, (<span class="keyword">lambda</span> x: <span class="number">100</span> * np.mean(x))]&#125;)</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>price</th>
+      <th colspan="2" halign="left">mpg</th>
+      <th colspan="2" halign="left">trunk</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>first</th>
+      <th>mean</th>
+      <th>median</th>
+      <th>mean</th>
+      <th>&lt;lambda_0&gt;</th>
+    </tr>
+    <tr>
+      <th>foreign</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Domestic</th>
+      <td>4934.0</td>
+      <td>19.826923</td>
+      <td>19.0</td>
+      <td>14.750000</td>
+      <td>1475.000000</td>
+    </tr>
+    <tr>
+      <th>Foreign</th>
+      <td>6229.0</td>
+      <td>24.772727</td>
+      <td>24.5</td>
+      <td>11.409091</td>
+      <td>1140.909091</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<p><code>.groupby</code>更多的操作可以参阅：<br><a target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/stable/groupby.html">https://pandas.pydata.org/pandas-docs/stable/groupby.html</a></p>
+<h1 id="重塑和数据透视表"><a href="#重塑和数据透视表" class="headerlink" title="重塑和数据透视表"></a>重塑和数据透视表</h1><h2 id="创建演示数据"><a href="#创建演示数据" class="headerlink" title="创建演示数据"></a>创建演示数据</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">tuples = [(<span class="string">&#x27;bar&#x27;</span>, <span class="string">&#x27;one&#x27;</span>,   <span class="number">1</span>, <span class="number">2</span>),</span><br><span class="line">          (<span class="string">&#x27;bar&#x27;</span>, <span class="string">&#x27;two&#x27;</span>,   <span class="number">3</span>, <span class="number">4</span>),</span><br><span class="line">          (<span class="string">&#x27;bar&#x27;</span>, <span class="string">&#x27;three&#x27;</span>, <span class="number">5</span>, <span class="number">6</span>),</span><br><span class="line">          (<span class="string">&#x27;baz&#x27;</span>, <span class="string">&#x27;one&#x27;</span>,   <span class="number">1</span>, <span class="number">2</span>),</span><br><span class="line">          (<span class="string">&#x27;baz&#x27;</span>, <span class="string">&#x27;two&#x27;</span>,   <span class="number">3</span>, <span class="number">4</span>),</span><br><span class="line">          (<span class="string">&#x27;baz&#x27;</span>, <span class="string">&#x27;three&#x27;</span>, <span class="number">5</span>, <span class="number">6</span>),</span><br><span class="line">          (<span class="string">&#x27;foo&#x27;</span>, <span class="string">&#x27;one&#x27;</span>,   <span class="number">1</span>, <span class="number">2</span>),</span><br><span class="line">          (<span class="string">&#x27;foo&#x27;</span>, <span class="string">&#x27;two&#x27;</span>,   <span class="number">3</span>, <span class="number">4</span>),</span><br><span class="line">          (<span class="string">&#x27;foo&#x27;</span>, <span class="string">&#x27;three&#x27;</span>, <span class="number">5</span>, <span class="number">6</span>)</span><br><span class="line">         ]</span><br><span class="line">df = pd.DataFrame(tuples)</span><br><span class="line">df.columns = [<span class="string">&#x27;first&#x27;</span>, <span class="string">&#x27;second&#x27;</span>, <span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>first</th>
+      <th>second</th>
+      <th>A</th>
+      <th>B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>bar</td>
+      <td>one</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>bar</td>
+      <td>two</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>bar</td>
+      <td>three</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>baz</td>
+      <td>one</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>baz</td>
+      <td>two</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>baz</td>
+      <td>three</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>foo</td>
+      <td>one</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>foo</td>
+      <td>two</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>foo</td>
+      <td>three</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="示例1：创建透视表（Create-a-pivot-table）"><a href="#示例1：创建透视表（Create-a-pivot-table）" class="headerlink" title="示例1：创建透视表（Create a pivot table）"></a>示例1：创建透视表（Create a pivot table）</h2><p>使用<code>pivot()</code>函数：<br><a target="_blank" rel="noopener" href="http://pandas.pydata.org/pandas-docs/stable/reshaping.html#reshaping-by-pivoting-dataframe-objects">http://pandas.pydata.org/pandas-docs/stable/reshaping.html#reshaping-by-pivoting-dataframe-objects</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.pivot(index=<span class="string">&#x27;first&#x27;</span>, columns=<span class="string">&#x27;second&#x27;</span>, values=<span class="string">&#x27;A&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>second</th>
+      <th>one</th>
+      <th>three</th>
+      <th>two</th>
+    </tr>
+    <tr>
+      <th>first</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>bar</th>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>baz</th>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>foo</th>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<p>使用 <code>pd.pivot_table()</code> 函数:<br><a target="_blank" rel="noopener" href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.pivot_table.html">http://pandas.pydata.org/pandas-docs/stable/generated/pandas.pivot_table.html</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.pivot_table(df, values=[<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>], index=<span class="string">&#x27;first&#x27;</span>, columns=<span class="string">&#x27;second&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="3" halign="left">A</th>
+      <th colspan="3" halign="left">B</th>
+    </tr>
+    <tr>
+      <th>second</th>
+      <th>one</th>
+      <th>three</th>
+      <th>two</th>
+      <th>one</th>
+      <th>three</th>
+      <th>two</th>
+    </tr>
+    <tr>
+      <th>first</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>bar</th>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>2</td>
+      <td>6</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>baz</th>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>2</td>
+      <td>6</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>foo</th>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>2</td>
+      <td>6</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<p>说明1：以上内容说明了Pandas本质上具有两个索引：通常的“row index”和“column index”。<br>说明2：Pandas 还具有一个称为<code>pandas.melt</code>（<a target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.melt.html">https://pandas.pydata.org/pandas-docs/stable/generated/pandas.melt.html</a>)</p>
+<h2 id="示例2：堆叠与去堆叠（Stack-and-Unstack）"><a href="#示例2：堆叠与去堆叠（Stack-and-Unstack）" class="headerlink" title="示例2：堆叠与去堆叠（Stack and Unstack）"></a>示例2：堆叠与去堆叠（Stack and Unstack）</h2><p><code>Stack</code>和<code>Unstack</code>是高级操作符，用于基于多级索引来重塑数据框。</p>
+<ul>
+<li>Stack —&gt; 向下移动数据</li>
+<li>Unstack —&gt; 向上移动数据</li>
+</ul>
+<h2 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pivot_df = pd.pivot_table(df, values=[<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>], index=<span class="string">&#x27;first&#x27;</span>, columns=<span class="string">&#x27;second&#x27;</span>)</span><br><span class="line">pivot_df</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="3" halign="left">A</th>
+      <th colspan="3" halign="left">B</th>
+    </tr>
+    <tr>
+      <th>second</th>
+      <th>one</th>
+      <th>three</th>
+      <th>two</th>
+      <th>one</th>
+      <th>three</th>
+      <th>two</th>
+    </tr>
+    <tr>
+      <th>first</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>bar</th>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>2</td>
+      <td>6</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>baz</th>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>2</td>
+      <td>6</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>foo</th>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>2</td>
+      <td>6</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pivot_df.stack(level=[<span class="string">&#x27;second&#x27;</span>])</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+    </tr>
+    <tr>
+      <th>first</th>
+      <th>second</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" valign="top">bar</th>
+      <th>one</th>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>three</th>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>two</th>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">baz</th>
+      <th>one</th>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>three</th>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>two</th>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">foo</th>
+      <th>one</th>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>three</th>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>two</th>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<p>注意：我们也可以只使用<code>pivot_df.stack()</code>，因为它将默认选择索引的“last”级别。</p>
+<h2 id="Unstack"><a href="#Unstack" class="headerlink" title="Unstack"></a>Unstack</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.set_index([<span class="string">&#x27;first&#x27;</span>, <span class="string">&#x27;second&#x27;</span>], inplace=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+    </tr>
+    <tr>
+      <th>first</th>
+      <th>second</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" valign="top">bar</th>
+      <th>one</th>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>two</th>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>three</th>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">baz</th>
+      <th>one</th>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>two</th>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>three</th>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">foo</th>
+      <th>one</th>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>two</th>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>three</th>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.unstack(level=[<span class="string">&#x27;first&#x27;</span>])</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="3" halign="left">A</th>
+      <th colspan="3" halign="left">B</th>
+    </tr>
+    <tr>
+      <th>first</th>
+      <th>bar</th>
+      <th>baz</th>
+      <th>foo</th>
+      <th>bar</th>
+      <th>baz</th>
+      <th>foo</th>
+    </tr>
+    <tr>
+      <th>second</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>one</th>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>three</th>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+      <td>6</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>two</th>
+      <td>3</td>
+      <td>3</td>
+      <td>3</td>
+      <td>4</td>
+      <td>4</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.unstack(level=[<span class="string">&#x27;second&#x27;</span>])</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="3" halign="left">A</th>
+      <th colspan="3" halign="left">B</th>
+    </tr>
+    <tr>
+      <th>second</th>
+      <th>one</th>
+      <th>three</th>
+      <th>two</th>
+      <th>one</th>
+      <th>three</th>
+      <th>two</th>
+    </tr>
+    <tr>
+      <th>first</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>bar</th>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>2</td>
+      <td>6</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>baz</th>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>2</td>
+      <td>6</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>foo</th>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>2</td>
+      <td>6</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h1 id="处理日期数据"><a href="#处理日期数据" class="headerlink" title="处理日期数据"></a>处理日期数据</h1><p>Pandas具有很多内置功能来处理时间序列数据<br><a target="_blank" rel="noopener" href="http://pandas.pydata.org/pandas-docs/stable/timeseries.html">http://pandas.pydata.org/pandas-docs/stable/timeseries.html</a></p>
+<p>文档概览：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Remarks</th>
+<th>How to create:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Timestamp</code></td>
+<td>Represents a single time stamp</td>
+<td><code>to_datetime</code>, <code>Timestamp</code></td>
+</tr>
+<tr>
+<td><code>DatetimeIndex</code></td>
+<td>Index of <code>Timestamp</code></td>
+<td><code>to_datetime</code>, <code>date_range</code>, <code>DatetimeIndex</code></td>
+</tr>
+<tr>
+<td><code>Period</code></td>
+<td>Represents a single time span</td>
+<td><code>Period</code></td>
+</tr>
+<tr>
+<td><code>PeriodIndex</code></td>
+<td>Index of <code>Period</code></td>
+<td><code>period_range</code>, <code>PeriodIndex</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="生成日期范围"><a href="#生成日期范围" class="headerlink" title="生成日期范围"></a>生成日期范围</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">date_index = pd.date_range(<span class="string">&#x27;1/1/2011&#x27;</span>, periods=len(df_auto.index), freq=<span class="string">&#x27;D&#x27;</span>)</span><br><span class="line">date_index[<span class="number">0</span>:<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>DatetimeIndex([&#39;2011-01-01&#39;, &#39;2011-01-02&#39;, &#39;2011-01-03&#39;, &#39;2011-01-04&#39;,
+               &#39;2011-01-05&#39;],
+              dtype=&#39;datetime64[ns]&#39;, freq=&#39;D&#39;)
+</code></pre><p>便于解释，在<code>df_auto</code>中添加日期：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df_ad = df_auto.copy()[[<span class="string">&#x27;make&#x27;</span>, <span class="string">&#x27;price&#x27;</span>]]</span><br><span class="line">df_ad[<span class="string">&#x27;date&#x27;</span>] = date_index</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_ad.head()</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>55</th>
+      <td>Datsun 200</td>
+      <td>6229.0</td>
+      <td>2011-01-01</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Pont. Firebird</td>
+      <td>4934.0</td>
+      <td>2011-01-02</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Plym. Sapporo</td>
+      <td>6486.0</td>
+      <td>2011-01-03</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Ford Fiesta</td>
+      <td>4389.0</td>
+      <td>2011-01-04</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Chev. Monza</td>
+      <td>3667.0</td>
+      <td>2011-01-05</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_ad.dtypes</span><br></pre></td></tr></table></figure>
+<pre><code>make             object
+price           float64
+date     datetime64[ns]
+dtype: object
+</code></pre><h2 id="将-str-列转为-date-列"><a href="#将-str-列转为-date-列" class="headerlink" title="将 str 列转为 date 列"></a>将 <code>str</code> 列转为 <code>date</code> 列</h2><p>从外部导入数据的时候，会将日期数据识别成字符型。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df_ad[<span class="string">&#x27;date&#x27;</span>] = df_ad[<span class="string">&#x27;date&#x27;</span>].astype(str)</span><br><span class="line">df_ad[<span class="string">&#x27;date&#x27;</span>].dtypes</span><br></pre></td></tr></table></figure>
+<pre><code>dtype(&#39;O&#39;)
+</code></pre><p>我们现在无法对该列执行任何日期时间操作，因为它的数据类型错误！</p>
+<p>幸运的是，我们可以这样修复它：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.to_datetime(df_ad[<span class="string">&#x27;date&#x27;</span>]).dtypes</span><br></pre></td></tr></table></figure>
+<pre><code>dtype(&#39;&lt;M8[ns]&#39;)
+</code></pre><p>或者：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_ad[<span class="string">&#x27;date&#x27;</span>] = df_ad[<span class="string">&#x27;date&#x27;</span>].apply(<span class="keyword">lambda</span> x: pd.to_datetime(x))</span><br></pre></td></tr></table></figure>
+<h2 id="选择特定范围内的观察值"><a href="#选择特定范围内的观察值" class="headerlink" title="选择特定范围内的观察值"></a>选择特定范围内的观察值</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.Timestamp(<span class="string">&#x27;2011-02-01&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>Timestamp(&#39;2011-02-01 00:00:00&#39;)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.to_datetime(<span class="string">&#x27;01-02-2011&#x27;</span>, format=<span class="string">&#x27;%d-%m-%Y&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>Timestamp(&#39;2011-02-01 00:00:00&#39;)
+</code></pre><p>提示：通常最好明确包含格式，以避免意外行为。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_ad[df_ad.date &gt; pd.to_datetime(<span class="string">&#x27;07-03-2011&#x27;</span>, format=<span class="string">&#x27;%d-%m-%Y&#x27;</span>)]</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>37</th>
+      <td>Olds Delta 88</td>
+      <td>4890.0</td>
+      <td>2011-03-08</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>Pont. Catalina</td>
+      <td>5798.0</td>
+      <td>2011-03-09</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Buick LeSabre</td>
+      <td>5788.0</td>
+      <td>2011-03-10</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>Olds Omega</td>
+      <td>4181.0</td>
+      <td>2011-03-11</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Buick Century</td>
+      <td>4816.0</td>
+      <td>2011-03-12</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>Olds Cutlass</td>
+      <td>4733.0</td>
+      <td>2011-03-13</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Dodge St. Regis</td>
+      <td>6342.0</td>
+      <td>2011-03-14</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>Plym. Volare</td>
+      <td>4060.0</td>
+      <td>2011-03-15</td>
+    </tr>
+    <tr>
+      <th>UvT_Car</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2011-03-16</td>
+    </tr>
+    <tr>
+      <th>UvT_Bike</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2011-03-17</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<p>我们也可以使用Pandas的<code>.isin()</code>代替<code>date_range</code>对象。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_ad[df_ad.date.isin(pd.date_range(<span class="string">&#x27;2/20/2011&#x27;</span>, <span class="string">&#x27;3/11/2011&#x27;</span>, freq=<span class="string">&#x27;D&#x27;</span>))]</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>11</th>
+      <td>Cad. Eldorado</td>
+      <td>14500.0</td>
+      <td>2011-02-20</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>Merc. Cougar</td>
+      <td>5379.0</td>
+      <td>2011-02-21</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Buick Riviera</td>
+      <td>10372.0</td>
+      <td>2011-02-22</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Chev. Malibu</td>
+      <td>4504.0</td>
+      <td>2011-02-23</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>Merc. Zephyr</td>
+      <td>3291.0</td>
+      <td>2011-02-24</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>Olds Toronado</td>
+      <td>10371.0</td>
+      <td>2011-02-25</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>Pont. Le Mans</td>
+      <td>4723.0</td>
+      <td>2011-02-26</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Linc. Continental</td>
+      <td>11497.0</td>
+      <td>2011-02-27</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>Merc. Marquis</td>
+      <td>6165.0</td>
+      <td>2011-02-28</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Dodge Diplomat</td>
+      <td>4010.0</td>
+      <td>2011-03-01</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Dodge Magnum</td>
+      <td>5886.0</td>
+      <td>2011-03-02</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>Plym. Horizon</td>
+      <td>4482.0</td>
+      <td>2011-03-03</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Buick Electra</td>
+      <td>7827.0</td>
+      <td>2011-03-04</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Cad. Deville</td>
+      <td>11385.0</td>
+      <td>2011-03-05</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Chev. Impala</td>
+      <td>5705.0</td>
+      <td>2011-03-06</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>Olds 98</td>
+      <td>8814.0</td>
+      <td>2011-03-07</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>Olds Delta 88</td>
+      <td>4890.0</td>
+      <td>2011-03-08</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>Pont. Catalina</td>
+      <td>5798.0</td>
+      <td>2011-03-09</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Buick LeSabre</td>
+      <td>5788.0</td>
+      <td>2011-03-10</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>Olds Omega</td>
+      <td>4181.0</td>
+      <td>2011-03-11</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="提取日期的组成部分"><a href="#提取日期的组成部分" class="headerlink" title="提取日期的组成部分"></a>提取日期的组成部分</h2><p>可以从日期中提取<code>day</code>,<code>month</code>和<code>year</code>：  </p>
+<p><a target="_blank" rel="noopener" href="http://pandas.pydata.org/pandas-docs/stable/timeseries.html#time-date-components">http://pandas.pydata.org/pandas-docs/stable/timeseries.html#time-date-components</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df_ad[<span class="string">&#x27;day&#x27;</span>] = df_ad[<span class="string">&#x27;date&#x27;</span>].apply(<span class="keyword">lambda</span> x: x.day)</span><br><span class="line">df_ad.head()</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>date</th>
+      <th>day</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>55</th>
+      <td>Datsun 200</td>
+      <td>6229.0</td>
+      <td>2011-01-01</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Pont. Firebird</td>
+      <td>4934.0</td>
+      <td>2011-01-02</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Plym. Sapporo</td>
+      <td>6486.0</td>
+      <td>2011-01-03</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Ford Fiesta</td>
+      <td>4389.0</td>
+      <td>2011-01-04</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Chev. Monza</td>
+      <td>3667.0</td>
+      <td>2011-01-05</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="日期运算（Manipulate）"><a href="#日期运算（Manipulate）" class="headerlink" title="日期运算（Manipulate）"></a>日期运算（Manipulate）</h2><p>参阅： <a target="_blank" rel="noopener" href="http://pandas.pydata.org/pandas-docs/stable/timeseries.html#dateoffset-objects">http://pandas.pydata.org/pandas-docs/stable/timeseries.html#dateoffset-objects</a>  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df_ad[<span class="string">&#x27;new_date&#x27;</span>] = df_ad.date.apply(<span class="keyword">lambda</span> x: x + pd.DateOffset(years=<span class="number">1</span>))</span><br><span class="line">df_ad.head()</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>make</th>
+      <th>price</th>
+      <th>date</th>
+      <th>day</th>
+      <th>new_date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>55</th>
+      <td>Datsun 200</td>
+      <td>6229.0</td>
+      <td>2011-01-01</td>
+      <td>1</td>
+      <td>2012-01-01</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Pont. Firebird</td>
+      <td>4934.0</td>
+      <td>2011-01-02</td>
+      <td>2</td>
+      <td>2012-01-02</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Plym. Sapporo</td>
+      <td>6486.0</td>
+      <td>2011-01-03</td>
+      <td>3</td>
+      <td>2012-01-03</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Ford Fiesta</td>
+      <td>4389.0</td>
+      <td>2011-01-04</td>
+      <td>4</td>
+      <td>2012-01-04</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Chev. Monza</td>
+      <td>3667.0</td>
+      <td>2011-01-05</td>
+      <td>5</td>
+      <td>2012-01-05</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+</div><div id="donate"><link rel="stylesheet" type="text/css" href="/css/donate.css"><script type="text/javascript" src="/js/donate.js" successtext="复制成功!"></script><a class="pos-f tr3" id="github" target="_blank" rel="noopener" href="https://github.com/Kaiyuan/donate-page" arget="_blank" title="Github"></a><div id="DonateText">Donate</div><ul class="list pos-f" id="donateBox"><li id="AliPay" qr="/img/alipayQR.jpg"></li><li id="WeChat" qr="/img/wechatQR.jpg"></li></ul><div class="pos-f left-100" id="QRBox"><div id="MainBox"></div></div></div><div class="post-copyright"><script type="text/javascript" src="/js/copyright.js" successtext="复制成功!"></script><link rel="stylesheet" type="text/css" href="/css/copyright.css"><p><span>本文标题：</span>PythonforResearch|2_数据处理</p><p><span>文章作者：</span>Gang Li</p><p><span>发布时间：</span>2020-08-17</p><p><span>最后更新：</span>2021-04-13</p><p><span>原始链接：</span><a href="/2020/08/17/PythonforResearch-2-数据处理/">http://lgspace.top/2020/08/17/PythonforResearch-2-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/</a><span class="copy-path"><i class="fa fa-clipboard" data-clipboard-text="http://lgspace.top/2020/08/17/PythonforResearch-2-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"></i></span></p><p><span>版权声明：</span>本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</p></div><br><script type="text/javascript" src="/js/share.js?v=1.0.0" async></script><a class="article-share-link" data-url="http://lgspace.top/2020/08/17/PythonforResearch-2-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" data-id="cktjvhcny00b88cor4w2khn6q" data-qrcode="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADNUlEQVR42u3ay47iQAwFUP7/pxmpVyPNJLm2g0Tcp1aogaJOIeH24/WK1/tn/f3433X+rny3o/ce/eXoU25Y2NjY2A9hv0/XOeCccfRscuijZ5P9oy8GGxsbex27F7TOt04C0hGjen25BRsbG/s3s6shJEld8iSkl8BgY2NjY1f/xU8Ol19xXhfCxsbGxp6EmeQK8ip9b4cP1tKwsbGxv57da/R+5+OP97exsbGxv4z9Lq5qaMnDVa/N/G4tbGxs7E3s83J8dYwmbyokTd98oKfabMDGxsbex64WhnqXkh+lGjhH6Qo2Njb2CnaPOhm+qRb3e9/kRQMDGxsbewX7rqJSfsRJO7Y3JFTubGNjY2M/kF14QzFtSApA1WZDL6T9J4BhY2NjL2XfW8pPgly+f+9s5ZvDxsbGfiy718rNy/29BnN1xGc0rIONjY39QHb1cL1mQG8QpxyW5gUmbGxs7Aey8x/9JBmYt4fnaUkUerGxsbEXsXvDjkkDID/cJwpbUfKDjY2NvYidF4/yIFQt7s/TlXy4ExsbG3sre9IYmCcnk5ZAUvCKYi82Njb2CvYrXpMiVF4MmqRJ0euxsbGxV7B7oWKeeBQypEEruhCxsbGxsR/Izks51SQhTw+S4tG83Rv1t7GxsbEfzp6M5vSGL88vpVp+KoQ0bGxs7HXs/A29gHe+fyHwxCe8SLewsbGx17HnZaNyezWAJfskgfCiMYCNjY29jl0IAzcN5UwCW/MSsbGxsdexe8GgN3zTSyfmoREbGxt7K7s38pK3EHqX0is5VceDsLGxsXewq6MwE3Y1Ybj30y/aA9jY2NiPZU+auD1APtxTxecDndjY2Nib2NUj5sWgavIwCXvlShE2Njb2Ovb5j35y3FGZvvjp+etv2wgbGxv769n5Sgr6k0A4Kfonp8LGxsbex+6FuuqHJYX7XrrSu0RsbGzsfew8aPWONW8JzANYOXpjY2NjP5A9GbKsVm/Oj9VrDJQLVdjY2Ni/kp0cNw8h1XSi2rS4CKLY2NjY2K2UoxqQJg2Mi0vExsbGXsfuNXfnO8wxvUYCNjY29ib2pNGbvL43vnPXpWNjY2OvZv8BypTA5M7rsc8AAAAASUVORK5CYII=">分享</a><div class="tags"><a href="/tags/Python/"><i class="fa fa-tag"></i>Python</a><a href="/tags/%E5%B7%A5%E5%85%B7/"><i class="fa fa-tag"></i>工具</a></div><div class="post-nav"><a class="pre" href="/2020/08/17/Pythonn%E4%BB%8EPDF%E4%B8%AD%E6%8F%90%E5%8F%96%E6%95%B0%E6%8D%AE/">Pythonn从PDF中提取数据</a><a class="next" href="/2020/08/17/PythonforResearch-1-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">PythonforResearch|1_文件操作</a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == 'true' ? true : false;
+var verify = 'false' == 'true' ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'4r3jOS497uyoVjem8hrofuye-MdYXbMMI',
+  appKey:'dRzNUi4hOYKfUV95GTwK8hoH',
+  placeholder:'给我留言吧～',
+  avatar:'retro',
+  guest_info:guest_info,
+  pageSize:'7'
+})
+</script></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="sidebar"><div class="widget"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"/><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script><div class="aplayer" data-id="5305796974" data-server="netease" data-type="playlist" data-listmaxheight="98px" data-theme="#555555"></div></div><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">69</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><span class="category-list-count">11</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/" style="font-size: 15px;">微观经济学</a> <a href="/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" style="font-size: 15px;">课程笔记</a> <a href="/tags/HUST/" style="font-size: 15px;">HUST</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Stata/" style="font-size: 15px;">Stata</a> <a href="/tags/%E6%95%B0%E6%8D%AE/" style="font-size: 15px;">数据</a> <a href="/tags/Casual-Inference/" style="font-size: 15px;">Casual Inference</a> <a href="/tags/%E6%96%87%E7%8C%AE/" style="font-size: 15px;">文献</a> <a href="/tags/Data/" style="font-size: 15px;">Data</a> <a href="/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/" style="font-size: 15px;">经济学</a> <a href="/tags/%E5%8F%91%E5%B1%95%E7%BB%8F%E6%B5%8E%E5%AD%A6/" style="font-size: 15px;">发展经济学</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 15px;">笔记</a> <a href="/tags/%E8%AE%A1%E9%87%8F/" style="font-size: 15px;">计量</a> <a href="/tags/English/" style="font-size: 15px;">English</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 15px;">工具</a> <a href="/tags/%E6%96%87%E4%BB%B6/" style="font-size: 15px;">文件</a> <a href="/tags/IELTS/" style="font-size: 15px;">IELTS</a> <a href="/tags/Notes/" style="font-size: 15px;">Notes</a> <a href="/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/" style="font-size: 15px;">宏观经济学</a> <a href="/tags/%E5%8F%B6%E8%88%AA/" style="font-size: 15px;">叶航</a> <a href="/tags/Jupyter-Notebook/" style="font-size: 15px;">Jupyter Notebook</a> <a href="/tags/Mankin/" style="font-size: 15px;">Mankin</a> <a href="/tags/%E8%AE%A1%E9%87%8F%E7%BB%8F%E6%B5%8E%E5%AD%A6/" style="font-size: 15px;">计量经济学</a> <a href="/tags/%E5%8C%97%E4%BA%AC/" style="font-size: 15px;">北京</a> <a href="/tags/%E7%94%B5%E5%BD%B1/" style="font-size: 15px;">电影</a> <a href="/tags/%E8%A7%82%E5%90%8E%E6%84%9F/" style="font-size: 15px;">观后感</a> <a href="/tags/Zotero/" style="font-size: 15px;">Zotero</a> <a href="/tags/%E6%83%B3%E6%B3%95/" style="font-size: 15px;">想法</a> <a href="/tags/%E6%97%85%E8%A1%8C/" style="font-size: 15px;">旅行</a> <a href="/tags/%E5%8A%A0%E5%AF%86/" style="font-size: 15px;">加密</a> <a href="/tags/%E7%BE%8E%E9%A3%9F/" style="font-size: 15px;">美食</a> <a href="/tags/LaTeX/" style="font-size: 15px;">LaTeX</a> <a href="/tags/%E4%BF%A1%E5%8F%A3%E8%83%A1%E8%AF%8C/" style="font-size: 15px;">信口胡诌</a> <a href="/tags/%E8%8B%B1%E8%AF%AD/" style="font-size: 15px;">英语</a> <a href="/tags/%E8%80%83%E5%8D%9A/" style="font-size: 15px;">考博</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/09/14/Advanced-MicroEcon-Notes-1/">高级微观经济学II课程笔记（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/05/19/Guide-to-Writing-in-Economics/">Guide to Writing in Economics</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/04/28/Exporting-Data-from-PDFs/">从 PDF 文件提取文本内容</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/04/22/Markdown-Typora-Brief-Intro/">Markdown-Typora-Brief-Intro</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/04/21/MacroEcon-Mankin-DynamicAD-AS/">MacroEcon-Mankin-DynamicAD-AS</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/04/20/DevelopEcon-ZhangPeiGang-Notes/">公平与发展</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/04/20/MacroEcon-Models/">MacroEcon-Models</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/04/20/MacroEcon-Mankin-Business-Cycle-Theory/">MacroEcon-Mankin-Business-Cycle-Theory</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/04/20/MacroEcon-Mankin-GrowthTheory/">增长理论：超长期中的经济</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/04/19/MacroEcon-Mankin-Outline-ClassicalTheory/">古典理论：长期中的经济</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://magi.com/" title="magi 搜索" target="_blank">magi 搜索</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2021 <a href="/." rel="nofollow">LG's Blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"><link rel="stylesheet" type="text/css" href="/css/search.css?v=1.0.0"><script type="text/javascript" src="/js/search.js?v=1.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" color="0,0,0" opacity="0.5" zIndex="-2" count="50" src="//cdn.jsdelivr.net/npm/canvas-nest.js/dist/canvas-nest.min.js"></script><script type="text/javascript" src="/js/love.js"></script><script type="text/javascript" src="/js/copycode.js" successtext="复制成功!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=1.0.0"></script><script>(function(d) {
+  var config = {
+    kitId: 'qpn2tap',
+    scriptTimeout: 3000,
+    async: true
+  },
+  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+})(document);</script></div></body></html>
