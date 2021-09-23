@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>宏观经济常用数据库</title>
+      <link href="2021/09/23/MacroEcon-Data-Sources/"/>
+      <url>2021/09/23/MacroEcon-Data-Sources/</url>
+      
+        <content type="html"><![CDATA[<p>宏观经济常用数据库介绍。</p><a id="more"></a><p>宏观经济变量（4+2） $\rightarrow$ 宏观经济变量的数据？</p><ul><li>经济增长：GDP</li><li>充分就业：失业率</li><li>物价稳定：CPI，GDP deflator， PPP</li><li>国际收支平衡（资产价格的稳定）：顺差、逆差及外汇储备来衡量</li><li>资产价格稳定：房地产？</li><li>收入分配：基尼系数？</li><li>人口</li><li>财政</li></ul><p>层面：世界、全国、区域</p><p>频率：月度、季度和年度</p><p>数据来源：</p><p>国际：</p><p><a href="https://www.aeaweb.org/resources/data/us-macro-regional">U.S. macroeconomic data - American Economic Association</a></p><ul><li>World Bank Open Data: <a href="https://data.worldbank.org/">https://data.worldbank.org/</a><ul><li><code>ssc install wbopendata</code></li><li><a href="https://github.com/jpazvd/wbopendata">https://github.com/jpazvd/wbopendata</a></li><li>World Development Indicators database </li></ul></li><li>IMF：<a href="https://www.imf.org/en/Data">https://www.imf.org/en/Data</a><ul><li>“世界经济展望”(World Economic Outlook) </li></ul></li><li>FRED（联邦储备经济数据库）<ul><li>Stata: <code>ssc install freduse</code></li></ul></li><li><a href="https://libguides.umn.edu/11843">UN Commodity Trade Statistics Database</a>；UN Comtrade联合国商品贸易统计数据库</li><li>WTO</li><li>WHO</li><li>UNdata</li><li><a href="https://www.rug.nl/ggdc/productivity/pwt/">Penn World Tables</a></li></ul><p>国内：</p><ul><li>CCER数据库</li><li>CEIC</li><li>RESSET宏观经济数据库</li><li>CSMAR数据库</li><li><a href="https://link.zhihu.com/?target=http%3A//www.stats.gov.cn/tjsj/">中华人民共和国国家统计局</a></li><li><a href="https://link.zhihu.com/?target=http%3A//www.pbc.gov.cn/diaochatongjisi/">中国人民银行统计数据</a></li><li><a href="https://link.zhihu.com/?target=http%3A//data.eastmoney.com/center/macro.html">东方财富网经济数据中心</a></li><li><a href="https://link.zhihu.com/?target=http%3A//mac.hexun.com/">和讯网宏观数据</a></li><li><a href="https://link.zhihu.com/?target=http%3A//finance.sina.com.cn/mac/">新浪财经-中国宏观经济数据</a></li><li>中经网数据库</li><li><a href="http://edu.macrochina.com.cn.qh.yitlink.com:8443/skins/11/stat/index.shtml">中宏统计数据库</a></li><li>塔塔统计数据库<ul><li>《塔塔统计数据库》由塔塔资讯提供。其数据主要来源：国家统计局、国家海关总署、工商总局、税务总局；中国工业和信息化部、发改委、文化部、教育部、商务部等部门；中国证监会、中国保监会、中国银监会及各个行业协会；塔塔资讯自有的信息采集系统、市场调查机构、研究机构等。</li></ul></li><li>EPS数据库</li><li>中国研究数据服务平台（Chinese Research Data Services，简称CNRDS）</li><li>Choice金融终端</li></ul><p>Python包：</p><ul><li><code>Tushare</code>:<a href="https://waditu.com/document/2?doc_id=25">https://waditu.com/document/2?doc_id=25</a><ul><li>适用对象：量化投资分析师（Quant）、对金融市场进行大数据分析的企业和个人、开发以证券为基础的金融类产品和解决方案的公司、正在学习利用Python进行数据分析的人</li></ul></li><li><code>AKShare</code>:<a href="https://www.akshare.xyz/introduction.html">https://www.akshare.xyz/introduction.html</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据 </tag>
+            
+            <tag> 经济学 </tag>
+            
+            <tag> 宏观经济学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>高级微观经济学II课程笔记（1）</title>
       <link href="2021/09/14/Advanced-MicroEcon-Notes-1/"/>
       <url>2021/09/14/Advanced-MicroEcon-Notes-1/</url>
