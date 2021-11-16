@@ -2166,7 +2166,7 @@
       </tags>
   </entry>
   <entry>
-    <title>高微II课程笔记-1</title>
+    <title>高微II课程笔记-01</title>
     <url>/2021/09/14/Advanced-MicroEcon-Notes-1/</url>
     <content><![CDATA[<blockquote>
 <p>2021年9月14日</p>
@@ -4557,8 +4557,8 @@ R_{uc}^2 = \frac{\sum_{i=1}^n \hat y_i^2}{\sum_{i=1}^n y_i^2}</script><p>如果�
         <category>学习</category>
       </categories>
       <tags>
-        <tag>微观经济学</tag>
         <tag>经济学</tag>
+        <tag>微观经济学</tag>
       </tags>
   </entry>
   <entry>
@@ -4591,8 +4591,8 @@ q = AK^\alpha L^\beta</script>]]></content>
         <category>学习</category>
       </categories>
       <tags>
-        <tag>微观经济学</tag>
         <tag>经济学</tag>
+        <tag>微观经济学</tag>
       </tags>
   </entry>
   <entry>
@@ -21353,8 +21353,8 @@ P(W_{m},Z_{m},\theta_{m},\Phi;\alpha,\beta) = \prod_{n=1}^{N_{m}}P(\theta_m;\alp
         <category>学习</category>
       </categories>
       <tags>
-        <tag>文献</tag>
         <tag>笔记</tag>
+        <tag>文献</tag>
         <tag>Python</tag>
       </tags>
   </entry>
