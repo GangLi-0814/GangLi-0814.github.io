@@ -2160,13 +2160,13 @@
         <category>学习</category>
       </categories>
       <tags>
-        <tag>数据</tag>
         <tag>经济学</tag>
         <tag>宏观经济学</tag>
+        <tag>数据</tag>
       </tags>
   </entry>
   <entry>
-    <title>高级微观经济学II课程笔记（1）</title>
+    <title>高微II课程笔记-1</title>
     <url>/2021/09/14/Advanced-MicroEcon-Notes-1/</url>
     <content><![CDATA[<blockquote>
 <p>2021年9月14日</p>
@@ -2250,18 +2250,6 @@
         <tag>微观经济学</tag>
         <tag>课程笔记</tag>
         <tag>HUST</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Guide to Writing in Economics</title>
-    <url>/2021/05/19/Guide-to-Writing-in-Economics/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>English</tag>
-        <tag>Notes</tag>
       </tags>
   </entry>
   <entry>
@@ -3535,59 +3523,6 @@ Y_{Ni} =
       </tags>
   </entry>
   <entry>
-    <title>📒 English-Notes</title>
-    <url>/2021/04/07/English-Notes/</url>
-    <content><![CDATA[<blockquote>
-<p>So, desperate, I did what I always do when I want to learn something new—I developed a course on causality to force myself to learn all the things I didn’t know.</p>
-</blockquote>
-<a id="more"></a>
-<p>be intrigued with</p>
-<p>falsify</p>
-<p>This is overwhelmingly exciting, and a seed had been planted.</p>
-<p>enamore</p>
-<p>fascinating topics</p>
-<p>I struggled to understand econometrics at a deep level.</p>
-<p>I was restless the second I got here.</p>
-<p>I couldn’t really find an example of the sort of class I was looking for, so I cobbled together a patchwork of ideas from several disciplines and authors.</p>
-<p>to put it bluntly</p>
-<p>Competency in the sense that they can take data, write code and, using theoretical and contextual knowledge, implement a reasonable design in one of their own projects.</p>
-<p>through a somewhat labyrinthine path to these methods.</p>
-<p>It’s a thorny task.</p>
-<p>be suspicious of </p>
-<p>retrospective</p>
-<p>cornerstone</p>
-<p>phenomena</p>
-<p>confound</p>
-<p>expound</p>
-<p>immensely</p>
-<p>straightforward</p>
-<p>preoccupation</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>English</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DataVisual-WuHan-Hospital</title>
-    <url>/2021/04/01/DataVisual-WuHan-Hospital/</url>
-    <content><![CDATA[<p>获取数据源</p>
-<ul>
-<li>现成的公开数据，如医院、学校、上市公司名称等。</li>
-</ul>
-<p><a href="http://wjw.wuhan.gov.cn/bsfw_28/bjcx/yljgmd/">武汉市卫健委-医疗机构名单</a></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Stata</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>永久收入假说</title>
     <url>/2021/04/01/%E6%B0%B8%E4%B9%85%E6%94%B6%E5%85%A5%E5%81%87%E8%AF%B4/</url>
     <content><![CDATA[<p>罗默高级宏观经济学笔记，永久收入假说。</p>
@@ -4624,26 +4559,6 @@ R_{uc}^2 = \frac{\sum_{i=1}^n \hat y_i^2}{\sum_{i=1}^n y_i^2}</script><p>如果�
       <tags>
         <tag>微观经济学</tag>
         <tag>经济学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常用数据说明及下载</title>
-    <url>/2021/03/24/Database/</url>
-    <content><![CDATA[<p>本帖收集经管类研究常用的数据及其下载。</p>
-<a id="more"></a>
-<h2 id="微观数据"><a href="#微观数据" class="headerlink" title="微观数据"></a>微观数据</h2><p>微观调查数据</p>
-<p>工业企业数据库</p>
-<p>海关数据库</p>
-<h2 id="宏观数据"><a href="#宏观数据" class="headerlink" title="宏观数据"></a>宏观数据</h2><h2 id="书籍配套数据"><a href="#书籍配套数据" class="headerlink" title="书籍配套数据"></a>书籍配套数据</h2><p>Hill-poe4stata</p>
-<p>Woordriage</p>
-<p>陈强-计量经济学及Stata应用</p>
-<p>陈强-高级计量经济学及Stata应用</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>数据</tag>
       </tags>
   </entry>
   <entry>
@@ -20608,8 +20523,8 @@ L = L_1 + L_2 = k Y - hr</script><p><img src="/2021/03/23/MacroEcon-Notes-ZJU-Ye
         <category>学习</category>
       </categories>
       <tags>
-        <tag>Stata</tag>
         <tag>工具</tag>
+        <tag>Stata</tag>
       </tags>
   </entry>
   <entry>
@@ -21266,8 +21181,8 @@ L = L_1 + L_2 = k Y - hr</script><p><img src="/2021/03/23/MacroEcon-Notes-ZJU-Ye
       </categories>
       <tags>
         <tag>Data</tag>
-        <tag>Stata</tag>
         <tag>工具</tag>
+        <tag>Stata</tag>
       </tags>
   </entry>
   <entry>
@@ -21439,8 +21354,8 @@ P(W_{m},Z_{m},\theta_{m},\Phi;\alpha,\beta) = \prod_{n=1}^{N_{m}}P(\theta_m;\alp
       </categories>
       <tags>
         <tag>文献</tag>
-        <tag>Python</tag>
         <tag>笔记</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -21470,8 +21385,8 @@ P(W_{m},Z_{m},\theta_{m},\Phi;\alpha,\beta) = \prod_{n=1}^{N_{m}}P(\theta_m;\alp
         <category>学习</category>
       </categories>
       <tags>
-        <tag>Stata</tag>
         <tag>工具</tag>
+        <tag>Stata</tag>
         <tag>LaTeX</tag>
       </tags>
   </entry>
@@ -21492,8 +21407,8 @@ P(W_{m},Z_{m},\theta_{m},\Phi;\alpha,\beta) = \prod_{n=1}^{N_{m}}P(\theta_m;\alp
         <category>学习</category>
       </categories>
       <tags>
-        <tag>Stata</tag>
         <tag>工具</tag>
+        <tag>Stata</tag>
       </tags>
   </entry>
   <entry>
@@ -21522,8 +21437,8 @@ P(W_{m},Z_{m},\theta_{m},\Phi;\alpha,\beta) = \prod_{n=1}^{N_{m}}P(\theta_m;\alp
       </categories>
       <tags>
         <tag>Python</tag>
-        <tag>Stata</tag>
         <tag>工具</tag>
+        <tag>Stata</tag>
       </tags>
   </entry>
   <entry>
@@ -21542,8 +21457,8 @@ P(W_{m},Z_{m},\theta_{m},\Phi;\alpha,\beta) = \prod_{n=1}^{N_{m}}P(\theta_m;\alp
         <category>学习</category>
       </categories>
       <tags>
-        <tag>Stata</tag>
         <tag>工具</tag>
+        <tag>Stata</tag>
       </tags>
   </entry>
   <entry>
@@ -21578,8 +21493,8 @@ P(W_{m},Z_{m},\theta_{m},\Phi;\alpha,\beta) = \prod_{n=1}^{N_{m}}P(\theta_m;\alp
       </categories>
       <tags>
         <tag>Python</tag>
-        <tag>Stata</tag>
         <tag>工具</tag>
+        <tag>Stata</tag>
       </tags>
   </entry>
   <entry>
@@ -21630,8 +21545,8 @@ price = 14542.434 + 4.365*weight - 104.868*length - 86.789*mpg</script><p>其中
         <category>学习</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>经济学</tag>
+        <tag>Python</tag>
         <tag>工具</tag>
       </tags>
   </entry>
