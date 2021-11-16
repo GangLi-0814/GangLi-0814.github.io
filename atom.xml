@@ -424,29 +424,6 @@
   </entry>
   
   <entry>
-    <title>Notes-of-mixtape</title>
-    <link href="http://lgspace.top/2021/04/07/Notes-of-mixtape/"/>
-    <id>http://lgspace.top/2021/04/07/Notes-of-mixtape/</id>
-    <published>2021-04-07T09:23:25.000Z</published>
-    <updated>2021-04-13T09:41:48.001Z</updated>
-    
-    <content type="html"><![CDATA[<p>This book is an introduction to research designs that can recover causal effects. But just as importantly, it provides you with hands-on practice to implement these designs. Implementing these designs means writing code in some type of software. I have chosen to illustrate these designs using two popular software languages: Stata (most commonly used by economists) and R (most commonly used by everyone else).</p><a id="more"></a><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Correlation not equals to causality</p><p>two types of data: </p><ul><li>experimental data(usually collected through surveys, or by-product of some other business activity)</li><li>non-experimental data (observational data)</li></ul><p>To put it as bluntly as I can, economic theory says choices are endogenous, and therefore since they are, the correlations between those choices and outcomes in the aggregate will rarely, if ever, represent a causal effect.</p><p>Emprical analysis: using data to test a theory or to estimate a relationship between variables.</p><h3 id="Probability-and-Regression-Review"><a href="#Probability-and-Regression-Review" class="headerlink" title="Probability and Regression Review"></a>Probability and Regression Review</h3><h2 id="Directed-Acyclic-Graphs"><a href="#Directed-Acyclic-Graphs" class="headerlink" title="Directed Acyclic Graphs"></a>Directed Acyclic Graphs</h2><p>DAGs are a graphical tool which provide a way to visually represent and better understand the key concepts of exposure, outcome, causation, confounding, and bias (Williams et al., 2018). </p><p>DAG Notation</p><p>direct</p><p>mediated by a third variable</p><p>backdoor criterion</p><p>collider bias</p><h2 id="Potential-Outcomes-Causal-Model"><a href="#Potential-Outcomes-Causal-Model" class="headerlink" title="Potential Outcomes Causal Model"></a>Potential Outcomes Causal Model</h2>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;This book is an introduction to research designs that can recover causal effects. But just as importantly, it provides you with hands-on practice to implement these designs. Implementing these designs means writing code in some type of software. I have chosen to illustrate these designs using two popular software languages: Stata (most commonly used by economists) and R (most commonly used by everyone else).&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="Casual Inference" scheme="http://lgspace.top/tags/Casual-Inference/"/>
-    
-    <category term="计量经济学" scheme="http://lgspace.top/tags/%E8%AE%A1%E9%87%8F%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
     <title>📒 English-Notes</title>
     <link href="http://lgspace.top/2021/04/07/English-Notes/"/>
     <id>http://lgspace.top/2021/04/07/English-Notes/</id>
@@ -518,6 +495,27 @@
     <category term="Python" scheme="http://lgspace.top/tags/Python/"/>
     
     <category term="Stata" scheme="http://lgspace.top/tags/Stata/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>永久收入假说</title>
+    <link href="http://lgspace.top/2021/04/01/%E6%B0%B8%E4%B9%85%E6%94%B6%E5%85%A5%E5%81%87%E8%AF%B4/"/>
+    <id>http://lgspace.top/2021/04/01/%E6%B0%B8%E4%B9%85%E6%94%B6%E5%85%A5%E5%81%87%E8%AF%B4/</id>
+    <published>2021-04-01T07:51:03.000Z</published>
+    <updated>2021-04-13T09:43:57.071Z</updated>
+    
+    <content type="html"><![CDATA[<p>罗默高级宏观经济学笔记，永久收入假说。</p><a id="more"></a><h3 id="假设"><a href="#假设" class="headerlink" title="假设"></a>假设</h3><p>考虑一个寿命为 $T$ 期的经济个体，其终生效用为：</p><script type="math/tex; mode=display">U = \sum_{t=1}^T u(C_t), \quad u'(\cdot) > 0, u''(\cdot) < 0,</script><p>其中，$u(\cdot)$ 为瞬时效用函数，$C_t$ 为 $t$ 期的消费。</p><p>经济个体的初始财富为 $A_0$ ，其一生的 $T$ 个时期劳动收入分别为 $Y_1, Y_2, …, Y_T$ ，这些劳动收入是外生给定的。该个体能够按一个外生的利率进行储蓄或借债，其唯一的约束条件是，所有的债务必须在生命终结前还清。为简单期间，假设利率为 0 。因此，该个体的预算约束为：</p><script type="math/tex; mode=display">\sum_{t=1}^T C_t \leq A_0+\sum_{i=1}^T Y_t.</script><h3 id="行为"><a href="#行为" class="headerlink" title="行为"></a>行为</h3><p>由于消费的边际效用总是正数，因此该个体会以等号形式满足预算约束，所以其最大化问题的拉格朗日函数为：</p><script type="math/tex; mode=display">L = \sum_{t=1}^T u(C_t) + \lambda(A_0+\sum_{t=1}^TY_t - \sum_{t=1}^TC_t)</script><p>$C_t$ 的一阶条件为：</p><script type="math/tex; mode=display">u'(C_t) = \lambda</script>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;罗默高级宏观经济学笔记，永久收入假说。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="http://lgspace.top/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="宏观经济学" scheme="http://lgspace.top/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
   </entry>
   
