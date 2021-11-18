@@ -6,7 +6,7 @@
   <link href="http://lgspace.top/atom.xml" rel="self"/>
   
   <link href="http://lgspace.top/"/>
-  <updated>2021-11-18T14:13:06.542Z</updated>
+  <updated>2021-11-18T14:25:07.646Z</updated>
   <id>http://lgspace.top/</id>
   
   <author>
@@ -17,21 +17,21 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>empirical-data-management</title>
+    <title>实证研究数据管理规范化</title>
     <link href="http://lgspace.top/2021/11/18/empirical-data-management/"/>
     <id>http://lgspace.top/2021/11/18/empirical-data-management/</id>
     <published>2021-11-18T14:10:11.000Z</published>
-    <updated>2021-11-18T14:13:06.542Z</updated>
+    <updated>2021-11-18T14:25:07.646Z</updated>
     
-    <content type="html"><![CDATA[<p>主题：实证研究数据规范化管理</p><p>简介：以整理证监会上市公司行业分类数据为案例，分享规范化数据管理的思路和工作流（Workflow）。包括数据处理和文档撰写工具的使用，具体而言：</p><ul><li>数据获取：使用 Python  爬取 PDF 文件并识别、转换为 Excel ；</li><li>数据清理：使用 Stata 数据清理，主要涉及<strong>字符串处理</strong>；</li><li>文档撰写：简单介绍两款文档撰写工具，一是 Markdown  记录说明文档，二是 LaTeX 撰写笔记、Beamer 制作学术幻灯片。</li></ul><div class="row">    <embed src="./report_paper.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
+    <content type="html"><![CDATA[<p>以整理证监会上市公司行业分类数据为案例，分享规范化数据管理的思路和工作流（Workflow）。包括数据处理和文档撰写工具的使用，具体而言：</p><ul><li>数据获取：使用 Python  爬取 PDF 文件并识别、转换为 Excel ；</li><li>数据清理：使用 Stata 数据清理，主要涉及<strong>字符串处理</strong>；</li><li>文档撰写：简单介绍两款文档撰写工具，一是 Markdown  记录说明文档，二是 LaTeX 撰写笔记、Beamer 制作学术幻灯片。</li></ul><div class="row">    <embed src="./report_paper.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;主题：实证研究数据规范化管理&lt;/p&gt;
-&lt;p&gt;简介：以整理证监会上市公司行业分类数据为案例，分享规范化数据管理的思路和工作流（Workflow）。包括数据处理和文档撰写工具的使用，具体而言：&lt;/p&gt;
+    <summary type="html">&lt;p&gt;以整理证监会上市公司行业分类数据为案例，分享规范化数据管理的思路和工作流（Workflow）。包括数据处理和文档撰写工具的使用，具体而言：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;数据获取：使用 Python  爬取 PDF 文件并识别、</summary>
+&lt;li&gt;数据获取：使用 Python  爬取 PDF 文件并识别、转换为 Excel ；&lt;/li&gt;
+&lt;li&gt;数据清理</summary>
       
     
     
