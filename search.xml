@@ -2085,6 +2085,32 @@
       </tags>
   </entry>
   <entry>
+    <title>empirical-data-management</title>
+    <url>/2021/11/18/empirical-data-management/</url>
+    <content><![CDATA[<p>主题：实证研究数据规范化管理</p>
+<p>简介：以整理证监会上市公司行业分类数据为案例，分享规范化数据管理的思路和工作流（Workflow）。包括数据处理和文档撰写工具的使用，具体而言：</p>
+<ul>
+<li>数据获取：使用 Python  爬取 PDF 文件并识别、转换为 Excel ；</li>
+<li>数据清理：使用 Stata 数据清理，主要涉及<strong>字符串处理</strong>；</li>
+<li>文档撰写：简单介绍两款文档撰写工具，一是 Markdown  记录说明文档，二是 LaTeX 撰写笔记、Beamer 制作学术幻灯片。</li>
+</ul>
+
+
+	<div class="row">
+    <embed src="./report_paper.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>文件</tag>
+        <tag>数据管理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>宏观经济常用数据库</title>
     <url>/2021/09/23/MacroEcon-Data-Sources/</url>
     <content><![CDATA[<p>宏观经济常用数据库介绍。</p>
@@ -4557,8 +4583,8 @@ R_{uc}^2 = \frac{\sum_{i=1}^n \hat y_i^2}{\sum_{i=1}^n y_i^2}</script><p>如果�
         <category>学习</category>
       </categories>
       <tags>
-        <tag>经济学</tag>
         <tag>微观经济学</tag>
+        <tag>经济学</tag>
       </tags>
   </entry>
   <entry>
@@ -4591,8 +4617,8 @@ q = AK^\alpha L^\beta</script>]]></content>
         <category>学习</category>
       </categories>
       <tags>
-        <tag>经济学</tag>
         <tag>微观经济学</tag>
+        <tag>经济学</tag>
       </tags>
   </entry>
   <entry>
@@ -21353,8 +21379,8 @@ P(W_{m},Z_{m},\theta_{m},\Phi;\alpha,\beta) = \prod_{n=1}^{N_{m}}P(\theta_m;\alp
         <category>学习</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>文献</tag>
+        <tag>笔记</tag>
         <tag>Python</tag>
       </tags>
   </entry>
