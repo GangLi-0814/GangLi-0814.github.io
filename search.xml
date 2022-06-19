@@ -2085,6 +2085,101 @@
       </tags>
   </entry>
   <entry>
+    <title>第四章 跨国收入差距</title>
+    <url>/2022/06/19/Romer-Textbook-Cross-Country-Income-Difference/</url>
+    <content><![CDATA[<blockquote>
+<p>我们列出的因素（创新、规模经济、教育、资本积累等）不是增长的原因，而是增长本身。——诺斯和托马斯（1973）</p>
+</blockquote>
+<p>外生增长模型的结论是资本差异无法解释跨国收入差异，内生增长模型认为知识非竞争性，技术上的差异也无法解释跨国收入差异。因此，本章引入人力资本差异、社会基础结构解释跨国收入差异。跨国收入差异的研究可以分为两类：</p>
+<ul>
+<li>研究收入的直接决定因素，如物质资本、人力资本等，多采用增长核算；</li>
+<li>考虑收入的潜在决定因素，如政治制度、地理及宗教等，多采用因果推断。</li>
+</ul>
+<a id="more"></a>
+<h2 id="Solow模型中引入人力资本"><a href="#Solow模型中引入人力资本" class="headerlink" title="Solow模型中引入人力资本"></a>Solow模型中引入人力资本</h2><p>生产函数：</p>
+<script type="math/tex; mode=display">
+Y(t) =F(K(t),A(t)H(t)) \\
+= K(t)^\alpha[A(t)H(t)]^{1-\alpha} \tag{4.1}</script><script type="math/tex; mode=display">
+H(t) = \underbrace{G(E)}_{\textcolor{blue}{G(E)=e^{\phi E},\phi>0}}L(t) \tag{4.2}</script><p>模型假设：</p>
+<script type="math/tex; mode=display">
+\dot K(t) = sK(t) - \delta K(t) \tag{4.3}</script><script type="math/tex; mode=display">
+\dot A(t) = gA(t) \tag{4.4}</script><script type="math/tex; mode=display">
+\dot L(t) = n L(t) \tag{4.5}</script><p>模型动态学：</p>
+<script type="math/tex; mode=display">
+k=\frac{K}{AG(E)L} \tag{4.6}</script><script type="math/tex; mode=display">
+\dot k(t) = s(f(k)) - (n+g+\delta)k \\
+= sk(t)^\alpha - (n+g+\delta)k(t) \tag{4.7}</script><p>稳态：</p>
+<script type="math/tex; mode=display">
+\dot k(t) = 0 => sk(t)^\alpha = (n+g+\delta)k(t) \\
+=> \textcolor{blue}{k^*(t)=[\frac{s}{(n+g+\delta)}]^{\frac{1}{1-\alpha}}} \tag{4.8}</script><p>结论：</p>
+<ul>
+<li>$E$ 不进入 $\dot K(t)$，不会影响平衡增长路径；但由于$y=\frac{Y}{AG(E)L} =&gt; \frac{Y}{L}=AG(E)y$  ，$E$ 的上升会提高平衡增长路径上的工人平均产出，而且其提高的比例与 $G(E)$ 提高的比例相同。</li>
+<li>人力资本差异也影响收入差距，但加入人力资本不会改变 Solow 模型关于物质资本积累的结论。</li>
+</ul>
+<blockquote>
+<p>[Problem 4.2]</p>
+<p><strong>Endogenizing the choice of</strong>  $E$. (This follows Bils and Klenow, 2000). Suppose that the wage of a worker with education $E$ at time $t$ is $be^{gt}e^{\phi E}$ . Consider a worker born at time 0 who will be in school for the first $E$ years of life and will work for the remaining $T−E$  years. Assume that the interest rate is constant and equal to $r$.</p>
+<p>(a) What is the present discounted value of the worker’s lifetime earnings as a function of $E, T, b, \bar r, \phi$, and $g$?</p>
+<p>(b) Find the first-order condition for the value of $E$ that maximizes the expression you found in part (a). Let $E^∗$ denote this value of $E$. (Assume an interior solution.)</p>
+<p>(c) Describe how each of the following developments affects $E^∗$: (i) A rise in $T$; (ii) A rise in $r$. (iii) A rise in $g$.</p>
+</blockquote>
+<h2 id="社会基础结构"><a href="#社会基础结构" class="headerlink" title="社会基础结构"></a>社会基础结构</h2><p>Hall and Jones：社会基础结构是指配置各种活动的私人和社会回报的制度和政策。</p>
+<ul>
+<li><p>私人回报和社会回报差异：</p>
+<ul>
+<li>各种类型的投资，如储蓄、教育投资等；</li>
+<li>经济个体旨在提高当前利益的活动，如生产、寻租等。</li>
+</ul>
+</li>
+<li><p>社会基础结构分类：</p>
+<ul>
+<li>财政政策；</li>
+<li>私人决策环境；</li>
+<li>政府自身寻租活动程度</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>实证研究中，如何度量（测量误差）？</li>
+<li>如何克服遗漏变量问题？</li>
+</ol>
+<p>社会基础结构的决定因素：</p>
+<ul>
+<li>激励；</li>
+<li>文化，如宗教、家庭结构、价值观等；</li>
+<li>地理条件，如距离赤道距离；</li>
+<li>领导者对制度和政策判断。</li>
+</ul>
+<hr>
+<p>宏观第四章习题：</p>
+<p>4.2</p>
+<p>(a) $Y=\int_{t=E}^T e^{-\bar r t}w(t)L(t)dt$，化简，求积分，得到 $Y$ 表达式</p>
+<p>(b) $\frac{\partial Y}{\partial E}=… ==&gt; E^*$</p>
+<p>(c)</p>
+<p>4.3</p>
+<p>教育水平和人均产量互为因果</p>
+<p>$\gamma$：人均产量对教育质量的影响</p>
+<p>4.4</p>
+<p>资本自由流动=&gt; $\frac{\partial Y}{\partial K}=…=r^* ==&gt; K$</p>
+<p>$\frac{\ln{Y}}{\partial E}$</p>
+<p><a href="https://space.bilibili.com/415513088/video">https://space.bilibili.com/415513088/video</a></p>
+<p>4.6</p>
+<p>4.8</p>
+<p>4.9</p>
+<p>4.11</p>
+<p>(a) 遗漏变量</p>
+<p>(b) 工具变量的条件</p>
+<p>(c) $R^2$ 含义</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>经济学</tag>
+        <tag>宏观经济学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Zotero for Windows 全局引用</title>
     <url>/2021/11/29/Zotero-for-Windows-%E5%85%A8%E5%B1%80%E5%BC%95%E7%94%A8/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><img src="/2021/11/29/Zotero-for-Windows-%E5%85%A8%E5%B1%80%E5%BC%95%E7%94%A8/reference.gif" style="zoom:50%;"></p>
