@@ -1,0 +1,373 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><title>第三章 内生增长模型 | Gang Li's Personal Website</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><script class="js-hypothesis-config" type="application/json">{"showHighlights": true}</script><script src="https://hypothes.is/embed.js" async=""></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><meta name="generator" content="Hexo 5.0.2"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">第三章 内生增长模型</h1><a id="logo" href="/.">Gang Li's Personal Website</a><p class="description">Causal Inference, Python, Stata, LaTeX, Zotero</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/tag/"><i class="fa fa-tag"> 标签</i></a><a href="/shuoshuo/"><i class="fa fa-cloud"> 零思</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">第三章 内生增长模型</h1><div class="post-meta">2022-06-19<span> | </span><span class="category"><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span><span class="post-time"><span class="post-meta-item-text"> | </span><span class="post-meta-item-icon"><i class="fa fa-keyboard-o"></i><span class="post-count"> 3.6k</span><span class="post-meta-item-text"> 字</span></span></span><span class="post-time"> | <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i><span class="post-count"> 16</span><span class="post-meta-item-text"> 分钟</span></span></span></div><a class="disqus-comment-count" href="/2022/06/19/Romer-Textbook-Endogenous-Growth-Model/#vcomment"><span class="valine-comment-count" data-xid="/2022/06/19/Romer-Textbook-Endogenous-Growth-Model/"></span><span> 条评论</span></a><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#R-amp-D-%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">R&amp;D 模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E8%AE%BE%E5%AE%9A"><span class="toc-number">1.1.</span> <span class="toc-text">模型设定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E6%8E%A8%E5%AF%BC"><span class="toc-number">1.2.</span> <span class="toc-text">模型推导</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E4%BE%8B%EF%BC%9A%E6%B2%A1%E6%9C%89%E8%B5%84%E6%9C%AC%E7%9A%84%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.2.1.</span> <span class="toc-text">特例：没有资本的模型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%83%85%E5%BD%A2-1%EF%BC%9A-theta-lt-1"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">情形 1：$\theta&lt;1$</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%83%85%E5%BD%A2-2%EF%BC%9A-theta-gt-1"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">情形 2：$\theta&gt;1$</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%83%85%E5%BD%A2-3%EF%BC%9A-theta-1"><span class="toc-number">1.2.1.3.</span> <span class="toc-text">情形 3：$\theta&#x3D;1$</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E6%83%85%E5%BD%A2%EF%BC%9A%E5%BC%95%E5%85%A5%E8%B5%84%E6%9C%AC"><span class="toc-number">1.2.2.</span> <span class="toc-text">一般情形：引入资本</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#K-%E7%9A%84%E5%8A%A8%E6%80%81%E5%AD%A6"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">$K$的动态学</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#A-%E7%9A%84%E5%8A%A8%E6%80%81%E5%AD%A6"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">$A$的动态学</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%83%85%E5%BD%A21%EF%BC%9A-beta-theta-lt-1"><span class="toc-number">1.2.2.3.</span> <span class="toc-text">情形1：$\beta+\theta&lt;1$</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%83%85%E5%BD%A22%EF%BC%9A-beta-theta-1-n-0"><span class="toc-number">1.2.2.3.1.</span> <span class="toc-text">情形2：$\beta+\theta&#x3D;1, n&#x3D;0$</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B2%E4%B8%AD%E5%AD%A6"><span class="toc-number">2.</span> <span class="toc-text">干中学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Romer-%E6%A8%A1%E5%9E%8B"><span class="toc-number">3.</span> <span class="toc-text">Romer 模型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E8%AE%BE%E5%AE%9A-1"><span class="toc-number">3.0.1.</span> <span class="toc-text">模型设定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E5%81%87%E8%AE%BE"><span class="toc-number">3.0.2.</span> <span class="toc-text">模型假设</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BB%8F%E6%B5%8E%E6%80%BB%E4%BD%93"><span class="toc-number">3.0.2.1.</span> <span class="toc-text">经济总体</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%8A%B3%E5%8A%A8%E5%8A%9B%E5%B8%82%E5%9C%BA"><span class="toc-number">3.0.2.1.1.</span> <span class="toc-text">劳动力市场</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%96%B0%E7%9F%A5%E8%AF%86%E7%94%9F%E4%BA%A7"><span class="toc-number">3.0.2.1.2.</span> <span class="toc-text">新知识生产</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%B6%E5%BA%AD%E5%BE%AE%E8%A7%82%E8%A1%8C%E4%B8%BA"><span class="toc-number">3.0.2.2.</span> <span class="toc-text">家庭微观行为</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%A0%94%E5%8F%91%E7%9A%84%E5%BE%AE%E8%A7%82%E5%9F%BA%E7%A1%80"><span class="toc-number">3.0.2.3.</span> <span class="toc-text">研发的微观基础</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E5%9D%87%E8%A1%A1"><span class="toc-number">3.0.2.4.</span> <span class="toc-text">一般均衡</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B1%82%E8%A7%A3%E6%A8%A1%E5%9E%8B"><span class="toc-number">3.0.3.</span> <span class="toc-text">求解模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E5%90%AF%E7%A4%BA"><span class="toc-number">3.0.4.</span> <span class="toc-text">模型启示</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%B9%E9%95%BF%E6%9C%9F%E5%A2%9E%E9%95%BF%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-number">3.0.4.1.</span> <span class="toc-text">对长期增长的影响</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9D%87%E8%A1%A1%E5%A2%9E%E9%95%BF%E5%92%8C%E6%9C%80%E4%BC%98%E5%A2%9E%E9%95%BF%E7%9A%84%E5%B7%AE%E8%B7%9D"><span class="toc-number">3.0.4.2.</span> <span class="toc-text">均衡增长和最优增长的差距</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="post-content"><p>将 $A$ 内生化，明确为知识积累，模型化知识随时间演化的决定因素。</p>
+<a id="more"></a>
+<h2 id="R-amp-D-模型"><a href="#R-amp-D-模型" class="headerlink" title="R&amp;D 模型"></a>R&amp;D 模型</h2><p>为将知识积累纳入模型，在经济中引入 R&amp;D 部门，刻画资源如何在生产部门的 R&amp;D 部门之间分配，以及投入要素如何生产出新知识。</p>
+<h3 id="模型设定"><a href="#模型设定" class="headerlink" title="模型设定"></a>模型设定</h3><p>$a_L$表示用于研发的劳动力比例，则 $(1-a_L)$为用于生产的劳动力比例；$a_K$的定义相同。</p>
+<p><strong>生产部门：</strong></p>
+<script type="math/tex; mode=display">
+Y(t)=[(1-a_K)K(t)]^{\alpha}[A(t)(1-a_L)L(t)]^{1-\alpha}, 0<\alpha<1 \tag{3.1}</script><p>$K,L$ 规模报酬不变。</p>
+<p><strong>研发部门：</strong></p>
+<script type="math/tex; mode=display">
+\dot {A(t)} = B[a_KK(t)]^\beta[a_L L(t)]^\gamma A(t)^\theta, B>0, \beta \geq0, \gamma \geq 0 \tag{3.2}</script><p>其中，$B$表示转换参数；<strong>$\theta$表示现有知识存量对研发成功率的影响</strong>；未假定 $K,L$ 规模报酬不变。</p>
+<p><strong>其他假设：</strong></p>
+<ol>
+<li><p>折旧率为零：$\dot K(t) = sY(t)$</p>
+</li>
+<li><p>人口增长率外生给定：$\dot L(t)=nL(t), n\geq0$</p>
+</li>
+<li><p>$A(0), K(0), L(0)$已知且严格为正。</p>
+</li>
+</ol>
+<h3 id="模型推导"><a href="#模型推导" class="headerlink" title="模型推导"></a>模型推导</h3><h4 id="特例：没有资本的模型"><a href="#特例：没有资本的模型" class="headerlink" title="特例：没有资本的模型"></a>特例：没有资本的模型</h4><p>由于模型中有 $K,A$ 两个内生性状态变量，为简化分析，假设不存在 $K$，以便观察 $A$  的变动。则式 (3.1) 和 (3.2) 可以改写为：</p>
+<script type="math/tex; mode=display">
+Y(t) = A(t)(1-a_L)L(t) \tag{3.3}</script><script type="math/tex; mode=display">
+\dot {A(t)} = B[a_L L(t)]^\gamma A(t)^\theta\tag{3.4}</script><p>人口增长率外生给定：$\dot L(t)=nL(t), n\geq0$ 。</p>
+<p>由式 (3.4)，$A$ 的增长率为：</p>
+<script type="math/tex; mode=display">
+g_A (t) \equiv \frac{\dot A(t)}{A(t)} = B[a_LL(t)]^\gamma A(t)^{\theta-1} \tag{3.5}</script><p>式 (3.5) 两端取对数并对 $t$ 求导：</p>
+<script type="math/tex; mode=display">
+\ln{g_A(t)} = \ln{(B)} + \gamma \ln{(a_L)}+\gamma\ln{[L(t)]} +(\theta-1)\ln{[A(t)]} \\
+=>  \frac{\partial \ln{g_A(t)}}{\partial t}  = \textcolor{blue}{\frac{\dot g_A(t)}{g_A(t)} = \gamma n +(\theta-1)g_A(t)} \tag{3.6}</script><p>将式 (3.6) 两端同乘 $g_A(t)$ ：</p>
+<script type="math/tex; mode=display">
+\textcolor{blue}{\dot g_A(t) = \gamma ng_A(t)+\textcolor{red}{(\theta-1)}[g_A(t)]^2} \tag{3.7}</script><p><strong>可见</strong>：</p>
+<ul>
+<li>式 (3.5) 中 $L(t), A(t)$ 决定 $g_A(t)$ 的初值；</li>
+<li>式 (3.7) 决定 $g_A(t)$ 此后的变动。观察式 (3.7) 右边，$\theta$ 小于、大于还是等于 1 影响二次项的正负（对应到式 (3.4) ，<strong>决定了生产对内生要素是规模报酬递减、递增还是不变</strong>），因此有必要进行分类讨论。</li>
+</ul>
+<h5 id="情形-1：-theta-lt-1"><a href="#情形-1：-theta-lt-1" class="headerlink" title="情形 1：$\theta&lt;1$"></a>情形 1：$\theta&lt;1$</h5><p>$\theta&lt;1$含义：新增加的知识存量对生产新知识的贡献有限。</p>
+<p><img src="/2022/06/19/Romer-Textbook-Endogenous-Growth-Model/fig_3_1.png" alt></p>
+<p>$g_A$ 稳态：</p>
+<script type="math/tex; mode=display">
+\gamma ng_A(t)+{(\theta-1)}[g_A(t)]^2 = 0 \\
+=> \textcolor{blue}{g_A^*=\frac{\gamma }{(1-\theta)}n} \tag{3.8}</script><p>（还有一个点 $g_A=0$，可为何这不是稳态点？）</p>
+<p>​    </p>
+<p>注意：不同于外生增长模型（假设 $g_A=g$ ），<strong>本模型中工人平均产出的增长率在模型内部确定</strong>，而不是取决于外生的技术进步率。</p>
+<p>由式 (3.8) 问：</p>
+<ol>
+<li>工人平均产出的增长率是 $n$ 的增函数？     <ul>
+<li>可现实是美国的人口增长率没有印度高。</li>
+</ul>
+</li>
+<li>劳动力投入比例 $a_L$ 不在 $g_A^*$ 表达式，$a_L$上升并不影响长期增长？<ul>
+<li>$a_L$ 上升不影响 $\dot g_A$；但由式 (3.5) ，$a_L$ 上升会导致 $g_A$ 增加。与 Solow 模型中储蓄的增加类似，只有水平效应，没有增长效应。</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>[Problem 3.1]</p>
+<p>Consider the model of Section 3.2 with $\theta &lt; 1$.</p>
+<ol>
+<li>On the balanced growth path, $\dot A = g_A^<em> A(t)$, where $g_A^</em>$ is the balanced-growth-path value of $g_A$. Use this fact and equation (3.6) to derive an expression for $A(t)$ on the balanced growth path in terms of $B, aL, \gamma, \theta$, and $L(t)$.</li>
+<li>Use your answer to part (a) and the production function, (3.5), to obtain an expression for $Y(t)$ on the balanced growth path. Find the value of $a_L$ that maximizes output on the balanced growth path.</li>
+</ol>
+<p>[Problem 3.2]</p>
+<p>Consider two economies (indexed by $i = 1, 2$) described by $Y_i(t) = K_i(t)^\theta$ and $K_i(t)= s_iY_i(t)$, where $\theta &gt; 1$. Suppose that the two economies have the same initial value of $K$, but that $s_1&gt;s_2$. Show that $Y_1/Y_2$ is continually rising.</p>
+</blockquote>
+<h5 id="情形-2：-theta-gt-1"><a href="#情形-2：-theta-gt-1" class="headerlink" title="情形 2：$\theta&gt;1$"></a>情形 2：$\theta&gt;1$</h5><p>$\theta&gt;1$含义：新知识的生产增加的比例超过知识存量增加的比例。</p>
+<p><img src="/2022/06/19/Romer-Textbook-Endogenous-Growth-Model/fig_3_4.png" alt></p>
+<ul>
+<li>知识爆炸：知识存量生产出更多新知识，不断增长（积累作用）；</li>
+<li>同时，根据式 (3.5)，$a_L$ 的上升立即导致 $g_A$ 增加，也导致 $\dot g_A$ 增加。</li>
+</ul>
+<h5 id="情形-3：-theta-1"><a href="#情形-3：-theta-1" class="headerlink" title="情形 3：$\theta=1$"></a>情形 3：$\theta=1$</h5><p>$\theta=1$ 含义：现存知识的生产能力刚好使得生产出新知识和指数存量成比例。</p>
+<script type="math/tex; mode=display">
+g_A(t) = Ba_L^\gamma L(t)^\gamma \tag{3.9}</script><script type="math/tex; mode=display">
+\dot g_A(t) = \gamma n g_A(t) \tag{3.10}</script><ul>
+<li>人口增长 $n$ 为正，则 $g_A$ 随时间增长；$n=0$，$g_A$ 为常数。</li>
+<li>由式 (3.9) ，$a_L$ 影响经济长期增长率。</li>
+</ul>
+<h4 id="一般情形：引入资本"><a href="#一般情形：引入资本" class="headerlink" title="一般情形：引入资本"></a>一般情形：引入资本</h4><blockquote>
+<p>模型设定：</p>
+<ul>
+<li>生产部门：</li>
+</ul>
+<script type="math/tex; mode=display">
+Y(t)=[(1-a_K)K(t)]^{\alpha}[A(t)(1-a_L)L(t)]^{1-\alpha}, 0<\alpha<1 \tag{3.1}</script><ul>
+<li>研发部门：</li>
+</ul>
+<script type="math/tex; mode=display">
+\dot {A(t)} = B[a_KK(t)]^\beta[a_L L(t)]^\gamma A(t)^\theta, B>0, \beta \geq0, \gamma \geq 0 \tag{3.2}</script><ul>
+<li>其他假设：</li>
+<li>折旧率为零：$\dot K(t) = sY(t)$</li>
+<li>人口增长率外生给定：$\dot L(t)=nL(t), n\geq0$</li>
+<li>$A(0), K(0), L(0)$已知且严格为正。</li>
+</ul>
+</blockquote>
+<h5 id="K-的动态学"><a href="#K-的动态学" class="headerlink" title="$K$的动态学"></a>$K$的动态学</h5><p>将式 (3.1) 代入资本积累表达式：</p>
+<script type="math/tex; mode=display">
+\dot K(t) = s(1-a_K)^\alpha(1-a_L)^{1-\alpha}K(t)^\alpha A(t)^{1-\alpha} L(t)^{1-\alpha} \tag{3.11}</script><p>两边同除 $K(t)$，并定义$c_K=s(1-a_K)^\alpha(1-a_L)^{1-\alpha}$：</p>
+<script type="math/tex; mode=display">
+g_K(t) = \frac{\dot K(t)}{K(t)} =s(1-a_K)^\alpha(1-a_L)^{1-\alpha}[\frac{A(t)L(t)}{K(t)}]^{1-\alpha} =c_K [\frac{A(t)L(t)}{K(t)}]^{1-\alpha} \tag{3.12}</script><p>两边取对数并对时间求导：</p>
+<script type="math/tex; mode=display">
+\frac{\dot g_K(t)}{g_K (t)} = (1-\alpha)[\textcolor{blue}{g_A(t)+n-g_K(t)}] \tag{3.13}</script><script type="math/tex; mode=display">
+\frac{\dot g_K}{g_K} <0 ==> g_A + n <g_K \tag{3.14}</script><p><img src="/2022/06/19/Romer-Textbook-Endogenous-Growth-Model/fig_3_5.png" alt></p>
+<h5 id="A-的动态学"><a href="#A-的动态学" class="headerlink" title="$A$的动态学"></a>$A$的动态学</h5><p>将式 (3.2) 两边除以 $A(t)$，并令$c_A=Ba_K^\alpha A_L^{1-\alpha}$：</p>
+<script type="math/tex; mode=display">
+g_A(t) = \frac{\dot A(t)}{A(t)} = c_A K(t)^\beta L(t)^\gamma A(t)^\theta \tag{3.15}</script><p>式 (3.15) 两边取对数并对时间求导：</p>
+<script type="math/tex; mode=display">
+\frac{\dot g_A(t)}{g_A(t)} = \beta g_K(t) + \gamma n+(\theta-1)g_A (t) \tag{3.16}</script><p><img src="/2022/06/19/Romer-Textbook-Endogenous-Growth-Model/fig_3_6.png" alt></p>
+<p><strong>由式 (3.1) ，生产函数对两种内生要素规模报酬不变，因此两种生产要素是规模报酬递增、递减、不变取决于在式 (3.2) 知识函数中的表现。</strong>知识生产函数对 $K$ 和 $A$ 的规模报酬取决于 $\beta+\theta$，因此后文分别讨论 $\beta+\theta<1$，以及 $\beta+\theta="1," n="0$" 的情形（$\beta+\theta>1$，$\beta+\theta=1, n&gt;0$ 的情形和没有资本模型中 $\theta&gt;1$ 的含义类似）。</1$，以及></p>
+<h5 id="情形1：-beta-theta-lt-1"><a href="#情形1：-beta-theta-lt-1" class="headerlink" title="情形1：$\beta+\theta&lt;1$"></a>情形1：$\beta+\theta&lt;1$</h5><p>$\beta+\theta<1 => (1-\theta)/\beta&gt;1$</1></p>
+<p>根据式 (3.16) ，$\dot g_A=0$ 线比 $\dot g_K=0$ 更陡峭。</p>
+<p>如下图，$g_A, g_K$的初始值由模型参数以及$A,K,L$ 初始值决定，但不论始于何处，最终都会收敛于$E$，此时 $\dot g_A=0, \dot g_K=0$。</p>
+<p><img src="/2022/06/19/Romer-Textbook-Endogenous-Growth-Model/fig_3_7.png" alt></p>
+<p>在 $E$ 点处：</p>
+<script type="math/tex; mode=display">
+g_A^* + n - g_K^*=0 \tag{3.17}</script><script type="math/tex; mode=display">
+\beta g_K^* + \gamma n+ (\theta-1)g_A^*=0 \tag{3.18}</script><p>将式 (3.18) 代入式 (3.19)：</p>
+<script type="math/tex; mode=display">
+\textcolor{blue}{g_A^* = \frac{\beta+\gamma}{1-(\theta+\beta)}n} \tag{3.19}</script><blockquote>
+<p>[Problem 3.3]</p>
+<p>Consider the economy analyzed in Section 3.3. Assume that $\theta + \beta &lt; 1, n&gt;0$ , and that the economy is on its balanced growth path. Describe how each of the following changes affects the $\dot g_A= 0$ and $\dot g_K = 0$ lines and the position of the economy in $(g_A,g_K)$ space at the moment of the change:</p>
+<ol>
+<li>An increase in $n$.</li>
+<li>An increase in $a_K$ .</li>
+<li>An increase in $\theta$.</li>
+</ol>
+<p>[Problem 3.4]</p>
+<p>Consider the economy described in Section 3.3, and assume $\beta + \theta &lt; 1$ and $n &gt; 0$. Suppose the economy is initially on its balanced growth path, and that <strong>there is a permanent increase in $s$.</strong><br>(a) How, if at all, does the change affect the $g_A = 0$ and $g_K = 0$ lines? How, if at all, does it affect the location of the economy in $(g_A,g_K)$ space at the time of the change?<br>(b) What are the dynamics of $g_A$ and $g_K$ after the increase in $s$ ? Sketch the path of log output per worker.<br>(c) Intuitively, how does the effect of the increase in s compare with its effect<br>in the Solow model?</p>
+</blockquote>
+<p>（解题：记住 $\dot g_A,\dot g_K, g_A, g_K$ 表达式，分析参数变化的影响）</p>
+<script type="math/tex; mode=display">
+\dot g_k = 0 => g_K =g_A+n \\
+\dot g_A = 0 => g_K=\frac{(1-\theta)g_A-\gamma n}{\beta}\\
+g_K = c_K[\frac{A(t)L(t)}{K(t)}]^{1-\alpha}, c_K\equiv s(1-a_K)^\alpha(1-a_L)^{1-\alpha}\\
+g_A = c_AK(t)^\beta L(t)^\gamma A(t)^{\theta-1}, c_A \equiv B a_K^\beta a_L^\gamma</script><h6 id="情形2：-beta-theta-1-n-0"><a href="#情形2：-beta-theta-1-n-0" class="headerlink" title="情形2：$\beta+\theta=1, n=0$"></a>情形2：$\beta+\theta=1, n=0$</h6><script type="math/tex; mode=display">
+\dot g_A=0 => g_K=g_A + n \\
+\dot g_K = 0 => g_K = -(\frac{\gamma n}{\beta}) + [(1-\theta)/\beta]g_A</script><p>当 $\beta+\theta=1, n=0$ 时：</p>
+<script type="math/tex; mode=display">
+g_K = g_A</script><p>不论经济始于何处，$g_A$ 与 $g_K$ 的动态学都会使其移动到 $45^\circ$ 线上，并且在到达条件之后，$g_A$ 和 $g_K$ 不再变化，经济处于平衡增长路径。</p>
+<p><img src="/2022/06/19/Romer-Textbook-Endogenous-Growth-Model/fig_3_8.png" alt></p>
+<blockquote>
+<p><strong>[Problem 3.5]</strong></p>
+<p>Consider the model of Section 3.3 with $\beta + \theta = 1$ and $n = 0$.<br>(a) Using (3.14) and (3.16), find the value that $A/K$ must have for $g_K$ and $g_A$ to be equal.<br>(b) Using your result in part (a), find the growth rate of $A$ and $K$ when $g_K = g_A$.<br>(c) How does an increase in $s$ affect the long-run growth rate of the economy?<br>(d) What value of $a_K$ maximizes the long-run growth rate of the economy? Intuitively, why is this value not increasing in $\beta$, the importance of capital in the R&amp;D sector?</p>
+</blockquote>
+<h2 id="干中学"><a href="#干中学" class="headerlink" title="干中学"></a>干中学</h2><p>生产函数：</p>
+<script type="math/tex; mode=display">
+Y(t) = K(t)^\alpha[A(t)L(t)]^{1-\alpha} \tag{3.20}</script><p><strong>若生产新资本时具有学习效应（知识是资本积累的副产品；知识是产品生产的副产品见[Problem 3.7]）</strong>，则知识增加量时资本增加量的函数。即：</p>
+<script type="math/tex; mode=display">
+A(t) = BK(t)^\phi, B>0,\phi>0 \tag{3.21}</script><p><strong>其他假设：</strong></p>
+<ol>
+<li><p>折旧率为零：$\dot K(t) = sY(t)$</p>
+</li>
+<li><p>人口增长率外生给定：$\dot L(t)=nL(t), n\geq0$</p>
+</li>
+</ol>
+<p>将式 (3.21) 代入 式 (3.20) ：</p>
+<script type="math/tex; mode=display">
+Y(t) = K(t)^\alpha B^{1-\alpha}K(t)^{\phi(1-\alpha)}L(t)^{1-\alpha} \tag{3.22}</script><p>由 $\dot K(t) = sY(t)$ ：</p>
+<script type="math/tex; mode=display">
+\dot K(t) = sB^{1-\alpha}K(t)^\alpha K(t)^{\phi(1-\alpha)}L(t)^{1-\alpha} \\
+\tag{3.23}</script><p>（类似于 R&amp;D 模型比较 $\theta$ 与 1 的大小）</p>
+<p>决定因素：$\alpha+\phi(1-\alpha)$ 与 1 的相对大小，实际上等价于比较 $\phi$ 与 1 的大小。</p>
+<ul>
+<li>$\phi&lt;1$：经济长期增长率是人口增长率 $n$ 的函数；</li>
+<li>$\phi&gt;1$：爆炸性增长；</li>
+<li>$\phi=1$：$n$ 为正时存在爆炸性增长，$n$ 为零时稳定增长。</li>
+</ul>
+<p>特殊情形：$\phi=1,n=0$：</p>
+<script type="math/tex; mode=display">
+Y(t) = bK(t), \underbrace{b \equiv B^{1-\alpha}L^{1-\alpha}}_{“b”在模型中常用符号“A”表示} \tag{3.24}</script><script type="math/tex; mode=display">
+\dot K(t) = sbK(t) \tag{3.25}</script><p>意味着 $K$ 按速率 $sb$ 稳定增长；因为 $K$ 的产出贡献很大（直接效应 $K^\alpha$ + 间接效应 $K^{\phi(1-\alpha)}$），长期增长内生并取决于 $s$ 。</p>
+<blockquote>
+<p>[problem 3.7]</p>
+<p>Suppose that output is given by equation (3.22) , $Y(t)=K(t)^{\alpha}[A(t)L(t)]^{1−\alpha}$; that $L$ is constant and equal to 1; that $\dot K(t) = sY(t)$; <strong>and that knowledge accumulation occurs as a side effect of goods production: $\dot A(t) = BY(t)$.</strong><br>(a) Find expressions for $g_A(t)$ and $g_K(t)$ in terms of $A(t),K(t)$ , and the parameters.<br>(b) Sketch the $\dot g_A = 0$ and $\dot g_K = 0$ lines in $(g_A,g_K)$ space.<br>(c)  Does the economy converge to a balanced growth path? If so, what are the growth rates of $K, A$, and $Y$ on the balanced growth path?<br>(d) How does an increase in $s$ affect long-run growth?</p>
+</blockquote>
+<h2 id="Romer-模型"><a href="#Romer-模型" class="headerlink" title="Romer 模型"></a>Romer 模型</h2><p>存在分工：生产知识的垄断厂商，专利持有人在市场上雇佣工人，生产出中间品之后卖给最终产品生产者，并对每单位中间品收取固定价格（排除价格其实和其他复杂合合同的可能性）；生产最终产品的完全竞争市场，将中间品价格看作给定。</p>
+<p><strong>模型要点总结：</strong></p>
+<p>模型设定：</p>
+<ol>
+<li><p>市场结构：思想（专利）——中间品——最终品</p>
+<ul>
+<li>R&amp;D ：垄断厂商，知识具有非竞争性、非排他性</li>
+<li>final goods：完全竞争（购买中间品的价格给定）</li>
+<li><strong>R&amp;D：自由进入 ==&gt; $w(t)=\frac{1}{BA(t)}; \int_{\tau=t}^{\infin} e^{-r(\tau-t)}\pi(i,\tau)d\tau=\frac{w(t)}{BA(t)}$</strong></li>
+</ul>
+</li>
+<li><p>生产函数</p>
+<ul>
+<li>R&amp;D：线性于$L_A$和$A(t)$  ==&gt;  $\dot A(t) = B L_A(t)A(t)$</li>
+<li>final goods：Ethier 生产函数 ==&gt; $Y=A^{(1-\phi)/\phi}L_Y$</li>
+</ul>
+</li>
+<li><p>最优选择</p>
+<ul>
+<li>households：效用最大化</li>
+<li><p>firms：成本最小化</p>
+</li>
+<li><p>R&amp;D：雇用多少$L_A$</p>
+<ul>
+<li>final goods：成本最小化 ==&gt;  $L(i)=[\frac{\lambda}{p(i)}]^{\frac{1}{1-\phi}}$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>市场出清</p>
+<p>均衡：劳动在研发和中间品生产之间的配置不随时间变化。</p>
+<ul>
+<li>labor：$\bar L=L_A+L_Y$</li>
+<li>goods：$C(t)\bar L = Y(t)$</li>
+</ul>
+</li>
+</ol>
+<p><strong>求解模型：</strong></p>
+<ol>
+<li><p>R&amp;D：作为垄断厂商，持有专利的利润（$\max{[p(t)-c(t)]*q(t)}==&gt; \pi(t) = \frac{1-\phi}{\phi}\frac{\bar L-L_A}{A(t)}w(t)$）</p>
+</li>
+<li><p>$\pi(t)$ 的PV：研发出来之后，将以后的利润贴现，新研发可得利润的现值（增长率，利率）==&gt;$\pi(t)<br>= \frac{1-\phi}{\phi}\frac{\bar L - L_Aw(t)}{\rho+BL_AA(t)} $</p>
+</li>
+<li><p>决定雇用多少$L_A$ ==&gt; $L_A=\max{{(1-\phi)\bar L-\frac{\phi\rho}{B},0}}$，$L_A==&gt;g_Y= \max{{\frac{(1-\phi)^2}{\phi}B\bar L-(1-\phi)\rho,0}}$</p>
+</li>
+</ol>
+<hr>
+<h4 id="模型设定-1"><a href="#模型设定-1" class="headerlink" title="模型设定"></a>模型设定</h4><p>Ethier 生产函数（Ethier, 1982）：</p>
+<script type="math/tex; mode=display">
+Y = [\int_{i=0}^{A} L(i)^{\phi}di]^{1/\phi}, o<\phi<1 \tag{3.26}</script><p>$L(i)$ 表示生产中间品 $i$ 的劳动数量，那么进入最终品生产的中间品 $i$ 的数量就是 $L(i)$ 。</p>
+<p>令 $L_Y$ 表示生产中间品的工人总数，并假设生产每种投入品的工人数相同，则 $L(i)=\frac{L_Y}{A}$，则式 (3.26) ：</p>
+<script type="math/tex; mode=display">
+Y = [\int_{i=0}^{A} (\frac{L_Y}{A})^{\phi}di]^{1/\phi}, o<\phi<1 \tag{3.27}</script><p>求解得：</p>
+<script type="math/tex; mode=display">
+\textcolor{blue}{Y = [A(\frac{L_Y}{A})^\phi]^{1/\phi} = A^{(1-\phi)/\phi}L_Y} \tag{3.28}</script><p>式 (3.28) 表明：</p>
+<ul>
+<li>$L_Y$ 对产出 $Y$ 规模报酬不变（保持知识不变，劳动力投入翻倍产出翻倍）；</li>
+<li>产出随 $A$ 递增，即新思想创造价值。</li>
+</ul>
+<p>考虑代表性最终产品厂商的成本最小化问题：</p>
+<p>令 $p(i)$ 表示专利持有人对每单位包含新思想 $i$ 的中间品收取的价格，成本最小化的拉格朗日函数为：</p>
+<script type="math/tex; mode=display">
+\mathcal{L} = \int_{i=0}^A p(i)L(i)di - \lambda\{{\textcolor{blue}{[\int_{i=0}^A L(i)^\phi di]^{1/\phi}-1}}\} \tag{3.29}</script><p><strong>最终产品生产商：由于生产函数规模报酬不变，且中间品价格外生给定，因此最终产品厂商边际成本等于平均成本，结果是最终品生产商的利润均为零（这也是为什么求成本最小化的问题可以取 1 ）。</strong></p>
+<p>最终品生产厂商需要选择 $L(i), i \in [0,1]$ 的数量， 使得成本最小化。对于每个 $L(i)$，FOC：</p>
+<script type="math/tex; mode=display">
+\frac{\partial \mathcal{L}}{\partial L(i)} = p(i) -\lambda L(i)^{\phi-1} = 0 \\
+=> p(i) = \lambda L(i)^{\phi-1} \tag{3.30}</script><p>（此处视为离散形式$Y=[\sum_{i=1}^N (\frac{A}{N}(\frac{NL_i}{A})^\phi]^{1/\phi}$，直接求导不太规范，参见英文第5版，脚注12）</p>
+<p>由式 (3.30)：</p>
+<script type="math/tex; mode=display">
+\textcolor{blue}{L(i) = [\frac{\lambda}{p(i)}]^{\frac{1}{1-\phi}}} \tag{3.31}</script><p>意味着，专利持有者生产的中间品面临向下倾斜的需求曲线：$L(i)$ 是 $p(i)$ 的平滑递减函数。当 $\phi$ 越接近于 1 ，中间品投入（随投入数量增加）的边际产出递减的越缓慢，其结果是中间品之间的替代性越强，从而每种中间品的<strong>需求弹性</strong>越大。</p>
+<h4 id="模型假设"><a href="#模型假设" class="headerlink" title="模型假设"></a>模型假设</h4><h5 id="经济总体"><a href="#经济总体" class="headerlink" title="经济总体"></a>经济总体</h5><h6 id="劳动力市场"><a href="#劳动力市场" class="headerlink" title="劳动力市场"></a>劳动力市场</h6><p>人口数量固定，且 $\bar L &gt;0$，工人可以从事研发（$L_A(t)$）或者中间品生产（$L_Y(t)$），则劳动力市场均衡条件为：</p>
+<script type="math/tex; mode=display">
+L_A(t)+L_Y(t)=\bar L \tag{3.32}</script><p>其中，$L<em>Y(i,t)=\int</em>{i=0}^{A(t)} L(i,t)di$ 为生产中间品的工人总数。</p>
+<h6 id="新知识生产"><a href="#新知识生产" class="headerlink" title="新知识生产"></a>新知识生产</h6><p>新知识的生产函数：</p>
+<script type="math/tex; mode=display">
+\textcolor{blue}{\dot A(t) = BL_A(t)A(t)}, B>0, A(0)>0 \tag{3.33}</script><p>与从事研发的人数线性，与现存知识成比例。</p>
+<h5 id="家庭微观行为"><a href="#家庭微观行为" class="headerlink" title="家庭微观行为"></a>家庭微观行为</h5><p>代表性家庭终生效用：</p>
+<script type="math/tex; mode=display">
+U = \int_{t=0}^\infin e^{-\rho t}\ln{C(t)}dt, \rho>0 \tag{3.34}</script><p>预算约束：</p>
+<script type="math/tex; mode=display">
+\int_{t=0}^\infin e^{-rt}C(t)dt = X(0) + \int_{t=0}^\infin e^{-rt}w(t)dt \tag{3.35}</script><h5 id="研发的微观基础"><a href="#研发的微观基础" class="headerlink" title="研发的微观基础"></a>研发的微观基础</h5><p><strong>知识创造行业自由进入</strong>：任何人都可以按照现行工资 $w(t)$ 雇用 $\frac{1}{BA(t)}$ 单位劳动力用于研发新知识（根据式(3.33) ）。同时，即便 $A$ 上升会提高研发能力，但研发不需要为以往的知识付费（意味着知识具有外部性）。</p>
+<p><strong>知识研发部门做什么：拥有可用于生产中间品的知识专利，在每个时间点上选择生产多少单位的中间品（雇用多少$L_Y$ ）</strong>。在进行决策时，专利持有者把工资、其他投入品价格、从事中间品生产的工人总数$L_Y$看作给定的（？）。</p>
+<p>知识创造行业自由进入就要求卖中间品利润的现值要等与研发的成本。假设知识创造于 $t$ 时刻，$\pi(i,\tau)$ 表示创造于 $\tau$ 时刻思想的利润，则有：</p>
+<script type="math/tex; mode=display">
+\int_{\tau=t}^\infin e^{-r(\tau-t)} \pi(i,\tau)d\tau = \frac{w(t)}{BA(t)} \tag{3.36}</script><h5 id="一般均衡"><a href="#一般均衡" class="headerlink" title="一般均衡"></a>一般均衡</h5><p>产品市场均衡条件：</p>
+<script type="math/tex; mode=display">
+C(t)\bar L = Y(t) \tag{3.37}</script><h4 id="求解模型"><a href="#求解模型" class="headerlink" title="求解模型"></a>求解模型</h4><p>均衡：劳动在研发和中间品生产之间的配置不随时间变化。</p>
+<p><strong>思路：直接寻找 $L_A$ 与 $L_Y$ 保持不变的条件来求解均衡。</strong></p>
+<p><strong>第一步：专利持有人在某时点上如何决定生产出来的中间品价格？</strong></p>
+<p>垄断厂商利润最大化条件：$\eta/(\eta-1)<em>MC$，$\eta$ 为需求弹性。<em>*$\eta/(\eta-1)$为mark-up</em></em></p>
+<p>由式 (3.31) ，需求弹性为 $1/(1-\phi)$；同时，时刻 $t$ 投入生产的劳动力边际成本为$w(t)$，则每个垄断厂商利润最大化条件收取的价格为：</p>
+<script type="math/tex; mode=display">
+[1/(1-\phi)]/\{[1/(1-\phi)]-1\}*w(t) = w(t)/\phi \tag{3.38}</script><p>每个专利持有人 $t$ 时刻利润（$p(t)<em>q(t)-c(t)</em>q(t)$）为多少？</p>
+<ul>
+<li><p>$p(t)$：$w(t)/\phi$（式(3.38)）</p>
+</li>
+<li><p>$q(t)$：由于所有投入品价格相同，因此每种投入品在时刻 $t$ 的使用数量也就相同（？），由 $L_A$ 固定不变，及 $L_A(t)+L_Y(t)=\bar L $，则<strong>使用数量为 $(\bar L- L_A)/A(t)$。</strong></p>
+</li>
+<li>$c(t)$：$w(t)$</li>
+</ul>
+<p>因此，每个专利持有人的利润为：</p>
+<script type="math/tex; mode=display">
+\pi(t) = \frac{\bar L-L_A}{A(t)}[\frac{w(t)}{\phi}-w(t)] \\
+=\frac{1-\phi}{\phi}\frac{\bar L-L_A}{A(t)}w(t) \tag{3.39}</script><p><strong>第二步：经济增长率（$\dot Y,\dot C, \dot W$）和利率是多少？这决定了新研发可得利润的现值。</strong></p>
+<p>根据：</p>
+<script type="math/tex; mode=display">
+\dot A(t) = BL_A(t)A(t) \\
+L_A(t) = \bar L- L_Y(t) \\
+Y(t) = A^{(1-\phi)/\phi}L_Y(t)</script><p>由于所有投入品提供者在一定时点上收取相同的价格，从而可用投入品的使用量都是相同，即 $L_A(t)$ 是固定的。</p>
+<p>$Y$的增长率：</p>
+<script type="math/tex; mode=display">
+\dot Y = [(1-\phi)/\phi]BL_A \tag{3.40}</script><p><strong>消费与工资按与产出相同的速率增长。</strong></p>
+<p>因此，既定发明获得的利润为：</p>
+<script type="math/tex; mode=display">
+[(1-\phi)/\phi]BL_A - BL_A = [(1-2\phi)/\phi]BL_A \tag{3.41}</script><p>由RCK，$\dot C(t)/C(t)=[r(t)-\rho]/\theta$，实际利率：</p>
+<script type="math/tex; mode=display">
+r(t) = \rho + \frac{\dot C(t)}{C(t)} \\
+= \rho+\frac{1-\phi}{\phi}BL_A \tag{3.42}</script><p>时刻 $t$ 新研发可得利润现值为多少？</p>
+<p>研发增长率：$\frac{(1-2\phi)}{\phi}BL_A$</p>
+<p>利率折现：$\rho+\frac{1-\phi}{\phi}BL_A$</p>
+<p>$t$ 时刻利润：$\frac{1-\phi}{\phi}\frac{ (\bar L-L_A)w(t)}{A(t)}$</p>
+<p>时刻 $t$ 新研发可得利润现值为：</p>
+<script type="math/tex; mode=display">
+\pi(t) = \frac{\frac{1-\phi}{\phi}\frac{ (\bar L-L_A)w(t)}{A(t)}}{\rho+\frac{1-\phi}{\phi}BL_A-\frac{(1-2\phi)}{\phi}BL_A} \\
+= \frac{1-\phi}{\phi}\frac{\bar L - L_Aw(t)}{\rho+BL_AA(t)} \tag{3.43}</script><p>第三步：求解 $L_A$ 的均衡值。</p>
+<p>$L_A$均衡含义：<strong>如果研发数量严格为正</strong>，则均衡时发明所获利润的现值一定等于发明成本。</p>
+<p>由于一个工人在单位时间可以生产 $BA(t)$ 思想，所以一项发明的成本为 $w(t)/[BA(t)]$。因此，均衡条件为：</p>
+<script type="math/tex; mode=display">
+\frac{1-\phi}{\phi}\frac{\bar L - L_Aw(t)}{\rho+BL_AA(t)}  = \frac{w(t)}{BA(t)} \\
+=> L_A(t) = (1-\phi)\bar L-\frac{\phi \rho}{B} \tag{3.44}</script><p>但研发数量不必为正，$L_A&lt;0$ 意味着从$L_A=0$开始的第一个发明所获利润折现值会小于其成本，结果是研发为零。</p>
+<script type="math/tex; mode=display">
+L_A = \max{\{(1-\phi)\bar L-\frac{\phi \rho}{B},0}\} \tag{3.45}</script><p>由于产出的增长率为：$[(1-\phi)/\phi]BL_A$，则：</p>
+<script type="math/tex; mode=display">
+\frac{\dot Y(t)}{Y(t)}=\max{\{\frac{(1-\phi)^2}{\phi}B\bar L-(1-\phi)\rho,0\}} \tag{3.46}</script><h4 id="模型启示"><a href="#模型启示" class="headerlink" title="模型启示"></a>模型启示</h4><h5 id="对长期增长的影响"><a href="#对长期增长的影响" class="headerlink" title="对长期增长的影响"></a>对长期增长的影响</h5><p>影响链条：$\rho, \phi, B,\bar L ==&gt; L_A ==&gt; g_Y$ </p>
+<ul>
+<li>个体缺乏耐性（ $\rho$ 越高），从事研发的人就越少，增长变慢；</li>
+<li>投入品之间的替代性越强（$\phi$ 增加），专利持有人市场势力会被削弱，新知识对产出贡献减少，使得研发吸引力下降，降低增长；</li>
+<li>研发部门生产力越高（$B$越高），使得既定研发工人数量下增长提速，同时吸纳更多人进入研发部门，进而促进增长；</li>
+<li>人口数量上升（$\bar L$上升），使得既定研发比例下增长提速、从事研发工人比例上升（知识非竞争性），增加研发回报促进增长。</li>
+</ul>
+<h5 id="均衡增长和最优增长的差距"><a href="#均衡增长和最优增长的差距" class="headerlink" title="均衡增长和最优增长的差距"></a>均衡增长和最优增长的差距</h5><p>寻找使代表性个体效用最大的 $L_A$ 的固定值（$L_A^{OPT}$，社会最优水平）,与前文求得 $L_A$ 的均衡水平（$L_A^{EQ}$）之间的关系。</p>
+<script type="math/tex; mode=display">
+C(0) = \frac{(\bar L -L_A)A(0)^{(1-\phi)\phi}}{\bar L}</script><script type="math/tex; mode=display">
+U= \int_{t=0}^{\infin} e^{-\rho t}...</script><p>积分求解（见 [Problem 3.10]，分部积分）：</p>
+<script type="math/tex; mode=display">
+U = \frac{1}{\rho}...</script><p>求$\max{{U}}$ 对应的$L_A$（见 [Problem 3.10]，求$\frac{\partial U}{\partial L_A}$）：</p>
+<script type="math/tex; mode=display">
+L_A^{OPT}= \max{\{\bar L-\frac{\phi}{1-\phi}\frac{\rho}{B},0\}}</script><p>比较二者：</p>
+<script type="math/tex; mode=display">
+L_A^{EQ} = (1-\phi)L_A^{OPT}</script><blockquote>
+<p>[Problem 3.8]<br>Consider the model of Section 3.5. Suppose, however, that households have constant-relative-risk-aversion(CRRA) utility with a coefficient of relative risk aversion of $\theta$. Find the equilibrium level of labor in the R&amp;D sector, $L_A$. </p>
+<p>[Problem 3.10]</p>
+<p>(a) Show that (3.48) follows from (3.47).</p>
+<p>(b) Derive (3.49).</p>
+</blockquote>
+<p>宏观第三章习题：</p>
+<p>3.1</p>
+<p>3.2</p>
+<p>3.3</p>
+<p><strong>3.4</strong></p>
+<p><strong>3.5</strong></p>
+<p>3.7</p>
+<p>3.8</p>
+<p>3.10</p>
+</div><div id="donate"><link rel="stylesheet" type="text/css" href="/css/donate.css"><script type="text/javascript" src="/js/donate.js" successtext="复制成功!"></script><a class="pos-f tr3" id="github" target="_blank" rel="noopener" href="https://github.com/Kaiyuan/donate-page" arget="_blank" title="Github"></a><div id="DonateText">Donate</div><ul class="list pos-f" id="donateBox"><li id="AliPay" qr="/img/alipayQR.jpg"></li><li id="WeChat" qr="/img/wechatQR.jpg"></li></ul><div class="pos-f left-100" id="QRBox"><div id="MainBox"></div></div></div><div class="post-copyright"><script type="text/javascript" src="/js/copyright.js" successtext="复制成功!"></script><link rel="stylesheet" type="text/css" href="/css/copyright.css"><p><span>本文标题：</span>第三章 内生增长模型</p><p><span>文章作者：</span>Gang Li</p><p><span>发布时间：</span>2022-06-19</p><p><span>最后更新：</span>2022-06-19</p><p><span>原始链接：</span><a href="/2022/06/19/Romer-Textbook-Endogenous-Growth-Model/">http://lgspace.top/2022/06/19/Romer-Textbook-Endogenous-Growth-Model/</a><span class="copy-path"><i class="fa fa-clipboard" data-clipboard-text="http://lgspace.top/2022/06/19/Romer-Textbook-Endogenous-Growth-Model/"></i></span></p><p><span>版权声明：</span>本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</p></div><br><script type="text/javascript" src="/js/share.js?v=1.0.0" async></script><a class="article-share-link" data-url="http://lgspace.top/2022/06/19/Romer-Textbook-Endogenous-Growth-Model/" data-id="cl4l3dwzc009qveor05rj4a8c" data-qrcode="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsElEQVR42u3aQW7CQAwFUO5/6XZbqSX5tsdApZcVgiaZl0Xsfs/jER9fwXF91s9vfv/N9V2enXvswMPDwzu69OuFTs5NSL274+Hh4b2G9+yNev05/zUpHtVHdr1mPDw8vE/jXTe4vWKQXBMPDw/v//J6CUBy3/wB4eHh4b2XV21hk0a5uqxqHHw4a8HDw8PrdK2Pajv7rs8r8z08PDy8QxsC8pdyUkLyrQPVCOOPu+Dh4eEt8CbhwsaWrF50e3NNPDw8vDVe3tTmr/JqIemVjZuAGA8PD2+BN3lNV7cXnM1RCgEuHh4e3lFeb4lVanWUVS0VN/M9PDw8vKO8yag+LxuTkX/SNBdKCx4eHt4hXm/rVbN/L7bdvZEYHh4e3gZvsvSN8GISQNxM9vDw8PAO8fIGOm9zy9FAcOVeOIKHh4e3wcsHVDksjzZ6g7dCTIyHh4e3wBulF3EbXW2yq48pqnt4eHh4C7x8pJQ0072tBvmALS9LeHh4eNu8XpHIr9CLaJPSUpjs4eHh4S3w8ma3OtrPW+FjRQIPDw/vhbzqLasRQ3KFXoCLh4eHt8eLYtDWIGoSvFaHYU+/x8PDw3sJLwlbe5uoqu3y5NE/LQx4eHh4h3jNzUytDVWF1/q4IOHh4eFt8PKwNR9ZTV70k6i3EOPi4eHhHeVVX9P54qrbDqrFo9zR4+Hh4R3l9Zrs3qt8vm3r5tHg4eHhrfGqg6jeNqk8qmiWATw8PLxl3lfxiGLTQVxbXe1NkcDDw8Nb4M3/o0+KQW+E9qKqiIeHh9fiVYtBXiTyReS8/FHi4eHhbfPykKL3ay/YnccreHh4eJ/Dy4dn860G+eP7YyV4eHh4H8DrRbqntqXm4TIeHh7eNi85udrmVreiJiWhfBc8PDy8BV4vZt0Lao8tGg8PD+887xu1WyvwDjH7mAAAAABJRU5ErkJggg==">分享</a><div class="tags"><a href="/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"><i class="fa fa-tag"></i>经济学</a><a href="/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/"><i class="fa fa-tag"></i>宏观经济学</a></div><div class="post-nav"><a class="pre" href="/2022/06/19/Romer-Textbook-Cross-Country-Income-Difference/">第四章 跨国收入差距</a><a class="next" href="/2021/11/29/Zotero-for-Windows-%E5%85%A8%E5%B1%80%E5%BC%95%E7%94%A8/">Zotero for Windows 全局引用</a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == 'true' ? true : false;
+var verify = 'false' == 'true' ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'4r3jOS497uyoVjem8hrofuye-MdYXbMMI',
+  appKey:'dRzNUi4hOYKfUV95GTwK8hoH',
+  placeholder:'给我留言吧～',
+  avatar:'retro',
+  guest_info:guest_info,
+  pageSize:'7'
+})
+</script></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="sidebar"><div class="widget"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"/><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script><div class="aplayer" data-id="7044223387" data-server="netease" data-type="playlist" data-listmaxheight="98px" data-theme="#555555"></div></div><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">67</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><span class="category-list-count">6</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/" style="font-size: 15px;">微观经济学</a> <a href="/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" style="font-size: 15px;">课程笔记</a> <a href="/tags/HUST/" style="font-size: 15px;">HUST</a> <a href="/tags/Data/" style="font-size: 15px;">Data</a> <a href="/tags/Casual-Inference/" style="font-size: 15px;">Casual Inference</a> <a href="/tags/%E6%96%87%E7%8C%AE/" style="font-size: 15px;">文献</a> <a href="/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/" style="font-size: 15px;">经济学</a> <a href="/tags/%E5%8F%91%E5%B1%95%E7%BB%8F%E6%B5%8E%E5%AD%A6/" style="font-size: 15px;">发展经济学</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 15px;">笔记</a> <a href="/tags/%E8%AE%A1%E9%87%8F/" style="font-size: 15px;">计量</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 15px;">工具</a> <a href="/tags/%E6%96%87%E4%BB%B6/" style="font-size: 15px;">文件</a> <a href="/tags/IELTS/" style="font-size: 15px;">IELTS</a> <a href="/tags/Jupyter-Notebook/" style="font-size: 15px;">Jupyter Notebook</a> <a href="/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/" style="font-size: 15px;">宏观经济学</a> <a href="/tags/%E6%95%B0%E6%8D%AE/" style="font-size: 15px;">数据</a> <a href="/tags/%E5%8F%B6%E8%88%AA/" style="font-size: 15px;">叶航</a> <a href="/tags/Mankin/" style="font-size: 15px;">Mankin</a> <a href="/tags/Stata/" style="font-size: 15px;">Stata</a> <a href="/tags/%E7%94%B5%E5%BD%B1/" style="font-size: 15px;">电影</a> <a href="/tags/%E8%A7%82%E5%90%8E%E6%84%9F/" style="font-size: 15px;">观后感</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/" style="font-size: 15px;">数据管理</a> <a href="/tags/Zotero/" style="font-size: 15px;">Zotero</a> <a href="/tags/%E7%BE%8E%E9%A3%9F/" style="font-size: 15px;">美食</a> <a href="/tags/LaTeX/" style="font-size: 15px;">LaTeX</a> <a href="/tags/%E8%8B%B1%E8%AF%AD/" style="font-size: 15px;">英语</a> <a href="/tags/%E8%80%83%E5%8D%9A/" style="font-size: 15px;">考博</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/06/19/Romer-Textbook-Cross-Country-Income-Difference/">第四章 跨国收入差距</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/06/19/Romer-Textbook-Endogenous-Growth-Model/">第三章 内生增长模型</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/29/Zotero-for-Windows-%E5%85%A8%E5%B1%80%E5%BC%95%E7%94%A8/">Zotero for Windows 全局引用</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/18/empirical-data-management/">实证研究数据管理规范化</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/09/23/MacroEcon-Data-Sources/">宏观经济常用数据库</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/09/14/Advanced-MicroEcon-Notes-1/">高微II课程笔记-01</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/04/28/Exporting-Data-from-PDFs/">从 PDF 文件提取文本内容</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/04/22/Markdown-Typora-Brief-Intro/">Markdown-Typora-Brief-Intro</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/04/21/MacroEcon-Mankin-DynamicAD-AS/">MacroEcon-Mankin-DynamicAD-AS</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/04/20/DevelopEcon-ZhangPeiGang-Notes/">公平与发展</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://magi.com/" title="magi 搜索" target="_blank">magi 搜索</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2022 <a href="/." rel="nofollow">Gang Li's Personal Website.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"><link rel="stylesheet" type="text/css" href="/css/search.css?v=1.0.0"><script type="text/javascript" src="/js/search.js?v=1.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" color="0,0,0" opacity="0.5" zIndex="-2" count="50" src="//cdn.jsdelivr.net/npm/canvas-nest.js/dist/canvas-nest.min.js"></script><script type="text/javascript" src="/js/love.js"></script><script type="text/javascript" src="/js/copycode.js" successtext="复制成功!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=1.0.0"></script><script>(function(d) {
+  var config = {
+    kitId: 'qpn2tap',
+    scriptTimeout: 3000,
+    async: true
+  },
+  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+})(document);</script></div></body></html>
