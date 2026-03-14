@@ -157,10 +157,6 @@
     
     <category term="{{ tag.name }}" scheme="{{ tag.permalink }}"/>
     
-    <category term="{{ tag.name }}" scheme="{{ tag.permalink }}"/>
-    
-    <category term="{{ tag.name }}" scheme="{{ tag.permalink }}"/>
-    
   </entry>
   
   <entry>
